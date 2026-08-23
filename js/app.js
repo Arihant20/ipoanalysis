@@ -78,6 +78,7 @@ function filterCards(crit, btn) {
       card.style.display = '';
     }
   });
+  resetPagination();
 }
 
 function searchCards() {
@@ -85,7 +86,30 @@ function searchCards() {
   document.querySelectorAll('.lm-card').forEach(card => {
     card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none';
   });
+  resetPagination();
 }
+
+let lmPage = 1;
+const LM_PAGE_SIZE = 24;
+function updatePagination() {
+  const allCards = Array.from(document.querySelectorAll('.lm-card'));
+  const visible = allCards.filter(c => c.style.display !== 'none' && !c.classList.contains('lm-hidden-paged'));
+  const filtered = allCards.filter(c => c.style.display !== 'none');
+  const totalVisible = filtered.length;
+  const showing = Math.min(lmPage * LM_PAGE_SIZE, totalVisible);
+  let count = 0;
+  filtered.forEach(card => {
+    count++;
+    card.style.display = count <= showing ? '' : 'none';
+  });
+  const btn = document.getElementById('lm-load-more');
+  const info = document.getElementById('lm-page-info');
+  if (btn) btn.style.display = showing < totalVisible ? 'inline-flex' : 'none';
+  if (info) info.textContent = 'Showing ' + showing + ' of ' + totalVisible + ' bankers';
+}
+function resetPagination() { lmPage = 1; updatePagination(); }
+function loadMoreLMs() { lmPage++; updatePagination(); }
+document.addEventListener('DOMContentLoaded', () => { if(document.getElementById('lm-cards-container')) resetPagination(); });
 
 function inspectLM(btn) {
   const name = btn.getAttribute('data-name');

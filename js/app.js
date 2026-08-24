@@ -55,61 +55,96 @@ function searchPast() {
   });
 }
 
+let currentLmFilter = 'all';
+let currentLmSearch = '';
+let lmPage = 1;
+const LM_PAGE_SIZE = 24;
+
 function filterCards(crit, btn) {
   document.querySelectorAll('.pill-filter').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.lm-card').forEach(card => {
-    const status = card.getAttribute('data-status');
-    const tier = card.getAttribute('data-tier');
-    const mb = parseInt(card.getAttribute('data-mb') || '0');
-    const sme = parseInt(card.getAttribute('data-sme') || '0');
-
-    if (crit === 'all') {
-      card.style.display = '';
-    } else if (crit === 'OPEN' || crit === 'RECENT_CLOSED') {
-      card.style.display = (status === crit) ? '' : 'none';
-    } else if (crit === 'tier1') {
-      card.style.display = (tier === 'tier1') ? '' : 'none';
-    } else if (crit === 'mb_active') {
-      card.style.display = (mb >= 5) ? '' : 'none';
-    } else if (crit === 'sme_active') {
-      card.style.display = (sme >= 5) ? '' : 'none';
-    } else {
-      card.style.display = '';
-    }
-  });
-  resetPagination();
+  currentLmFilter = crit;
+  applyLmFilters();
 }
 
 function searchCards() {
-  const q = document.getElementById('search-lm').value.toLowerCase();
-  document.querySelectorAll('.lm-card').forEach(card => {
-    card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none';
+  currentLmSearch = (document.getElementById('search-lm').value || '').toLowerCase().trim();
+  applyLmFilters();
+}
+
+function applyLmFilters() {
+  const allCards = Array.from(document.querySelectorAll('.lm-card'));
+  allCards.forEach(card => {
+    const status = card.getAttribute('data-status') || '';
+    const tier = card.getAttribute('data-tier') || '';
+    const mb = parseInt(card.getAttribute('data-mb') || '0', 10);
+    const sme = parseInt(card.getAttribute('data-sme') || '0', 10);
+    const text = card.innerText.toLowerCase();
+
+    let matchesFilter = true;
+    if (currentLmFilter === 'OPEN' || currentLmFilter === 'RECENT_CLOSED') {
+      matchesFilter = (status === currentLmFilter);
+    } else if (currentLmFilter === 'tier1') {
+      matchesFilter = (tier === 'tier1');
+    } else if (currentLmFilter === 'mb_active') {
+      matchesFilter = (mb >= 5);
+    } else if (currentLmFilter === 'sme_active') {
+      matchesFilter = (sme >= 5);
+    }
+
+    let matchesSearch = (!currentLmSearch || text.includes(currentLmSearch));
+    if (matchesFilter && matchesSearch) {
+      card.setAttribute('data-matched', 'true');
+    } else {
+      card.setAttribute('data-matched', 'false');
+    }
   });
+
   resetPagination();
 }
 
-let lmPage = 1;
-const LM_PAGE_SIZE = 24;
 function updatePagination() {
-  const allCards = Array.from(document.querySelectorAll('.lm-card'));
-  const visible = allCards.filter(c => c.style.display !== 'none' && !c.classList.contains('lm-hidden-paged'));
-  const filtered = allCards.filter(c => c.style.display !== 'none');
-  const totalVisible = filtered.length;
+  const matchedCards = Array.from(document.querySelectorAll('.lm-card[data-matched="true"]'));
+  const totalVisible = matchedCards.length;
   const showing = Math.min(lmPage * LM_PAGE_SIZE, totalVisible);
+
+  document.querySelectorAll('.lm-card[data-matched="false"]').forEach(card => {
+    card.style.display = 'none';
+  });
+
   let count = 0;
-  filtered.forEach(card => {
+  matchedCards.forEach(card => {
     count++;
     card.style.display = count <= showing ? '' : 'none';
   });
+
   const btn = document.getElementById('lm-load-more');
   const info = document.getElementById('lm-page-info');
-  if (btn) btn.style.display = showing < totalVisible ? 'inline-flex' : 'none';
+  if (btn) btn.style.display = (showing < totalVisible) ? 'inline-flex' : 'none';
   if (info) info.textContent = 'Showing ' + showing + ' of ' + totalVisible + ' bankers';
 }
-function resetPagination() { lmPage = 1; updatePagination(); }
-function loadMoreLMs() { lmPage++; updatePagination(); }
-document.addEventListener('DOMContentLoaded', () => { if(document.getElementById('lm-cards-container')) resetPagination(); });
+
+function resetPagination() {
+  lmPage = 1;
+  updatePagination();
+}
+
+function loadMoreLMs() {
+  lmPage++;
+  updatePagination();
+}
+
+function initLmPage() {
+  if (document.getElementById('lm-cards-container')) {
+    applyLmFilters();
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initLmPage);
+} else {
+  initLmPage();
+}
 
 function inspectLM(btn) {
   const name = btn.getAttribute('data-name');

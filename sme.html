@@ -27,7 +27,7 @@
     <a href="lead_managers.html" class="nav-tab ">🏦 Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-08-23 14:14:40
+    <span class="pulse-dot"></span> Cycle: 2026-08-24 10:55:53
   </div>
 </nav>
 
@@ -48,10 +48,10 @@
 
 <!-- TOP STATS CARDS -->
 <div class="cards">
-  <div class="card" style="border-color:var(--green)"><div class="cnum" style="color:var(--green)">4</div><div class="clbl">🔥 Currently Open</div></div>
-  <div class="card" style="border-color:var(--amber)"><div class="cnum" style="color:var(--amber)">3</div><div class="clbl">⏳ Closed &bull; Listing Pending</div></div>
-  <div class="card" style="border-color:#3b82f6"><div class="cnum" style="color:#60a5fa">8</div><div class="clbl">🔔 Recently Listed</div></div>
-  <div class="card" style="border-color:#10b981"><div class="cnum" style="color:#34d399">1</div><div class="clbl">SUBSCRIBE Action (Active)</div></div>
+  <div class="card" style="border-color:var(--green)"><div class="cnum" style="color:var(--green)">7</div><div class="clbl">🔥 Currently Open</div></div>
+  <div class="card" style="border-color:var(--amber)"><div class="cnum" style="color:var(--amber)">2</div><div class="clbl">⏳ Closed &bull; Listing Pending</div></div>
+  <div class="card" style="border-color:#3b82f6"><div class="cnum" style="color:#60a5fa">9</div><div class="clbl">🔔 Recently Listed</div></div>
+  <div class="card" style="border-color:#10b981"><div class="cnum" style="color:#34d399">4</div><div class="clbl">SUBSCRIBE Action (Active)</div></div>
   <div class="card"><div class="cnum" style="color:var(--green)">+9.5%</div><div class="clbl">Avg Listing Gain (Last 50)</div></div>
   <div class="card"><div class="cnum" style="color:var(--green)">+17.9%</div><div class="clbl">Avg Post-Listing Return (Last 50)</div></div>
 </div>
@@ -59,11 +59,11 @@
 <!-- ========================================================================= -->
 <!-- SECTION 1: CURRENTLY OPENED IPOS -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#34d399;">🔥 1. Currently Open for Bidding (4 IPOs)</div>
+<div class="sec-hdr" style="color:#34d399;">🔥 1. Currently Open for Bidding (7 IPOs)</div>
 <div class="toolbar">
   <div class="filter-group">
     <span style="color:var(--dim);font-size:11px;font-weight:700">FILTER:</span>
-    <button class="pill-filter active" onclick="filterOpen('all', this)">All Open (4)</button>
+    <button class="pill-filter active" onclick="filterOpen('all', this)">All Open (7)</button>
     <button class="pill-filter" onclick="filterOpen('SUBSCRIBE', this)">Subscribe Only</button>
     <button class="pill-filter" onclick="filterOpen('BUY_AT_LISTING', this)">Buy at Open</button>
     <button class="pill-filter" onclick="filterOpen('AVOID', this)">Avoid / Trap</button>
@@ -92,63 +92,63 @@
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
           <td>
             <b>Madhur Knit Crafts</b>
             <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Capital Goods</div>
           </td>
-          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td><span title='Day 1 (Interim) — Early bids; value will update on Day 2 & Final Day.' style='background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 1 (Interim)</span></td>
           <td class="num">
             &#8377;100
             <div style='font-size:10px;color:#64748b;margin-top:1px;'>₹53 Cr</div>
           </td>
           <td>2026-08-27<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-01)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+7.3%</b>
+            <b>+13.6%</b>
           </td>
-          <td class="num"><b>&#8377;107.3</b></td>
+          <td class="num"><b>&#8377;113.6</b></td>
           <td>
-    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;2.4% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
-      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;2.4%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+4.9% &sim; +9.8%]</div>
+    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.5% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
+      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.5%</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+12.1% &sim; +15.1%]</div>
     </div>
     </td>
-          <td class="num" style="color:var(--dim)">
-            <b>+0.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;100.0</div>
+          <td class="num" style="color:var(--green)">
+            <b>+9.0%</b>
+            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;109.0</div>
           </td>
           <td>
-            <span class='dim'>—</span>
-            
+            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 1.0x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.0x</span></div>
+            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>1.2x</b> &bull; Bid Capital: <b>₹30 Cr</b></div>
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
             <b>SKI Capital Services Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>SKI Capital Services Ltd: 4 IPOs/5y, avg gain +33.2%, 75% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +7.3% (consensus expectation: +7.3%).</li></ul>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>SKI Capital Services Ltd: 4 IPOs/5y, avg gain +33.2%, 75% positive</li><li>Market GMP indicates ~9.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +13.6% (consensus expectation: +11.3%).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
           <td>
             <b>ABH Healthcare</b>
             <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Healthcare</div>
           </td>
-          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td><span title='Day 1 (Interim) — Early bids; value will update on Day 2 & Final Day.' style='background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 1 (Interim)</span></td>
           <td class="num">
             &#8377;102
             <div style='font-size:10px;color:#64748b;margin-top:1px;'>₹35 Cr</div>
           </td>
           <td>2026-08-27<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-01)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b>+0.5%</b>
+          <td class="num" style="color:var(--red)">
+            <b>-15.0%</b>
           </td>
-          <td class="num"><b>&#8377;102.5</b></td>
+          <td class="num"><b>&#8377;86.7</b></td>
           <td>
     <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.0% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
       <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.0%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-0.5% &sim; +1.5%]</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-16.0% &sim; -14.0%]</div>
     </div>
     </td>
           <td class="num" style="color:var(--dim)">
@@ -156,15 +156,15 @@
             <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;102.0</div>
           </td>
           <td>
-            <span class='dim'>—</span>
-            
+            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.0x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.0x</span></div>
+            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>0.6x</b> &bull; Bid Capital: <b>₹10 Cr</b></div>
           </td>
-          <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num">-15.0</td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <b>Fedex Securities Pvt Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Fedex Securities Pvt Ltd: 3 IPOs/5y, avg gain -4.6%, 33% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +0.5% (consensus expectation: +0.5%).</li></ul>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Fedex Securities Pvt Ltd: 3 IPOs/5y, avg gain -4.6%, 33% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -15.0% (consensus expectation: -15.0%).</li></ul>
           </td>
         </tr>
 
@@ -180,13 +180,13 @@
           </td>
           <td>2026-08-28<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-02)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+14.5%</b>
+            <b>+28.5%</b>
           </td>
-          <td class="num"><b>&#8377;115.6</b></td>
+          <td class="num"><b>&#8377;129.8</b></td>
           <td>
-    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.0% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
-      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.0%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+13.5% &sim; +15.5%]</div>
+    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;2.6% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
+      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;2.6%</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+25.9% &sim; +31.1%]</div>
     </div>
     </td>
           <td class="num" style="color:var(--green)">
@@ -202,11 +202,11 @@
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
           <td>
             <b>GYR Capital Advisors Pvt Ltd.</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>GYR Capital Advisors Pvt Ltd.: 31 IPOs/5y, avg gain +49.1%, 90% positive</li><li>Market GMP indicates ~31.7% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +14.5% (consensus expectation: +23.1%).</li></ul>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>GYR Capital Advisors Pvt Ltd.: 31 IPOs/5y, avg gain +49.1%, 90% positive</li><li>Market GMP indicates ~31.7% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +28.5% (consensus expectation: +30.1%).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
           <td>
             <b>Kwick Forensic Solutions</b>
             <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Capital Goods</div>
@@ -218,18 +218,94 @@
           </td>
           <td>2026-08-31<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-03)</span></td>
           <td class="num" style="color:var(--red)">
-            <b>-2.2%</b>
+            <b>-2.1%</b>
           </td>
           <td class="num"><b>&#8377;88.1</b></td>
           <td>
+    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;2.7% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
+      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;2.7%</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-4.8% &sim; +0.6%]</div>
+    </div>
+    </td>
+          <td class="num" style="color:var(--green)">
+            <b>+67.8%</b>
+            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;151.0</div>
+          </td>
+          <td>
+            <span class='dim'>—</span>
+            
+          </td>
+          <td class="num">+0.0</td>
+          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <b>Corporate Capital Ventures Pvt Ltd., Corporate Capitalventures Pvt Ltd</b>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Corporate Capitalventures Pvt Ltd: 2 IPOs/5y, avg gain -19.9%, 0% positive</li><li>Market GMP indicates ~67.8% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -2.1% (consensus expectation: +32.8%).</li></ul>
+          </td>
+        </tr>
+
+        <tr class="open-row" data-rec="NEUTRAL" data-strat="BUY_AT_LISTING">
+          <td>
+            <b>Complete Sports &amp; Management India</b>
+            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Capital Goods</div>
+          </td>
+          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td class="num">
+            &#8377;135
+            <div style='font-size:10px;color:#64748b;margin-top:1px;'>₹75 Cr</div>
+          </td>
+          <td>2026-09-01<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-04)</span></td>
+          <td class="num" style="color:var(--green)">
+            <b>+8.2%</b>
+          </td>
+          <td class="num"><b>&#8377;146.1</b></td>
+          <td>
     <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;2.9% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
       <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;2.9%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-5.1% &sim; +0.7%]</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+5.3% &sim; +11.1%]</div>
     </div>
     </td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;90.0</div>
+            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;135.0</div>
+          </td>
+          <td>
+            <span class='dim'>—</span>
+            
+          </td>
+          <td class="num">+0.0</td>
+          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-strat" style="background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655">BUY_AT_LISTING</span></td>
+          <td>
+            <b>Smart Horizon Capital Advisors Pvt Ltd</b>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Smart Horizon Capital Advisors Pvt Ltd: 25 IPOs/5y, avg gain +7.2%, 76% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +8.2% (consensus expectation: +8.2%).</li></ul>
+          </td>
+        </tr>
+
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+          <td>
+            <b>Paluck Technologies</b>
+            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Information Technology</div>
+          </td>
+          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td class="num">
+            &#8377;48
+            
+          </td>
+          <td>2026-09-01<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-04)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b>-0.6%</b>
+          </td>
+          <td class="num"><b>&#8377;47.7</b></td>
+          <td>
+    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.3% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
+      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.3%</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-1.9% &sim; +0.7%]</div>
+    </div>
+    </td>
+          <td class="num" style="color:var(--dim)">
+            <b>+0.0%</b>
+            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;48.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -239,8 +315,46 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Corporate Capital Ventures Pvt Ltd., Corporate Capitalventures Pvt Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Corporate Capitalventures Pvt Ltd: 2 IPOs/5y, avg gain -19.9%, 0% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -2.2% (consensus expectation: -2.2%).</li></ul>
+            <b>Horizon Management Pvt Ltd</b>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Horizon Management Pvt Ltd: 18 IPOs/5y, avg gain +9.3%, 44% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -0.6% (consensus expectation: -0.6%).</li></ul>
+          </td>
+        </tr>
+
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+          <td>
+            <b>Shanti Inorganics</b>
+            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Capital Goods</div>
+          </td>
+          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td class="num">
+            &#8377;83
+            
+          </td>
+          <td>2026-09-02<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-07)</span></td>
+          <td class="num" style="color:var(--green)">
+            <b>+12.6%</b>
+          </td>
+          <td class="num"><b>&#8377;93.5</b></td>
+          <td>
+    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.7% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
+      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.7%</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+10.9% &sim; +14.3%]</div>
+    </div>
+    </td>
+          <td class="num" style="color:var(--dim)">
+            <b>+0.0%</b>
+            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;83.0</div>
+          </td>
+          <td>
+            <span class='dim'>—</span>
+            
+          </td>
+          <td class="num">+0.0</td>
+          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <b>Vivro Financial Services Pvt Ltd</b>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Vivro Financial Services Pvt Ltd: 10 IPOs/5y, avg gain +40.2%, 70% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +12.6% (consensus expectation: +12.6%).</li></ul>
           </td>
         </tr>
     </tbody>
@@ -250,11 +364,11 @@
 <!-- ========================================================================= -->
 <!-- SECTION 2: RECENTLY CLOSED — LISTING PENDING -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#fbbf24;">⏳ 2. Recently Closed — Listing Pending (3 IPOs)</div>
+<div class="sec-hdr" style="color:#fbbf24;">⏳ 2. Recently Closed — Listing Pending (2 IPOs)</div>
 <div class="toolbar">
   <div class="filter-group">
     <span style="color:var(--dim);font-size:11px;font-weight:700">FILTER:</span>
-    <button class="pill-filter active" onclick="filterPending('all', this)">All Pending (3)</button>
+    <button class="pill-filter active" onclick="filterPending('all', this)">All Pending (2)</button>
     <button class="pill-filter" onclick="filterPending('SUBSCRIBE', this)">Subscribed</button>
     <button class="pill-filter" onclick="filterPending('AVOID', this)">Avoid / Trap</button>
   </div>
@@ -284,61 +398,23 @@
       
         <tr class="pending-row" data-rec="AVOID" data-strat="DO_NOT_BUY">
           <td>
-            <b>Fascinate Textiles</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Textiles</div>
-          </td>
-          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
-          <td class="num">
-            &#8377;151
-            
-          </td>
-          <td><b>2026-08-24</b><br><span style='font-size:9.5px;color:#64748b;'>(Closed 2026-08-19)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b>-2.0%</b>
-          </td>
-          <td class="num"><b>&#8377;148.0</b></td>
-          <td>
-    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.4% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
-      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.4%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-3.4% &sim; -0.6%]</div>
-    </div>
-    </td>
-          <td class="num" style="color:var(--dim)">
-            <b>+0.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;151.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 7.0x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 45.0x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 103.0x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>64.3x</b></div>
-          </td>
-          <td class="num">+18.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td>
-            <b>Affinity Global Capital Market Pvt Ltd.</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Affinity Global Capital Market Pvt Ltd.: 5 IPOs/5y, avg gain -7.6%, 20% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -2.0% (consensus expectation: -9.0%).</li></ul>
-          </td>
-        </tr>
-
-        <tr class="pending-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY">
-          <td>
             <b>Mopshop Distribution</b>
             <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Capital Goods</div>
           </td>
           <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
           <td class="num">
             &#8377;138
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>₹27 Cr</div>
+            
           </td>
           <td><b>2026-08-26</b><br><span style='font-size:9.5px;color:#64748b;'>(Closed 2026-08-21)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b>+2.6%</b>
+          <td class="num" style="color:var(--red)">
+            <b>-11.5%</b>
           </td>
-          <td class="num"><b>&#8377;141.6</b></td>
+          <td class="num"><b>&#8377;122.2</b></td>
           <td>
-    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;1.6% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
-      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;1.6%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[+1.0% &sim; +4.2%]</div>
+    <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;2.1% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
+      <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;2.1%</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-13.6% &sim; -9.4%]</div>
     </div>
     </td>
           <td class="num" style="color:var(--green)">
@@ -346,15 +422,15 @@
             <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;139.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> &bull; <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 63.0x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 2.9x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>33.0x</b> &bull; Bid Capital: <b>₹845 Cr</b></div>
+            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> &bull; <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 63.0x</span></div>
+            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>63.0x</b></div>
           </td>
-          <td class="num">+12.0</td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td class="num">+18.0</td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
             <b>Khandwala Securities Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Khandwala Securities Ltd: 6 IPOs/5y, avg gain -7.3%, 17% positive</li><li>Market GMP indicates ~0.7% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +2.6% (consensus expectation: +1.6%).</li></ul>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Khandwala Securities Ltd: 6 IPOs/5y, avg gain -7.3%, 17% positive</li><li>Market GMP indicates ~0.7% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -11.5% (consensus expectation: -8.6%).</li></ul>
           </td>
         </tr>
 
@@ -366,17 +442,17 @@
           <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
           <td class="num">
             &#8377;99
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>₹27 Cr</div>
+            
           </td>
           <td><b>2026-08-26</b><br><span style='font-size:9.5px;color:#64748b;'>(Closed 2026-08-21)</span></td>
           <td class="num" style="color:var(--red)">
-            <b>-5.7%</b>
+            <b>-17.3%</b>
           </td>
-          <td class="num"><b>&#8377;93.4</b></td>
+          <td class="num"><b>&#8377;81.8</b></td>
           <td>
     <div style='text-align:right;' title='Model Estimation Standard Error: &plusmn;2.8% (Model Precision) | True Out-of-Sample CV MAE: &plusmn;15.25%'>
       <div style='font-size:11.5px;font-weight:700;color:#94a3b8;'>&plusmn;2.8%</div>
-      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-8.5% &sim; -2.9%]</div>
+      <div style='font-size:9.5px;color:#64748b;font-variant-numeric:tabular-nums;'>[-20.1% &sim; -14.5%]</div>
     </div>
     </td>
           <td class="num" style="color:var(--green)">
@@ -384,15 +460,15 @@
             <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;100.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.0x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 5.0x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 61.0x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 3.1x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>13.2x</b> &bull; Bid Capital: <b>₹339 Cr</b></div>
+            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.0x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 5.0x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 61.0x</span></div>
+            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>23.2x</b></div>
           </td>
-          <td class="num">+8.0</td>
+          <td class="num">+12.0</td>
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <b>Wealth Mine Networks Pvt Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Wealth Mine Networks Pvt Ltd: 5 IPOs/5y, avg gain -17.1%, 0% positive</li><li>Market GMP indicates ~1.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -5.7% (consensus expectation: -2.3%).</li></ul>
+            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Wealth Mine Networks Pvt Ltd: 5 IPOs/5y, avg gain -17.1%, 0% positive</li><li>Market GMP indicates ~1.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -17.3% (consensus expectation: -8.2%).</li></ul>
           </td>
         </tr>
     </tbody>
@@ -402,7 +478,7 @@
 <!-- ========================================================================= -->
 <!-- SECTION 3: RECENTLY CLOSED — LISTED -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#38bdf8;">🔔 3. Recently Closed — Listed (8 IPOs)</div>
+<div class="sec-hdr" style="color:#38bdf8;">🔔 3. Recently Closed — Listed (9 IPOs)</div>
 <div class="toolbar">
   <input type="text" class="search-box" id="search-recently-listed" placeholder="Search recently listed SME IPOs..." oninput="searchRecentlyListed()">
 </div>
@@ -428,6 +504,25 @@
     </thead>
     <tbody id="recently-listed-table-body">
       
+        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+          <td>
+            <b>Fascinate Textiles</b>
+            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>Textiles</div>
+          </td>
+          <td class="num">&#8377;151</td>
+          <td><b>24 Aug 26</b></td>
+          <td class="num">&#8377;120.8</td>
+          <td class="num"></td>
+          <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
+          <td class="num" style="color:var(--red)"><b>-3.4%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:13px;">-20.0%</b></td>
+          <td class="num" style="color:var(--red)"><b>-20.0%</b></td>
+          <td class="num" style="color:var(--red)"><b>-16.6%</b></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td><b>Affinity Global Capital Market Pvt Ltd.</b></td>
+        </tr>
+
         <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
           <td>
             <b>Credent Connect N Care</b>

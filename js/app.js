@@ -146,16 +146,21 @@ if (document.readyState === 'loading') {
   initLmPage();
 }
 
+function esc(s) {
+  return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
 function inspectLM(btn) {
   const name = btn.getAttribute('data-name');
   const hist = JSON.parse(btn.getAttribute('data-hist') || '[]');
-  document.getElementById('modal-title').innerText = name + ' — Deal History (' + hist.length + ' IPOs)';
+  document.getElementById('modal-title').textContent = (name || '') + ' — Deal History (' + hist.length + ' IPOs)';
   let html = '<table style="width:100%"><thead><tr><th>IPO Name</th><th>Year</th><th>Segment</th><th class="num">Listing Gain</th><th class="num">Post-Listing Return</th></tr></thead><tbody>';
   hist.forEach(h => {
-    const gCol = (h.gain > 0) ? '#10b981' : ((h.gain < 0) ? '#ef4444' : '#e2e8f0');
+    const gainNum = typeof h.gain === 'number' ? h.gain : parseFloat(h.gain) || 0;
+    const gCol = (gainNum > 0) ? '#10b981' : ((gainNum < 0) ? '#ef4444' : '#e2e8f0');
     const pCol = (h.post_ret > 0) ? '#10b981' : ((h.post_ret < 0) ? '#ef4444' : '#94a3b8');
-    const pStr = (h.post_ret !== null) ? (h.post_ret >= 0 ? '+' : '') + h.post_ret.toFixed(1) + '%' : '<span style="color:#64748b">—</span>';
-    html += '<tr><td><b>' + h.name + '</b></td><td>' + (h.year||'—') + '</td><td><span class="badge-rec" style="background:#1e293b;color:#94a3b8">' + (h.seg||'—') + '</span></td><td class="num" style="color:' + gCol + '"><b>' + (h.gain>=0?'+':'') + h.gain.toFixed(1) + '%</b></td><td class="num" style="color:' + pCol + '"><b>' + pStr + '</b></td></tr>';
+    const pStr = (h.post_ret !== null && typeof h.post_ret !== 'undefined') ? (h.post_ret >= 0 ? '+' : '') + Number(h.post_ret).toFixed(1) + '%' : '<span style="color:#64748b">—</span>';
+    html += '<tr><td><b>' + esc(h.name) + '</b></td><td>' + esc(h.year||'—') + '</td><td><span class="badge-rec" style="background:#1e293b;color:#94a3b8">' + esc(h.seg||'—') + '</span></td><td class="num" style="color:' + gCol + '"><b>' + (gainNum>=0?'+':'') + gainNum.toFixed(1) + '%</b></td><td class="num" style="color:' + pCol + '"><b>' + pStr + '</b></td></tr>';
   });
   html += '</tbody></table>';
   document.getElementById('modal-body').innerHTML = html;

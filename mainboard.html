@@ -9,8 +9,7 @@
 <title>Mainboard IPOs — IPO Estimator Pro</title>
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-
+<body class="compact-grid">
 
 
 <nav class="main-nav">
@@ -27,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-08-27 01:18:14
+    <span class="pulse-dot"></span> Cycle: 2026-08-27 23:46:01
   </div>
 </nav>
 
@@ -50,248 +49,289 @@
 
 <!-- TOP STATS CARDS -->
 <div class="cards">
-  <div class="card" style="border-color:var(--green)"><div class="cnum" style="color:var(--green)">14</div><div class="clbl">”¥ Currently Open</div></div>
-  <div class="card" style="border-color:var(--amber)"><div class="cnum" style="color:var(--amber)">1</div><div class="clbl">â³ Closed &bull; Listing Pending</div></div>
-  <div class="card" style="border-color:#3b82f6"><div class="cnum" style="color:#60a5fa">12</div><div class="clbl">”” Recently Listed</div></div>
-  <div class="card" style="border-color:#10b981"><div class="cnum" style="color:#34d399">6</div><div class="clbl">SUBSCRIBE Action (Active)</div></div>
-  <div class="card"><div class="cnum" style="color:var(--green)">+15.6%</div><div class="clbl">Avg Listing Gain (Last 50)</div></div>
-  <div class="card"><div class="cnum" style="color:var(--red)">-6.3%</div><div class="clbl">Avg Post-Listing Return (Last 50)</div></div>
+  <div class="card" style="border-color:var(--green)">
+    <div class="cnum" style="color:var(--green)">15</div>
+    <div class="clbl">Currently Open</div>
+  </div>
+  <div class="card" style="border-color:var(--amber)">
+    <div class="cnum" style="color:var(--amber)">1</div>
+    <div class="clbl">Listing Pending</div>
+  </div>
+  <div class="card" style="border-color:#3b82f6">
+    <div class="cnum" style="color:#60a5fa">12</div>
+    <div class="clbl">Recently Listed</div>
+  </div>
+  <div class="card" style="border-color:#10b981">
+    <div class="cnum" style="color:#34d399">6</div>
+    <div class="clbl">SUBSCRIBE Action</div>
+  </div>
+  <div class="card">
+    <div class="cnum" style="color:var(--green)">+15.6%</div>
+    <div class="clbl">Avg Listing Gain (Last 50)</div>
+  </div>
+  <div class="card">
+    <div class="cnum" style="color:var(--red)">-6.3%</div>
+    <div class="clbl">Avg Post-Listing (Last 50)</div>
+  </div>
 </div>
 
 <!-- ========================================================================= -->
 <!-- SECTION 1: CURRENTLY OPENED IPOS -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#34d399;">”¥ 1. Currently Open for Bidding (14 IPOs)</div>
+<div class="sec-hdr-row">
+  <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. Currently Open for Bidding (15 IPOs)</div>
+  <div class="density-switch">
+    <button class="btn-density" onclick="toggleDensity()" id="density-btn" title="Toggle table row padding and font size">Density: Ultra-Compact</button>
+  </div>
+</div>
+
 <div class="toolbar">
   <div class="filter-group">
-    <span style="color:var(--dim);font-size:11px;font-weight:700">FILTER:</span>
-    <button class="pill-filter active" onclick="filterOpen('all', this)">All Open (14)</button>
-    <button class="pill-filter" onclick="filterOpen('SUBSCRIBE', this)">Subscribe Only</button>
-    <button class="pill-filter" onclick="filterOpen('BUY_AT_LISTING', this)">Buy at Open</button>
-    <button class="pill-filter" onclick="filterOpen('AVOID', this)">Avoid / Trap</button>
+    <span class="filter-label">ACTION:</span>
+    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (15)</button>
+    <button class="pill-filter" onclick="filterAction('open', 'SUBSCRIBE', this)">Subscribe</button>
+    <button class="pill-filter" onclick="filterAction('open', 'BUY_AT_LISTING', this)">Buy at Open</button>
+    <button class="pill-filter" onclick="filterAction('open', 'AVOID', this)">Avoid / Trap</button>
   </div>
-  <input type="text" class="search-box" id="search-open" placeholder="Search currently open Mainboard IPOs..." oninput="searchOpen()">
+  <div class="filter-group">
+    <span class="filter-label">SECTOR:</span>
+    <select class="select-filter" id="sector-open" onchange="filterSection('open')">
+      <option value="all">All Sectors</option>
+      <option value="Chemicals &amp; Materials">Chemicals &amp; Materials</option>
+<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
+<option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>
+<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="Hospitality &amp; Tourism">Hospitality &amp; Tourism</option>
+<option value="IT &amp; Technology">IT &amp; Technology</option>
+<option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain</option>
+<option value="Metals &amp; Mining">Metals &amp; Mining</option>
+<option value="Real Estate &amp; Infrastructure">Real Estate &amp; Infrastructure</option>
+<option value="Renewable Energy &amp; Power">Renewable Energy &amp; Power</option>
+<option value="Retail &amp; E-Commerce">Retail &amp; E-Commerce</option>
+    </select>
+  </div>
+  <input type="text" class="search-box" id="search-open" placeholder="Search open Mainboard IPOs by name, sector, lead manager..." oninput="filterSection('open')">
 </div>
 
 <div class="table-container">
-  <table>
+  <table id="table-open">
     <thead>
       <tr>
-        <th>IPO Name</th>
-        <th>Stage / Timeline</th>
-        <th>Issue ₹ (Size)</th>
-        <th>Close Date</th>
-        <th>Our Calc%</th>
-        <th>Pred. Listing ₹</th>
+        <th class="sortable" onclick="sortTable('table-open', 0, false)">IPO Name & Sector</th>
+        <th class="sortable" onclick="sortTable('table-open', 1, false)">Stage</th>
+        <th class="sortable num" onclick="sortTable('table-open', 2, true)">Issue ₹ (Size)</th>
+        <th class="sortable" onclick="sortTable('table-open', 3, false)">Close Date</th>
+        <th class="sortable num" onclick="sortTable('table-open', 4, true)">Our Calc%</th>
+        <th class="sortable num" onclick="sortTable('table-open', 5, true)">Pred. Listing ₹</th>
         <th>Precision (±%)</th>
-        <th>Market GMP%</th>
-        <th>Demand Breakdown (QIB / HNI / Ret)</th>
-        <th>SUB</th>
-        <th>Action</th>
-        <th>Strategy</th>
-        <th>Lead Manager(s) & Valuation Signals</th>
+        <th class="sortable num" onclick="sortTable('table-open', 7, true)">Market GMP%</th>
+        <th>Demand Breakdown</th>
+        <th class="sortable num" onclick="sortTable('table-open', 9, true)">SUB</th>
+        <th class="sortable" onclick="sortTable('table-open', 10, false)">Action</th>
+        <th class="sortable" onclick="sortTable('table-open', 11, false)">Strategy</th>
+        <th>Lead Manager & Valuation Signals</th>
       </tr>
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Engineering &amp; Capital Goods">
           <td>
-            <b>Hy-Tech Engineers</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>technology</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Hy-Tech Engineers</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
           </td>
           <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
           <td class="num">
             &#8377;53
             
           </td>
-          <td>2026-08-27<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-01)</span></td>
+          <td>2026-08-27<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-01)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+8.0%</b>
+            <b style="font-size:11.5px;">+30.2%</b>
           </td>
-          <td class="num"><b>&#8377;57.2</b></td>
+          <td class="num"><b>&#8377;69.0</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;6.8%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[+1.2% &sim; +14.8%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;23.5%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[+6.7% &sim; +53.7%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+75.5%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;93.0</div>
+            <b>+84.9%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;98.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.8x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 11.1x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 133.2x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 66.8x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>44.7x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 249.7x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 69.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 527.5x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 175.1x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>206.5x</b></div>
           </td>
-          <td class="num">+12.0</td>
+          <td class="num">+25.0</td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
           <td>
-            <b>New Berry Capitals Pvt Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>New Berry Capitals Pvt Ltd: 1 IPOs/5y, avg gain +4.2%, 100% positive</li><li>Market GMP indicates ~75.5% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +8.0% (consensus expectation: +41.7%).</li></ul>
+            <div style="font-weight:600;font-size:11px;">New Berry Capitals Pvt Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>New Berry Capitals Pvt Ltd: 1 IPOs/5y, avg gain +4.2%, 100% positive</li><li>Market GMP indicates ~84.9% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Healthcare &amp; Pharma">
           <td>
-            <b>Symbiotec Pharmalab</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>pharma</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Symbiotec Pharmalab</div>
+            <span class="sector-pill">Healthcare &amp; Pharma</span>
           </td>
           <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
           <td class="num">
             &#8377;988
             
           </td>
-          <td>2026-08-27<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-01)</span></td>
+          <td>2026-08-27<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-01)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+2.1%</b>
+            <b style="font-size:11.5px;">+20.1%</b>
           </td>
-          <td class="num"><b>&#8377;1008.6</b></td>
+          <td class="num"><b>&#8377;1186.9</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;8.1%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-6.0% &sim; +10.2%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[+8.7% &sim; +31.5%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+34.4%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;1328.0</div>
+            <b>+25.3%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;1238.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.6x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 2.4x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 14.1x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 5.4x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>4.2x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 181.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 17.8x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 56.2x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 13.7x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>65.2x</b></div>
           </td>
-          <td class="num">+2.0</td>
+          <td class="num">+18.0</td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
           <td>
-            <b>Jm Financial Ltd, Avendus Capital Pvt Ltd., Motilal Oswal Investment Advisors Ltd, Nomura Financial Advisory &amp; Securities (India) Pvt Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Avendus Capital Pvt Ltd.: 6 IPOs/5y, avg gain +5.3%, 67% positive</li><li>Motilal Oswal Investment Advisors Ltd: 37 IPOs/5y, avg gain +12.0%, 68% positive</li></ul>
+            <div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Avendus Capital Pvt Ltd., Motilal Oswal Investment Advisors Ltd, Nomura Financial Advisory &amp; Securities (India) Pvt Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Avendus Capital Pvt Ltd.: 6 IPOs/5y, avg gain +5.3%, 67% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
           <td>
-            <b>Skyways Air Services</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Skyways Air Services</div>
+            <span class="sector-pill">Logistics &amp; Supply Chain</span>
           </td>
           <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
           <td class="num">
             &#8377;138
             
           </td>
-          <td>2026-08-27<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-01)</span></td>
+          <td>2026-08-27<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-01)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+1.1%</b>
+            <b style="font-size:11.5px;">+18.3%</b>
           </td>
-          <td class="num"><b>&#8377;139.5</b></td>
+          <td class="num"><b>&#8377;163.2</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;9.7%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-8.6% &sim; +10.8%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;15.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[+2.9% &sim; +33.7%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+29.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;178.0</div>
+            <b>+32.6%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;183.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.5x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 1.1x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 9.4x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 7.0x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>4.5x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 139.7x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 18.5x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 76.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 25.4x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>60.6x</b></div>
           </td>
-          <td class="num">+2.0</td>
+          <td class="num">+18.0</td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
-            <b>Holani Consultants Pvt Ltd., Shannon Advisors Pvt Ltd., Dolat Finserv</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Holani Consultants Pvt Ltd.: 2 IPOs/5y, avg gain +77.5%, 100% positive</li><li>Shannon Advisors Pvt Ltd.: 1 IPOs/5y, avg gain -20.0%, 0% positive</li><li>Market GMP indicates ~29.0% listing premium (benchmark quote).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Holani Consultants Pvt Ltd., Shannon Advisors Pvt Ltd., Dolat Finserv</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Holani Consultants Pvt Ltd.: 2 IPOs/5y, avg gain +77.5%, 100% positive</li><li>Shannon Advisors Pvt Ltd.: 1 IPOs/5y, avg gain -20.0%, 0% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
           <td>
-            <b>Annu Projects</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Annu Projects</div>
+            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
           </td>
           <td><span title='Interim Bidding — Subject to final day QIB/HNI bids.' style='background:#8b5cf622;color:#a78bfa;border:1px solid #8b5cf655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 3 (Interim)</span></td>
           <td class="num">
             &#8377;99
             
           </td>
-          <td>2026-08-28<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-02)</span></td>
+          <td>2026-08-28<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-02)</span></td>
           <td class="num" style="color:var(--red)">
-            <b>-6.0%</b>
+            <b style="font-size:11.5px;">-6.0%</b>
           </td>
           <td class="num"><b>&#8377;93.1</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;7.2%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-13.2% &sim; +1.2%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;6.6%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-12.6% &sim; +0.6%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+4.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;103.0</div>
+            <b>+7.1%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;106.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.6x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.0x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 0.5x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.5x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>0.4x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 0.7x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.8x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.6x</b></div>
           </td>
           <td class="num">-6.0</td>
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Mefcom Capital Markets Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Mefcom Capital Markets Ltd: 1 IPOs/5y, avg gain +26.8%, 100% positive</li><li>Market GMP indicates ~4.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -6.0% (consensus expectation: -6.0%).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Mefcom Capital Markets Ltd: 1 IPOs/5y, avg gain +26.8%, 100% positive</li><li>Market GMP indicates ~7.1% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
           <td>
-            <b>Lumino Industries</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Lumino Industries</div>
+            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
           </td>
           <td><span title='Day 1 (Interim) — Early bids; value will update on Day 2 & Final Day.' style='background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 1 (Interim)</span></td>
           <td class="num">
             &#8377;82
             
           </td>
-          <td>2026-08-31<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-03)</span></td>
+          <td>2026-08-31<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-03)</span></td>
           <td class="num" style="color:var(--red)">
-            <b>-5.5%</b>
+            <b style="font-size:11.5px;">-3.4%</b>
           </td>
-          <td class="num"><b>&#8377;77.5</b></td>
+          <td class="num"><b>&#8377;79.2</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;7.3%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-12.8% &sim; +1.8%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;7.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-10.8% &sim; +4.0%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+58.5%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;130.0</div>
+            <b>+68.3%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;138.0</div>
           </td>
           <td>
-            <span class='dim'>—</span>
-            
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 3.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 2.1x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>1.3x</b></div>
           </td>
           <td class="num">+0.0</td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
-            <b>Jm Financial Ltd, Motilal Oswal Investment Advisors Ltd, Monarch Networth Capital Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Motilal Oswal Investment Advisors Ltd: 37 IPOs/5y, avg gain +12.0%, 68% positive</li><li>Monarch Networth Capital Ltd: 3 IPOs/5y, avg gain +2.9%, 33% positive</li></ul>
+            <div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Motilal Oswal Investment Advisors Ltd, Monarch Networth Capital Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Motilal Oswal Investment Advisors Ltd: 37 IPOs/5y, avg gain +12.0%, 68% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY">
+        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Gems &amp; Jewellery">
           <td>
-            <b>Priority Jewels</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Priority Jewels</div>
+            <span class="sector-pill">Gems &amp; Jewellery</span>
           </td>
           <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
           <td class="num">
             &#8377;200
             
           </td>
-          <td>2026-09-01<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-04)</span></td>
+          <td>2026-09-01<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-04)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+0.4%</b>
+            <b style="font-size:11.5px;">+0.4%</b>
           </td>
           <td class="num"><b>&#8377;200.8</b></td>
           <td>
@@ -300,8 +340,8 @@
       <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-6.2% &sim; +7.0%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+15.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;230.0</div>
+            <b>+18.5%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;237.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -311,24 +351,24 @@
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
-            <b>Mefcom Capital Markets Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Mefcom Capital Markets Ltd: 1 IPOs/5y, avg gain +26.8%, 100% positive</li><li>Market GMP indicates ~15.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +0.4% (consensus expectation: +7.7%).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Mefcom Capital Markets Ltd: 1 IPOs/5y, avg gain +26.8%, 100% positive</li><li>Market GMP indicates ~18.5% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES">
+        <tr class="open-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="IT &amp; Technology">
           <td>
-            <b>ESDS Software Solution</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>technology</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">ESDS Software Solution</div>
+            <span class="sector-pill">IT &amp; Technology</span>
           </td>
           <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
           <td class="num">
             &#8377;429
             
           </td>
-          <td>2026-09-01<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-04)</span></td>
+          <td>2026-09-01<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-04)</span></td>
           <td class="num" style="color:var(--red)">
-            <b>-4.6%</b>
+            <b style="font-size:11.5px;">-4.6%</b>
           </td>
           <td class="num"><b>&#8377;409.4</b></td>
           <td>
@@ -337,8 +377,8 @@
       <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-12.1% &sim; +2.9%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+81.6%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;779.0</div>
+            <b>+78.3%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;765.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -348,24 +388,24 @@
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
           <td>
-            <b>Systematix Corporate Services Ltd, Dam Capital Advisors Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Systematix Corporate Services Ltd: 6 IPOs/5y, avg gain +12.5%, 50% positive</li><li>Dam Capital Advisors Ltd: 15 IPOs/5y, avg gain +10.3%, 67% positive</li><li>Market GMP indicates ~81.6% listing premium (benchmark quote).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Systematix Corporate Services Ltd, Dam Capital Advisors Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Systematix Corporate Services Ltd: 6 IPOs/5y, avg gain +12.5%, 50% positive</li><li>Dam Capital Advisors Ltd: 15 IPOs/5y, avg gain +10.3%, 67% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY">
+        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
           <td>
-            <b>Rays of Belief</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rays of Belief</div>
+            <span class="sector-pill">IT &amp; Technology</span>
           </td>
           <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
           <td class="num">
             &#8377;239
             
           </td>
-          <td>2026-09-03<br><span style='font-size:9px;color:#64748b;'>(Lists 2026-09-08)</span></td>
+          <td>2026-09-03<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-08)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+0.1%</b>
+            <b style="font-size:11.5px;">+0.1%</b>
           </td>
           <td class="num"><b>&#8377;239.1</b></td>
           <td>
@@ -374,8 +414,8 @@
       <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-7.5% &sim; +7.6%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+7.5%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;257.0</div>
+            <b>+4.2%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;249.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -385,15 +425,52 @@
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
-            <b>Mefcom Capital Markets Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Mefcom Capital Markets Ltd: 1 IPOs/5y, avg gain +26.8%, 100% positive</li><li>Market GMP indicates ~7.5% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +0.1% (consensus expectation: +3.8%).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Mefcom Capital Markets Ltd: 1 IPOs/5y, avg gain +26.8%, 100% positive</li><li>Market GMP indicates ~4.2% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Gems &amp; Jewellery">
           <td>
-            <b>Jajoo Rashmi Refractories</b>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Deepa Jewellers</div>
+            <span class="sector-pill">Gems &amp; Jewellery</span>
+          </td>
+          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td class="num">
+            &#8377;177
             
+          </td>
+          <td>2026-09-03<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-08)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-8.3%</b>
+          </td>
+          <td class="num"><b>&#8377;162.2</b></td>
+          <td>
+    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;6.9%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-15.2% &sim; -1.4%]</div>
+    </div></td>
+          <td class="num" style="color:var(--green)">
+            <b>+23.7%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;219.0</div>
+          </td>
+          <td>
+            <span class='dim'>—</span>
+            
+          </td>
+          <td class="num">+0.0</td>
+          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <div style="font-weight:600;font-size:11px;">Emkay Global Financial Services Ltd, Valmiki Leela Capital Pvt Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Emkay Global Financial Services Ltd: 4 IPOs/5y, avg gain +9.3%, 25% positive</li><li>Market GMP indicates ~23.7% listing premium (benchmark quote).</li></ul>
+          </td>
+        </tr>
+
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Chemicals &amp; Materials">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Jajoo Rashmi Refractories</div>
+            <span class="sector-pill">Chemicals &amp; Materials</span>
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
@@ -402,7 +479,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b>-0.4%</b>
+            <b style="font-size:11.5px;">-0.4%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
@@ -422,15 +499,15 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Unistone Capital Pvt Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Unistone Capital Pvt Ltd: 5 IPOs/5y, avg gain +12.7%, 100% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -0.4% (consensus expectation: -0.4%).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Unistone Capital Pvt Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Unistone Capital Pvt Ltd: 5 IPOs/5y, avg gain +12.7%, 100% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
           <td>
-            <b>Swastika Infra</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>infra</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Swastika Infra</div>
+            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
@@ -439,7 +516,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b>-1.7%</b>
+            <b style="font-size:11.5px;">-1.7%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
@@ -459,15 +536,15 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Srujan Alpha Capital Advisors Llp</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Srujan Alpha Capital Advisors Llp: 5 IPOs/5y, avg gain +17.0%, 80% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -1.7% (consensus expectation: -1.7%).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Srujan Alpha Capital Advisors Llp</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Srujan Alpha Capital Advisors Llp: 5 IPOs/5y, avg gain +17.0%, 80% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Metals &amp; Mining">
           <td>
-            <b>A-One Steels India</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>infra</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">A-One Steels India</div>
+            <span class="sector-pill">Metals &amp; Mining</span>
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
@@ -476,7 +553,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b>-2.1%</b>
+            <b style="font-size:11.5px;">-2.1%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
@@ -496,15 +573,15 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Pl Capital Markets Pvt Ltd, Khambatta Securities Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Pl Capital Markets Pvt Ltd: 2 IPOs/5y, avg gain +0.6%, 50% positive</li><li>Khambatta Securities Ltd: 1 IPOs/5y, avg gain +34.0%, 100% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Pl Capital Markets Pvt Ltd, Khambatta Securities Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Pl Capital Markets Pvt Ltd: 2 IPOs/5y, avg gain +0.6%, 50% positive</li><li>Khambatta Securities Ltd: 1 IPOs/5y, avg gain +34.0%, 100% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Retail &amp; E-Commerce">
           <td>
-            <b>Purple Style Labs</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Purple Style Labs</div>
+            <span class="sector-pill">Retail &amp; E-Commerce</span>
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
@@ -513,7 +590,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b>-2.5%</b>
+            <b style="font-size:11.5px;">-2.5%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
@@ -533,15 +610,15 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Idbi Capital Markets Services Ltd, Axis Capital Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Idbi Capital Markets Services Ltd: 7 IPOs/5y, avg gain +21.3%, 71% positive</li><li>Axis Capital Ltd: 38 IPOs/5y, avg gain +18.5%, 82% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
+            <div style="font-weight:600;font-size:11px;">Idbi Capital Markets Services Ltd, Axis Capital Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Idbi Capital Markets Services Ltd: 7 IPOs/5y, avg gain +21.3%, 71% positive</li><li>Axis Capital Ltd: 38 IPOs/5y, avg gain +18.5%, 82% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Renewable Energy &amp; Power">
           <td>
-            <b>Continuum Green Energy</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>infra</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Continuum Green Energy</div>
+            <span class="sector-pill">Renewable Energy &amp; Power</span>
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
@@ -550,7 +627,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b>-2.6%</b>
+            <b style="font-size:11.5px;">-2.6%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
@@ -570,15 +647,15 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Kotak Mahindra Capital Company Ltd, Ambit Pvt Ltd, Citigroup Global Markets India Pvt Ltd, Jm Financial Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Kotak Mahindra Capital Company Ltd: 38 IPOs/5y, avg gain +15.3%, 74% positive</li><li>Ambit Pvt Ltd: 4 IPOs/5y, avg gain +16.1%, 75% positive</li><li>Citigroup Global Markets India Pvt Ltd: 18 IPOs/5y, avg gain +12.0%, 72% positive</li></ul>
+            <div style="font-weight:600;font-size:11px;">Kotak Mahindra Capital Company Ltd, Ambit Pvt Ltd, Citigroup Global Markets India Pvt Ltd, Jm Financial Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Kotak Mahindra Capital Company Ltd: 38 IPOs/5y, avg gain +15.3%, 74% positive</li><li>Ambit Pvt Ltd: 4 IPOs/5y, avg gain +16.1%, 75% positive</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Hospitality &amp; Tourism">
           <td>
-            <b>Prestige Hospitality Ventures</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Prestige Hospitality Ventures</div>
+            <span class="sector-pill">Hospitality &amp; Tourism</span>
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
@@ -587,7 +664,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b>-2.9%</b>
+            <b style="font-size:11.5px;">-2.9%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
@@ -607,8 +684,8 @@
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
-            <b>Jm Financial Ltd, Clsa India Pvt Ltd, Jp Morgan India Pvt Ltd, Kotak Mahindra Capital Company Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Clsa India Pvt Ltd: 3 IPOs/5y, avg gain +7.1%, 67% positive</li><li>Jp Morgan India Pvt Ltd: 17 IPOs/5y, avg gain +16.6%, 82% positive</li></ul>
+            <div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Clsa India Pvt Ltd, Jp Morgan India Pvt Ltd, Kotak Mahindra Capital Company Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Clsa India Pvt Ltd: 3 IPOs/5y, avg gain +7.1%, 67% positive</li></ul>
           </td>
         </tr>
     </tbody>
@@ -618,51 +695,58 @@
 <!-- ========================================================================= -->
 <!-- SECTION 2: RECENTLY CLOSED — LISTING PENDING -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#fbbf24;">â³ 2. Recently Closed — Listing Pending (1 IPOs)</div>
+<div class="sec-hdr" style="color:#fbbf24;"><span class="dot-pending"></span> 2. Recently Closed — Listing Pending (1 IPOs)</div>
 <div class="toolbar">
   <div class="filter-group">
-    <span style="color:var(--dim);font-size:11px;font-weight:700">FILTER:</span>
-    <button class="pill-filter active" onclick="filterPending('all', this)">All Pending (1)</button>
-    <button class="pill-filter" onclick="filterPending('SUBSCRIBE', this)">Subscribed</button>
-    <button class="pill-filter" onclick="filterPending('AVOID', this)">Avoid / Trap</button>
+    <span class="filter-label">ACTION:</span>
+    <button class="pill-filter active" onclick="filterAction('pending', 'all', this)">All (1)</button>
+    <button class="pill-filter" onclick="filterAction('pending', 'SUBSCRIBE', this)">Subscribed</button>
+    <button class="pill-filter" onclick="filterAction('pending', 'AVOID', this)">Avoid / Trap</button>
   </div>
-  <input type="text" class="search-box" id="search-pending" placeholder="Search listing pending Mainboard IPOs..." oninput="searchPending()">
+  <div class="filter-group">
+    <span class="filter-label">SECTOR:</span>
+    <select class="select-filter" id="sector-pending" onchange="filterSection('pending')">
+      <option value="all">All Sectors</option>
+      <option value="BFSI &amp; Financial Services">BFSI &amp; Financial Services</option>
+    </select>
+  </div>
+  <input type="text" class="search-box" id="search-pending" placeholder="Search listing pending Mainboard IPOs..." oninput="filterSection('pending')">
 </div>
 
 <div class="table-container">
-  <table>
+  <table id="table-pending">
     <thead>
       <tr>
-        <th>IPO Name</th>
-        <th>Stage / Timeline</th>
-        <th>Issue ₹ (Size)</th>
-        <th>Listing Date</th>
-        <th>Our Calc%</th>
-        <th>Pred. Listing ₹</th>
+        <th class="sortable" onclick="sortTable('table-pending', 0, false)">IPO Name & Sector</th>
+        <th class="sortable" onclick="sortTable('table-pending', 1, false)">Stage</th>
+        <th class="sortable num" onclick="sortTable('table-pending', 2, true)">Issue ₹ (Size)</th>
+        <th class="sortable" onclick="sortTable('table-pending', 3, false)">Listing Date</th>
+        <th class="sortable num" onclick="sortTable('table-pending', 4, true)">Our Calc%</th>
+        <th class="sortable num" onclick="sortTable('table-pending', 5, true)">Pred. Listing ₹</th>
         <th>Precision (±%)</th>
-        <th>Market GMP%</th>
-        <th>Demand Breakdown (QIB / HNI / Ret)</th>
-        <th>SUB</th>
-        <th>Action</th>
-        <th>Strategy</th>
-        <th>Lead Manager(s) & Valuation Signals</th>
+        <th class="sortable num" onclick="sortTable('table-pending', 7, true)">Market GMP%</th>
+        <th>Demand Breakdown</th>
+        <th class="sortable num" onclick="sortTable('table-pending', 9, true)">SUB</th>
+        <th class="sortable" onclick="sortTable('table-pending', 10, false)">Action</th>
+        <th class="sortable" onclick="sortTable('table-pending', 11, false)">Strategy</th>
+        <th>Lead Manager & Valuation Signals</th>
       </tr>
     </thead>
     <tbody id="pending-table-body">
       
-        <tr class="pending-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="pending-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="BFSI &amp; Financial Services">
           <td>
-            <b>Augmont Enterprises</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Augmont Enterprises</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
           </td>
           <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
           <td class="num">
             &#8377;788
             
           </td>
-          <td><b>2026-08-31</b><br><span style='font-size:9.5px;color:#64748b;'>(Closed 2026-08-25)</span></td>
+          <td><b>2026-08-31</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-08-25)</span></td>
           <td class="num" style="color:var(--green)">
-            <b>+21.1%</b>
+            <b style="font-size:11.5px;">+21.1%</b>
           </td>
           <td class="num"><b>&#8377;954.3</b></td>
           <td>
@@ -671,19 +755,19 @@
       <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[+5.6% &sim; +36.6%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
-            <b>+40.0%</b>
-            <div style='font-size:10px;color:#64748b;margin-top:1px;'>&#8377;1103.0</div>
+            <b>+38.1%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;1088.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:6px;font-size:10.5px;white-space:nowrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 238.5x</span> &bull; <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 27.2x</span> &bull; <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 110.8x</span> &bull; <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 26.7x</span></div>
-            <div style='font-size:9.5px;color:#94a3b8;margin-top:2px;'>Weighted: <b>93.2x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 238.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 27.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 110.8x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 26.7x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>93.2x</b></div>
           </td>
           <td class="num">+18.0</td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
-            <b>Intensive Fiscal Services Pvt Ltd, Jm Financial Ltd, Motilal Oswal Investment Advisors Ltd, Nuvama Wealth Management Ltd</b>
-            <ul style='margin:4px 0 0 14px;padding:0;font-size:10.5px;color:#94a3b8;line-height:1.3;'><li>Intensive Fiscal Services Pvt Ltd: 7 IPOs/5y, avg gain +15.2%, 57% positive</li><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Motilal Oswal Investment Advisors Ltd: 37 IPOs/5y, avg gain +12.0%, 68% positive</li></ul>
+            <div style="font-weight:600;font-size:11px;">Intensive Fiscal Services Pvt Ltd, Jm Financial Ltd, Motilal Oswal Investment Advisors Ltd, Nuvama Wealth Management Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Intensive Fiscal Services Pvt Ltd: 7 IPOs/5y, avg gain +15.2%, 57% positive</li><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li></ul>
           </td>
         </tr>
     </tbody>
@@ -693,55 +777,69 @@
 <!-- ========================================================================= -->
 <!-- SECTION 3: RECENTLY CLOSED — LISTED -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#38bdf8;">”” 3. Recently Closed — Listed (12 IPOs)</div>
+<div class="sec-hdr" style="color:#38bdf8;"><span class="dot-listed"></span> 3. Recently Closed — Listed (12 IPOs)</div>
 <div class="toolbar">
-  <input type="text" class="search-box" id="search-recently-listed" placeholder="Search recently listed Mainboard IPOs..." oninput="searchRecentlyListed()">
+  <div class="filter-group">
+    <span class="filter-label">SECTOR:</span>
+    <select class="select-filter" id="sector-recently-listed" onchange="filterSection('recently-listed')">
+      <option value="all">All Sectors</option>
+      <option value="Auto &amp; Ancillaries">Auto &amp; Ancillaries</option>
+<option value="Consumer &amp; FMCG">Consumer &amp; FMCG</option>
+<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
+<option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>
+<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain</option>
+<option value="Media &amp; Entertainment">Media &amp; Entertainment</option>
+<option value="Real Estate &amp; Infrastructure">Real Estate &amp; Infrastructure</option>
+    </select>
+  </div>
+  <input type="text" class="search-box" id="search-recently-listed" placeholder="Search recently listed Mainboard IPOs..." oninput="filterSection('recently-listed')">
 </div>
 
 <div class="table-container">
-  <table>
+  <table id="table-recently-listed">
     <thead>
       <tr>
-        <th>IPO Name</th>
-        <th>Issue ₹</th>
-        <th>Listed On</th>
-        <th>Open ₹</th>
-        <th>Current ₹</th>
-        <th>Pre-List GMP%</th>
-        <th>Our Calc%</th>
-        <th>Actual Listing Gain%</th>
-        <th>GMP &Delta;</th>
-        <th>Exp &Delta;</th>
-        <th>Action</th>
-        <th>Strategy</th>
+        <th class="sortable" onclick="sortTable('table-recently-listed', 0, false)">IPO Name & Sector</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 1, true)">Issue ₹</th>
+        <th class="sortable" onclick="sortTable('table-recently-listed', 2, false)">Listed On</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 3, true)">Open ₹</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 4, true)">Current ₹</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 5, true)">Pre-List GMP%</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 6, true)">Our Calc%</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 7, true)">Actual Gain%</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 8, true)">GMP &Delta;</th>
+        <th class="sortable num" onclick="sortTable('table-recently-listed', 9, true)">Exp &Delta;</th>
+        <th class="sortable" onclick="sortTable('table-recently-listed', 10, false)">Action</th>
+        <th class="sortable" onclick="sortTable('table-recently-listed', 11, false)">Strategy</th>
         <th>Lead Manager(s)</th>
       </tr>
     </thead>
     <tbody id="recently-listed-table-body">
       
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
           <td>
-            <b>Tempsens Instruments (India)</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Tempsens Instruments (India)</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
           </td>
           <td class="num">&#8377;300</td>
           <td><b>2026-08-27</b></td>
           <td class="num"></td>
           <td class="num"></td>
-          <td class="num" style="color:var(--green)"><b>+103.3%</b></td>
+          <td class="num" style="color:var(--green)"><b>+102.3%</b></td>
           <td class="num" style="color:var(--green)"><b>+31.4%</b></td>
-          <td class="num" style="color:var(--dim)"><b style="font-size:13px;">—</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td><b>Jm Financial Ltd, Icici Securities Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Icici Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="BUY_AT_LISTING">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="BUY_AT_LISTING" data-sector="Media &amp; Entertainment">
           <td>
-            <b>Sunshine Pictures</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sunshine Pictures</div>
+            <span class="sector-pill">Media &amp; Entertainment</span>
           </td>
           <td class="num">&#8377;360</td>
           <td><b>25 Aug 26</b></td>
@@ -749,18 +847,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+13.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+13.2%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+10.0%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.9%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.2%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655">BUY_AT_LISTING</span></td>
-          <td><b>GYR Capital Advisors Pvt Ltd.</b></td>
+          <td><div style="font-weight:600;font-size:11px;">GYR Capital Advisors Pvt Ltd.</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN">
+        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Gems &amp; Jewellery">
           <td>
-            <b>Shankesh Jewellers</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shankesh Jewellers</div>
+            <span class="sector-pill">Gems &amp; Jewellery</span>
           </td>
           <td class="num">&#8377;93</td>
           <td><b>25 Aug 26</b></td>
@@ -768,18 +866,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+3.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-4.0%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+11.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+8.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.1%</b></td>
           <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
-          <td><b>Aryaman Financial Services Ltd, Smart Horizon Capital Advisors Pvt Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Aryaman Financial Services Ltd, Smart Horizon Capital Advisors Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
           <td>
-            <b>Horizon Industrial Parks</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Horizon Industrial Parks</div>
+            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
           </td>
           <td class="num">&#8377;60</td>
           <td><b>24 Aug 26</b></td>
@@ -787,18 +885,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+2.5%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.3%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+0.4%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+0.4%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.1%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.9%</b></td>
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td><b>Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd, Sbi Capital Markets Ltd, 360 One Wam Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd, Sbi Capital Markets Ltd, 360 One Wam Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Gems &amp; Jewellery">
           <td>
-            <b>Lalithaa Jewellery Mart</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Lalithaa Jewellery Mart</div>
+            <span class="sector-pill">Gems &amp; Jewellery</span>
           </td>
           <td class="num">&#8377;201</td>
           <td><b>24 Aug 26</b></td>
@@ -806,18 +904,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+36.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+17.2%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+31.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+31.8%</b></td>
           <td class="num" style="color:var(--red)"><b>-5.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+14.6%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td><b>Anand Rathi Advisors Ltd, Equirus Capital Pvt Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Anand Rathi Advisors Ltd, Equirus Capital Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Logistics &amp; Supply Chain">
           <td>
-            <b>Shiprocket</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shiprocket</div>
+            <span class="sector-pill">Logistics &amp; Supply Chain</span>
           </td>
           <td class="num">&#8377;97</td>
           <td><b>19 Aug 26</b></td>
@@ -825,18 +923,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+36.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+18.0%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+35.0%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+35.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-1.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+17.1%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
-          <td><b>Axis Capital Ltd, Bofa Securities India Ltd, Jm Financial Ltd, Kotak Mahindra Capital Co.Ltd., Kotak Mahindra Capital Company Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Axis Capital Ltd, Bofa Securities India Ltd, Jm Financial Ltd, Kotak Mahindra Capital Co.Ltd., Kotak Mahindra Capital Company Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Consumer &amp; FMCG">
           <td>
-            <b>Milky Mist Dairy Food</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>fmcg</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Milky Mist Dairy Food</div>
+            <span class="sector-pill">Consumer &amp; FMCG</span>
           </td>
           <td class="num">&#8377;140</td>
           <td><b>18 Aug 26</b></td>
@@ -844,18 +942,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+14.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.0%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+17.9%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+17.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+3.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+13.8%</b></td>
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
-          <td><b>Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Healthcare &amp; Pharma">
           <td>
-            <b>Molbio Diagnostics</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>pharma</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Molbio Diagnostics</div>
+            <span class="sector-pill">Healthcare &amp; Pharma</span>
           </td>
           <td class="num"></td>
           <td><b>17 Aug 26</b></td>
@@ -863,18 +961,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+16.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+29.0%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+21.4%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+21.4%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.6%</b></td>
           <td class="num" style="color:var(--red)"><b>-7.5%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td><b>Iifl Capital Services Ltd, Kotak Mahindra Capital Company Ltd, Jefferies India Pvt Ltd, Motilal Oswal Investment Advisors Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Iifl Capital Services Ltd, Kotak Mahindra Capital Company Ltd, Jefferies India Pvt Ltd, Motilal Oswal Investment Advisors Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Auto &amp; Ancillaries">
           <td>
-            <b>Dhoot Transmission</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dhoot Transmission</div>
+            <span class="sector-pill">Auto &amp; Ancillaries</span>
           </td>
           <td class="num"></td>
           <td><b>17 Aug 26</b></td>
@@ -882,18 +980,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+31.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+29.9%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+37.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+37.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+6.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+7.8%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td><b>Axis Capital Ltd, Kotak Mahindra Capital Company Ltd, Jefferies India Pvt Ltd, Sbi Capital Markets Ltd, Nomura Financial Advisory &amp; Securities (India) Pvt Ltd, 360 One Wam Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Axis Capital Ltd, Kotak Mahindra Capital Company Ltd, Jefferies India Pvt Ltd, Sbi Capital Markets Ltd, Nomura Financial Advisory &amp; Securities (India) Pvt Ltd, 360 One Wam Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Logistics &amp; Supply Chain">
           <td>
-            <b>LEAP India</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">LEAP India</div>
+            <span class="sector-pill">Logistics &amp; Supply Chain</span>
           </td>
           <td class="num">&#8377;159</td>
           <td><b>14 Aug 26</b></td>
@@ -901,18 +999,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+8.2%</b></td>
           <td class="num" style="color:var(--red)"><b>-6.1%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+4.3%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+4.3%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+10.4%</b></td>
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
-          <td><b>Jm Financial Ltd, Avendus Capital Pvt Ltd., Iifl Capital Services Ltd, Ubs Securities India Private Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Avendus Capital Pvt Ltd., Iifl Capital Services Ltd, Ubs Securities India Private Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Engineering &amp; Capital Goods">
           <td>
-            <b>Technocraft Ventures</b>
-            <div style='font-size:10px;color:#38bdf8;margin-top:2px;font-weight:600;'>technology</div>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Technocraft Ventures</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
           </td>
           <td class="num">&#8377;212</td>
           <td><b>14 Aug 26</b></td>
@@ -920,18 +1018,18 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+19.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+26.3%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+34.0%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+34.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+14.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+7.7%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
-          <td><b>Khambatta Securities Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Khambatta Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Engineering &amp; Capital Goods">
           <td>
-            <b>Behari Lal Engineering</b>
-            
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Behari Lal Engineering</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
           </td>
           <td class="num">&#8377;285</td>
           <td><b>19 Aug 26</b></td>
@@ -939,12 +1037,12 @@
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+46.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+35.7%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+63.2%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+63.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+16.5%</b></td>
           <td class="num" style="color:var(--green)"><b>+27.4%</b></td>
           <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
-          <td><b>Emkay Global Financial Services Ltd, Systematix Corporate Services Ltd</b></td>
+          <td><div style="font-weight:600;font-size:11px;">Emkay Global Financial Services Ltd, Systematix Corporate Services Ltd</div></td>
         </tr>
     </tbody>
   </table>
@@ -953,725 +1051,894 @@
 <!-- ========================================================================= -->
 <!-- SECTION 4: ALL OTHER HISTORICAL LISTINGS (LATEST TO OLDER - LAST 50) -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#a78bfa;">“œ 4. Past Listed IPOs — Latest to Older (Last 50)</div>
+<div class="sec-hdr" style="color:#a78bfa;"><span class="dot-past"></span> 4. Past Listed IPOs — Latest to Older (Last 50)</div>
 <div class="toolbar">
-  <input type="text" class="search-box" id="search-past" placeholder="Search historical Mainboard IPOs..." oninput="searchPast()">
+  <div class="filter-group">
+    <span class="filter-label">SECTOR:</span>
+    <select class="select-filter" id="sector-past" onchange="filterSection('past')">
+      <option value="all">All Sectors</option>
+      <option value="BFSI &amp; Financial Services">BFSI &amp; Financial Services</option>
+<option value="Consumer &amp; FMCG">Consumer &amp; FMCG</option>
+<option value="Diversified">Diversified</option>
+<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
+<option value="Gems &amp; Jewellery">Gems &amp; Jewellery</option>
+<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="Hospitality &amp; Tourism">Hospitality &amp; Tourism</option>
+<option value="IT &amp; Technology">IT &amp; Technology</option>
+<option value="Media &amp; Entertainment">Media &amp; Entertainment</option>
+<option value="Real Estate &amp; Infrastructure">Real Estate &amp; Infrastructure</option>
+<option value="Renewable Energy &amp; Power">Renewable Energy &amp; Power</option>
+<option value="Retail &amp; E-Commerce">Retail &amp; E-Commerce</option>
+<option value="Textiles &amp; Apparel">Textiles &amp; Apparel</option>
+    </select>
+  </div>
+  <input type="text" class="search-box" id="search-past" placeholder="Search historical Mainboard IPOs..." oninput="filterSection('past')">
 </div>
 
 <div class="table-container">
-  <table>
+  <table id="table-past">
     <thead>
       <tr>
-        <th>IPO Name</th>
-        <th>Issue ₹</th>
-        <th>Listed On</th>
-        <th>Open ₹</th>
-        <th>Current ₹</th>
-        <th>GMP% (captured)</th>
-        <th>Our Exp%</th>
-        <th>Actual Listing Gain%</th>
-        <th>GMP &Delta; vs Actual</th>
-        <th>Exp &Delta; vs Actual</th>
-        <th>Post-Listing Return%</th>
+        <th class="sortable" onclick="sortTable('table-past', 0, false)">IPO Name & Sector</th>
+        <th class="sortable num" onclick="sortTable('table-past', 1, true)">Issue ₹</th>
+        <th class="sortable" onclick="sortTable('table-past', 2, false)">Listed On</th>
+        <th class="sortable num" onclick="sortTable('table-past', 3, true)">Open ₹</th>
+        <th class="sortable num" onclick="sortTable('table-past', 4, true)">Current ₹</th>
+        <th class="sortable num" onclick="sortTable('table-past', 5, true)">GMP%</th>
+        <th class="sortable num" onclick="sortTable('table-past', 6, true)">Our Exp%</th>
+        <th class="sortable num" onclick="sortTable('table-past', 7, true)">Actual Gain%</th>
+        <th class="sortable num" onclick="sortTable('table-past', 8, true)">GMP &Delta;</th>
+        <th class="sortable num" onclick="sortTable('table-past', 9, true)">Exp &Delta;</th>
+        <th class="sortable num" onclick="sortTable('table-past', 10, true)">Post-Listing Ret%</th>
       </tr>
     </thead>
     <tbody id="past-table-body">
       
-        <tr class="past-row">
-          <td><b>Brigade Hotel Ventures</b></td>
+        <tr class="past-row" data-sector="Hospitality &amp; Tourism">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Brigade Hotel Ventures</div>
+            <span class="sector-pill">Hospitality &amp; Tourism</span>
+          </td>
           <td class="num">&#8377;90</td>
           <td>31 Jul 25</td>
           <td class="num">&#8377;81.1</td>
           <td class="num">&#8377;65.9</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-9.9%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-9.9%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-18.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Unimech Aerospace And Manufacturing</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Unimech Aerospace And Manufacturing</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;785</td>
           <td>31 Dec 24</td>
           <td class="num">&#8377;1460.0</td>
           <td class="num">&#8377;1022.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+86.0%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+86.0%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-30.0%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Solarworld Energy Solutions</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Solarworld Energy Solutions</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;351</td>
           <td>30 Sep 25</td>
           <td class="num">&#8377;388.5</td>
           <td class="num">&#8377;202.1</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+10.7%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.7%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-48.0%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Seshaasai Technologies</b></td>
+        <tr class="past-row" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Seshaasai Technologies</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+          </td>
           <td class="num">&#8377;423</td>
           <td>30 Sep 25</td>
           <td class="num">&#8377;432.0</td>
           <td class="num">&#8377;237.1</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+2.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+2.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-45.1%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Jaro Institute of Technology Management &amp; Research</b></td>
+        <tr class="past-row" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Jaro Institute of Technology Management &amp; Research</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+          </td>
           <td class="num">&#8377;890</td>
           <td>30 Sep 25</td>
           <td class="num">&#8377;890.0</td>
           <td class="num">&#8377;406.1</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-54.4%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Anand Rathi Share and Stock Brokers</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Anand Rathi Share and Stock Brokers</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;414</td>
           <td>30 Sep 25</td>
           <td class="num">&#8377;432.0</td>
           <td class="num">&#8377;607.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+4.3%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+4.3%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+40.5%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Manba Finance</b></td>
+        <tr class="past-row" data-sector="BFSI &amp; Financial Services">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manba Finance</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
+          </td>
           <td class="num">&#8377;120</td>
           <td>30 Sep 24</td>
           <td class="num">&#8377;145.0</td>
           <td class="num">&#8377;114.7</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+20.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+20.8%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-20.9%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Godavari Biorefineries</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Godavari Biorefineries</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;352</td>
           <td>30 Oct 24</td>
           <td class="num">&#8377;308.0</td>
           <td class="num">&#8377;312.9</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-12.5%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-12.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+1.6%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Central Mine Planning &amp; Design Institute</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Central Mine Planning &amp; Design Institute</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;172</td>
           <td>30 Mar 26</td>
           <td class="num">&#8377;160.0</td>
           <td class="num">&#8377;197.9</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-7.0%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-7.0%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+23.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Indo-MIM</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Indo-MIM</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;485</td>
           <td>30 Jul 26</td>
           <td class="num">&#8377;700.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+44.3%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+44.3%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Xtranet Technologies</b></td>
+        <tr class="past-row" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Xtranet Technologies</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+          </td>
           <td class="num">&#8377;127</td>
           <td>30 Jul 26</td>
           <td class="num">&#8377;136.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+7.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+7.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Lohia Corp</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Lohia Corp</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;425</td>
           <td>30 Jul 26</td>
           <td class="num">&#8377;461.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+8.5%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+8.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Indiqube Spaces</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Indiqube Spaces</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;237</td>
           <td>30 Jul 25</td>
           <td class="num">&#8377;216.0</td>
           <td class="num">&#8377;174.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-8.9%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-8.9%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-19.4%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>GNG Electronics</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">GNG Electronics</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;237</td>
           <td>30 Jul 25</td>
           <td class="num">&#8377;355.0</td>
           <td class="num">&#8377;452.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+49.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+49.8%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+27.3%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Gujarat Kidney and Super Speciality</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Gujarat Kidney and Super Speciality</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;114</td>
           <td>30 Dec 25</td>
           <td class="num">&#8377;120.0</td>
           <td class="num">&#8377;123.2</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+5.3%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+5.3%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+2.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Senores Pharmaceuticals</b></td>
+        <tr class="past-row" data-sector="Healthcare &amp; Pharma">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Senores Pharmaceuticals</div>
+            <span class="sector-pill">Healthcare &amp; Pharma</span>
+          </td>
           <td class="num">&#8377;391</td>
           <td>30 Dec 24</td>
           <td class="num">&#8377;600.0</td>
           <td class="num">&#8377;886.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+53.5%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+53.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+47.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Carraro India</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Carraro India</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;704</td>
           <td>30 Dec 24</td>
           <td class="num">&#8377;651.0</td>
           <td class="num">&#8377;575.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-7.5%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-7.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-11.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Ventive Hospitality</b></td>
+        <tr class="past-row" data-sector="Hospitality &amp; Tourism">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Ventive Hospitality</div>
+            <span class="sector-pill">Hospitality &amp; Tourism</span>
+          </td>
           <td class="num">&#8377;643</td>
           <td>30 Dec 24</td>
           <td class="num">&#8377;716.0</td>
           <td class="num">&#8377;625.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+11.3%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.3%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-12.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Ganesh Consumer Products</b></td>
+        <tr class="past-row" data-sector="Consumer &amp; FMCG">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Ganesh Consumer Products</div>
+            <span class="sector-pill">Consumer &amp; FMCG</span>
+          </td>
           <td class="num">&#8377;322</td>
           <td>29 Sep 25</td>
           <td class="num">&#8377;296.1</td>
           <td class="num">&#8377;202.6</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-8.1%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-8.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-31.6%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Atlanta Electricals</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Atlanta Electricals</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;754</td>
           <td>29 Sep 25</td>
           <td class="num">&#8377;857.0</td>
           <td class="num">&#8377;1600.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+13.7%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+13.7%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+86.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Enviro Infra Engineers</b></td>
+        <tr class="past-row" data-sector="Engineering &amp; Capital Goods">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Enviro Infra Engineers</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
+          </td>
           <td class="num">&#8377;148</td>
           <td>29 Nov 24</td>
           <td class="num">&#8377;220.0</td>
           <td class="num">&#8377;212.7</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+48.6%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+48.6%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-3.3%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Turtlemint Fintech Solutions</b></td>
+        <tr class="past-row" data-sector="BFSI &amp; Financial Services">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Turtlemint Fintech Solutions</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
+          </td>
           <td class="num">&#8377;152</td>
           <td>29 Jun 26</td>
           <td class="num">&#8377;134.9</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-11.2%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-11.2%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Denta Water And Infra Solutions</b></td>
+        <tr class="past-row" data-sector="Real Estate &amp; Infrastructure">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Denta Water And Infra Solutions</div>
+            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
+          </td>
           <td class="num">&#8377;294</td>
           <td>29 Jan 25</td>
           <td class="num">&#8377;325.0</td>
           <td class="num">&#8377;281.5</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+10.5%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-13.4%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Deepak Builders &amp; Engineers India</b></td>
+        <tr class="past-row" data-sector="Engineering &amp; Capital Goods">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Deepak Builders &amp; Engineers India</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
+          </td>
           <td class="num">&#8377;203</td>
           <td>28 Oct 24</td>
           <td class="num">&#8377;200.0</td>
           <td class="num">&#8377;85.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-1.5%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-1.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-57.5%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Waaree Energies</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Waaree Energies</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;1503</td>
           <td>28 Oct 24</td>
           <td class="num">&#8377;2550.0</td>
           <td class="num">&#8377;3182.8</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+69.7%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+69.7%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+24.8%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Sudeep Pharma</b></td>
+        <tr class="past-row" data-sector="Healthcare &amp; Pharma">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sudeep Pharma</div>
+            <span class="sector-pill">Healthcare &amp; Pharma</span>
+          </td>
           <td class="num">&#8377;593</td>
           <td>28 Nov 25</td>
           <td class="num">&#8377;730.0</td>
           <td class="num">&#8377;685.7</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+23.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+23.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-6.1%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Belrise Industries</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Belrise Industries</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;90</td>
           <td>28 May 25</td>
           <td class="num">&#8377;100.0</td>
           <td class="num">&#8377;213.2</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+11.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+113.2%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Shadowfax Technologies</b></td>
+        <tr class="past-row" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shadowfax Technologies</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+          </td>
           <td class="num">&#8377;124</td>
           <td>28 Jan 26</td>
           <td class="num">&#8377;112.6</td>
           <td class="num">&#8377;170.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-9.2%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-9.2%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+51.0%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Mangal Electrical Industries</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Mangal Electrical Industries</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;561</td>
           <td>28 Aug 25</td>
           <td class="num">&#8377;556.0</td>
           <td class="num">&#8377;330.1</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-0.9%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-0.9%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-40.6%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>NTPC Green Energy</b></td>
+        <tr class="past-row" data-sector="Renewable Energy &amp; Power">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">NTPC Green Energy</div>
+            <span class="sector-pill">Renewable Energy &amp; Power</span>
+          </td>
           <td class="num">&#8377;108</td>
           <td>27 Nov 24</td>
           <td class="num">&#8377;111.5</td>
           <td class="num">&#8377;109.6</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+3.2%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+3.2%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-1.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Borana Weaves</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Borana Weaves</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;216</td>
           <td>27 May 25</td>
           <td class="num">&#8377;243.0</td>
           <td class="num">&#8377;344.9</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+12.5%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+12.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+42.0%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Gaudium IVF &amp; Women Health</b></td>
+        <tr class="past-row" data-sector="Healthcare &amp; Pharma">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Gaudium IVF &amp; Women Health</div>
+            <span class="sector-pill">Healthcare &amp; Pharma</span>
+          </td>
           <td class="num">&#8377;79</td>
           <td>27 Feb 26</td>
           <td class="num">&#8377;83.0</td>
           <td class="num">&#8377;119.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+5.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+5.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+43.4%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Concord Enviro Systems</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Concord Enviro Systems</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;701</td>
           <td>27 Dec 24</td>
           <td class="num">&#8377;826.0</td>
           <td class="num">&#8377;304.8</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+17.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+17.8%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-63.1%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Sanathan Textiles</b></td>
+        <tr class="past-row" data-sector="Textiles &amp; Apparel">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sanathan Textiles</div>
+            <span class="sector-pill">Textiles &amp; Apparel</span>
+          </td>
           <td class="num">&#8377;321</td>
           <td>27 Dec 24</td>
           <td class="num">&#8377;422.3</td>
           <td class="num">&#8377;450.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+31.6%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+31.6%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+6.6%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Dam Capital Advisors</b></td>
+        <tr class="past-row" data-sector="BFSI &amp; Financial Services">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dam Capital Advisors</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
+          </td>
           <td class="num">&#8377;283</td>
           <td>27 Dec 24</td>
           <td class="num">&#8377;393.0</td>
           <td class="num">&#8377;153.1</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+38.9%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+38.9%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-61.0%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Transrail Lighting</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Transrail Lighting</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;432</td>
           <td>27 Dec 24</td>
           <td class="num">&#8377;590.0</td>
           <td class="num">&#8377;586.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+36.6%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+36.6%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-0.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Mamata Machinery</b></td>
+        <tr class="past-row" data-sector="Engineering &amp; Capital Goods">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Mamata Machinery</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
+          </td>
           <td class="num">&#8377;243</td>
           <td>27 Dec 24</td>
           <td class="num">&#8377;600.0</td>
           <td class="num">&#8377;438.7</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+146.9%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+146.9%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-26.9%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>GK Energy</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">GK Energy</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;153</td>
           <td>26 Sep 25</td>
           <td class="num">&#8377;171.0</td>
           <td class="num">&#8377;129.8</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+11.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.8%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-24.1%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Saatvik Green Energy</b></td>
+        <tr class="past-row" data-sector="Renewable Energy &amp; Power">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Saatvik Green Energy</div>
+            <span class="sector-pill">Renewable Energy &amp; Power</span>
+          </td>
           <td class="num">&#8377;465</td>
           <td>26 Sep 25</td>
           <td class="num">&#8377;465.0</td>
           <td class="num">&#8377;474.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+1.9%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Excelsoft Technologies</b></td>
+        <tr class="past-row" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Excelsoft Technologies</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+          </td>
           <td class="num">&#8377;120</td>
           <td>26 Nov 25</td>
           <td class="num">&#8377;135.0</td>
           <td class="num">&#8377;88.1</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+12.5%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+12.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-34.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Gaja Alternative Asset Management</b></td>
+        <tr class="past-row" data-sector="BFSI &amp; Financial Services">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Gaja Alternative Asset Management</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
+          </td>
           <td class="num">&#8377;160</td>
           <td>26 Aug 26</td>
           <td class="num">&#8377;185.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+15.6%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+15.6%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Patel Retail</b></td>
+        <tr class="past-row" data-sector="Retail &amp; E-Commerce">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Patel Retail</div>
+            <span class="sector-pill">Retail &amp; E-Commerce</span>
+          </td>
           <td class="num">&#8377;255</td>
           <td>26 Aug 25</td>
           <td class="num">&#8377;300.0</td>
           <td class="num">&#8377;211.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+17.6%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+17.6%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-29.7%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Shreeji Shipping Global</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shreeji Shipping Global</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;252</td>
           <td>26 Aug 25</td>
           <td class="num">&#8377;270.0</td>
           <td class="num">&#8377;422.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+7.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+7.1%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--green)"><b>+56.3%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Vikram Solar</b></td>
+        <tr class="past-row" data-sector="Renewable Energy &amp; Power">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Vikram Solar</div>
+            <span class="sector-pill">Renewable Energy &amp; Power</span>
+          </td>
           <td class="num">&#8377;332</td>
           <td>26 Aug 25</td>
           <td class="num">&#8377;338.0</td>
           <td class="num">&#8377;216.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+1.8%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+1.8%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-36.1%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Gem Aromatics</b></td>
+        <tr class="past-row" data-sector="Gems &amp; Jewellery">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Gem Aromatics</div>
+            <span class="sector-pill">Gems &amp; Jewellery</span>
+          </td>
           <td class="num">&#8377;325</td>
           <td>26 Aug 25</td>
           <td class="num">&#8377;333.1</td>
           <td class="num">&#8377;163.7</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+2.5%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+2.5%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-50.9%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Ivalue Infosolutions</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Ivalue Infosolutions</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;299</td>
           <td>25 Sep 25</td>
           <td class="num">&#8377;284.9</td>
           <td class="num">&#8377;258.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-4.7%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-4.7%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-9.5%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Arisinfra Solutions</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Arisinfra Solutions</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;222</td>
           <td>25 Jun 25</td>
           <td class="num">&#8377;205.0</td>
           <td class="num">&#8377;135.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--red)"><b>-7.7%</b></td>
+          <td class="num" style="color:var(--red)"><b style="font-size:12px;">-7.7%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-34.1%</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Shankesh Jewellers</b></td>
+        <tr class="past-row" data-sector="Gems &amp; Jewellery">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shankesh Jewellers</div>
+            <span class="sector-pill">Gems &amp; Jewellery</span>
+          </td>
           <td class="num">&#8377;93</td>
           <td>25 Aug 26</td>
           <td class="num">&#8377;103.3</td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+3.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-4.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+11.1%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+8.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.1%</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>Sunshine Pictures</b></td>
+        <tr class="past-row" data-sector="Media &amp; Entertainment">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sunshine Pictures</div>
+            <span class="sector-pill">Media &amp; Entertainment</span>
+          </td>
           <td class="num">&#8377;360</td>
           <td>25 Aug 26</td>
           <td class="num">&#8377;395.9</td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+13.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+13.2%</b></td>
-          <td class="num" style="color:var(--green)"><b>+10.0%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.9%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.2%</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
         </tr>
 
-        <tr class="past-row">
-          <td><b>VMS TMT</b></td>
+        <tr class="past-row" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">VMS TMT</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
           <td class="num">&#8377;99</td>
           <td>24 Sep 25</td>
           <td class="num">&#8377;104.9</td>
           <td class="num">&#8377;50.0</td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
-          <td class="num" style="color:var(--green)"><b>+6.0%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+6.0%</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num" style="color:var(--red)"><b>-52.3%</b></td>

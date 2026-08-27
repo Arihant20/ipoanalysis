@@ -1,11 +1,51 @@
 // IPO Estimator Pro - Client-side Interactions
-function filterOpen(crit, btn) {
-  btn.parentElement.querySelectorAll('.pill-filter').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.open-row').forEach(row => {
-    const rec = row.getAttribute('data-rec');
-    const strat = row.getAttribute('data-strat');
-    if (crit === 'all' || rec === crit || strat === crit) {
+
+// Active action filter state per section
+const sectionActionFilters = {
+  'open': 'all',
+  'pending': 'all',
+  'recently-listed': 'all',
+  'past': 'all'
+};
+
+function filterAction(section, action, btn) {
+  if (btn && btn.parentElement) {
+    btn.parentElement.querySelectorAll('.pill-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  sectionActionFilters[section] = action;
+  filterSection(section);
+}
+
+function filterSection(section) {
+  const actionCrit = sectionActionFilters[section] || 'all';
+  
+  const sectorSelect = document.getElementById('sector-' + section);
+  const sectorCrit = sectorSelect ? sectorSelect.value : 'all';
+  
+  const searchInput = document.getElementById('search-' + section);
+  const searchCrit = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+  const rowClass = (section === 'open') ? '.open-row' :
+                   (section === 'pending') ? '.pending-row' :
+                   (section === 'recently-listed') ? '.recently-listed-row' : '.past-row';
+
+  document.querySelectorAll(rowClass).forEach(row => {
+    const rec = row.getAttribute('data-rec') || '';
+    const strat = row.getAttribute('data-strat') || '';
+    const sector = row.getAttribute('data-sector') || '';
+    const text = row.innerText.toLowerCase();
+
+    // 1. Action filter check
+    let matchesAction = (actionCrit === 'all' || rec === actionCrit || strat === actionCrit);
+
+    // 2. Sector filter check
+    let matchesSector = (sectorCrit === 'all' || sector === sectorCrit);
+
+    // 3. Search query check
+    let matchesSearch = (!searchCrit || text.includes(searchCrit));
+
+    if (matchesAction && matchesSector && matchesSearch) {
       row.style.display = '';
     } else {
       row.style.display = 'none';
@@ -13,46 +53,91 @@ function filterOpen(crit, btn) {
   });
 }
 
-function searchOpen() {
-  const q = document.getElementById('search-open').value.toLowerCase();
-  document.querySelectorAll('.open-row').forEach(row => {
-    row.style.display = row.innerText.toLowerCase().includes(q) ? '' : 'none';
-  });
-}
+// Backwards-compatible legacy helpers
+function filterOpen(crit, btn) { filterAction('open', crit, btn); }
+function searchOpen() { filterSection('open'); }
+function filterPending(crit, btn) { filterAction('pending', crit, btn); }
+function searchPending() { filterSection('pending'); }
+function searchRecentlyListed() { filterSection('recently-listed'); }
+function searchPast() { filterSection('past'); }
 
-function filterPending(crit, btn) {
-  btn.parentElement.querySelectorAll('.pill-filter').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.pending-row').forEach(row => {
-    const rec = row.getAttribute('data-rec');
-    const strat = row.getAttribute('data-strat');
-    if (crit === 'all' || rec === crit || strat === crit) {
-      row.style.display = '';
-    } else {
-      row.style.display = 'none';
+// ==============================================================================
+// INTERACTIVE TABLE COLUMN SORTING
+// ==============================================================================
+
+const sortStates = {};
+
+function sortTable(tableId, colIndex, isNum) {
+  const table = document.getElementById(tableId);
+  if (!table) return;
+
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  if (rows.length === 0) return;
+
+  const key = tableId + '_' + colIndex;
+  const currentAsc = sortStates[key] === 'asc';
+  const newAsc = !currentAsc;
+  sortStates[key] = newAsc ? 'asc' : 'desc';
+
+  // Update header indicators
+  table.querySelectorAll('th').forEach((th, idx) => {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (idx === colIndex) {
+      th.classList.add(newAsc ? 'sort-asc' : 'sort-desc');
     }
   });
+
+  function parseCellVal(cell) {
+    if (!cell) return 0;
+    const txt = cell.innerText.trim();
+    if (!txt || txt === '—' || txt === '--' || txt === 'n/a') return -999999;
+    if (isNum) {
+      const clean = txt.replace(/₹/g, '').replace(/,/g, '').replace(/%/g, '').replace(/x/g, '').replace(/Cr/g, '').replace(/\+/g, '').trim();
+      const n = parseFloat(clean);
+      return isNaN(n) ? -999999 : n;
+    }
+    return txt.toLowerCase();
+  }
+
+  rows.sort((rowA, rowB) => {
+    const cellA = rowA.children[colIndex];
+    const cellB = rowB.children[colIndex];
+    const valA = parseCellVal(cellA);
+    const valB = parseCellVal(cellB);
+
+    if (valA < valB) return newAsc ? -1 : 1;
+    if (valA > valB) return newAsc ? 1 : -1;
+    return 0;
+  });
+
+  rows.forEach(r => tbody.appendChild(r));
 }
 
-function searchPending() {
-  const q = document.getElementById('search-pending').value.toLowerCase();
-  document.querySelectorAll('.pending-row').forEach(row => {
-    row.style.display = row.innerText.toLowerCase().includes(q) ? '' : 'none';
-  });
+// ==============================================================================
+// DENSITY TOGGLE (Compact vs Ultra-Compact)
+// ==============================================================================
+
+function toggleDensity() {
+  const isUltra = document.body.classList.toggle('ultra-compact');
+  const btn = document.getElementById('density-btn');
+  if (btn) {
+    btn.textContent = isUltra ? 'Density: Standard' : 'Density: Ultra-Compact';
+  }
+  try {
+    localStorage.setItem('ipo_density', isUltra ? 'ultra' : 'compact');
+  } catch (e) {}
 }
 
-function searchRecentlyListed() {
-  const q = document.getElementById('search-recently-listed').value.toLowerCase();
-  document.querySelectorAll('.recently-listed-row').forEach(row => {
-    row.style.display = row.innerText.toLowerCase().includes(q) ? '' : 'none';
-  });
-}
-
-function searchPast() {
-  const q = document.getElementById('search-past').value.toLowerCase();
-  document.querySelectorAll('.past-row').forEach(row => {
-    row.style.display = row.innerText.toLowerCase().includes(q) ? '' : 'none';
-  });
+function initDensity() {
+  try {
+    const saved = localStorage.getItem('ipo_density');
+    if (saved === 'ultra') {
+      document.body.classList.add('ultra-compact');
+      const btn = document.getElementById('density-btn');
+      if (btn) btn.textContent = 'Density: Standard';
+    }
+  } catch (e) {}
 }
 
 let currentLmFilter = 'all';
@@ -134,16 +219,17 @@ function loadMoreLMs() {
   updatePagination();
 }
 
-function initLmPage() {
+function initPage() {
+  initDensity();
   if (document.getElementById('lm-cards-container')) {
     applyLmFilters();
   }
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initLmPage);
+  document.addEventListener('DOMContentLoaded', initPage);
 } else {
-  initLmPage();
+  initPage();
 }
 
 function esc(s) {

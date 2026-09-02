@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-02 19:58:00
+    <span class="pulse-dot"></span> Cycle: 2026-09-02 20:29:31
   </div>
 </nav>
 
@@ -46,6 +46,29 @@
         </div>
         <div style='background:#7f1d1d;color:#fecaca;padding:10px 14px;border:1px solid #ef4444;border-radius:6px;margin:10px 0;font-size:12.5px;font-weight:600;'>⚠️ MODEL NOT VALIDATED FOR LIVE TRADING — out-of-time backtest on a 2018+ bear cycle (2020 COVID or 2022 FII) has not passed. Use displayed predictions for research only.</div>
         
+
+
+    <div class="learnings-card" style="background:#0f172a;border:1px solid #1e293b;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0 16px 0;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-bottom:1px solid #1e293b;padding-bottom:8px;margin-bottom:8px;">
+        <div style="font-weight:700;font-size:12.5px;color:#93c5fd;display:flex;align-items:center;gap:6px;">
+          <span>🧠</span> CONTINUOUS MODEL LEARNING &amp; MISTAKE CALIBRATION (MAINBOARD)
+        </div>
+        <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
+          <div>Evaluated: <b style="color:#f8fafc;">16 Listings</b></div>
+          <div>Overprediction Rate: <b style="color:#10b981;">31.2% (5/16)</b></div>
+          <div>Mean Error (Bias): <b style="color:#10b981;">+1.4%</b></div>
+          <div>MAE: <b style="color:#10b981;">14.2%</b></div>
+          <div>Adaptive Dampener: <b style="color:#64748b;">+0.0%</b></div>
+          <div>GMP Blend Weight: <b style="color:#fbbf24;">55%</b></div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
+        <ul style="margin:0 0 0 16px;padding:0;">
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 14.2%, Directional Acc: 75.0%).</li><li style='margin-bottom:3px;'>Learned from Lumino Industries: Pred +22.9% vs Actual +61.9% (Delta +39.0%, Driver: UNDERESTIMATED_DEMAND).</li><li style='margin-bottom:3px;'>Learned from Skyways Air Services: Pred +21.2% vs Actual -10.1% (Delta -31.4%, Driver: GMP_DECAY_HYPE).</li>
+        </ul>
+      </div>
+    </div>
+    
 
 <!-- TOP STATS CARDS -->
 <div class="cards">
@@ -743,10 +766,11 @@
     </thead>
     <tbody id="recently-listed-table-body">
       
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Annu Projects</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
+            <div title='Independent calculation (+0.0%) over-estimated demand pull vs -27.3% actual. Requires conservative margin shrinkage.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-27.3%)</div>
           </td>
           <td class="num">&#8377;99</td>
           <td><b>02 Sep 26</b></td>
@@ -757,8 +781,8 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-27.3%</b></td>
           <td class="num" style="color:var(--red)"><b>-20.2%</b></td>
           <td class="num" style="color:var(--red)"><b>-27.3%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td><div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div></td>
         </tr>
 
@@ -766,6 +790,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Skyways Air Services</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
+            <div title='Grey market premium (+23.9%) decayed or failed to convert to listing pop (-10.1% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-31.4%)</div>
           </td>
           <td class="num">&#8377;138</td>
           <td><b>01 Sep 26</b></td>
@@ -785,6 +810,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Symbiotec Pharmalab</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
+            <div title='Grey market premium (+18.7%) decayed or failed to convert to listing pop (+0.0% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-19.4%)</div>
           </td>
           <td class="num">&#8377;988</td>
           <td><b>01 Sep 26</b></td>
@@ -804,6 +830,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Hy-Tech Engineers</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
+            <div title='Grey market premium (+73.6%) decayed or failed to convert to listing pop (+41.5% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-10.4%)</div>
           </td>
           <td class="num">&#8377;53</td>
           <td><b>01 Sep 26</b></td>
@@ -823,6 +850,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sunshine Pictures</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-3.6%)</div>
           </td>
           <td class="num">&#8377;360</td>
           <td><b>25 Aug 26</b></td>
@@ -842,6 +870,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shankesh Jewellers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
+            <div title='Listing gain (+11.1%) surpassed estimate (-0.5%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+11.6%)</div>
           </td>
           <td class="num">&#8377;93</td>
           <td><b>25 Aug 26</b></td>
@@ -861,6 +890,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Horizon Industrial Parks</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-3.0%)</div>
           </td>
           <td class="num">&#8377;60</td>
           <td><b>24 Aug 26</b></td>
@@ -880,6 +910,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Lalithaa Jewellery Mart</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+4.8%)</div>
           </td>
           <td class="num">&#8377;201</td>
           <td><b>24 Aug 26</b></td>
@@ -899,6 +930,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shiprocket</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
+            <div title='Listing gain (+35.0%) surpassed estimate (+27.0%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+8.0%)</div>
           </td>
           <td class="num">&#8377;97</td>
           <td><b>19 Aug 26</b></td>
@@ -918,6 +950,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Milky Mist Dairy Food</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
+            <div title='Listing gain (+17.9%) surpassed estimate (+4.0%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+13.8%)</div>
           </td>
           <td class="num">&#8377;140</td>
           <td><b>18 Aug 26</b></td>
@@ -937,6 +970,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Molbio Diagnostics</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
+            <div title='Realized listing (+21.4%) underperformed prediction (+29.0%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-7.5%)</div>
           </td>
           <td class="num"></td>
           <td><b>17 Aug 26</b></td>
@@ -956,6 +990,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dhoot Transmission</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
+            <div title='Listing gain (+37.8%) surpassed estimate (+29.9%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+7.8%)</div>
           </td>
           <td class="num"></td>
           <td><b>17 Aug 26</b></td>
@@ -975,6 +1010,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">LEAP India</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
+            <div title='Listing gain (+4.3%) surpassed estimate (-6.1%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+10.4%)</div>
           </td>
           <td class="num">&#8377;159</td>
           <td><b>14 Aug 26</b></td>
@@ -994,6 +1030,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Technocraft Ventures</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
+            <div title='Listing gain (+34.0%) surpassed estimate (+26.3%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+7.7%)</div>
           </td>
           <td class="num">&#8377;212</td>
           <td><b>14 Aug 26</b></td>
@@ -1013,6 +1050,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Behari Lal Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
+            <div title='Listing gain (+63.2%) surpassed estimate (+41.2%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+22.0%)</div>
           </td>
           <td class="num">&#8377;285</td>
           <td><b>19 Aug 26</b></td>

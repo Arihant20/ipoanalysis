@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-02 19:58:01
+    <span class="pulse-dot"></span> Cycle: 2026-09-02 20:29:31
   </div>
 </nav>
 
@@ -46,6 +46,29 @@
         </div>
         <div style='background:#7f1d1d;color:#fecaca;padding:10px 14px;border:1px solid #ef4444;border-radius:6px;margin:10px 0;font-size:12.5px;font-weight:600;'>⚠️ MODEL NOT VALIDATED FOR LIVE TRADING — out-of-time backtest on a 2018+ bear cycle (2020 COVID or 2022 FII) has not passed. Use displayed predictions for research only.</div>
         
+
+
+    <div class="learnings-card" style="background:#0f172a;border:1px solid #1e293b;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin:12px 0 16px 0;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;border-bottom:1px solid #1e293b;padding-bottom:8px;margin-bottom:8px;">
+        <div style="font-weight:700;font-size:12.5px;color:#93c5fd;display:flex;align-items:center;gap:6px;">
+          <span>🧠</span> CONTINUOUS MODEL LEARNING &amp; MISTAKE CALIBRATION (SME)
+        </div>
+        <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
+          <div>Evaluated: <b style="color:#f8fafc;">20 Listings</b></div>
+          <div>Overprediction Rate: <b style="color:#10b981;">30.0% (6/20)</b></div>
+          <div>Mean Error (Bias): <b style="color:#3b82f6;">+11.0%</b></div>
+          <div>MAE: <b style="color:#10b981;">25.6%</b></div>
+          <div>Adaptive Dampener: <b style="color:#f59e0b;">+2.2%</b></div>
+          <div>GMP Blend Weight: <b style="color:#fbbf24;">100%</b></div>
+        </div>
+      </div>
+      <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
+        <ul style="margin:0 0 0 16px;padding:0;">
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in SME (MAE: 25.6%, Directional Acc: 40.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -5.2% vs Actual +111.3% (Delta +116.5%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Technocrats Plasma Systems: Pred -12.5% vs Actual +74.2% (Delta +86.7%, Driver: BLOCKBUSTER_SURGE).</li>
+        </ul>
+      </div>
+    </div>
+    
 
 <!-- TOP STATS CARDS -->
 <div class="cards">
@@ -317,7 +340,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Textiles &amp; Apparel">
+        <tr class="open-row" data-rec="NEUTRAL" data-strat="HOLD_ALLOTTEES" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Qualiance International</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -347,7 +370,7 @@
           </td>
           <td class="num">+0.0</td>
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Hem Securities Ltd: 34 IPOs/5y, avg gain +26.1%, 88% positive</li><li>Market GMP indicates ~39.4% listing premium (benchmark quote).</li></ul>
@@ -858,6 +881,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sumax Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
+            <div title='Grey market premium (+21.8%) decayed or failed to convert to listing pop (+0.0% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-26.5%)</div>
           </td>
           <td class="num">&#8377;101</td>
           <td><b>02 Sep 26</b></td>
@@ -877,6 +901,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">ABH Healthcare</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+4.3%)</div>
           </td>
           <td class="num">&#8377;102</td>
           <td><b>01 Sep 26</b></td>
@@ -896,6 +921,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Madhur Knit Crafts</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
+            <div title='Listing gain (+0.0%) surpassed estimate (-9.0%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+9.0%)</div>
           </td>
           <td class="num">&#8377;100</td>
           <td><b>01 Sep 26</b></td>
@@ -915,6 +941,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Fascinate Textiles</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
+            <div title='SME issue locked at lower circuit (-20.0%). Risk discount was insufficient given liquidity concentration.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ Lower Circuit (-18.2%)</div>
           </td>
           <td class="num">&#8377;151</td>
           <td><b>24 Aug 26</b></td>
@@ -934,6 +961,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Credent Connect N Care</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
+            <div title='Listing gain (+90.0%) surpassed estimate (+35.6%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+54.4%)</div>
           </td>
           <td class="num">&#8377;189</td>
           <td><b>20 Aug 26</b></td>
@@ -953,6 +981,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Pramodini Medicare</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
+            <div title='Listing gain (+1.7%) surpassed estimate (-12.5%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+14.2%)</div>
           </td>
           <td class="num">&#8377;118</td>
           <td><b>19 Aug 26</b></td>
@@ -972,6 +1001,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sham Foam</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
+            <div title='SME issue locked at lower circuit (-20.0%). Risk discount was insufficient given liquidity concentration.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ Lower Circuit (-23.3%)</div>
           </td>
           <td class="num">&#8377;130</td>
           <td><b>18 Aug 26</b></td>
@@ -991,6 +1021,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Skytech Infinite Platform</div>
             <span class="sector-pill">IT &amp; Technology</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-4.5%)</div>
           </td>
           <td class="num">&#8377;77</td>
           <td><b>21 Aug 26</b></td>
@@ -1010,6 +1041,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Mopshop Distribution</div>
             <span class="sector-pill">Retail &amp; E-Commerce</span>
+            <div title='Listing gain (-0.7%) surpassed estimate (-9.9%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+9.2%)</div>
           </td>
           <td class="num">&#8377;138</td>
           <td><b>26 Aug 26</b></td>
@@ -1029,6 +1061,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Q&amp;T Foods</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-3.9%)</div>
           </td>
           <td class="num">&#8377;115</td>
           <td><b>19 Aug 26</b></td>
@@ -1048,6 +1081,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dhanwel Hybrid Seeds</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
+            <div title='Listing gain (+0.0%) surpassed estimate (-10.6%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+10.6%)</div>
           </td>
           <td class="num">&#8377;99</td>
           <td><b>26 Aug 26</b></td>
@@ -1067,6 +1101,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Optimystix Entertainment India</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+2.9%)</div>
           </td>
           <td class="num">&#8377;175</td>
           <td><b>14 Aug 26</b></td>
@@ -1086,6 +1121,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">AJC Jewel Manufacturers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
+            <div title='Listing gain (+4.2%) surpassed estimate (-1.9%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+6.1%)</div>
           </td>
           <td class="num"></td>
           <td><b>01 Jul 25</b></td>
@@ -1105,6 +1141,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">ENS Enterprises</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
+            <div title='Independent calculation (+11.3%) over-estimated demand pull vs -9.6% actual. Requires conservative margin shrinkage.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-20.9%)</div>
           </td>
           <td class="num">&#8377;92</td>
           <td><b>21 Aug 26</b></td>
@@ -1124,6 +1161,7 @@
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Technocrats Plasma Systems</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
+            <div title='Blockbuster listing pop (+74.2%) exceeded pre-listing expectations (-12.5%). Institutional demand tail was underweighted.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>🚀 Pop Surge (+86.7%)</div>
           </td>
           <td class="num">&#8377;132</td>
           <td><b>21 Aug 26</b></td>

@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-03 18:49:38
+    <span class="pulse-dot"></span> Cycle: 2026-09-04 12:01:02
   </div>
 </nav>
 
@@ -56,15 +56,15 @@
         <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
           <div>Evaluated: <b style="color:#f8fafc;">20 Listings</b></div>
           <div>Overprediction Rate: <b style="color:#10b981;">30.0% (6/20)</b></div>
-          <div>Mean Error (Bias): <b style="color:#3b82f6;">+11.3%</b></div>
-          <div>MAE: <b style="color:#10b981;">25.8%</b></div>
+          <div>Mean Error (Bias): <b style="color:#3b82f6;">+11.6%</b></div>
+          <div>MAE: <b style="color:#10b981;">26.1%</b></div>
           <div>Adaptive Dampener: <b style="color:#f59e0b;">+2.3%</b></div>
           <div>GMP Blend Weight: <b style="color:#fbbf24;">100%</b></div>
         </div>
       </div>
       <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
         <ul style="margin:0 0 0 16px;padding:0;">
-          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in SME (MAE: 25.8%, Directional Acc: 45.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -5.2% vs Actual +111.3% (Delta +116.5%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Technocrats Plasma Systems: Pred -12.5% vs Actual +74.2% (Delta +86.7%, Driver: BLOCKBUSTER_SURGE).</li>
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in SME (MAE: 26.1%, Directional Acc: 40.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -5.2% vs Actual +111.3% (Delta +116.5%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Technocrats Plasma Systems: Pred -12.5% vs Actual +74.2% (Delta +86.7%, Driver: BLOCKBUSTER_SURGE).</li>
         </ul>
       </div>
     </div>
@@ -73,7 +73,7 @@
 <!-- TOP STATS CARDS -->
 <div class="cards">
   <div class="card" style="border-color:var(--green)">
-    <div class="cnum" style="color:var(--green)">11</div>
+    <div class="cnum" style="color:var(--green)">10</div>
     <div class="clbl">Currently Open</div>
   </div>
   <div class="card" style="border-color:var(--amber)">
@@ -81,7 +81,7 @@
     <div class="clbl">Listing Pending</div>
   </div>
   <div class="card" style="border-color:#3b82f6">
-    <div class="cnum" style="color:#60a5fa">16</div>
+    <div class="cnum" style="color:#60a5fa">18</div>
     <div class="clbl">Recently Listed</div>
   </div>
   <div class="card" style="border-color:#10b981">
@@ -102,7 +102,7 @@
 <!-- SECTION 1: CURRENTLY OPENED IPOS -->
 <!-- ========================================================================= -->
 <div class="sec-hdr-row">
-  <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. Currently Open for Bidding (11 IPOs)</div>
+  <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. Currently Open for Bidding (10 IPOs)</div>
   <div class="density-switch">
     <button class="btn-density" onclick="toggleDensity()" id="density-btn" title="Toggle table row padding and font size">Density: Ultra-Compact</button>
   </div>
@@ -111,7 +111,7 @@
 <div class="toolbar">
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (11)</button>
+    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (10)</button>
     <button class="pill-filter" onclick="filterAction('open', 'SUBSCRIBE', this)">Subscribe</button>
     <button class="pill-filter" onclick="filterAction('open', 'BUY_AT_LISTING', this)">Buy at Open</button>
     <button class="pill-filter" onclick="filterAction('open', 'AVOID', this)">Avoid / Trap</button>
@@ -154,86 +154,12 @@
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Farm Peace</div>
-            <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;59
-            
-          </td>
-          <td>2026-09-03<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-08)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b style="font-size:11.5px;">-4.5%</b>
-          </td>
-          <td class="num"><b>&#8377;56.3</b></td>
-          <td>
-    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;10.2%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-14.8% &sim; +5.6%]</div>
-    </div></td>
-          <td class="num" style="color:var(--dim)">
-            <b>+0.0%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;59.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 9.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.6x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>4.8x</b></div>
-          </td>
-          <td class="num">+4.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
-          <td>
-            <div style="font-weight:600;font-size:11px;">Socradamus Capital Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Socradamus Capital Pvt Ltd: 5 IPOs/5y, avg gain +9.3%, 40% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Fly-Hi Maritime Travels</div>
-            <span class="sector-pill">Logistics &amp; Supply Chain</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;102
-            
-          </td>
-          <td>2026-09-03<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-08)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b style="font-size:11.5px;">-5.8%</b>
-          </td>
-          <td class="num"><b>&#8377;96.0</b></td>
-          <td>
-    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;9.6%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-15.4% &sim; +3.8%]</div>
-    </div></td>
-          <td class="num" style="color:var(--green)">
-            <b>+19.6%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;122.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 123.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 3.6x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>63.3x</b></div>
-          </td>
-          <td class="num">+25.0</td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td>
-            <div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Corporate Makers Capital Ltd: 12 IPOs/5y, avg gain -2.1%, 17% positive</li><li>Market GMP indicates ~19.6% listing premium (benchmark quote).</li></ul>
-          </td>
-        </tr>
-
         <tr class="open-row" data-rec="NEUTRAL" data-strat="HOLD_ALLOTTEES" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Qualiance International</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
           </td>
-          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td><span title='Day 1 (Interim) — Early bids; value will update on Day 2 & Final Day.' style='background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 1 (Interim)</span></td>
           <td class="num">
             &#8377;127
             
@@ -253,8 +179,8 @@
             <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;182.0</div>
           </td>
           <td>
-            <span class='dim'>—</span>
-            
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 1.9x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 3.5x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>2.7x</b></div>
           </td>
           <td class="num">+0.0</td>
           <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
@@ -560,6 +486,43 @@
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd: 43 IPOs/5y, avg gain +12.3%, 67% positive</li><li>Icici Securities Ltd: 41 IPOs/5y, avg gain +10.9%, 66% positive</li></ul>
           </td>
         </tr>
+
+        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Logistics &amp; Supply Chain">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Apana Logistics</div>
+            <span class="sector-pill">Logistics &amp; Supply Chain</span>
+          </td>
+          <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
+          <td class="num">
+            &#8377;60
+            
+          </td>
+          <td>--</td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-8.0%</b>
+          </td>
+          <td class="num"><b>&#8377;55.2</b></td>
+          <td>
+    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;10.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-18.4% &sim; +2.4%]</div>
+    </div></td>
+          <td class="num" style="color:var(--dim)">
+            <b>+0.0%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;60.0</div>
+          </td>
+          <td>
+            <span class='dim'>—</span>
+            
+          </td>
+          <td class="num">+0.0</td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <div style="font-weight:600;font-size:11px;">Unassigned</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li><li>Our independent calculated fair value is -8.0% (consensus expectation: -8.0%).</li></ul>
+          </td>
+        </tr>
     </tbody>
   </table>
 </div>
@@ -579,9 +542,9 @@
     <span class="filter-label">SECTOR:</span>
     <select class="select-filter" id="sector-pending" onchange="filterSection('pending')">
       <option value="all">All Sectors</option>
-      <option value="Chemicals &amp; Materials">Chemicals &amp; Materials</option>
-<option value="IT &amp; Technology">IT &amp; Technology</option>
-<option value="Media &amp; Entertainment">Media &amp; Entertainment</option>
+      <option value="Agriculture &amp; Agri-Tech">Agriculture &amp; Agri-Tech</option>
+<option value="Chemicals &amp; Materials">Chemicals &amp; Materials</option>
+<option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain</option>
 <option value="Textiles &amp; Apparel">Textiles &amp; Apparel</option>
     </select>
   </div>
@@ -609,80 +572,6 @@
     </thead>
     <tbody id="pending-table-body">
       
-        <tr class="pending-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Paluck Technologies</div>
-            <span class="sector-pill">IT &amp; Technology</span>
-          </td>
-          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
-          <td class="num">
-            &#8377;48
-            
-          </td>
-          <td><b>2026-09-04</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-01)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:11.5px;">+46.0%</b>
-          </td>
-          <td class="num"><b>&#8377;70.1</b></td>
-          <td>
-    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;30.9%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[+15.1% &sim; +76.9%]</div>
-    </div></td>
-          <td class="num" style="color:var(--green)">
-            <b>+20.8%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;58.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 53.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 8559.0x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 9851.0x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>3880.6x</b></div>
-          </td>
-          <td class="num">+25.0</td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td>
-            <div style="font-weight:600;font-size:11px;">Horizon Management Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Horizon Management Pvt Ltd: 18 IPOs/5y, avg gain +9.3%, 44% positive</li><li>Market GMP indicates ~20.8% listing premium (benchmark quote).</li></ul>
-          </td>
-        </tr>
-
-        <tr class="pending-row" data-rec="AVOID" data-strat="DO_NOT_BUY" data-sector="Media &amp; Entertainment">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Complete Sports &amp; Management India</div>
-            <span class="sector-pill">Media &amp; Entertainment</span>
-          </td>
-          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
-          <td class="num">
-            &#8377;135
-            
-          </td>
-          <td><b>2026-09-04</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-01)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:11.5px;">+2.1%</b>
-          </td>
-          <td class="num"><b>&#8377;137.9</b></td>
-          <td>
-    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;5.1%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-3.0% &sim; +7.2%]</div>
-    </div></td>
-          <td class="num" style="color:var(--dim)">
-            <b>+0.0%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;135.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 13.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 160.0x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 168.0x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>77.2x</b></div>
-          </td>
-          <td class="num">+25.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
-          <td>
-            <div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Smart Horizon Capital Advisors Pvt Ltd: 25 IPOs/5y, avg gain +7.2%, 76% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
-          </td>
-        </tr>
-
         <tr class="pending-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shanti Inorganics</div>
@@ -793,6 +682,80 @@
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Hem Securities Ltd: 34 IPOs/5y, avg gain +26.1%, 88% positive</li><li>Market GMP indicates ~1.9% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
+
+        <tr class="pending-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Farm Peace</div>
+            <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;59
+            
+          </td>
+          <td><b>2026-09-08</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-03)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-4.6%</b>
+          </td>
+          <td class="num"><b>&#8377;56.3</b></td>
+          <td>
+    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;10.0%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-14.6% &sim; +5.4%]</div>
+    </div></td>
+          <td class="num" style="color:var(--dim)">
+            <b>+0.0%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;59.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 9.0x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>9.0x</b></div>
+          </td>
+          <td class="num">+4.0</td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <div style="font-weight:600;font-size:11px;">Socradamus Capital Pvt Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Socradamus Capital Pvt Ltd: 5 IPOs/5y, avg gain +9.3%, 40% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Fly-Hi Maritime Travels</div>
+            <span class="sector-pill">Logistics &amp; Supply Chain</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;102
+            
+          </td>
+          <td><b>2026-09-08</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-03)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-5.8%</b>
+          </td>
+          <td class="num"><b>&#8377;96.1</b></td>
+          <td>
+    <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;9.7%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-15.5% &sim; +3.9%]</div>
+    </div></td>
+          <td class="num" style="color:var(--green)">
+            <b>+19.6%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;122.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 123.0x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>123.0x</b></div>
+          </td>
+          <td class="num">+25.0</td>
+          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Corporate Makers Capital Ltd: 12 IPOs/5y, avg gain -2.1%, 17% positive</li><li>Market GMP indicates ~19.6% listing premium (benchmark quote).</li></ul>
+          </td>
+        </tr>
     </tbody>
   </table>
 </div>
@@ -800,7 +763,7 @@
 <!-- ========================================================================= -->
 <!-- SECTION 3: RECENTLY CLOSED — LISTED -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#38bdf8;"><span class="dot-listed"></span> 3. Recently Closed — Listed (16 IPOs)</div>
+<div class="sec-hdr" style="color:#38bdf8;"><span class="dot-listed"></span> 3. Recently Closed — Listed (18 IPOs)</div>
 <div class="toolbar">
   <div class="filter-group">
     <span class="filter-label">SECTOR:</span>
@@ -841,6 +804,46 @@
     </thead>
     <tbody id="recently-listed-table-body">
       
+        <tr class="recently-listed-row" data-rec="AVOID" data-strat="DO_NOT_BUY" data-sector="Media &amp; Entertainment">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Complete Sports &amp; Management India</div>
+            <span class="sector-pill">Media &amp; Entertainment</span>
+            
+          </td>
+          <td class="num">&#8377;135</td>
+          <td><b>2026-09-04</b></td>
+          <td class="num"></td>
+          <td class="num"></td>
+          <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
+          <td class="num" style="color:var(--green)"><b>+2.1%</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
+          <td class="num"><span class="dim">&mdash;</span></td>
+          <td class="num"><span class="dim">&mdash;</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td><div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div></td>
+        </tr>
+
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Paluck Technologies</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+            <div title='Independent calculation (+46.1%) over-estimated demand pull vs +10.0% actual. Requires conservative margin shrinkage.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-25.8%)</div>
+          </td>
+          <td class="num">&#8377;48</td>
+          <td><b>2026-09-04</b></td>
+          <td class="num"></td>
+          <td class="num"></td>
+          <td class="num" style="color:var(--green)"><b>+20.8%</b></td>
+          <td class="num" style="color:var(--green)"><b>+46.1%</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
+          <td class="num"><span class="dim">&mdash;</span></td>
+          <td class="num"><span class="dim">&mdash;</span></td>
+          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td><div style="font-weight:600;font-size:11px;">Horizon Management Pvt Ltd</div></td>
+        </tr>
+
         <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Kwick Forensic Solutions</div>

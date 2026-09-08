@@ -38,6 +38,11 @@ function filterSection(section) {
 
     // 1. Action filter check
     let matchesAction = (actionCrit === 'all' || rec === actionCrit || strat === actionCrit);
+    if (actionCrit === 'BUY') {
+      matchesAction = (rec === 'BUY' || rec === 'SUBSCRIBE' || rec === 'MUST_BUY');
+    } else if (actionCrit === 'IGNORE') {
+      matchesAction = (rec === 'IGNORE' || rec === 'AVOID');
+    }
 
     // 2. Sector filter check
     let matchesSector = (sectorCrit === 'all' || sector === sectorCrit);

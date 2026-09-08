@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-08 10:50:56
+    <span class="pulse-dot"></span> Cycle: 2026-09-08 12:06:37
   </div>
 </nav>
 
@@ -84,9 +84,13 @@
     <div class="cnum" style="color:#60a5fa">21</div>
     <div class="clbl">Recently Listed</div>
   </div>
+  <div class="card" style="border-color:#8b5cf6">
+    <div class="cnum" style="color:#a78bfa">0</div>
+    <div class="clbl">MUST BUY Action</div>
+  </div>
   <div class="card" style="border-color:#10b981">
-    <div class="cnum" style="color:#34d399">0</div>
-    <div class="clbl">SUBSCRIBE Action</div>
+    <div class="cnum" style="color:#34d399">1</div>
+    <div class="clbl">BUY Action (All)</div>
   </div>
   <div class="card">
     <div class="cnum" style="color:var(--green)">+9.5%</div>
@@ -112,9 +116,10 @@
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
     <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (27)</button>
-    <button class="pill-filter" onclick="filterAction('open', 'SUBSCRIBE', this)">Subscribe</button>
+    <button class="pill-filter" onclick="filterAction('open', 'MUST_BUY', this)">Must Buy</button>
+    <button class="pill-filter" onclick="filterAction('open', 'BUY', this)">Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'BUY_AT_LISTING', this)">Buy at Open</button>
-    <button class="pill-filter" onclick="filterAction('open', 'AVOID', this)">Avoid / Trap</button>
+    <button class="pill-filter" onclick="filterAction('open', 'IGNORE', this)">Ignore / Avoid</button>
   </div>
   <div class="filter-group">
     <span class="filter-label">SECTOR:</span>
@@ -159,7 +164,7 @@
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="HOLD_ALLOTTEES" data-sector="Textiles &amp; Apparel">
+        <tr class="open-row" data-rec="BUY" data-strat="HOLD_ALLOTTEES" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Qualiance International</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -176,27 +181,27 @@
           <td class="num"><b>&#8377;126.5</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;5.8%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-6.2% &sim; +5.4%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;6.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-6.8% &sim; +6.0%]</div>
     </div></td>
           <td class="num" style="color:var(--green)">
             <b>+43.3%</b>
             <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;182.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 5.8x</span> | <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 135.7x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 120.7x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>128.2x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 8.4x</span> | <span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 226.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 173.2x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>199.8x</b></div>
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
           <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Hem Securities Ltd: 34 IPOs/5y, avg gain +26.1%, 88% positive</li><li>Market GMP indicates ~43.3% listing premium (benchmark quote).</li></ul>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Hem Securities Ltd [Tier 1 (Elite Alpha)]: 34 IPOs, avg gain +26.1%, 88% positive (LM impact: +10.3 pts)</li><li>Market GMP indicates ~43.3% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Chemicals &amp; Materials">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Amtech Esters</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -213,8 +218,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.7%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.8% &sim; +1.6%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.5%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.6% &sim; +3.4%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -225,7 +230,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Credora Partners Pvt Ltd</div>
@@ -250,8 +255,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;22.8%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-22.0% &sim; +23.6%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;26.2%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-25.4% &sim; +27.0%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -266,7 +271,7 @@
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">GYR Capital Advisors Pvt Ltd.</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>GYR Capital Advisors Pvt Ltd.: 31 IPOs/5y, avg gain +49.1%, 90% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>GYR Capital Advisors Pvt Ltd. [Tier 1 (Elite Alpha)]: 31 IPOs, avg gain +49.1%, 90% positive (LM impact: +17.2 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
@@ -381,7 +386,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Taiyo Feed Mill</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -398,8 +403,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.2%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-14.5% &sim; +7.9%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;12.8%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-16.1% &sim; +9.5%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -410,11 +415,11 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Share India Capital Services Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Share India Capital Services Pvt Ltd: 11 IPOs/5y, avg gain +18.5%, 54% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Share India Capital Services Pvt Ltd [Tier 3 (Moderate)]: 11 IPOs, avg gain +18.5%, 54% positive (LM impact: +5.5 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
@@ -455,7 +460,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="IT &amp; Technology">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dove Soft</div>
             <span class="sector-pill">IT &amp; Technology</span>
@@ -472,8 +477,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;7.2%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-11.0% &sim; +3.4%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;8.3%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-12.1% &sim; +4.5%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -484,11 +489,11 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unicon Capital Services Pvt Ltd, Grow House Wealth Management Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Unicon Capital Services Pvt Ltd: 3 IPOs/5y, avg gain -4.2%, 33% positive</li><li>Grow House Wealth Management Pvt Ltd: 2 IPOs/5y, avg gain +5.4%, 100% positive</li></ul>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Unicon Capital Services Pvt Ltd [Tier 4 (High Risk)]: 3 IPOs, avg gain -4.2%, 33% positive (LM impact: -9.3 pts)</li><li>Grow House Wealth Management Pvt Ltd [Tier 3 (Moderate)]: 2 IPOs, avg gain +5.4%, 100% positive (LM impact: +1.6 pts)</li></ul>
           </td>
         </tr>
 
@@ -529,7 +534,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Hospitality &amp; Tourism">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Hospitality &amp; Tourism">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Neptune Holidays</div>
             <span class="sector-pill">Hospitality &amp; Tourism</span>
@@ -546,8 +551,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;9.4%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-14.0% &sim; +4.8%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;10.8%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-15.4% &sim; +6.2%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -558,11 +563,11 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Horizon Management Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Horizon Management Pvt Ltd: 18 IPOs/5y, avg gain +9.3%, 44% positive</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Horizon Management Pvt Ltd [Tier 4 (High Risk)]: 18 IPOs, avg gain +9.3%, 44% positive (LM impact: -5.2 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
@@ -640,7 +645,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Logistics &amp; Supply Chain">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Apana Logistics</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -657,19 +662,19 @@
           <td class="num"><b>&#8377;55.2</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;10.4%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-18.4% &sim; +2.4%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;12.0%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-20.0% &sim; +4.0%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
             <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;60.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 0.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.4x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.2x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='HNI / NII' style='color:#a78bfa;'><b>HNI:</b> 0.1x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.6x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.3x</b></div>
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -677,7 +682,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Vinod Texworld</div>
             <span class="sector-pill">Diversified</span>
@@ -694,8 +699,8 @@
           <td class="num"><b>&#8377;85.3</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.4%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-20.7% &sim; +2.1%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.1%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-22.4% &sim; +3.8%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -706,7 +711,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -714,7 +719,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">National Stock Exchange of India</div>
             <span class="sector-pill">Diversified</span>
@@ -731,8 +736,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;12.0%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-22.0% &sim; +2.0%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.7%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.7% &sim; +3.7%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -743,7 +748,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -751,7 +756,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Media &amp; Entertainment">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Media &amp; Entertainment">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Century Business Media</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
@@ -768,8 +773,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.6%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.6% &sim; +1.6%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.3%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.3% &sim; +3.3%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -780,7 +785,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -788,7 +793,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Om Galaxy</div>
             <span class="sector-pill">Diversified</span>
@@ -805,8 +810,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.7%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.7% &sim; +1.7%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.4% &sim; +3.4%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -817,7 +822,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -825,7 +830,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rentomojo</div>
             <span class="sector-pill">Diversified</span>
@@ -842,8 +847,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.9%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.9% &sim; +1.9%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.7%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.7% &sim; +3.7%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -854,7 +859,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -862,7 +867,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Maharaja &amp; Speedex India</div>
             <span class="sector-pill">Diversified</span>
@@ -879,8 +884,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.3%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.3% &sim; +1.3%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.0%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.0% &sim; +3.0%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -891,7 +896,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -899,7 +904,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manika Plastech</div>
             <span class="sector-pill">Diversified</span>
@@ -916,8 +921,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.9%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-22.0% &sim; +1.8%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.7%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.8% &sim; +3.6%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -928,7 +933,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -936,7 +941,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">LCC Projects</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -953,8 +958,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.6%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.8% &sim; +1.4%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.3%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.5% &sim; +3.1%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -965,7 +970,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -973,7 +978,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Steamhouse India</div>
             <span class="sector-pill">Diversified</span>
@@ -990,8 +995,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.4%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.6% &sim; +1.2%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.2%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.4% &sim; +3.0%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -1002,7 +1007,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -1010,7 +1015,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Engineering &amp; Capital Goods">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Karamtara Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -1027,8 +1032,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.7%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-21.9% &sim; +1.5%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.6% &sim; +3.2%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -1039,7 +1044,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -1047,7 +1052,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Raksan Transformers</div>
             <span class="sector-pill">Diversified</span>
@@ -1064,8 +1069,8 @@
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;12.5%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-22.7% &sim; +2.3%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;14.4%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-24.6% &sim; +4.2%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -1076,7 +1081,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -1084,7 +1089,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Renewable Energy &amp; Power">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Renewable Energy &amp; Power">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Infrax Renewable</div>
             <span class="sector-pill">Renewable Energy &amp; Power</span>
@@ -1101,8 +1106,8 @@
           <td class="num"><b>&#8377;93.3</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;12.4%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-22.7% &sim; +2.1%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;14.2%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-24.5% &sim; +3.9%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -1113,7 +1118,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -1121,7 +1126,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Panchatv Bharat</div>
             <span class="sector-pill">Diversified</span>
@@ -1138,8 +1143,8 @@
           <td class="num"><b>&#8377;123.6</b></td>
           <td>
     <div style='text-align:right;' title='Stage-scaled error estimate (not a calibrated interval)'>
-      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;11.6%</div>
-      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-23.3% &sim; -0.1%]</div>
+      <div style='font-size:10.5px;font-weight:700;color:#94a3b8;'>&plusmn;13.3%</div>
+      <div style='font-size:9px;color:#64748b;font-variant-numeric:tabular-nums;'>[-25.0% &sim; +1.6%]</div>
     </div></td>
           <td class="num" style="color:var(--dim)">
             <b>+0.0%</b>
@@ -1150,7 +1155,7 @@
             
           </td>
           <td class="num">+0.0</td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unassigned</div>
@@ -1169,8 +1174,9 @@
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
     <button class="pill-filter active" onclick="filterAction('pending', 'all', this)">All (0)</button>
-    <button class="pill-filter" onclick="filterAction('pending', 'SUBSCRIBE', this)">Subscribed</button>
-    <button class="pill-filter" onclick="filterAction('pending', 'AVOID', this)">Avoid / Trap</button>
+    <button class="pill-filter" onclick="filterAction('pending', 'MUST_BUY', this)">Must Buy</button>
+    <button class="pill-filter" onclick="filterAction('pending', 'BUY', this)">Buy</button>
+    <button class="pill-filter" onclick="filterAction('pending', 'IGNORE', this)">Ignore / Avoid</button>
   </div>
   <div class="filter-group">
     <span class="filter-label">SECTOR:</span>
@@ -1253,7 +1259,7 @@
     </thead>
     <tbody id="recently-listed-table-body">
       
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
+        <tr class="recently-listed-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Fly-Hi Maritime Travels</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -1264,16 +1270,16 @@
           <td class="num"></td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+19.6%</b></td>
-          <td class="num" style="color:var(--red)"><b>-5.8%</b></td>
+          <td class="num" style="color:var(--green)"><b>+8.8%</b></td>
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
+          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
           <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
           <td><div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Farm Peace</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -1288,7 +1294,7 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td><div style="font-weight:600;font-size:11px;">Socradamus Capital Pvt Ltd</div></td>
         </tr>
@@ -1613,7 +1619,7 @@
           <td><div style="font-weight:600;font-size:11px;">Lsi Financial Services Private Ltd, Nexgen Financial Solutions Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Gems &amp; Jewellery">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">AJC Jewel Manufacturers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
@@ -1628,7 +1634,7 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+4.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+6.1%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
+          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
           <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
           <td><div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div></td>
         </tr>

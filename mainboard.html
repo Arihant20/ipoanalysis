@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-11 14:37:48
+    <span class="pulse-dot"></span> Cycle: 2026-09-12 00:34:12
   </div>
 </nav>
 
@@ -56,15 +56,15 @@
         <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
           <div>Evaluated: <b style="color:#f8fafc;">20 Listings</b></div>
           <div>Overprediction Rate: <b style="color:#10b981;">15.0% (3/20)</b></div>
-          <div>Mean Error (Bias): <b style="color:#3b82f6;">+12.8%</b></div>
-          <div>MAE: <b style="color:#10b981;">21.4%</b></div>
+          <div>Mean Error (Bias): <b style="color:#3b82f6;">+13.1%</b></div>
+          <div>MAE: <b style="color:#10b981;">21.3%</b></div>
           <div>Adaptive Dampener: <b style="color:#f59e0b;">+2.6%</b></div>
           <div>GMP Blend Weight: <b style="color:#fbbf24;">100%</b></div>
         </div>
       </div>
       <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
         <ul style="margin:0 0 0 16px;padding:0;">
-          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 21.4%, Directional Acc: 65.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -12.5% vs Actual +111.3% (Delta +123.8%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from esds software: Pred -12.5% vs Actual +76.5% (Delta +89.0%, Driver: BLOCKBUSTER_SURGE).</li>
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 21.3%, Directional Acc: 65.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -12.5% vs Actual +111.3% (Delta +123.8%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from esds software: Pred -12.5% vs Actual +76.5% (Delta +89.0%, Driver: BLOCKBUSTER_SURGE).</li>
         </ul>
       </div>
     </div>
@@ -73,11 +73,11 @@
 <!-- TOP STATS CARDS -->
 <div class="cards">
   <div class="card" style="border-color:var(--green)">
-    <div class="cnum" style="color:var(--green)">21</div>
+    <div class="cnum" style="color:var(--green)">14</div>
     <div class="clbl">Currently Open</div>
   </div>
   <div class="card" style="border-color:var(--amber)">
-    <div class="cnum" style="color:var(--amber)">3</div>
+    <div class="cnum" style="color:var(--amber)">10</div>
     <div class="clbl">Listing Pending</div>
   </div>
   <div class="card" style="border-color:#3b82f6">
@@ -85,11 +85,11 @@
     <div class="clbl">Recently Listed</div>
   </div>
   <div class="card" style="border-color:#8b5cf6">
-    <div class="cnum" style="color:#a78bfa">4</div>
+    <div class="cnum" style="color:#a78bfa">3</div>
     <div class="clbl">MUST BUY Action</div>
   </div>
   <div class="card" style="border-color:#10b981">
-    <div class="cnum" style="color:#34d399">6</div>
+    <div class="cnum" style="color:#34d399">5</div>
     <div class="clbl">BUY Action (All)</div>
   </div>
   <div class="card">
@@ -106,7 +106,7 @@
 <!-- SECTION 1: CURRENTLY OPENED IPOS -->
 <!-- ========================================================================= -->
 <div class="sec-hdr-row">
-  <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. Currently Open for Bidding (21 IPOs)</div>
+  <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. Currently Open for Bidding (14 IPOs)</div>
   <div class="density-switch">
     <button class="btn-density" onclick="toggleDensity()" id="density-btn" title="Toggle table row padding and font size">Density: Ultra-Compact</button>
   </div>
@@ -115,7 +115,7 @@
 <div class="toolbar">
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (21)</button>
+    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (14)</button>
     <button class="pill-filter" onclick="filterAction('open', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'BUY', this)">Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'IGNORE', this)">Ignore / Avoid</button>
@@ -126,13 +126,10 @@
       <option value="all">All Sectors</option>
       <option value="Agriculture &amp; Agri-Tech">Agriculture &amp; Agri-Tech</option>
 <option value="Auto &amp; Ancillaries">Auto &amp; Ancillaries</option>
-<option value="BFSI &amp; Financial Services">BFSI &amp; Financial Services</option>
 <option value="Chemicals &amp; Materials">Chemicals &amp; Materials</option>
 <option value="Diversified">Diversified</option>
-<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
 <option value="Hospitality &amp; Tourism">Hospitality &amp; Tourism</option>
 <option value="IT &amp; Technology">IT &amp; Technology</option>
-<option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain</option>
 <option value="Metals &amp; Mining">Metals &amp; Mining</option>
 <option value="Real Estate &amp; Infrastructure">Real Estate &amp; Infrastructure</option>
 <option value="Renewable Energy &amp; Power">Renewable Energy &amp; Power</option>
@@ -163,390 +160,12 @@
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="MUST_BUY" data-sector="Logistics &amp; Supply Chain">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rentomojo</div>
-            <span class="sector-pill">Logistics &amp; Supply Chain</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;404
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:11.5px;">+3.6%</b>
-          </td>
-          <td class="num"><b>&#8377;418.6</b></td>
-          <td class="num" style="color:var(--green)">
-            <b>+33.4%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;539.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 4.8x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 22.1x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 6.3x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>5.5x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              68/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">GOOD VALUE</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: +18.0%
-              </div>
-              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;477</div>
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>40.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 21.5% Pre &rarr; 19.9% Post'>Promoter: <b>19.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(21%&rarr;20%, -1.6% dil.)</span></span><span style='background:#1e293b;border:1px solid #ef444466;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Heavy OFS: Pre-IPO investors cashing out'>OFS: 88% (₹1106 Cr)</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹376 Cr</b> (30d: 2026-10-15)</span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 25.1%.</li><li style='margin-bottom:2px;'>Robust net margin of 16.2%.</li>
-          </ul>
-          
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>80</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Axis Capital Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="BUY" data-sector="Diversified">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Steamhouse India</div>
-            <span class="sector-pill">Diversified</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;81
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:11.5px;">+1.4%</b>
-          </td>
-          <td class="num"><b>&#8377;82.1</b></td>
-          <td class="num" style="color:var(--green)">
-            <b>+28.4%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;104.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.7x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.9x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 10.2x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 5.5x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>4.1x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              46/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#ef4444;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: -4.0%
-              </div>
-              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;78</div>
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>57.9x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 95.8% Pre &rarr; 78.0% Post'>Promoter: <b>78.0%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(96%&rarr;78%, -17.8% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 85% | OFS 15%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹124 Cr</b> (30d: 2026-10-15)</span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Healthy profitability: ROE of 22.4%.</li><li style='margin-bottom:2px;'>High financial leverage: D/E of 1.57x introduces balance sheet risk.</li>
-          </ul>
-          
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>60</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Equirus Capital Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Equirus Capital Pvt Ltd [Tier 2 (High Conviction)]: 12 IPOs, avg gain +16.7%, 67% positive (LM impact: +6.0 pts)</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="BUY" data-sector="Engineering &amp; Capital Goods">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Karamtara Engineering</div>
-            <span class="sector-pill">Engineering &amp; Capital Goods</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;254
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:11.5px;">+0.8%</b>
-          </td>
-          <td class="num"><b>&#8377;255.9</b></td>
-          <td class="num" style="color:var(--green)">
-            <b>+27.2%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;323.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 2.4x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 2.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 14.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 5.3x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>4.6x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              60/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: +10.0%
-              </div>
-              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;279</div>
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>35.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 94.8% Pre &rarr; 83.6% Post'>Promoter: <b>83.6%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(95%&rarr;84%, -11.2% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 77% | OFS 23%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹262 Cr</b> (30d: 2026-10-15)</span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 23.3%.</li>
-          </ul>
-          
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>68</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Jm Financial Ltd, Icici Securities Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="MUST_BUY" data-sector="Real Estate &amp; Infrastructure">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">LCC Projects</div>
-            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;146
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b style="font-size:11.5px;">-0.3%</b>
-          </td>
-          <td class="num"><b>&#8377;145.5</b></td>
-          <td class="num" style="color:var(--green)">
-            <b>+34.9%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;197.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 1.8x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 19.8x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 8.8x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>6.4x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              60/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: +10.0%
-              </div>
-              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;161</div>
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>14.8x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 89.9% Post'>Promoter: <b>89.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;90%, -10.1% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 60% | OFS 40%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹128 Cr</b> (30d: 2026-10-15)</span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 27.6%.</li>
-          </ul>
-          
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>73</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Motilal Oswal Investment Advisors Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="IGNORE" data-sector="Diversified">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Asset Reconstruction Co.(India)</div>
-            <span class="sector-pill">Diversified</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;139
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b style="font-size:11.5px;">-15.0%</b>
-          </td>
-          <td class="num"><b>&#8377;118.1</b></td>
-          <td class="num" style="color:var(--green)">
-            <b>+10.1%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;153.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.5x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.5x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>1.0x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              66/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">GOOD VALUE</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: +16.0%
-              </div>
-              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;161</div>
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>11.1x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 88.5% Pre &rarr; 77.5% Post'>Promoter: <b>77.5%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(88%&rarr;77%, -11.0% dil.)</span></span><span style='background:#1e293b;border:1px solid #ef444466;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Heavy OFS: Pre-IPO investors cashing out'>OFS: 100% (₹733 Cr)</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹220 Cr</b> (30d: 2026-10-15)</span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Robust net margin of 57.0%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.11x.</li>
-          </ul>
-          
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>39</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Idbi Capital Markets Services Ltd [Tier 2 (High Conviction)]: 7 IPOs, avg gain +21.3%, 71% positive (LM impact: +7.4 pts)</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="IGNORE" data-sector="Diversified">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Asset Reconstruction Company India</div>
-            <span class="sector-pill">Diversified</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b style="font-size:11.5px;">-15.0%</b>
-          </td>
-          <td class="num"><b><span class='dim'>—</span></b></td>
-          <td class="num" style="color:var(--dim)">
-            <b>+0.0%</b>
-            
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.5x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.5x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>1.0x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              50/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#38bdf8;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: +0.0%
-              </div>
-              
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
-          </ul>
-          <div style='margin-top:4px;'><a href='https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Idbi Capital Markets Services Ltd [Tier 2 (High Conviction)]: 7 IPOs, avg gain +21.3%, 71% positive (LM impact: +7.4 pts)</li></ul>
-          </td>
-        </tr>
-
-        <tr class="open-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manipal Payment &amp; Identity Solutions</div>
-            <span class="sector-pill">BFSI &amp; Financial Services</span>
-          </td>
-          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
-          <td class="num">
-            &#8377;339
-            
-          </td>
-          <td>2026-09-11<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-17)</span></td>
-          <td class="num" style="color:var(--red)">
-            <b style="font-size:11.5px;">-15.0%</b>
-          </td>
-          <td class="num"><b>&#8377;288.1</b></td>
-          <td class="num" style="color:var(--green)">
-            <b>+1.2%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;343.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 0.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.5x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.8x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              68/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">GOOD VALUE</div>
-            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
-              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
-                Exp: +18.0%
-              </div>
-              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;400</div>
-            </div>
-          </div>
-        </td>
-          <td>
-          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>31.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 62.1% Pre &rarr; 53.9% Post'>Promoter: <b>53.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(62%&rarr;54%, -8.2% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 40% | OFS 60%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹362 Cr</b> (30d: 2026-10-15)</span></div>
-          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 34.0%.</li><li style='margin-bottom:2px;'>Robust net margin of 22.1%.</li>
-          </ul>
-          
-        </td>
-          <td>
-            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>32</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Motilal Oswal Investment Advisors Ltd, Axis Capital Ltd, Icici Securities Ltd, Iifl Capital Services Ltd, Nuvama Wealth Management Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li></ul>
-          </td>
-        </tr>
-
         <tr class="open-row" data-rec="IGNORE" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Veegaland Developers</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
           </td>
-          <td><span title='Interim Bidding — Subject to final day QIB/HNI bids.' style='background:#8b5cf622;color:#a78bfa;border:1px solid #8b5cf655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 2 (Interim)</span></td>
+          <td><span title='Interim Bidding — Subject to final day QIB/HNI bids.' style='background:#8b5cf622;color:#a78bfa;border:1px solid #8b5cf655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 3 (Interim)</span></td>
           <td class="num">
             &#8377;140
             
@@ -581,7 +200,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>25.6x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 92.0% Pre &rarr; 63.7% Post'>Promoter: <b>63.7%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(92%&rarr;64%, -28.3% dil.)</span></span><span style='background:#1e293b;border:1px solid #10b98166;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='100% Fresh Issue funds internal business growth'>100% Fresh (₹210 Cr)</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹63 Cr</b> (30d: 2026-10-16)</span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Robust net margin of 10.5%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.32x.</li>
+            <li style='margin-bottom:2px;'>Robust net margin of 10.5%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.32x.</li>
           </ul>
           
         </td>
@@ -600,7 +219,7 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manika Plastech</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
           </td>
-          <td><span title='Day 1 (Interim) — Early bids; value will update on Day 2 & Final Day.' style='background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 1 (Interim)</span></td>
+          <td><span title='Interim Bidding — Subject to final day QIB/HNI bids.' style='background:#8b5cf622;color:#a78bfa;border:1px solid #8b5cf655;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 2 (Interim)</span></td>
           <td class="num">
             &#8377;43
             
@@ -635,7 +254,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>9.6x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 75.0% Post'>Promoter: <b>75.0%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;75%, -25.1% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 74% | OFS 26%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹38 Cr</b> (30d: 2026-10-17)</span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
+            <li style='margin-bottom:2px;'>Valuation Multiple: 9.6x (Disclosed Post P/E).</li>
           </ul>
           
         </td>
@@ -695,7 +314,7 @@
         </td>
           <td>
             <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>35</b>/100</div>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>5</b>/100</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Dam Capital Advisors Ltd, Icici Securities Ltd</div>
@@ -764,7 +383,7 @@
           </td>
           <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>2026-09-18<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-23)</span></td>
@@ -905,7 +524,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>16.5x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 86.2% Pre &rarr; 64.5% Post'>Promoter: <b>64.5%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(86%&rarr;65%, -21.7% dil.)</span></span><span style='background:#1e293b;border:1px solid #10b98166;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='100% Fresh Issue funds internal business growth'>100% Fresh (₹142 Cr)</span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>The extreme Debt/Equity ratio of 2.48 presents significant solvency risks, especially in the cyclical and capital-intensive textile and apparel sector.</li><li style='margin-bottom:2px;'>While the EBITDA margin is healthy at 16.4%, high finance costs suppress the PAT margin to 6.58%, leaving thin cushions for raw material price shocks.</li><li style='margin-bottom:2px;'>The wide divergence between ROE (39.05%) and ROCE (19.69%) points to highly leveraged balance sheet engineering rather than high core asset productivity.</li><li style='margin-bottom:2px;'>With key IPO pricing parameters (P/E and Issue Size) undisclosed in current metrics, investors face high valuation opacity and liquidity risk post-listing.</li>
+            <li style='margin-bottom:2px;'>The extreme Debt/Equity ratio of 2.48 presents significant solvency risks, especially in the cyclical and capital-intensive textile and apparel sector.</li><li style='margin-bottom:2px;'>While the EBITDA margin is healthy at 16.4%, high finance costs suppress the PAT margin to 6.58%, leaving thin cushions for raw material price shocks.</li><li style='margin-bottom:2px;'>The wide divergence between ROE (39.05%) and ROCE (19.69%) points to highly leveraged balance sheet engineering rather than high core asset productivity.</li>
           </ul>
           
         </td>
@@ -926,7 +545,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>04 Sep 26</td>
@@ -980,7 +599,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>--</td>
@@ -1013,7 +632,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
+            <li style='margin-bottom:2px;'>Valuation Multiple: 20.0x (DRHP Prospectus).</li>
           </ul>
           
         </td>
@@ -1034,7 +653,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>--</td>
@@ -1067,7 +686,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
+            <li style='margin-bottom:2px;'>Valuation Multiple: 20.0x (DRHP Prospectus).</li>
           </ul>
           
         </td>
@@ -1088,7 +707,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>--</td>
@@ -1121,7 +740,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
+            <li style='margin-bottom:2px;'>Valuation Multiple: 20.0x (DRHP Prospectus).</li>
           </ul>
           
         </td>
@@ -1142,7 +761,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>--</td>
@@ -1175,7 +794,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>35.4x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #ef444466;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Heavy OFS: Pre-IPO investors cashing out'>OFS: 100% (₹22562 Cr)</span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 42.8%.</li><li style='margin-bottom:2px;'>Robust net margin of 51.0%.</li>
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 42.8%.</li><li style='margin-bottom:2px;'>Robust net margin of 51.0%.</li>
           </ul>
           <div style='margin-top:4px;'><a href='https://www.chittorgarh.net/reports/ipo_notes/nse-ipo-rhp.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
@@ -1196,7 +815,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>--</td>
@@ -1229,7 +848,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
+            <li style='margin-bottom:2px;'>Valuation Multiple: 20.0x (DRHP Prospectus).</li>
           </ul>
           
         </td>
@@ -1250,7 +869,7 @@
           </td>
           <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>In-Offer (Interim)</span></td>
           <td class="num">
-            
+            <span class="dim" style="color:#64748b;">—</span>
             
           </td>
           <td>--</td>
@@ -1283,7 +902,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li>
+            <li style='margin-bottom:2px;'>Valuation Multiple: 20.0x (DRHP Prospectus).</li>
           </ul>
           
         </td>
@@ -1303,11 +922,11 @@
 <!-- ========================================================================= -->
 <!-- SECTION 2: RECENTLY CLOSED — LISTING PENDING -->
 <!-- ========================================================================= -->
-<div class="sec-hdr" style="color:#fbbf24;"><span class="dot-pending"></span> 2. Recently Closed — Listing Pending (3 IPOs)</div>
+<div class="sec-hdr" style="color:#fbbf24;"><span class="dot-pending"></span> 2. Recently Closed — Listing Pending (10 IPOs)</div>
 <div class="toolbar">
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('pending', 'all', this)">All (3)</button>
+    <button class="pill-filter active" onclick="filterAction('pending', 'all', this)">All (10)</button>
     <button class="pill-filter" onclick="filterAction('pending', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('pending', 'BUY', this)">Buy</button>
     <button class="pill-filter" onclick="filterAction('pending', 'IGNORE', this)">Ignore / Avoid</button>
@@ -1316,7 +935,10 @@
     <span class="filter-label">SECTOR:</span>
     <select class="select-filter" id="sector-pending" onchange="filterSection('pending')">
       <option value="all">All Sectors</option>
-      <option value="Diversified">Diversified</option>
+      <option value="BFSI &amp; Financial Services">BFSI &amp; Financial Services</option>
+<option value="Diversified">Diversified</option>
+<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
+<option value="Logistics &amp; Supply Chain">Logistics &amp; Supply Chain</option>
 <option value="Real Estate &amp; Infrastructure">Real Estate &amp; Infrastructure</option>
 <option value="Renewable Energy &amp; Power">Renewable Energy &amp; Power</option>
     </select>
@@ -1384,7 +1006,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus Forensic P/E)'>P/E: <b>24.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus Forensic P/E)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 24.8%.</li>
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 24.8%.</li>
           </ul>
           <div style='margin-top:4px;'><a href='https://www.centrum.co.in/sites/default/files/product_equity/Pranav%20Constructions%20Limited%20-%20RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
@@ -1438,7 +1060,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus Forensic P/E)'>P/E: <b>30.4x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus Forensic P/E)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 43.4%.</li><li style='margin-bottom:2px;'>Robust net margin of 20.7%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.05x.</li>
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 43.4%.</li><li style='margin-bottom:2px;'>Robust net margin of 20.7%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.05x.</li>
           </ul>
           <div style='margin-top:4px;'><a href='https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
@@ -1492,7 +1114,7 @@
           <td>
           <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus Forensic P/E)'>P/E: <b>30.4x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus Forensic P/E)</span></span></div>
           <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
-            <li style='margin-bottom:2px;'>P/E multiple undisclosed or negative.</li><li style='margin-bottom:2px;'>Superior return on capital: ROCE of 47.6%.</li><li style='margin-bottom:2px;'>Robust net margin of 14.2%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.13x.</li>
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 47.6%.</li><li style='margin-bottom:2px;'>Robust net margin of 14.2%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.13x.</li>
           </ul>
           <div style='margin-top:4px;'><a href='https://www.iiflcapital.com/institutional-equities/upload/investmentbanking/prospects/kanohar_electricals_limited_-_rhp.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
@@ -1503,6 +1125,384 @@
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Nuvama Wealth Management Ltd, Iifl Capital Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Nuvama Wealth Management Ltd [Tier 3 (Moderate)]: 25 IPOs, avg gain +9.9%, 56% positive (LM impact: +3.0 pts)</li><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="IGNORE" data-sector="Logistics &amp; Supply Chain">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rentomojo</div>
+            <span class="sector-pill">Logistics &amp; Supply Chain</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;404
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--green)">
+            <b style="font-size:11.5px;">+3.6%</b>
+          </td>
+          <td class="num"><b>&#8377;418.6</b></td>
+          <td class="num" style="color:var(--green)">
+            <b>+33.4%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;539.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 4.8x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 22.1x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 6.3x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>5.5x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              68/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">GOOD VALUE</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: +18.0%
+              </div>
+              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;477</div>
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>40.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 21.5% Pre &rarr; 19.9% Post'>Promoter: <b>19.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(21%&rarr;20%, -1.6% dil.)</span></span><span style='background:#1e293b;border:1px solid #ef444466;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Heavy OFS: Pre-IPO investors cashing out'>OFS: 88% (₹1106 Cr)</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹376 Cr</b> (30d: 2026-10-15)</span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 25.1%.</li><li style='margin-bottom:2px;'>Robust net margin of 16.2%.</li>
+          </ul>
+          
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>19</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Axis Capital Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="BUY" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Steamhouse India</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;81
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--green)">
+            <b style="font-size:11.5px;">+1.4%</b>
+          </td>
+          <td class="num"><b>&#8377;82.1</b></td>
+          <td class="num" style="color:var(--green)">
+            <b>+28.4%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;104.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.7x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.9x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 10.2x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 5.5x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>4.1x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              46/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#ef4444;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: -4.0%
+              </div>
+              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;78</div>
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>57.9x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 95.8% Pre &rarr; 78.0% Post'>Promoter: <b>78.0%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(96%&rarr;78%, -17.8% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 85% | OFS 15%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹124 Cr</b> (30d: 2026-10-15)</span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Healthy profitability: ROE of 22.4%.</li><li style='margin-bottom:2px;'>High financial leverage: D/E of 1.57x introduces balance sheet risk.</li>
+          </ul>
+          
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>60</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Equirus Capital Pvt Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Equirus Capital Pvt Ltd [Tier 2 (High Conviction)]: 12 IPOs, avg gain +16.7%, 67% positive (LM impact: +6.0 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="BUY" data-sector="Engineering &amp; Capital Goods">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Karamtara Engineering</div>
+            <span class="sector-pill">Engineering &amp; Capital Goods</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;254
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--green)">
+            <b style="font-size:11.5px;">+0.8%</b>
+          </td>
+          <td class="num"><b>&#8377;255.9</b></td>
+          <td class="num" style="color:var(--green)">
+            <b>+27.2%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;323.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 2.4x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 2.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 14.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 5.3x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>4.6x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              60/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: +10.0%
+              </div>
+              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;279</div>
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>35.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 94.8% Pre &rarr; 83.6% Post'>Promoter: <b>83.6%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(95%&rarr;84%, -11.2% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 77% | OFS 23%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹262 Cr</b> (30d: 2026-10-15)</span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 23.3%.</li>
+          </ul>
+          
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>68</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Jm Financial Ltd, Icici Securities Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="MUST_BUY" data-sector="Real Estate &amp; Infrastructure">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">LCC Projects</div>
+            <span class="sector-pill">Real Estate &amp; Infrastructure</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;146
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-0.3%</b>
+          </td>
+          <td class="num"><b>&#8377;145.5</b></td>
+          <td class="num" style="color:var(--green)">
+            <b>+34.9%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;197.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 1.8x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 19.8x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 8.8x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>6.4x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              60/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: +10.0%
+              </div>
+              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;161</div>
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>14.8x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 89.9% Post'>Promoter: <b>89.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;90%, -10.1% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 60% | OFS 40%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹128 Cr</b> (30d: 2026-10-15)</span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 27.6%.</li>
+          </ul>
+          
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>73</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Motilal Oswal Investment Advisors Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="IGNORE" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Asset Reconstruction Company India</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            <span class="dim" style="color:#64748b;">—</span>
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-15.0%</b>
+          </td>
+          <td class="num"><b><span class='dim'>—</span></b></td>
+          <td class="num" style="color:var(--dim)">
+            <b>+0.0%</b>
+            
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.5x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.5x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>1.0x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              50/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#38bdf8;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: +0.0%
+              </div>
+              
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>20.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Valuation Multiple: 20.0x (DRHP Prospectus).</li>
+          </ul>
+          <div style='margin-top:4px;'><a href='https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Idbi Capital Markets Services Ltd [Tier 2 (High Conviction)]: 7 IPOs, avg gain +21.3%, 71% positive (LM impact: +7.4 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="IGNORE" data-sector="Diversified">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Asset Reconstruction Co.(India)</div>
+            <span class="sector-pill">Diversified</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;139
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-15.0%</b>
+          </td>
+          <td class="num"><b>&#8377;118.1</b></td>
+          <td class="num" style="color:var(--green)">
+            <b>+10.1%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;153.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.5x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.5x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>1.0x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              66/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">GOOD VALUE</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: +16.0%
+              </div>
+              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;161</div>
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>11.1x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 88.5% Pre &rarr; 77.5% Post'>Promoter: <b>77.5%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(88%&rarr;77%, -11.0% dil.)</span></span><span style='background:#1e293b;border:1px solid #ef444466;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Heavy OFS: Pre-IPO investors cashing out'>OFS: 100% (₹733 Cr)</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹220 Cr</b> (30d: 2026-10-15)</span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Robust net margin of 57.0%.</li><li style='margin-bottom:2px;'>Conservative balance sheet with low Debt/Equity of 0.11x.</li>
+          </ul>
+          
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>39</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Idbi Capital Markets Services Ltd [Tier 2 (High Conviction)]: 7 IPOs, avg gain +21.3%, 71% positive (LM impact: +7.4 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="pending-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manipal Payment &amp; Identity Solutions</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
+          </td>
+          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
+          <td class="num">
+            &#8377;339
+            
+          </td>
+          <td><b>2026-09-17</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-11)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:11.5px;">-15.0%</b>
+          </td>
+          <td class="num"><b>&#8377;288.1</b></td>
+          <td class="num" style="color:var(--green)">
+            <b>+1.2%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;343.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 0.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.5x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.8x</b></div>
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              68/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">GOOD VALUE</div>
+            <div style="margin-top:4px;padding-top:2px;border-top:1px dashed #334155;text-align:right;">
+              <div style="font-size:10px;font-weight:700;color:#10b981;" title="Gemini Fundamental Listing Expectation based on balance sheet, return ratios, and intrinsic fair value">
+                Exp: +18.0%
+              </div>
+              <div style='font-size:8.5px;color:#94a3b8;' title='Intrinsic Fair Value per share'>Fair: &#8377;400</div>
+            </div>
+          </div>
+        </td>
+          <td>
+          <div style='display:flex;flex-wrap:wrap;gap:4px;margin-bottom:6px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>31.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 62.1% Pre &rarr; 53.9% Post'>Promoter: <b>53.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(62%&rarr;54%, -8.2% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 40% | OFS 60%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹362 Cr</b> (30d: 2026-10-15)</span></div>
+          <ul style="margin:0 0 0 12px;padding:0;font-size:10px;color:#cbd5e1;line-height:1.35;">
+            <li style='margin-bottom:2px;'>Superior return on capital: ROCE of 34.0%.</li><li style='margin-bottom:2px;'>Robust net margin of 22.1%.</li>
+          </ul>
+          
+        </td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>32</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Motilal Oswal Investment Advisors Ltd, Axis Capital Ltd, Icici Securities Ltd, Iifl Capital Services Ltd, Nuvama Wealth Management Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li></ul>
           </td>
         </tr>
     </tbody>
@@ -1564,7 +1564,7 @@
           <td class="num">&#8377;788</td>
           <td><b>31 Aug 26</b></td>
           <td class="num">&#8377;961.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+22.8%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+21.9%</b></td>
@@ -1589,7 +1589,7 @@
           <td class="num">&#8377;300</td>
           <td><b>27 Aug 26</b></td>
           <td class="num">&#8377;634.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+29.4%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+111.3%</b></td>
@@ -1609,12 +1609,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Gaja Alternative Asset Management</div>
             <span class="sector-pill">BFSI &amp; Financial Services</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>27.5x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-2.0%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-2.1%)</div>
           </td>
           <td class="num">&#8377;160</td>
           <td><b>26 Aug 26</b></td>
           <td class="num">&#8377;185.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.1%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+15.6%</b></td>
@@ -1629,6 +1629,31 @@
           </td>
         </tr>
 
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
+          <td>
+            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rays of Belief</div>
+            <span class="sector-pill">IT &amp; Technology</span>
+            <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>100.8x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
+            
+          </td>
+          <td class="num">&#8377;239</td>
+          <td><b>2026-09-08</b></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
+          <td class="num" style="color:var(--green)"><b>+6.3%</b></td>
+          <td class="num" style="color:var(--green)"><b>+22.2%</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
+          <td class="num"><span class="dim">&mdash;</span></td>
+          <td class="num"><span class="dim">&mdash;</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div>
+          </td>
+        </tr>
+
         <tr class="recently-listed-row" data-rec="BUY" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Deepa Jewellers</div>
@@ -1638,8 +1663,8 @@
           </td>
           <td class="num">&#8377;177</td>
           <td><b>2026-09-08</b></td>
-          <td class="num"></td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+14.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+11.9%</b></td>
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
@@ -1654,42 +1679,17 @@
           </td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
-          <td>
-            <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rays of Belief</div>
-            <span class="sector-pill">IT &amp; Technology</span>
-            <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>100.8x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            
-          </td>
-          <td class="num">&#8377;239</td>
-          <td><b>2026-09-08</b></td>
-          <td class="num"></td>
-          <td class="num"></td>
-          <td class="num" style="color:var(--green)"><b>+6.3%</b></td>
-          <td class="num" style="color:var(--green)"><b>+22.2%</b></td>
-          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
-          <td class="num"><span class="dim">&mdash;</span></td>
-          <td class="num"><span class="dim">&mdash;</span></td>
-          <td>
-            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>11</b>/100</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div>
-          </td>
-        </tr>
-
         <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Retail &amp; E-Commerce">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Purple Style Labs</div>
             <span class="sector-pill">Retail &amp; E-Commerce</span>
             
-            <div title='Realized listing (-7.0%) underperformed prediction (+1.0%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-7.9%)</div>
+            <div title='Realized listing (-7.0%) underperformed prediction (+1.1%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-8.0%)</div>
           </td>
           <td class="num">&#8377;575</td>
           <td><b>07 Sep 26</b></td>
           <td class="num">&#8377;535.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+0.3%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.4%</b></td>
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-7.0%</b></td>
@@ -1709,12 +1709,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Annu Projects</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>19.6x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Independent calculation (+3.5%) over-estimated demand pull vs -27.3% actual. Requires conservative margin shrinkage.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-28.0%)</div>
+            <div title='Independent calculation (+3.5%) over-estimated demand pull vs -27.3% actual. Requires conservative margin shrinkage.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-28.1%)</div>
           </td>
           <td class="num">&#8377;99</td>
           <td><b>02 Sep 26</b></td>
           <td class="num">&#8377;72.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--red)"><b>-7.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+3.5%</b></td>
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-27.3%</b></td>
@@ -1734,12 +1734,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Skyways Air Services</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
             
-            <div title='Grey market premium (+23.9%) decayed or failed to convert to listing pop (-10.1% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-32.3%)</div>
+            <div title='Grey market premium (+23.9%) decayed or failed to convert to listing pop (-10.1% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-32.4%)</div>
           </td>
           <td class="num">&#8377;138</td>
           <td><b>01 Sep 26</b></td>
           <td class="num">&#8377;124.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+23.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.4%</b></td>
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-10.1%</b></td>
@@ -1759,12 +1759,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Symbiotec Pharmalab</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>56.4x</b> <span style='color:#94a3b8;font-size:8px;'>(Calculated: P/BV ÷ RoNW Identity)</span></span></div>
-            <div title='Grey market premium (+18.7%) decayed or failed to convert to listing pop (+0.0% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-20.9%)</div>
+            <div title='Grey market premium (+18.7%) decayed or failed to convert to listing pop (+0.0% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-21.0%)</div>
           </td>
           <td class="num">&#8377;988</td>
           <td><b>01 Sep 26</b></td>
           <td class="num">&#8377;988.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+18.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+18.0%</b></td>
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
@@ -1784,12 +1784,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Hy-Tech Engineers</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>17.9x</b> <span style='color:#94a3b8;font-size:8px;'>(Calculated: P/BV ÷ RoNW Identity)</span></span></div>
-            <div title='Grey market premium (+73.6%) decayed or failed to convert to listing pop (+41.5% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-5.1%)</div>
+            <div title='Grey market premium (+73.6%) decayed or failed to convert to listing pop (+41.5% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-5.2%)</div>
           </td>
           <td class="num">&#8377;53</td>
           <td><b>01 Sep 26</b></td>
           <td class="num">&#8377;75.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+73.6%</b></td>
           <td class="num" style="color:var(--green)"><b>+14.7%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+41.5%</b></td>
@@ -1809,12 +1809,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sunshine Pictures</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>28.0x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-4.1%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-3.8%)</div>
           </td>
           <td class="num">&#8377;360</td>
           <td><b>25 Aug 26</b></td>
           <td class="num">&#8377;395.9</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+13.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+8.4%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.0%</b></td>
@@ -1834,12 +1834,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shankesh Jewellers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>12.8x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing gain (+11.1%) surpassed estimate (+3.1%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+8.0%)</div>
+            <div title='Listing gain (+11.1%) surpassed estimate (+2.8%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+8.3%)</div>
           </td>
           <td class="num">&#8377;93</td>
           <td><b>25 Aug 26</b></td>
           <td class="num">&#8377;103.3</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+3.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.6%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.1%</b></td>
@@ -1859,12 +1859,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Horizon Industrial Parks</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
             
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-3.2%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-2.9%)</div>
           </td>
           <td class="num">&#8377;60</td>
           <td><b>24 Aug 26</b></td>
           <td class="num">&#8377;60.2</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+2.5%</b></td>
           <td class="num" style="color:var(--red)"><b>-1.1%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+0.4%</b></td>
@@ -1884,12 +1884,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Lalithaa Jewellery Mart</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>11.1x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+2.4%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+2.7%)</div>
           </td>
           <td class="num">&#8377;201</td>
           <td><b>24 Aug 26</b></td>
           <td class="num">&#8377;265.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+36.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+16.2%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+31.8%</b></td>
@@ -1909,12 +1909,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shiprocket</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
             
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+2.2%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+2.5%)</div>
           </td>
           <td class="num">&#8377;97</td>
           <td><b>19 Aug 26</b></td>
           <td class="num">&#8377;131.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+36.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+23.7%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+35.0%</b></td>
@@ -1929,25 +1929,25 @@
           </td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="MUST_BUY" data-sector="Consumer &amp; FMCG">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Consumer &amp; FMCG">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Milky Mist Dairy Food</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>84.8x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+0.0%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+0.3%)</div>
           </td>
           <td class="num">&#8377;140</td>
           <td><b>18 Aug 26</b></td>
           <td class="num">&#8377;165.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+14.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.8%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+17.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+3.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+2.0%</b></td>
           <td>
-            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
-            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>86</b>/100</div>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>37</b>/100</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd</div>
@@ -1959,12 +1959,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Molbio Diagnostics</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
             
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-0.8%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-0.5%)</div>
           </td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td><b>17 Aug 26</b></td>
           <td class="num">&#8377;980.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+16.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+21.8%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+21.4%</b></td>
@@ -1984,12 +1984,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dhoot Transmission</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
             
-            <div title='Listing gain (+37.8%) surpassed estimate (+29.8%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+8.0%)</div>
+            <div title='Listing gain (+37.8%) surpassed estimate (+29.5%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+8.3%)</div>
           </td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td><b>17 Aug 26</b></td>
           <td class="num">&#8377;1200.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+31.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+22.6%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+37.8%</b></td>
@@ -2009,12 +2009,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Behari Lal Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>18.6x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing gain (+63.2%) surpassed estimate (+38.5%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+24.6%)</div>
+            <div title='Listing gain (+63.2%) surpassed estimate (+38.2%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+24.9%)</div>
           </td>
           <td class="num">&#8377;285</td>
           <td><b>19 Aug 26</b></td>
           <td class="num">&#8377;465.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+46.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+24.6%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+63.2%</b></td>
@@ -2034,12 +2034,12 @@
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Technocraft Ventures</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
             <div style='margin-top:2px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 5px;border-radius:4px;font-size:9px;font-weight:600;'>P/E: <b>19.4x</b> <span style='color:#94a3b8;font-size:8px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing gain (+34.0%) surpassed estimate (+23.6%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+10.4%)</div>
+            <div title='Listing gain (+34.0%) surpassed estimate (+23.3%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+10.7%)</div>
           </td>
           <td class="num">&#8377;212</td>
           <td><b>14 Aug 26</b></td>
           <td class="num">&#8377;284.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--green)"><b>+19.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+21.6%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+34.0%</b></td>
@@ -2064,7 +2064,7 @@
           <td class="num">&#8377;200</td>
           <td><b>04 Sep 26</b></td>
           <td class="num">&#8377;230.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+20.2%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+15.0%</b></td>
@@ -2288,7 +2288,7 @@
           <td class="num">&#8377;485</td>
           <td>30 Jul 26</td>
           <td class="num">&#8377;700.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+44.3%</b></td>
@@ -2305,7 +2305,7 @@
           <td class="num">&#8377;127</td>
           <td>30 Jul 26</td>
           <td class="num">&#8377;136.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+7.1%</b></td>
@@ -2322,7 +2322,7 @@
           <td class="num">&#8377;425</td>
           <td>30 Jul 26</td>
           <td class="num">&#8377;461.0</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+8.5%</b></td>
@@ -2492,7 +2492,7 @@
           <td class="num">&#8377;152</td>
           <td>29 Jun 26</td>
           <td class="num">&#8377;134.9</td>
-          <td class="num"></td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--dim)"><b>—</b></td>
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-11.2%</b></td>

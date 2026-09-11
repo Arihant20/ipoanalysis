@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-11 13:15:08
+    <span class="pulse-dot"></span> Cycle: 2026-09-11 13:30:47
   </div>
 </nav>
 
@@ -55,16 +55,16 @@
         </div>
         <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
           <div>Evaluated: <b style="color:#f8fafc;">20 Listings</b></div>
-          <div>Overprediction Rate: <b style="color:#10b981;">15.0% (3/20)</b></div>
-          <div>Mean Error (Bias): <b style="color:#3b82f6;">+14.9%</b></div>
-          <div>MAE: <b style="color:#10b981;">22.3%</b></div>
-          <div>Adaptive Dampener: <b style="color:#f59e0b;">+3.0%</b></div>
+          <div>Overprediction Rate: <b style="color:#10b981;">20.0% (4/20)</b></div>
+          <div>Mean Error (Bias): <b style="color:#3b82f6;">+14.7%</b></div>
+          <div>MAE: <b style="color:#10b981;">22.6%</b></div>
+          <div>Adaptive Dampener: <b style="color:#f59e0b;">+2.9%</b></div>
           <div>GMP Blend Weight: <b style="color:#fbbf24;">100%</b></div>
         </div>
       </div>
       <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
         <ul style="margin:0 0 0 16px;padding:0;">
-          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 22.3%, Directional Acc: 60.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -12.5% vs Actual +111.3% (Delta +123.8%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from esds software: Pred -12.5% vs Actual +76.5% (Delta +89.0%, Driver: BLOCKBUSTER_SURGE).</li>
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 22.6%, Directional Acc: 55.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -12.5% vs Actual +111.3% (Delta +123.8%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from esds software: Pred -12.5% vs Actual +76.5% (Delta +89.0%, Driver: BLOCKBUSTER_SURGE).</li>
         </ul>
       </div>
     </div>
@@ -85,11 +85,11 @@
     <div class="clbl">Recently Listed</div>
   </div>
   <div class="card" style="border-color:#8b5cf6">
-    <div class="cnum" style="color:#a78bfa">2</div>
+    <div class="cnum" style="color:#a78bfa">4</div>
     <div class="clbl">MUST BUY Action</div>
   </div>
   <div class="card" style="border-color:#10b981">
-    <div class="cnum" style="color:#34d399">8</div>
+    <div class="cnum" style="color:#34d399">6</div>
     <div class="clbl">BUY Action (All)</div>
   </div>
   <div class="card">
@@ -118,7 +118,6 @@
     <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (21)</button>
     <button class="pill-filter" onclick="filterAction('open', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'BUY', this)">Buy</button>
-    <button class="pill-filter" onclick="filterAction('open', 'BUY_AT_LISTING', this)">Buy at Open</button>
     <button class="pill-filter" onclick="filterAction('open', 'IGNORE', this)">Ignore / Avoid</button>
   </div>
   <div class="filter-group">
@@ -159,13 +158,12 @@
         <th class="sortable num" onclick="sortTable('table-open', 8, true)">Gemini Score</th>
         <th style="min-width:240px;">Points (Why the Score)</th>
         <th class="sortable" onclick="sortTable('table-open', 10, false)">Action</th>
-        <th class="sortable" onclick="sortTable('table-open', 11, false)">Strategy</th>
         <th>Lead Manager & Valuation Signals</th>
       </tr>
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="BUY" data-strat="HOLD_ALLOTTEES" data-sector="Logistics &amp; Supply Chain">
+        <tr class="open-row" data-rec="MUST_BUY" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rentomojo</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -202,15 +200,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>80</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Axis Capital Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="BUY" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="BUY" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Steamhouse India</div>
             <span class="sector-pill">Diversified</span>
@@ -247,15 +247,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>60</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Equirus Capital Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Equirus Capital Pvt Ltd [Tier 2 (High Conviction)]: 12 IPOs, avg gain +16.7%, 67% positive (LM impact: +6.0 pts)</li><li>Market GMP indicates ~28.4% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
+        <tr class="open-row" data-rec="BUY" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Karamtara Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -292,15 +294,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>68</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Iifl Capital Services Ltd, Jm Financial Ltd, Icici Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="open-row" data-rec="MUST_BUY" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">LCC Projects</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -337,15 +341,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>73</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Motilal Oswal Investment Advisors Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li><li>Market GMP indicates ~34.9% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Asset Reconstruction Co.(India)</div>
             <span class="sector-pill">Diversified</span>
@@ -382,15 +388,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>39</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Idbi Capital Markets Services Ltd [Tier 2 (High Conviction)]: 7 IPOs, avg gain +21.3%, 71% positive (LM impact: +7.4 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Asset Reconstruction Company India</div>
             <span class="sector-pill">Diversified</span>
@@ -427,15 +435,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.arcil.co.in/sites/default/files/2026-09/Arcil-RHP-01-09-26.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Idbi Capital Markets Services Ltd [Tier 2 (High Conviction)]: 7 IPOs, avg gain +21.3%, 71% positive (LM impact: +7.4 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="BFSI &amp; Financial Services">
+        <tr class="open-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manipal Payment &amp; Identity Solutions</div>
             <span class="sector-pill">BFSI &amp; Financial Services</span>
@@ -472,15 +482,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>32</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Motilal Oswal Investment Advisors Ltd, Axis Capital Ltd, Icici Securities Ltd, Iifl Capital Services Ltd, Nuvama Wealth Management Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Veegaland Developers</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -517,15 +529,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>39</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Cumulative Capital Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Cumulative Capital Pvt Ltd [Tier 3 (Moderate)]: 1 IPOs, avg gain +7.2%, 100% positive (LM impact: +2.2 pts)</li><li>Market GMP indicates ~17.9% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Chemicals &amp; Materials">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Manika Plastech</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -562,15 +576,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>46</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Pantomath Capital Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Pantomath Capital Advisors Pvt Ltd [Tier 2 (High Conviction)]: 9 IPOs, avg gain +13.1%, 67% positive (LM impact: +4.9 pts)</li><li>Market GMP indicates ~30.2% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Auto &amp; Ancillaries">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Auto &amp; Ancillaries">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Hero Motors</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
@@ -607,15 +623,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.heromotors.com/uploads/prospectus/hero-motors-limited-rhp.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>35</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Dam Capital Advisors Ltd, Icici Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li><li>Dam Capital Advisors Ltd [Tier 2 (High Conviction)]: 15 IPOs, avg gain +10.3%, 67% positive (LM impact: +4.1 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Jindal Supreme (India)</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -652,15 +670,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>40</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Sarthi Capital Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Sarthi Capital Advisors Pvt Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +5.6%, 75% positive (LM impact: +2.7 pts)</li><li>Market GMP indicates ~20.4% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Jindal Supreme India</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -697,15 +717,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>13</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Sarthi Capital Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Sarthi Capital Advisors Pvt Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +5.6%, 75% positive (LM impact: +2.7 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Retail &amp; E-Commerce">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Retail &amp; E-Commerce">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">SS Retail</div>
             <span class="sector-pill">Retail &amp; E-Commerce</span>
@@ -742,15 +764,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://ssmobile.com/aboutus/investor/assets/RHP/SS%20Retail%20Limited%20-%20RHP%20-%2008092026.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>27</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Anand Rathi Advisors Ltd, Emkay Global Financial Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Anand Rathi Advisors Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +29.4%, 100% positive (LM impact: +9.8 pts)</li><li>Emkay Global Financial Services Ltd [Tier 4 (High Risk)]: 4 IPOs, avg gain +9.3%, 25% positive (LM impact: -5.2 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Textiles &amp; Apparel">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sonaselection India</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -787,15 +811,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>25</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Choice Capital Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Choice Capital Advisors Pvt Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +14.2%, 100% positive (LM impact: +5.3 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
+        <tr class="open-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">esds software</div>
             <span class="sector-pill">IT &amp; Technology</span>
@@ -832,15 +858,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Systematix Corporate Services Ltd, Dam Capital Advisors Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Systematix Corporate Services Ltd [Tier 3 (Moderate)]: 6 IPOs, avg gain +12.5%, 50% positive (LM impact: +3.7 pts)</li><li>Dam Capital Advisors Ltd [Tier 2 (High Conviction)]: 15 IPOs, avg gain +10.3%, 67% positive (LM impact: +4.1 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Chemicals &amp; Materials">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Jajoo Rashmi Refractories</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -877,15 +905,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>34</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unistone Capital Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Unistone Capital Pvt Ltd [Tier 2 (High Conviction)]: 5 IPOs, avg gain +12.7%, 100% positive (LM impact: +4.8 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Swastika Infra</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -922,15 +952,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>45</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Srujan Alpha Capital Advisors Llp</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Srujan Alpha Capital Advisors Llp [Tier 1 (Elite Alpha)]: 5 IPOs, avg gain +17.0%, 80% positive (LM impact: +7.6 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Metals &amp; Mining">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Metals &amp; Mining">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">A-One Steels India</div>
             <span class="sector-pill">Metals &amp; Mining</span>
@@ -967,15 +999,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>26</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Pl Capital Markets Pvt Ltd, Khambatta Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Pl Capital Markets Pvt Ltd [Tier 3 (Moderate)]: 2 IPOs, avg gain +0.6%, 50% positive (LM impact: +0.2 pts)</li><li>Khambatta Securities Ltd [Tier 3 (Moderate)]: 1 IPOs, avg gain +34.0%, 100% positive (LM impact: +10.2 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Diversified">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">National Stock Exchange of India</div>
             <span class="sector-pill">Diversified</span>
@@ -1012,15 +1046,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.chittorgarh.net/reports/ipo_notes/nse-ipo-rhp.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>45</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Kotak Mahindra Capital Company Ltd, Morgan Stanley India Company Pvt Ltd, Avendus Capital Pvt Ltd., HSBC Securities &amp; Capital Markets Pvt Ltd, Dam Capital Advisors Ltd, Hdfc Bank Ltd, Citigroup Global Markets India Pvt Ltd, Icici Securities Ltd, Jm Financial Ltd, Pantomath Capital Advisors Pvt Ltd, Axis Capital Ltd, Jp Morgan India Pvt Ltd, Equirus Capital Pvt Ltd, Motilal Oswal Investment Advisors Ltd, Nuvama Wealth Management Ltd, Idbi Capital Markets Services Ltd, Iifl Capital Services Ltd, 360 One Wam Ltd, Anand Rathi Advisors Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Kotak Mahindra Capital Company Ltd [Tier 2 (High Conviction)]: 38 IPOs, avg gain +15.3%, 74% positive (LM impact: +5.6 pts)</li><li>Morgan Stanley India Company Pvt Ltd [Tier 3 (Moderate)]: 17 IPOs, avg gain +15.1%, 65% positive (LM impact: +4.5 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Renewable Energy &amp; Power">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Renewable Energy &amp; Power">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Continuum Green Energy</div>
             <span class="sector-pill">Renewable Energy &amp; Power</span>
@@ -1057,15 +1093,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>32</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Kotak Mahindra Capital Company Ltd, Ambit Pvt Ltd, Citigroup Global Markets India Pvt Ltd, Jm Financial Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Kotak Mahindra Capital Company Ltd [Tier 2 (High Conviction)]: 38 IPOs, avg gain +15.3%, 74% positive (LM impact: +5.6 pts)</li><li>Ambit Pvt Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +16.1%, 75% positive (LM impact: +5.8 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Hospitality &amp; Tourism">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Hospitality &amp; Tourism">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Prestige Hospitality Ventures</div>
             <span class="sector-pill">Hospitality &amp; Tourism</span>
@@ -1102,8 +1140,10 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>32</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Clsa India Pvt Ltd, Jp Morgan India Pvt Ltd, Kotak Mahindra Capital Company Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li><li>Clsa India Pvt Ltd [Tier 2 (High Conviction)]: 3 IPOs, avg gain +7.1%, 67% positive (LM impact: +3.1 pts)</li></ul>
@@ -1152,13 +1192,12 @@
         <th class="sortable num" onclick="sortTable('table-pending', 8, true)">Gemini Score</th>
         <th style="min-width:240px;">Points (Why the Score)</th>
         <th class="sortable" onclick="sortTable('table-pending', 10, false)">Action</th>
-        <th class="sortable" onclick="sortTable('table-pending', 11, false)">Strategy</th>
         <th>Lead Manager & Valuation Signals</th>
       </tr>
     </thead>
     <tbody id="pending-table-body">
       
-        <tr class="pending-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="pending-row" data-rec="IGNORE" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Pranav Constructions</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -1195,15 +1234,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.centrum.co.in/sites/default/files/product_equity/Pranav%20Constructions%20Limited%20-%20RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>6</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Pnb Investment Services Ltd, Centrum Capital Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Pnb Investment Services Ltd [Tier 3 (Moderate)]: 2 IPOs, avg gain +2.0%, 50% positive (LM impact: +0.6 pts)</li><li>Centrum Capital Ltd [Tier 4 (High Risk)]: 2 IPOs, avg gain -2.3%, 50% positive (LM impact: -3.7 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="pending-row" data-rec="MUST_BUY" data-strat="HOLD_ALLOTTEES" data-sector="Diversified">
+        <tr class="pending-row" data-rec="MUST_BUY" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Glass Wall Systems (India)</div>
             <span class="sector-pill">Diversified</span>
@@ -1240,15 +1281,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.iiflcapital.com/institutional-equities/Upload/InvestmentBanking/Prospects/Glass_Walls_Systems_(India)_Limited_RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>96</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Iifl Capital Services Ltd, Motilal Oswal Investment Advisors Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="pending-row" data-rec="MUST_BUY" data-strat="HOLD_ALLOTTEES" data-sector="Renewable Energy &amp; Power">
+        <tr class="pending-row" data-rec="MUST_BUY" data-sector="Renewable Energy &amp; Power">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Kanohar Electricals</div>
             <span class="sector-pill">Renewable Energy &amp; Power</span>
@@ -1285,8 +1328,10 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.iiflcapital.com/institutional-equities/upload/investmentbanking/prospects/kanohar_electricals_limited_-_rhp.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>97</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Nuvama Wealth Management Ltd, Iifl Capital Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Nuvama Wealth Management Ltd [Tier 3 (Moderate)]: 25 IPOs, avg gain +9.9%, 56% positive (LM impact: +3.0 pts)</li><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li></ul>
@@ -1336,13 +1381,12 @@
         <th class="sortable num" onclick="sortTable('table-recently-listed', 8, true)">GMP &Delta;</th>
         <th class="sortable num" onclick="sortTable('table-recently-listed', 9, true)">Exp &Delta;</th>
         <th class="sortable" onclick="sortTable('table-recently-listed', 10, false)">Action</th>
-        <th class="sortable" onclick="sortTable('table-recently-listed', 11, false)">Strategy</th>
         <th>Lead Manager(s)</th>
       </tr>
     </thead>
     <tbody id="recently-listed-table-body">
       
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="BFSI &amp; Financial Services">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Augmont Enterprises</div>
             <span class="sector-pill">BFSI &amp; Financial Services</span>
@@ -1353,16 +1397,18 @@
           <td class="num">&#8377;961.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+19.2%</b></td>
+          <td class="num" style="color:var(--green)"><b>+22.8%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+21.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+21.9%</b></td>
-          <td class="num" style="color:var(--green)"><b>+2.7%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--red)"><b>-0.9%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>4</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Intensive Fiscal Services Pvt Ltd, Jm Financial Ltd, Motilal Oswal Investment Advisors Ltd, Nuvama Wealth Management Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Tempsens Instruments (India)</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -1373,36 +1419,40 @@
           <td class="num">&#8377;634.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+25.7%</b></td>
+          <td class="num" style="color:var(--green)"><b>+29.4%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+111.3%</b></td>
           <td class="num" style="color:var(--green)"><b>+111.3%</b></td>
-          <td class="num" style="color:var(--green)"><b>+85.6%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--green)"><b>+81.9%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>8</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Icici Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="BUY" data-strat="BUY_AT_LISTING" data-sector="BFSI &amp; Financial Services">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Gaja Alternative Asset Management</div>
             <span class="sector-pill">BFSI &amp; Financial Services</span>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-0.8%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-2.5%)</div>
           </td>
           <td class="num">&#8377;160</td>
           <td><b>26 Aug 26</b></td>
           <td class="num">&#8377;185.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+13.6%</b></td>
+          <td class="num" style="color:var(--green)"><b>+15.1%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+15.6%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.6%</b></td>
-          <td class="num" style="color:var(--green)"><b>+2.0%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655">BUY_AT_LISTING</span></td>
+          <td class="num" style="color:var(--green)"><b>+0.5%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>78</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Iifl Capital Services Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Gems &amp; Jewellery">
+        <tr class="recently-listed-row" data-rec="BUY" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Deepa Jewellers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
@@ -1417,12 +1467,14 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>66</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Emkay Global Financial Services Ltd, Valmiki Leela Capital Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Rays of Belief</div>
             <span class="sector-pill">IT &amp; Technology</span>
@@ -1437,32 +1489,36 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>11</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Retail &amp; E-Commerce">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Retail &amp; E-Commerce">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Purple Style Labs</div>
             <span class="sector-pill">Retail &amp; E-Commerce</span>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-4.9%)</div>
+            <div title='Realized listing (-7.0%) underperformed prediction (+1.5%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-8.4%)</div>
           </td>
           <td class="num">&#8377;575</td>
           <td><b>07 Sep 26</b></td>
           <td class="num">&#8377;535.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+0.3%</b></td>
-          <td class="num" style="color:var(--red)"><b>-2.9%</b></td>
+          <td class="num" style="color:var(--red)"><b>-3.4%</b></td>
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-7.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-7.2%</b></td>
-          <td class="num" style="color:var(--red)"><b>-4.0%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td class="num" style="color:var(--red)"><b>-3.6%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>31</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Idbi Capital Markets Services Ltd, Axis Capital Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Annu Projects</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -1477,12 +1533,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-27.3%</b></td>
           <td class="num" style="color:var(--red)"><b>-20.2%</b></td>
           <td class="num" style="color:var(--red)"><b>-27.3%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Skyways Air Services</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -1497,12 +1555,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-10.1%</b></td>
           <td class="num" style="color:var(--red)"><b>-34.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-28.7%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Holani Consultants Pvt Ltd., Shannon Advisors Pvt Ltd., Dolat Finserv</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Healthcare &amp; Pharma">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Healthcare &amp; Pharma">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Symbiotec Pharmalab</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -1517,12 +1577,14 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-18.7%</b></td>
           <td class="num" style="color:var(--red)"><b>-20.0%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Avendus Capital Pvt Ltd., Motilal Oswal Investment Advisors Ltd, Nomura Financial Advisory &amp; Securities (India) Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Hy-Tech Engineers</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -1537,12 +1599,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+41.5%</b></td>
           <td class="num" style="color:var(--red)"><b>-32.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+11.3%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">New Berry Capitals Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="BUY_AT_LISTING" data-sector="Media &amp; Entertainment">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Media &amp; Entertainment">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sunshine Pictures</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
@@ -1557,12 +1621,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.9%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.2%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655">BUY_AT_LISTING</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">GYR Capital Advisors Pvt Ltd.</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Gems &amp; Jewellery">
+        <tr class="recently-listed-row" data-rec="AVOID" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shankesh Jewellers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
@@ -1577,12 +1643,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+11.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+8.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.1%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Aryaman Financial Services Ltd, Smart Horizon Capital Advisors Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Real Estate &amp; Infrastructure">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Horizon Industrial Parks</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
@@ -1597,12 +1665,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+0.4%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.1%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.9%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd, Sbi Capital Markets Ltd, 360 One Wam Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Gems &amp; Jewellery">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Lalithaa Jewellery Mart</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
@@ -1617,12 +1687,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+31.8%</b></td>
           <td class="num" style="color:var(--red)"><b>-5.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+14.6%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Anand Rathi Advisors Ltd, Equirus Capital Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Logistics &amp; Supply Chain">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shiprocket</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -1637,12 +1709,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+35.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-1.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+17.1%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Axis Capital Ltd, Bofa Securities India Ltd, Jm Financial Ltd, Kotak Mahindra Capital Co.Ltd., Kotak Mahindra Capital Company Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="EXIT_AT_OPEN" data-sector="Consumer &amp; FMCG">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Consumer &amp; FMCG">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Milky Mist Dairy Food</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
@@ -1657,12 +1731,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+17.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+3.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+13.8%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Jm Financial Ltd, Axis Capital Ltd, Iifl Capital Services Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Healthcare &amp; Pharma">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Healthcare &amp; Pharma">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Molbio Diagnostics</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -1677,12 +1753,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+21.4%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.6%</b></td>
           <td class="num" style="color:var(--red)"><b>-7.5%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Iifl Capital Services Ltd, Kotak Mahindra Capital Company Ltd, Jefferies India Pvt Ltd, Motilal Oswal Investment Advisors Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Auto &amp; Ancillaries">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Auto &amp; Ancillaries">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dhoot Transmission</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
@@ -1697,12 +1775,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+37.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+6.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+7.8%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Axis Capital Ltd, Kotak Mahindra Capital Company Ltd, Jefferies India Pvt Ltd, Sbi Capital Markets Ltd, Nomura Financial Advisory &amp; Securities (India) Pvt Ltd, 360 One Wam Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Engineering &amp; Capital Goods">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Behari Lal Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -1717,12 +1797,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+63.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+16.5%</b></td>
           <td class="num" style="color:var(--green)"><b>+27.4%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Emkay Global Financial Services Ltd, Systematix Corporate Services Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="HOLD_ALLOTTEES" data-sector="Engineering &amp; Capital Goods">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Technocraft Ventures</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -1737,12 +1819,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+34.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+14.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+7.7%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Khambatta Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="Gems &amp; Jewellery">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Priority Jewels</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
@@ -1757,8 +1841,10 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+15.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+15.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.9%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div></td>
         </tr>
     </tbody>

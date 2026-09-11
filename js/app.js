@@ -32,14 +32,15 @@ function filterSection(section) {
 
   document.querySelectorAll(rowClass).forEach(row => {
     const rec = row.getAttribute('data-rec') || '';
-    const strat = row.getAttribute('data-strat') || '';
     const sector = row.getAttribute('data-sector') || '';
     const text = row.innerText.toLowerCase();
 
     // 1. Action filter check
-    let matchesAction = (actionCrit === 'all' || rec === actionCrit || strat === actionCrit);
-    if (actionCrit === 'BUY') {
-      matchesAction = (rec === 'BUY' || rec === 'SUBSCRIBE' || rec === 'MUST_BUY');
+    let matchesAction = (actionCrit === 'all' || rec === actionCrit);
+    if (actionCrit === 'MUST_BUY') {
+      matchesAction = (rec === 'MUST_BUY');
+    } else if (actionCrit === 'BUY') {
+      matchesAction = (rec === 'BUY' || rec === 'SUBSCRIBE');
     } else if (actionCrit === 'IGNORE') {
       matchesAction = (rec === 'IGNORE' || rec === 'AVOID');
     }

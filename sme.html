@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-11 13:15:10
+    <span class="pulse-dot"></span> Cycle: 2026-09-11 13:30:49
   </div>
 </nav>
 
@@ -56,15 +56,15 @@
         <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
           <div>Evaluated: <b style="color:#f8fafc;">20 Listings</b></div>
           <div>Overprediction Rate: <b style="color:#10b981;">20.0% (4/20)</b></div>
-          <div>Mean Error (Bias): <b style="color:#3b82f6;">+13.3%</b></div>
-          <div>MAE: <b style="color:#10b981;">22.6%</b></div>
-          <div>Adaptive Dampener: <b style="color:#f59e0b;">+2.7%</b></div>
+          <div>Mean Error (Bias): <b style="color:#3b82f6;">+13.9%</b></div>
+          <div>MAE: <b style="color:#10b981;">22.1%</b></div>
+          <div>Adaptive Dampener: <b style="color:#f59e0b;">+2.8%</b></div>
           <div>GMP Blend Weight: <b style="color:#fbbf24;">100%</b></div>
         </div>
       </div>
       <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
         <ul style="margin:0 0 0 16px;padding:0;">
-          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in SME (MAE: 22.6%, Directional Acc: 50.0%).</li><li style='margin-bottom:3px;'>Learned from Technocrats Plasma Systems: Pred -12.5% vs Actual +74.2% (Delta +86.7%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Shanti Inorganics: Pred +24.1% vs Actual +90.0% (Delta +65.9%, Driver: BLOCKBUSTER_SURGE).</li>
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in SME (MAE: 22.1%, Directional Acc: 55.0%).</li><li style='margin-bottom:3px;'>Learned from Technocrats Plasma Systems: Pred -12.5% vs Actual +74.2% (Delta +86.7%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Shanti Inorganics: Pred +24.1% vs Actual +90.0% (Delta +65.9%, Driver: BLOCKBUSTER_SURGE).</li>
         </ul>
       </div>
     </div>
@@ -89,7 +89,7 @@
     <div class="clbl">MUST BUY Action</div>
   </div>
   <div class="card" style="border-color:#10b981">
-    <div class="cnum" style="color:#34d399">2</div>
+    <div class="cnum" style="color:#34d399">1</div>
     <div class="clbl">BUY Action (All)</div>
   </div>
   <div class="card">
@@ -118,7 +118,6 @@
     <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (18)</button>
     <button class="pill-filter" onclick="filterAction('open', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'BUY', this)">Buy</button>
-    <button class="pill-filter" onclick="filterAction('open', 'BUY_AT_LISTING', this)">Buy at Open</button>
     <button class="pill-filter" onclick="filterAction('open', 'IGNORE', this)">Ignore / Avoid</button>
   </div>
   <div class="filter-group">
@@ -157,13 +156,12 @@
         <th class="sortable num" onclick="sortTable('table-open', 8, true)">Gemini Score</th>
         <th style="min-width:240px;">Points (Why the Score)</th>
         <th class="sortable" onclick="sortTable('table-open', 10, false)">Action</th>
-        <th class="sortable" onclick="sortTable('table-open', 11, false)">Strategy</th>
         <th>Lead Manager & Valuation Signals</th>
       </tr>
     </thead>
     <tbody id="open-table-body">
       
-        <tr class="open-row" data-rec="BUY" data-strat="BUY_AT_LISTING" data-sector="Chemicals &amp; Materials">
+        <tr class="open-row" data-rec="BUY" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Amtech Esters</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -200,15 +198,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.bseindia.com/downloads/ipo/RHP&amp;GID_090920261409.zip' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#3b82f622;color:#3b82f6;border:1px solid #3b82f655">BUY_AT_LISTING</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>70</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Credora Partners Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Market GMP indicates ~14.7% listing premium (benchmark quote).</li><li>Our independent calculated fair value is +4.9% (consensus expectation: +12.5%).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="BUY" data-strat="EXIT_AT_OPEN" data-sector="Textiles &amp; Apparel">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Vinod Texworld</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -245,15 +245,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://nsearchives.nseindia.com/emerge/corporates/content/Registration_29092025212200_VTLDraftProspectusfinal.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>43</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Fast Track Finsec Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Fast Track Finsec Pvt Ltd [Tier 4 (High Risk)]: 9 IPOs, avg gain -3.0%, 44% positive (LM impact: -8.9 pts)</li><li>Market GMP indicates ~16.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Renewable Energy &amp; Power">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Renewable Energy &amp; Power">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Infrax Renewable</div>
             <span class="sector-pill">Renewable Energy &amp; Power</span>
@@ -290,15 +292,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.bsesme.com/download/369933/SME_IPO%20InPrinciple/Draft_Prospectus_and_Draft_Abridged_Prospectus_20260626200921.zip' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Smart Horizon Capital Advisors Pvt Ltd [Tier 2 (High Conviction)]: 25 IPOs, avg gain +7.2%, 76% positive (LM impact: +3.2 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Renewable Energy &amp; Power">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Renewable Energy &amp; Power">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Raksan Transformers</div>
             <span class="sector-pill">Renewable Energy &amp; Power</span>
@@ -335,15 +339,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.bseindia.com/downloads/ipo/RHP&amp;GID_Raksan%20Transformers%20Limited_090920261636.zip' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>48</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Hem Securities Ltd [Tier 1 (Elite Alpha)]: 34 IPOs, avg gain +26.1%, 88% positive (LM impact: +10.3 pts)</li><li>Market GMP indicates ~10.3% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Auto &amp; Ancillaries">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Auto &amp; Ancillaries">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Om Galaxy</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
@@ -380,15 +386,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://omgalaxymould.com/wp-content/uploads/2026/09/Project-Om_-RHP_with_RFS.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>9</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Indorient Financial Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Indorient Financial Services Ltd [Tier 4 (High Risk)]: 7 IPOs, avg gain +12.7%, 43% positive (LM impact: -4.2 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="BFSI &amp; Financial Services">
+        <tr class="open-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Maharaja &amp; Speedex India</div>
             <span class="sector-pill">BFSI &amp; Financial Services</span>
@@ -425,15 +433,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://speedexind.com/wp-content/uploads/2026/09/SPeedex-RHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>17</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Choice Capital Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Choice Capital Advisors Pvt Ltd [Tier 4 (High Risk)]: 2 IPOs, avg gain -5.2%, 50% positive (LM impact: -4.6 pts)</li><li>Market GMP indicates ~16.1% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Textiles &amp; Apparel">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Panchatv Bharat</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -470,15 +480,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.markcorporateadvisors.com/style/images/smeipo/Panchatv%20Bharat%20Limited.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Mark Corporate Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Mark Corporate Advisors Pvt Ltd [Tier 3 (Moderate)]: 4 IPOs, avg gain +13.6%, 50% positive (LM impact: +4.1 pts)</li><li>Market GMP indicates ~5.8% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Media &amp; Entertainment">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Media &amp; Entertainment">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Century Business Media</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
@@ -515,15 +527,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://hemadmin.hemsecurities.com/images/Files/offer/3167.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>52</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Hem Securities Ltd [Tier 1 (Elite Alpha)]: 34 IPOs, avg gain +26.1%, 88% positive (LM impact: +10.3 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Chemicals &amp; Materials">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Injecto Polymers</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -560,15 +574,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://injectopolymers.in/wp-content/uploads/2026/09/1.-RHP_07.09.2026.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>7</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Indcap Advisors Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Indcap Advisors Pvt Ltd [Tier 4 (High Risk)]: 3 IPOs, avg gain +3.2%, 33% positive (LM impact: -7.0 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Consumer &amp; FMCG">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Consumer &amp; FMCG">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shakti Polytarp</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
@@ -605,15 +621,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.chittorgarh.net/reports/ipo_notes/shakti-polytarp-ltd-rhp.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>33</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Nexgen Financial Solutions Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Nexgen Financial Solutions Pvt Ltd [Tier 1 (Elite Alpha)]: 5 IPOs, avg gain +16.3%, 80% positive (LM impact: +7.4 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Consumer &amp; FMCG">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Consumer &amp; FMCG">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Vama Wovenfab</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
@@ -650,15 +668,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://vamawoven.com/wp-content/uploads/2026/09/RHP_VamaWovenfabLimited-2.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>18</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Gretex Corporate Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Gretex Corporate Services Ltd [Tier 3 (Moderate)]: 14 IPOs, avg gain +4.3%, 79% positive (LM impact: +1.3 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Healthcare &amp; Pharma">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Quanto Agroworld</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -695,15 +715,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://syjjlswidlmfzafnyaen.supabase.co/storage/v1/object/public/investor-documents/DRAFT_PROSPECTUS_QUANTO_27-02-2026.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>7</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Jawa Capital Services Pvt Ltd, Sobhagya Capital Options Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jawa Capital Services Pvt Ltd [Tier 4 (High Risk)]: 6 IPOs, avg gain -8.8%, 17% positive (LM impact: -10.7 pts)</li><li>Sobhagya Capital Options Pvt Ltd [Tier 4 (High Risk)]: 8 IPOs, avg gain +3.0%, 38% positive (LM impact: -7.1 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Auto &amp; Ancillaries">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Auto &amp; Ancillaries">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Kheria Autocomp</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
@@ -740,15 +762,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.chittorgarh.net/reports/ipo_notes/kheria_autocomp_limited_rhp-1.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>21</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Smc Capitals Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Smc Capitals Ltd [Tier 3 (Moderate)]: 1 IPOs, avg gain +0.3%, 100% positive (LM impact: +0.1 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Engineering &amp; Capital Goods">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Axiom Gas Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -785,15 +809,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>40</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">SKI Capital Services Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>SKI Capital Services Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +33.2%, 75% positive (LM impact: +11.0 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">EnProCon Enterprise</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -805,7 +831,7 @@
           </td>
           <td>29 Jan 25</td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:11.5px;">+0.8%</b>
+            <b style="font-size:11.5px;">+0.3%</b>
           </td>
           <td class="num"><b><span class='dim'>—</span></b></td>
           <td class="num" style="color:var(--dim)">
@@ -830,15 +856,17 @@
           </ul>
           
         </td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>47</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">GYR Capital Advisors Pvt Ltd.</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>GYR Capital Advisors Pvt Ltd. [Tier 1 (Elite Alpha)]: 31 IPOs, avg gain +49.1%, 90% positive (LM impact: +17.2 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Taiyo Feed Mill</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -875,15 +903,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.bseindia.com/corporates/download/330693/Final%20DRHP_Taiyo%20Feed%20Mill%20Limited_20250204192623.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>25</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Share India Capital Services Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Share India Capital Services Pvt Ltd [Tier 3 (Moderate)]: 11 IPOs, avg gain +18.5%, 54% positive (LM impact: +5.5 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="IT &amp; Technology">
+        <tr class="open-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dove Soft</div>
             <span class="sector-pill">IT &amp; Technology</span>
@@ -920,15 +950,17 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.dovesoft.io/images/investor/DRHP.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>25</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Unicon Capital Services Pvt Ltd, Grow House Wealth Management Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Unicon Capital Services Pvt Ltd [Tier 4 (High Risk)]: 3 IPOs, avg gain -4.2%, 33% positive (LM impact: -9.3 pts)</li><li>Grow House Wealth Management Pvt Ltd [Tier 3 (Moderate)]: 2 IPOs, avg gain +5.4%, 100% positive (LM impact: +1.6 pts)</li></ul>
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Hospitality &amp; Tourism">
+        <tr class="open-row" data-rec="IGNORE" data-sector="Hospitality &amp; Tourism">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Neptune Holidays</div>
             <span class="sector-pill">Hospitality &amp; Tourism</span>
@@ -965,8 +997,10 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.bseindia.com/corporates/download/377244/NeptuneHolidaysLimitedDRHPfilingversion_20250223164149.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>10</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Horizon Management Pvt Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Horizon Management Pvt Ltd [Tier 4 (High Risk)]: 18 IPOs, avg gain +9.3%, 44% positive (LM impact: -5.2 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
@@ -1013,13 +1047,12 @@
         <th class="sortable num" onclick="sortTable('table-pending', 8, true)">Gemini Score</th>
         <th style="min-width:240px;">Points (Why the Score)</th>
         <th class="sortable" onclick="sortTable('table-pending', 10, false)">Action</th>
-        <th class="sortable" onclick="sortTable('table-pending', 11, false)">Strategy</th>
         <th>Lead Manager & Valuation Signals</th>
       </tr>
     </thead>
     <tbody id="pending-table-body">
       
-        <tr class="pending-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
+        <tr class="pending-row" data-rec="IGNORE" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Apana Logistics</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -1056,8 +1089,10 @@
           </ul>
           <div style='margin-top:3px;'><a href='https://www.corporatemakers.in/pdf/Apana_Prospectus.pdf' target='_blank' style='font-size:9.5px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
         </td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>2</b>/100</div>
+          </td>
           <td>
             <div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Corporate Makers Capital Ltd [Tier 4 (High Risk)]: 12 IPOs, avg gain -2.1%, 17% positive (LM impact: -8.6 pts)</li><li>Market GMP indicates ~0.0% listing premium (benchmark quote).</li></ul>
@@ -1107,13 +1142,12 @@
         <th class="sortable num" onclick="sortTable('table-recently-listed', 8, true)">GMP &Delta;</th>
         <th class="sortable num" onclick="sortTable('table-recently-listed', 9, true)">Exp &Delta;</th>
         <th class="sortable" onclick="sortTable('table-recently-listed', 10, false)">Action</th>
-        <th class="sortable" onclick="sortTable('table-recently-listed', 11, false)">Strategy</th>
         <th>Lead Manager(s)</th>
       </tr>
     </thead>
     <tbody id="recently-listed-table-body">
       
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Retail &amp; E-Commerce">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Retail &amp; E-Commerce">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Mopshop Distribution</div>
             <span class="sector-pill">Retail &amp; E-Commerce</span>
@@ -1128,12 +1162,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-0.7%</b></td>
           <td class="num" style="color:var(--red)"><b>-0.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+6.7%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>9</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Khandwala Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Dhanwel Hybrid Seeds</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -1148,52 +1184,58 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+7.5%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>9</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Wealth Mine Networks Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Skytech Infinite Platform</div>
             <span class="sector-pill">IT &amp; Technology</span>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-4.5%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+0.5%)</div>
           </td>
           <td class="num">&#8377;77</td>
           <td><b>21 Aug 26</b></td>
           <td class="num">&#8377;74.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+0.6%</b></td>
+          <td class="num" style="color:var(--red)"><b>-4.4%</b></td>
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-3.9%</b></td>
           <td class="num" style="color:var(--red)"><b>-3.9%</b></td>
-          <td class="num" style="color:var(--red)"><b>-4.5%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--green)"><b>+0.5%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>10</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Finshore Management Services Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">ENS Enterprises</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
-            <div title='Independent calculation (+11.3%) over-estimated demand pull vs -9.6% actual. Requires conservative margin shrinkage.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-20.9%)</div>
+            <div title='Realized listing (-9.6%) underperformed prediction (+4.7%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-14.3%)</div>
           </td>
           <td class="num">&#8377;92</td>
           <td><b>21 Aug 26</b></td>
           <td class="num">&#8377;96.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+11.3%</b></td>
+          <td class="num" style="color:var(--green)"><b>+2.0%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+4.3%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.3%</b></td>
-          <td class="num" style="color:var(--red)"><b>-6.9%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--green)"><b>+2.3%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>14</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="DO_NOT_BUY" data-sector="Engineering &amp; Capital Goods">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Technocrats Plasma Systems</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
@@ -1204,16 +1246,18 @@
           <td class="num">&#8377;230.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--dim)"><b>+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b>+62.8%</b></td>
+          <td class="num" style="color:var(--green)"><b>+32.9%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+74.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+74.2%</b></td>
-          <td class="num" style="color:var(--green)"><b>+11.4%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--green)"><b>+41.3%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>9</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Rarever Financial Advisors Pvt Ltd.</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="MUST_BUY" data-strat="HOLD_ALLOTTEES" data-sector="Textiles &amp; Apparel">
+        <tr class="recently-listed-row" data-rec="MUST_BUY" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Qualiance International</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -1228,12 +1272,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+77.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+13.3%</b></td>
           <td class="num" style="color:var(--green)"><b>+24.3%</b></td>
-          <td><span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span></td>
-          <td><span class="badge-strat" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">HOLD_ALLOTTEES</span></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>99</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="BUY" data-strat="DO_NOT_BUY" data-sector="Agriculture &amp; Agri-Tech">
+        <tr class="recently-listed-row" data-rec="MUST_BUY" data-sector="Agriculture &amp; Agri-Tech">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Farm Peace</div>
             <span class="sector-pill">Agriculture &amp; Agri-Tech</span>
@@ -1248,12 +1294,14 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">BUY</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>98</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Socradamus Capital Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="Logistics &amp; Supply Chain">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Logistics &amp; Supply Chain">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Fly-Hi Maritime Travels</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
@@ -1268,12 +1316,14 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
           <td class="num"><span class="dim">&mdash;</span></td>
           <td class="num"><span class="dim">&mdash;</span></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>1</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="DO_NOT_BUY" data-sector="Chemicals &amp; Materials">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Phychem Technologies</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -1284,36 +1334,40 @@
           <td class="num">&#8377;56.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+1.9%</b></td>
-          <td class="num" style="color:var(--green)"><b>+6.9%</b></td>
+          <td class="num" style="color:var(--green)"><b>+8.8%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+3.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+1.9%</b></td>
-          <td class="num" style="color:var(--red)"><b>-3.2%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--red)"><b>-5.0%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>6</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Textiles &amp; Apparel">
+        <tr class="recently-listed-row" data-rec="MUST_BUY" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Ashutosh Fibre</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
-            <div title='Listing gain (+52.2%) surpassed estimate (+33.6%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+18.6%)</div>
+            <div title='Listing gain (+52.2%) surpassed estimate (+33.5%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+18.7%)</div>
           </td>
           <td class="num">&#8377;92</td>
           <td><b>07 Sep 26</b></td>
           <td class="num">&#8377;140.0</td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+35.9%</b></td>
-          <td class="num" style="color:var(--green)"><b>+25.9%</b></td>
+          <td class="num" style="color:var(--green)"><b>+25.6%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+52.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+16.3%</b></td>
-          <td class="num" style="color:var(--green)"><b>+26.3%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--green)"><b>+26.5%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>95</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Mefcom Capital Markets Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Chemicals &amp; Materials">
+        <tr class="recently-listed-row" data-rec="MUST_BUY" data-sector="Chemicals &amp; Materials">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Shanti Inorganics</div>
             <span class="sector-pill">Chemicals &amp; Materials</span>
@@ -1324,16 +1378,18 @@
           <td class="num">&#8377;157.7</td>
           <td class="num"></td>
           <td class="num" style="color:var(--green)"><b>+15.7%</b></td>
-          <td class="num" style="color:var(--green)"><b>+27.1%</b></td>
+          <td class="num" style="color:var(--green)"><b>+27.2%</b></td>
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+90.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+74.3%</b></td>
-          <td class="num" style="color:var(--green)"><b>+62.9%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td class="num" style="color:var(--green)"><b>+62.8%</b></td>
+          <td>
+            <span class="badge-rec" style="background:#8b5cf622;color:#8b5cf6;border:1px solid #8b5cf655">MUST_BUY</span>
+            <div style='font-size:9.5px;color:#cbd5e1;font-weight:600;margin-top:2px;'>Rel: <b style='color:#f8fafc;'>92</b>/100</div>
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Vivro Financial Services Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Kwick Forensic Solutions</div>
             <span class="sector-pill">IT &amp; Technology</span>
@@ -1348,12 +1404,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+66.7%</b></td>
           <td class="num" style="color:var(--red)"><b>-20.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+53.4%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Corporate Capital Ventures Pvt Ltd., Corporate Capitalventures Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Healthcare &amp; Pharma">
+        <tr class="recently-listed-row" data-rec="AVOID" data-sector="Healthcare &amp; Pharma">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">ABH Healthcare</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -1368,12 +1426,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-2.9%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.3%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Fedex Securities Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="DO_NOT_BUY" data-sector="Textiles &amp; Apparel">
+        <tr class="recently-listed-row" data-rec="AVOID" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Madhur Knit Crafts</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -1388,12 +1448,14 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-0.9%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">SKI Capital Services Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="EXIT_AT_OPEN" data-sector="Textiles &amp; Apparel">
+        <tr class="recently-listed-row" data-rec="AVOID" data-sector="Textiles &amp; Apparel">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Fascinate Textiles</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
@@ -1408,12 +1470,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-20.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-20.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-18.2%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Affinity Global Capital Market Pvt Ltd.</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-strat="DO_NOT_BUY" data-sector="Healthcare &amp; Pharma">
+        <tr class="recently-listed-row" data-rec="SUBSCRIBE" data-sector="Healthcare &amp; Pharma">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Credent Connect N Care</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -1428,12 +1492,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+90.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+53.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+55.8%</b></td>
-          <td><span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#10b98122;color:#10b981;border:1px solid #10b98155">SUBSCRIBE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Hem Securities Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="AVOID" data-strat="DO_NOT_BUY" data-sector="Healthcare &amp; Pharma">
+        <tr class="recently-listed-row" data-rec="AVOID" data-sector="Healthcare &amp; Pharma">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Pramodini Medicare</div>
             <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -1448,12 +1514,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+1.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+1.7%</b></td>
           <td class="num" style="color:var(--red)"><b>-5.2%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">AVOID</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Consumer &amp; FMCG">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Consumer &amp; FMCG">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Sham Foam</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
@@ -1468,12 +1536,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-20.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-21.1%</b></td>
           <td class="num" style="color:var(--red)"><b>-23.3%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd, Navigant Corporate Advisors Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Consumer &amp; FMCG">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Consumer &amp; FMCG">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Q&amp;T Foods</div>
             <span class="sector-pill">Consumer &amp; FMCG</span>
@@ -1488,12 +1558,14 @@
           <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
           <td class="num" style="color:var(--red)"><b>-0.9%</b></td>
           <td class="num" style="color:var(--red)"><b>-6.9%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Corporate Makers Capital Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Media &amp; Entertainment">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Media &amp; Entertainment">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Optimystix Entertainment India</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
@@ -1508,12 +1580,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+2.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+2.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+2.9%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Lsi Financial Services Private Ltd, Nexgen Financial Solutions Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="DO_NOT_BUY" data-sector="IT &amp; Technology">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Paluck Technologies</div>
             <span class="sector-pill">IT &amp; Technology</span>
@@ -1528,12 +1602,14 @@
           <td class="num" style="color:var(--red)"><b style="font-size:12px;">-2.5%</b></td>
           <td class="num" style="color:var(--red)"><b>-2.5%</b></td>
           <td class="num" style="color:var(--red)"><b>-46.1%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Horizon Management Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="NEUTRAL" data-strat="DO_NOT_BUY" data-sector="Media &amp; Entertainment">
+        <tr class="recently-listed-row" data-rec="NEUTRAL" data-sector="Media &amp; Entertainment">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">Complete Sports &amp; Management India</div>
             <span class="sector-pill">Media &amp; Entertainment</span>
@@ -1548,12 +1624,14 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+3.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+3.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+1.4%</b></td>
-          <td><span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span></td>
-          <td><span class="badge-strat" style="background:#64748b22;color:#64748b;border:1px solid #64748b55">DO_NOT_BUY</span></td>
+          <td>
+            <span class="badge-rec" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55">NEUTRAL</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div></td>
         </tr>
 
-        <tr class="recently-listed-row" data-rec="IGNORE" data-strat="EXIT_AT_OPEN" data-sector="Gems &amp; Jewellery">
+        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Gems &amp; Jewellery">
           <td>
             <div style="font-weight:700;font-size:11.5px;color:#f8fafc;">AJC Jewel Manufacturers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
@@ -1568,8 +1646,10 @@
           <td class="num" style="color:var(--green)"><b style="font-size:12px;">+4.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+4.2%</b></td>
           <td class="num" style="color:var(--green)"><b>+6.1%</b></td>
-          <td><span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span></td>
-          <td><span class="badge-strat" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">EXIT_AT_OPEN</span></td>
+          <td>
+            <span class="badge-rec" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455">IGNORE</span>
+            
+          </td>
           <td><div style="font-weight:600;font-size:11px;">Smart Horizon Capital Advisors Pvt Ltd</div></td>
         </tr>
     </tbody>

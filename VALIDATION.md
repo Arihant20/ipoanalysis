@@ -1,10 +1,10 @@
 # Quantitative Model Validation & Out-Of-Time Stress Test Report
 
 - **Model Type**: LightGBM Quantile (p10/p50/p90)
-- **Model Version**: `2b2848829edf`
-- **Training Sample**: 200 historical IPOs (2018+ regime)
+- **Model Version**: `98108754c4fb`
+- **Training Sample**: 1832 historical IPOs (2018+ regime)
 - **Features Used**: 25 engineered signals
-- **Validated At**: 2026-09-12T09:21:51.748645+00:00
+- **Validated At**: 2026-09-12T09:17:02.133644+00:00
 - **Validation Gate Status**: **✅ PASS (Validated for Live Inference)**
 
 ---
@@ -14,10 +14,10 @@ Cross-validation evaluated across 5 folds with 5% chronological embargo:
 
 | Metric | Measured Value | Benchmark Target | Gate Status |
 |---|---|---|---|
-| **Mean Absolute Error (MAE)** | **22.16%** | < 20.0% | FAIL |
-| **Root Mean Squared Error (RMSE)** | **27.13%** | < 30.0% | PASS |
-| **Directional Accuracy** | **76.5%** | > 60.0% | PASS |
-| **80% Prediction Interval Coverage** | **71.2%** | 70.0% - 90.0% | PASS |
+| **Mean Absolute Error (MAE)** | **12.90%** | < 20.0% | PASS |
+| **Root Mean Squared Error (RMSE)** | **21.31%** | < 30.0% | PASS |
+| **Directional Accuracy** | **83.1%** | > 60.0% | PASS |
+| **80% Prediction Interval Coverage** | **74.6%** | 70.0% - 90.0% | PASS |
 
 ---
 
@@ -26,28 +26,28 @@ Trained outside shock windows; evaluated on out-of-time listings during downturn
 
 | Stress Window | Date Range | N | Measured MAE | RMSE | Dir Acc | Stress Gate |
 |---|---|---|---|---|---|---|
-| **2020 COVID Crash** | 2020-03-01 to 2020-12-31 | 35 | **24.11%** | 28.75% | 88.6% | PASS (MAE < 25%) |
-| **2022 FII Exodus** | 2022-04-01 to 2022-12-31 | 19 | **22.19%** | 26.84% | 73.7% | PASS (MAE < 25%) |
+| **2020 COVID Crash** | 2020-03-01 to 2020-12-31 | 157 | **9.60%** | 17.65% | 87.3% | PASS (MAE < 25%) |
+| **2022 FII Exodus** | 2022-04-01 to 2022-12-31 | 137 | **10.30%** | 18.80% | 89.1% | PASS (MAE < 25%) |
 
 ---
 
 ## 3. Top Feature Importances (Median Model, ranked by split-importance)
 | Feature Column | Split Importance Score |
 |---|---|
-| `ebitda_margin` | 138 |
-| `debt_equity` | 99 |
-| `issue_price` | 76 |
-| `total_bid_capital_cr` | 73 |
-| `is_sme` | 68 |
-| `sub_per_crore` | 64 |
-| `roe` | 63 |
-| `subscription_x` | 58 |
-| `lot_size` | 56 |
-| `pat_margin` | 52 |
-| `issue_size_cr` | 39 |
-| `log_price` | 21 |
+| `lm_avg_gain` | 139 |
+| `subscription_x` | 126 |
+| `total_bid_capital_cr` | 116 |
+| `lm_total_ipos` | 81 |
+| `lm_pct_negative` | 71 |
+| `issue_size_cr` | 70 |
+| `sub_per_crore` | 60 |
+| `lm_pct_positive` | 49 |
+| `issue_price` | 47 |
+| `log_sub` | 44 |
+| `log_bid_capital` | 26 |
+| `log_size` | 24 |
 
-**Zero-importance audit:** `lm_avg_gain`, `lm_pct_negative`, `lm_pct_positive`, `lm_total_ipos`, `pe`, `sub_blockbuster`, `sub_high`, `sub_trap_zone` — 0 split-importance (kept only if structurally required, e.g. `is_sme` for segment stratification; otherwise prune).
+**Zero-importance audit:** `ebitda_margin`, `is_sme`, `pe` — 0 split-importance (kept only if structurally required, e.g. `is_sme` for segment stratification; otherwise prune).
 
 ---
 

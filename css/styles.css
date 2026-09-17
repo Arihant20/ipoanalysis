@@ -225,13 +225,13 @@ th {
   top: 0;
   z-index: 5;
   background: #151e30;
-  color: var(--dim);
-  font-size: 10px;
-  font-weight: 700;
+  color: #cbd5e1;
+  font-size: 10.5px;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 6px 8px;
-  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.05em;
+  padding: 8px 10px;
+  border-bottom: 2px solid var(--border-light);
   white-space: nowrap;
 }
 th.sortable {
@@ -242,8 +242,8 @@ th.sortable {
 th.sortable:hover { color: #fff; background: #1c2840; }
 th.sortable::after {
   content: " ⇅";
-  opacity: 0.35;
-  font-size: 8.5px;
+  opacity: 0.4;
+  font-size: 9px;
 }
 th.sort-asc::after {
   content: " ▲";
@@ -257,33 +257,89 @@ th.sort-desc::after {
 }
 
 td {
-  padding: 6px 8px;
+  padding: 8px 10px;
   border-bottom: 1px solid var(--border);
   color: var(--text);
   vertical-align: middle;
-  line-height: 1.25;
+  line-height: 1.35;
 }
-tr:hover td { background: rgba(255,255,255,0.03); }
+tr:nth-child(even) td { background: rgba(255,255,255,0.015); }
+tr:hover td { background: rgba(59,130,246,0.06); }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .dim { color: var(--dim-2); }
 
 /* Sector Pill Tag */
 .sector-pill {
   display: inline-block;
-  font-size: 9px;
+  font-size: 9.5px;
   font-weight: 700;
   color: #38bdf8;
-  background: rgba(56,189,248,0.1);
-  border: 1px solid rgba(56,189,248,0.25);
-  padding: 1px 5px;
+  background: rgba(56,189,248,0.12);
+  border: 1px solid rgba(56,189,248,0.3);
+  padding: 2px 6px;
   border-radius: 4px;
-  margin-top: 2px;
+  margin-top: 3px;
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
 
-/* Badges */
-.badge-rec, .badge-strat {
+/* Points & Investment Drivers */
+.points-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 480px;
+}
+.metric-pills-row {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.point-bullet {
+  font-size: 11px;
+  color: #cbd5e1;
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.point-bullet span.bullet-icon {
+  color: #60a5fa;
+  font-size: 9px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Action Badges */
+.badge-rec {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.badge-rec.must-buy {
+  background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(168,85,247,0.25));
+  color: #c084fc;
+  border: 1px solid #a855f7;
+  box-shadow: 0 0 8px rgba(168,85,247,0.25);
+}
+.badge-rec.buy {
+  background: rgba(16,185,129,0.18);
+  color: #34d399;
+  border: 1px solid #10b981;
+}
+.badge-rec.ignore {
+  background: rgba(239,68,68,0.15);
+  color: #f87171;
+  border: 1px solid #ef444455;
+}
+
+.badge-strat {
   display: inline-block;
   padding: 2px 6px;
   border-radius: 4px;

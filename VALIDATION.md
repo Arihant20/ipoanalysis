@@ -1,10 +1,10 @@
 # Quantitative Model Validation & Out-Of-Time Stress Test Report
 
 - **Model Type**: LightGBM Quantile (p10/p50/p90)
-- **Model Version**: `98108754c4fb`
-- **Training Sample**: 1832 historical IPOs (2018+ regime)
-- **Features Used**: 25 engineered signals
-- **Validated At**: 2026-09-12T09:17:02.133644+00:00
+- **Model Version**: `7007fa0731d6`
+- **Training Sample**: 1993 historical IPOs (2018+ regime)
+- **Features Used**: 15 engineered signals
+- **Validated At**: 2026-09-20T14:01:04.531787+00:00
 - **Validation Gate Status**: **✅ PASS (Validated for Live Inference)**
 
 ---
@@ -14,10 +14,10 @@ Cross-validation evaluated across 5 folds with 5% chronological embargo:
 
 | Metric | Measured Value | Benchmark Target | Gate Status |
 |---|---|---|---|
-| **Mean Absolute Error (MAE)** | **12.90%** | < 20.0% | PASS |
-| **Root Mean Squared Error (RMSE)** | **21.31%** | < 30.0% | PASS |
-| **Directional Accuracy** | **83.1%** | > 60.0% | PASS |
-| **80% Prediction Interval Coverage** | **74.6%** | 70.0% - 90.0% | PASS |
+| **Mean Absolute Error (MAE)** | **13.34%** | < 20.0% | PASS |
+| **Root Mean Squared Error (RMSE)** | **21.02%** | < 30.0% | PASS |
+| **Directional Accuracy** | **81.1%** | > 60.0% | PASS |
+| **80% Prediction Interval Coverage** | **77.2%** | 70.0% - 90.0% | PASS |
 
 ---
 
@@ -26,28 +26,28 @@ Trained outside shock windows; evaluated on out-of-time listings during downturn
 
 | Stress Window | Date Range | N | Measured MAE | RMSE | Dir Acc | Stress Gate |
 |---|---|---|---|---|---|---|
-| **2020 COVID Crash** | 2020-03-01 to 2020-12-31 | 157 | **9.60%** | 17.65% | 87.3% | PASS (MAE < 25%) |
-| **2022 FII Exodus** | 2022-04-01 to 2022-12-31 | 137 | **10.30%** | 18.80% | 89.1% | PASS (MAE < 25%) |
+| **2020 COVID Crash** | 2020-03-01 to 2020-12-31 | 180 | **9.34%** | 17.48% | 88.9% | PASS (MAE < 25%) |
+| **2022 FII Exodus** | 2022-04-01 to 2022-12-31 | 160 | **10.11%** | 18.45% | 89.4% | PASS (MAE < 25%) |
 
 ---
 
 ## 3. Top Feature Importances (Median Model, ranked by split-importance)
 | Feature Column | Split Importance Score |
 |---|---|
-| `lm_avg_gain` | 139 |
-| `subscription_x` | 126 |
-| `total_bid_capital_cr` | 116 |
-| `lm_total_ipos` | 81 |
-| `lm_pct_negative` | 71 |
-| `issue_size_cr` | 70 |
-| `sub_per_crore` | 60 |
-| `lm_pct_positive` | 49 |
-| `issue_price` | 47 |
-| `log_sub` | 44 |
-| `log_bid_capital` | 26 |
-| `log_size` | 24 |
+| `lm_avg_gain` | 136 |
+| `subscription_x` | 134 |
+| `total_bid_capital_cr` | 121 |
+| `lm_pct_positive` | 97 |
+| `issue_size_cr` | 76 |
+| `sub_per_crore` | 66 |
+| `lm_total_ipos` | 62 |
+| `lm_pct_negative` | 61 |
+| `issue_price` | 54 |
+| `gmp_gain_pct` | 48 |
+| `lot_size` | 20 |
+| `sub_moderate` | 19 |
 
-**Zero-importance audit:** `ebitda_margin`, `is_sme`, `pe` — 0 split-importance (kept only if structurally required, e.g. `is_sme` for segment stratification; otherwise prune).
+**Zero-importance audit:** None — every feature splits at least once.
 
 ---
 

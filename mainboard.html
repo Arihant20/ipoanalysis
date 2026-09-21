@@ -26,7 +26,7 @@
     <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-20 23:42:40 IST
+    <span class="pulse-dot"></span> Cycle: 2026-09-21 12:38:19 IST
   </div>
 </nav>
 
@@ -55,16 +55,16 @@
         </div>
         <div style="display:flex;gap:14px;font-size:11px;color:#94a3b8;flex-wrap:wrap;">
           <div>Evaluated: <b style="color:#f8fafc;">20 Listings</b></div>
-          <div>Overprediction Rate: <b style="color:#10b981;">10.0% (2/20)</b></div>
-          <div>Mean Error (Bias): <b style="color:#3b82f6;">+9.5%</b></div>
-          <div>MAE: <b style="color:#10b981;">12.3%</b></div>
-          <div>Adaptive Dampener: <b style="color:#f59e0b;">+1.9%</b></div>
+          <div>Overprediction Rate: <b style="color:#10b981;">15.0% (3/20)</b></div>
+          <div>Mean Error (Bias): <b style="color:#3b82f6;">+8.9%</b></div>
+          <div>MAE: <b style="color:#10b981;">12.2%</b></div>
+          <div>Adaptive Dampener: <b style="color:#f59e0b;">+1.8%</b></div>
           <div>GMP Blend Weight: <b style="color:#fbbf24;">100%</b></div>
         </div>
       </div>
       <div style="font-size:11px;color:#cbd5e1;line-height:1.45;">
         <ul style="margin:0 0 0 16px;padding:0;">
-          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 12.3%, Directional Acc: 90.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -12.5% vs Actual +111.3% (Delta +123.8%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Augmont Enterprises: Pred -12.5% vs Actual +21.9% (Delta +34.5%, Driver: UNDERESTIMATED_DEMAND).</li>
+          <li style='margin-bottom:3px;'>Prediction accuracy is healthy in MAINBOARD (MAE: 12.2%, Directional Acc: 90.0%).</li><li style='margin-bottom:3px;'>Learned from Tempsens Instruments (India): Pred -12.5% vs Actual +111.3% (Delta +123.8%, Driver: BLOCKBUSTER_SURGE).</li><li style='margin-bottom:3px;'>Learned from Augmont Enterprises: Pred -12.5% vs Actual +21.9% (Delta +34.5%, Driver: UNDERESTIMATED_DEMAND).</li>
         </ul>
       </div>
     </div>
@@ -73,11 +73,11 @@
 <!-- TOP STATS CARDS -->
 <div class="cards">
   <div class="card" style="border-color:var(--green)">
-    <div class="cnum" style="color:var(--green)">12</div>
+    <div class="cnum" style="color:var(--green)">13</div>
     <div class="clbl">Currently Running</div>
   </div>
   <div class="card" style="border-color:var(--amber)">
-    <div class="cnum" style="color:var(--amber)">4</div>
+    <div class="cnum" style="color:var(--amber)">3</div>
     <div class="clbl">Going to List</div>
   </div>
   <div class="card" style="border-color:#38bdf8">
@@ -93,7 +93,7 @@
     <div class="clbl">BUY Calls (All)</div>
   </div>
   <div class="card">
-    <div class="cnum" style="color:var(--green)">+15.4%</div>
+    <div class="cnum" style="color:var(--green)">+10.3%</div>
     <div class="clbl">Avg Listing Gain (Last 15)</div>
   </div>
   <div class="card">
@@ -107,7 +107,7 @@
 <!-- ========================================================================= -->
 <div class="sec-hdr-row">
   <div>
-    <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. CURRENTLY RUNNING (12 IPOs) &mdash; Bidding Open / Upcoming</div>
+    <div class="sec-hdr" style="color:#34d399;"><span class="dot-open"></span> 1. CURRENTLY RUNNING (13 IPOs) &mdash; Bidding Open / Upcoming</div>
     <div style="font-size:11px;color:#94a3b8;margin-top:2px;">Ordered by Close Date (closing soonest first)</div>
   </div>
   <div class="density-switch">
@@ -118,7 +118,7 @@
 <div class="toolbar">
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (12)</button>
+    <button class="pill-filter active" onclick="filterAction('open', 'all', this)">All (13)</button>
     <button class="pill-filter" onclick="filterAction('open', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'BUY', this)">Buy</button>
     <button class="pill-filter" onclick="filterAction('open', 'IGNORE', this)">Ignore / Avoid</button>
@@ -128,6 +128,7 @@
     <select class="select-filter" id="sector-open" onchange="filterSection('open')">
       <option value="all">All Sectors</option>
       <option value="Auto &amp; Ancillaries">Auto &amp; Ancillaries</option>
+<option value="BFSI &amp; Financial Services">BFSI &amp; Financial Services</option>
 <option value="Chemicals &amp; Materials">Chemicals &amp; Materials</option>
 <option value="Diversified">Diversified</option>
 <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
@@ -167,7 +168,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Sonaselection India</div>
             <span class="sector-pill">Textiles &amp; Apparel</span>
           </td>
-          <td><span title='Live / In-Offer' style='background:#1e293b;color:#94a3b8;border:1px solid #334155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Day 4 (Interim)</span></td>
+          <td><span title='Final Day (Interim) — Bids finalize at 4:30 PM close.' style='background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Final Day (12 PM Interim)</span></td>
           <td class="num">
             <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;99</div>
             
@@ -182,8 +183,8 @@
             <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;99.0</div>
           </td>
           <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 0.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.9x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.7x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 0.9x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 1.4x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.9x</b></div>
           </td>
           <td class="num">
           <div style="display:inline-block;text-align:right;">
@@ -197,14 +198,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>16.5x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 86.2% Pre &rarr; 64.5% Post'>Promoter: <b>64.5%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(86%&rarr;65%, -21.7% dil.)</span></span><span style='background:#1e293b;border:1px solid #10b98166;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='100% Fresh Issue funds internal business growth'>100% Fresh (₹142 Cr)</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹42 Cr</b></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation is aggressive with a post-IPO P/E of 42.9x against a modest PAT margin of 6.58%, leaving little margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>ROCE stands at 19.69% while ROE reaches 39.05%, heavily influenced by a high financial leverage structure (Debt/Equity of 2.48).</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic health requires close monitoring due to elevated debt levels, though the issue is structured as 100% fresh capital rather than promoter exit.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Promoter holding transitions from 86.2% pre-issue to 64.5% post-issue, retaining strong skin-in-the-game while expanding the public float.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E of 42.9x is elevated relative to a modest ROCE of 19.69% and a low PAT margin of 6.58%, offering limited margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: High reported ROE of 39.05% is heavily leveraged by a high Debt/Equity ratio of 2.48, signaling financial risk rather than pure operational efficiency.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Heavy reliance on debt leverage requires close monitoring of interest coverage and operating cash flow durability against stated earnings.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: The issue structure is 100% fresh issue (Rs. 142 Cr), ensuring capital flows directly into the balance sheet for productive deployment rather than promoter exit.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
             <span class="badge-rec ignore">IGNORE (-15.0%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>17</b>/100</div>
-            <div class='action-reason-box'>Ignore this IPO due to negative fair value expectations, zero GMP, and weak sub-1x subscription demand signaling immediate listing discount risks.</div>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>1</b>/100</div>
+            <div class='action-reason-box'>Terrible 0.46x QIB subscription, negative fair value, and zero GMP confirm a classic value trap with severe listing loss risks. Avoid entirely.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Choice Capital Advisors Pvt Ltd</div>
@@ -226,10 +227,10 @@
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+0.3%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;158.7</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;155.4</b></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+10.1%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;163.0</div>
+            <b style="font-size:12px;">+6.1%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;157.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -247,14 +248,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Calculated: Post Shares × Price ÷ PAT)'>P/E: <b>74.4x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Calculated: Post Shares × Price ÷ PAT)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 52.0% Pre &rarr; 46.5% Post'>Promoter: <b>46.5%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(52%&rarr;47%, -5.5% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 45% | OFS 55%</span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E of 74.4x is highly aggressive and detached from underlying fundamentals, offering an abysmal margin of safety given the low return ratios.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Weak profitability metrics with an anemic ROCE of 9.89% and ROE of 6.8%, alongside a thin PAT margin of 3.53%, indicate weak pricing power and low capital efficiency in a competitive tile manufacturing sector.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>⚠️ Value Trap / Window-Dressing Alert: The combination of a lofty 74.4x P/E multiple with suppressed single-digit return metrics (ROCE &lt; 10%) points to poor operating earnings quality and an inflated valuation structure.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Ownership Alignment: The offer composition features a substantial Rs. 388 Cr Offer For Sale (55% of the total issue size), suggesting heavy promoter stake monetization at expensive valuations rather than prioritizing business growth.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: The post-IPO P/E of 74.4x is exorbitant for a low-margin tiles and sanitaryware player, offering virtually zero margin of safety given single-digit returns on capital.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Weak profitability metrics with an anemic ROCE of 9.89%, ROE of 6.8%, and a wafer-thin PAT margin of 3.53% signal intense industry competition and lack of pricing power.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Offer Composition &amp; Governance: A substantial 55% of the issue size consists of an Offer for Sale (Rs. 388 Cr out of Rs. 708 Cr total), indicating heavy promoter stake dilution at the upper end of the valuation cycle rather than core capital deployment.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics &amp; Capital Allocation: While featuring a mix of fresh issue and OFS on the mainboard, the heavy reliance on an expensive valuation multiple to raise capital for a low-return business model poses significant post-listing downside risk.</span></div>
             <div style='margin-top:4px;'><a href='https://live.jmfl.com/od/UploadedFiles/A49FD961-AE8C-4FE8-9A30-5041E1D8672C.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+7.2%)</span>
+            <span class="badge-rec ignore">IGNORE (+5.0%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>4</b>/100</div>
-            <div class='action-reason-box'>Despite a 10.1% GMP, an excessive 74.4x P/E and zero subscription demand highlight severe discounting risk, making this fundamentally unviable.</div>
+            <div class='action-reason-box'>Avoid — Extreme valuation risk: Stretched multiple (P/E 74.4x) leaves zero safety margin despite retail hype; elevated risk of post-listing multiple contraction.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Goldman Sachs (India) Securities Pvt Ltd, Sbi Capital Markets Ltd</div>
@@ -262,7 +263,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-sector="Auto &amp; Ancillaries">
+        <tr class="open-row" data-rec="BUY" data-sector="Auto &amp; Ancillaries">
           <td>
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Adroit Industries (India)</div>
             <span class="sector-pill">Auto &amp; Ancillaries</span>
@@ -274,12 +275,12 @@
           </td>
           <td>2026-09-25<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-09-30)</span></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+3.5%</b>
+            <b style="font-size:12px;">+1.9%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;159.0</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;153.7</b></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+29.9%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;174.0</div>
+            <b style="font-size:12px;">+23.9%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;166.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -287,24 +288,24 @@
           </td>
           <td class="num">
           <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              5/100
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              58/100
             </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">HIGH RISK</div>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
             
           </div>
         </td>
           <td style="min-width:320px;">
           <div class="points-container">
-            
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Impossible to assess post-IPO P/E, EV/EBITDA, or margin of safety as all critical financial metrics such as issue price, P/E, PAT Margin, ROCE, ROE, and Debt/Equity are marked as &#x27;N/A&#x27;. There is no basis to compare against industry peers.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: No information regarding ROCE, ROE, revenue trajectory, or margin durability is provided, preventing any assessment of the company&#x27;s business moat, scalability, or historical performance.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Critical forensic checks like customer concentration, related-party transactions, litigations, promoter debt, cash flow vs. profit divergence (CFO lagging PAT, ballooning receivables), or pre-IPO profit spikes cannot be performed due to the complete lack of financial statements or operational data. This data vacuum is a significant governance red flag.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics &amp; Ownership Alignment: The issue size, offer composition (Fresh Issue vs. OFS), and promoter holding percentages (pre- vs. post-IPO) are all marked as &#x27;N/A&#x27;, making it impossible to analyze float dynamics, potential secondary dilution, or promoter &#x27;skin-in-the-game&#x27;.</span></div>
+            <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Calculated: Post Shares × Price ÷ PAT)'>P/E: <b>41.3x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Calculated: Post Shares × Price ÷ PAT)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 96.1% Pre &rarr; 71.9% Post'>Promoter: <b>71.9%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(96%&rarr;72%, -24.2% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 88% | OFS 12%</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E of 41.3x sits on the richer side for an engineering component supplier, requiring sustained high earnings growth to justify entry multiples.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Demonstrates solid profitability with an 18.69% PAT margin, alongside respectable capital efficiency markers including 19.01% ROCE and 22.54% ROE.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance &amp; Forensic Health: Debt-to-Equity of 0.41 indicates manageable leverage; however, forensic monitoring of customer and OEM dependencies is vital given the B2B auto/rail component focus.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float &amp; Capital Allocation: Healthy mix featuring a Fresh Issue of Rs. 133 Cr dedicated to productive use alongside a minor 12% OFS (Rs. 18 Cr), maintaining decent promoter skin-in-the-game at 71.9% post-issue.</span></div>
             <div style='margin-top:4px;'><a href='https://adroitindustries.com/Assets/pdf/Red_Herring_Prospectus.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+18.7%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>34</b>/100</div>
-            <div class='action-reason-box'>Despite a 29.9% GMP, zero subscription demand, undisclosed P/E, and severe discount risks outweigh listing gains, making this fundamentally unviable.</div>
+            <span class="badge-rec buy">BUY (+14.7%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>65</b>/100</div>
+            <div class='action-reason-box'>Despite a weak 58 DRHP score and neutral model value, a 23.9% GMP drives a tactical listing-day momentum trade, warranting a speculative buy.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Choice Capital Advisors Pvt Ltd</div>
@@ -326,7 +327,7 @@
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+0.8%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;191.0</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;190.6</b></td>
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+1.6%</b>
             <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;188.0</div>
@@ -337,24 +338,24 @@
           </td>
           <td class="num">
           <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              5/100
+            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              48/100
             </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">HIGH RISK</div>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
             
           </div>
         </td>
           <td style="min-width:320px;">
           <div class="points-container">
-            
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Critical data such as Issue Price, Issue Size, Pre/Post-IPO P/E, Post-Offer Market Cap, and Net Asset Value are all N/A, preventing any assessment of valuation sanity or margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Key performance indicators like PAT Margin, EBITDA Margin, ROE, ROCE, and Debt/Equity are completely missing, making it impossible to evaluate business moat, scalability, or margin durability.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Absence of data on customer concentration, offer composition (Fresh vs OFS), promoter holding, and cash flow metrics means no forensic analysis can be performed to detect potential red flags or window-dressing.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>With issue size, offer composition, and reservation quotas marked as N/A, an assessment of float mechanics, liquidity, or potential for pre-open cornering is not feasible.</span></div>
+            <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Calculated: Post Shares × Price ÷ PAT)'>P/E: <b>45.2x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Calculated: Post Shares × Price ÷ PAT)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 76.5% Pre &rarr; 57.4% Post'>Promoter: <b>57.4%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(77%&rarr;57%, -19.1% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 80% | OFS 20%</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: The post-IPO P/E of 45.2x sits on the higher side for a traditional infrastructure/construction related entity, leaving a narrow margin of safety for public investors.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Demonstrates respectable capital efficiency with an ROCE of 25.76% and an ROE of 35.44%, backed by a stable EBITDA margin of 14.07%.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Debt-to-Equity stands at 0.73, indicating meaningful financial leverage that warrants close monitoring of interest coverage and working capital cycles.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: The issue composition includes a mix of Rs. 129 Cr in fresh capital for deployment alongside a Rs. 32 Cr OFS (approx. 20%), resulting in promoter dilution from 76.5% to 57.4%.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+3.2%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>20</b>/100</div>
-            <div class='action-reason-box'>Zero subscription demand, undisclosed valuations, and severe discount risks outweigh marginal GMP gains. This is a fundamental avoid despite Tier-1 management.</div>
+            <span class="badge-rec ignore">IGNORE (+3.0%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>48</b>/100</div>
+            <div class='action-reason-box'>Despite tier-1 sponsorship, zero subscription demand, rich 45.2x P/E valuation, and discount risk override any marginal listing premium, signaling a clear avoid.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Srujan Alpha Capital Advisors Llp</div>
@@ -376,7 +377,7 @@
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+0.4%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;377.9</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;377.2</b></td>
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+4.4%</b>
             <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;378.0</div>
@@ -388,23 +389,23 @@
           <td class="num">
           <div style="display:inline-block;text-align:right;">
             <span class="badge-gemini" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              5/100
+              35/100
             </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">HIGH RISK</div>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">CAUTION</div>
             
           </div>
         </td>
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Calculated: Post Shares × Price ÷ PAT)'>P/E: <b>153.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Calculated: Post Shares × Price ÷ PAT)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 65.6% Post'>Promoter: <b>65.6%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;66%, -34.4% dil.)</span></span><span style='background:#1e293b;border:1px solid #10b98166;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='100% Fresh Issue funds internal business growth'>100% Fresh (₹2100 Cr)</span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: The Post-IPO P/E of 153.7x is astronomical and unsustainable, especially given a modest ROCE of 9.9% and high leverage. This indicates extreme overvaluation with virtually no margin of safety for investors.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>⚠️ Value Trap / Window-Dressing Alert: The DRHP explicitly references &#x27;Restated Consolidated Summary Statements as at March 31, 2026, March 31, 2025 and March 31, 2024&#x27;. Presenting future financial projections as historical &#x27;restated summary statements&#x27; is a catastrophic disclosure red flag, severely undermining the reliability of all provided financial metrics and indicating potential window-dressing. A high Debt/Equity ratio of 2.71 further compounds financial risk.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Ownership Alignment &amp; Float Dynamics: While the issue is 100% fresh (Rs. 2100 Cr) intended for company growth and promoter holding post-IPO remains healthy at 65.6%, these positive attributes cannot offset the profound concerns regarding valuation and severe governance/disclosure irregularities.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E of 153.7x is astronomical and leaves zero margin of safety, especially considering the capital-heavy nature of student housing and school infrastructure leasing.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: A mediocre ROCE of 9.9% paired with a high Debt/Equity ratio of 2.71 indicates subpar capital efficiency and heavy reliance on leverage to fund asset expansion.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>⚠️ Value Trap / Window-Dressing Alert: Despite a 100% fresh issue of Rs. 2100 Cr aimed at debt reduction or asset build-up, the combination of high leverage, low return on capital employed (9.9%), and a lofty 153.7x P/E exhibits classic characteristics of an over-engineered asset-heavy play priced to perfection.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Ownership &amp; Float Dynamics: Promoters dilute control down from 100% to 65.6% via a massive Rs. 2100 Cr fresh capital infusion, resulting in a substantial institutional float that requires flawless execution to justify valuations.</span></div>
             <div style='margin-top:4px;'><a href='https://www.chittorgarh.net/reports/ipo_notes/elevate-campus-rhp.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+4.4%)</span>
+            <span class="badge-rec ignore">IGNORE (+4.2%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>1</b>/100</div>
-            <div class='action-reason-box'>Despite a nominal 4.4% GMP, the prohibitive 153.7x P/E and zero subscription demand expose severe fundamental distress, making this a clear Grey Market hype trap to avoid.</div>
+            <div class='action-reason-box'>Despite a nominal 4.4% GMP, a prohibitive 153.7x P/E valuation and 0.0x subscription demand signal a severe grey market hype trap.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Iifl Capital Services Ltd, Morgan Stanley India Company Pvt Ltd</div>
@@ -426,10 +427,10 @@
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+0.8%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;445.7</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;443.9</b></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+15.3%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;467.0</div>
+            <b style="font-size:12px;">+14.8%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;465.0</div>
           </td>
           <td>
             <span class='dim'>—</span>
@@ -438,7 +439,7 @@
           <td class="num">
           <div style="display:inline-block;text-align:right;">
             <span class="badge-gemini" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              5/100
+              12/100
             </span>
             <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">HIGH RISK</div>
             
@@ -447,18 +448,68 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Calculated: Post Shares × Price ÷ PAT)'>P/E: <b>80.4x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Calculated: Post Shares × Price ÷ PAT)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 85.9% Pre &rarr; 74.5% Post'>Promoter: <b>74.5%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(86%&rarr;75%, -11.3% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 88% | OFS 12%</span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E of 80.4x is extraordinarily high and completely unjustified given the company&#x27;s extremely poor financial performance, offering no margin of safety whatsoever.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Razor-thin PAT margin (0.34%), abysmal ROE (1.69%), and very low ROCE (7.03%) indicate a highly commoditized business with poor capital efficiency, virtually no moat, and actively destroying shareholder value (ROE significantly below cost of capital and even bank FD rates). The high Debt/Equity of 1.34 further exacerbates risk for a business with such low returns.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: ⚠️ Value Trap / Window-Dressing Alert: The combination of an astronomical P/E and critically poor profitability metrics (ROE, ROCE, PAT Margin) presents a severe disconnect between valuation and fundamental business quality, indicating this IPO is a classic value trap despite the fresh issue component. No historical profit spikes or cash flow data provided to confirm or deny other forensic red flags, but the core metrics are damning.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: The total issue size of Rs. 405 Cr (Rs. 355 Cr Fresh + Rs. 50 Cr OFS) is substantial for a Mainboard IPO, ensuring adequate float and reducing immediate squeeze risks. Promoter holding post-IPO at 74.5% shows continued significant skin-in-the-game, but this does not mitigate the fundamental valuation and business quality concerns.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>⚠️ Value Trap / Window-Dressing Alert: The post-IPO P/E of 80.4x is massively disconnected from its dismal capital efficiency, evidenced by an anemic ROE of 1.69% and ROCE of 7.03%.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Extremely weak operational profitability with a razor-thin PAT margin of 0.34%, pointing toward severe commodity margin pressures and lack of any pricing power or business moat.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Unhealthy leverage profile with a Debt-to-Equity ratio of 1.34, compounding the risk for public shareholders given the low underlying returns on capital.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Heavy promoter holding pre-issue (85.9%) dropping to 74.5% post-issue via a mix of fresh issue and a Rs. 50 Cr OFS, offering poor margin of safety at the current valuation.</span></div>
             <div style='margin-top:4px;'><a href='https://www.chittorgarh.net/reports/ipo_notes/va20260912_rhp_project-ace_final.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+10.1%)</span>
+            <span class="badge-rec ignore">IGNORE (+9.6%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>2</b>/100</div>
-            <div class='action-reason-box'>Despite a 15.3% GMP, an excessive 80.4x P/E, zero subscription demand, and Tier-3 lead managers signal severe discount risk and fundamental value destruction.</div>
+            <div class='action-reason-box'>Despite a 14.8% GMP, an exorbitant 80.4x P/E, tier-3 lead managers, and zero subscription demand signal severe downside discount risk. Avoid entirely.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Pl Capital Markets Pvt Ltd, Khambatta Securities Ltd</div>
             <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Pl Capital Markets Pvt Ltd [Tier 3 (Moderate)]: 2 IPOs, avg gain +0.6%, 50% positive (LM impact: +0.2 pts)</li><li>Khambatta Securities Ltd [Tier 3 (Moderate)]: 1 IPOs, avg gain +34.0%, 100% positive (LM impact: +10.2 pts)</li></ul>
+          </td>
+        </tr>
+
+        <tr class="open-row" data-rec="IGNORE" data-sector="BFSI &amp; Financial Services">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Moneyview</div>
+            <span class="sector-pill">BFSI &amp; Financial Services</span>
+          </td>
+          <td><span title='Upcoming (Pre-Open) — Bidding not yet started.' style='background:#64748b22;color:#94a3b8;border:1px solid #64748b55;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Upcoming (Pre-Open)</span></td>
+          <td class="num">
+            <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;34</div>
+            
+          </td>
+          <td>2026-09-28<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-01)</span></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:12px;">-0.1%</b>
+          </td>
+          <td class="num"><b style="font-size:12px;">&#8377;34.0</b></td>
+          <td class="num" style="color:var(--dim)">
+            <b style="font-size:12px;">+0.0%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;34.0</div>
+          </td>
+          <td>
+            <span class='dim'>—</span>
+            
+          </td>
+          <td class="num">
+          <div style="display:inline-block;text-align:right;">
+            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              40/100
+            </span>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">CAUTION</div>
+            
+          </div>
+        </td>
+          <td style="min-width:320px;">
+          <div class="points-container">
+            
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and issue metrics are undisclosed (N/A), making it impossible to establish a margin of safety or compare against peer fintech lenders.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Profitability, ROCE, and ROE metrics are missing from the provided excerpts, preventing proper evaluation of its credit underwriting model and scalability.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Fintech NBFC models require intense scrutiny of Gross/Net NPAs, credit costs, and customer acquisition costs; current disclosures lack these vital forensic safeguards.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Lead managed by top-tier investment banks, but specific issue size and pre- vs post-promoter holding metrics remain unavailable for float and dilution analysis.</span></div>
+            <div style='margin-top:4px;'><a href='https://www.axiscapital.co.in/contents/Moneyview-%20RHP-1789923107.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
+          </div>
+        </td>
+          <td style="min-width:180px;">
+            <span class="badge-rec ignore">IGNORE (-0.1%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>28</b>/100</div>
+            <div class='action-reason-box'>Moneyview warrants an IGNORE due to zero subscription demand, flat GMP, and uncompelling fundamentals, presenting a severe listing discount risk.</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Kotak Mahindra Capital Company Ltd, Bofa Securities India Ltd, Axis Capital Ltd, Iifl Capital Services Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Kotak Mahindra Capital Company Ltd [Tier 2 (High Conviction)]: 38 IPOs, avg gain +15.3%, 74% positive (LM impact: +5.6 pts)</li><li>Bofa Securities India Ltd [Tier 1 (Elite Alpha)]: 9 IPOs, avg gain +28.1%, 89% positive (LM impact: +10.9 pts)</li></ul>
           </td>
         </tr>
 
@@ -496,15 +547,15 @@
         </td>
           <td style="min-width:320px;">
           <div class="points-container">
-            
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and issue price are unquantified in the prospectus data, leaving zero visibility on the margin of safety or relative peer valuation.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Essential metrics such as ROE, ROCE, and profit margins are entirely missing, rendering fundamental analysis of capital efficiency impossible.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Absence of detailed cash flow statements and working capital metrics prevents checking for CFO-to-PAT divergence or aggressive window-dressing.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Issue size and structure details are unlisted, making it impossible to evaluate pre-open cornering risks or the balance between fresh issue and OFS.</span></div>
+            <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>10.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and issue pricing details are currently unavailable (N/A), preventing a meaningful assessment of the margin of safety or relative peer valuation.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Key profitability and return metrics such as ROE, ROCE, and margins lack disclosed values, hindering the evaluation of long-term operational efficiency and durability.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Incomplete data on customer concentration, working capital trends, and cash flow conversions warrants caution against potential window-dressing or hidden liabilities.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: The exact issue size and offer composition remain unspecified, making it difficult to analyze potential dilution overhang or micro-float manipulation risks.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+2.3%)</span>
+            <span class="badge-rec ignore">IGNORE (+2.1%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>26</b>/100</div>
-            <div class='action-reason-box'>Zero subscription demand, zero GMP, and unappealing fundamentals justify a total ignore due to severe listing discount risks.</div>
+            <div class='action-reason-box'>Zero subscription demand and flat GMP signals complete lack of investor interest, outweighing the fair P/E valuation and making this issue an absolute avoid.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Unistone Capital Pvt Ltd</div>
@@ -538,23 +589,23 @@
           <td class="num">
           <div style="display:inline-block;text-align:right;">
             <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              40/100
+              45/100
             </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">CAUTION</div>
+            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
             
           </div>
         </td>
           <td style="min-width:320px;">
           <div class="points-container">
             
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E, EV/EBITDA, and issue pricing details are unavailable in the current disclosures, preventing any credible margin of safety calculation.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Key metrics such as ROCE, ROE, revenue trajectory, and EBITDA margins are entirely missing from the prospectus excerpts.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Without accessible financial statements, cash flow statements, and working capital details, evaluating potential window-dressing or customer concentration is unfeasible.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Issue size, fresh issue vs. OFS breakdown, and promoter holding dilution levels are not specified, hindering float structure and overhang analysis.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as Post-IPO P/E and issue size are entirely unlisted in the provided prospectus excerpts, preventing meaningful margin of safety calculations.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Financial returns (ROE, ROCE) and operating margins are missing, leaving the underlying operational efficiency and scalability of the renewable assets unverified.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance and forensic health cannot be audited due to absent disclosures on customer concentration, related-party transactions, and debt leverage.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Capital structure details, including the exact split between fresh issue and OFS, are not disclosed, obscuring potential promoter exit overhang.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+2.1%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>28</b>/100</div>
-            <div class='action-reason-box'>Zero subscription demand and flat GMP signal severe discounting risk. With unappealing fundamentals and no listing momentum, avoiding this capital-lockup is imperative.</div>
+            <span class="badge-rec ignore">IGNORE (+1.9%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>32</b>/100</div>
+            <div class='action-reason-box'>Ignore this offering entirely due to zero subscription demand and absolute lack of grey market momentum, signaling severe downside listing risk despite flat model expectations.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Kotak Mahindra Capital Company Ltd, Ambit Pvt Ltd, Citigroup Global Markets India Pvt Ltd, Jm Financial Ltd</div>
@@ -596,15 +647,15 @@
         </td>
           <td style="min-width:320px;">
           <div class="points-container">
-            <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (DRHP Prospectus)'>P/E: <b>15.0x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(DRHP Prospectus)</span></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and specific valuation metrics are not disclosed in the current text, making absolute margin of safety unquantifiable.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Operating as a prominent non-banking financial company (NBFC) backed by the Hero Group, but exact ROCE, ROE, and leverage ratios remain unverified.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Backed by top-tier investment banks (Jefferies, ICICI, HSBC, HDFC, BofA, Axis, JM Financial, SBI Caps), implying rigorous institutional oversight, though specific customer concentration and asset quality metrics are missing.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Mainboard issue with a high-profile syndicate of merchant bankers, ensuring broad institutional participation and adequate liquidity post-listing.</span></div>
+            
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as post-IPO P/E, issue size, and pricing remain unquantified in the current data disclosures.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business profitability, ROCE, ROE, and leverage ratios lack specific numerical values, limiting fundamental moat verification.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance structure benefits from a strong syndicate of lead investment banks, but customer concentration and asset quality metrics require deep forensic scrutiny.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float dynamics and exact offer composition (Fresh vs OFS split) are currently unavailable to gauge capital allocation utility and equity dilution.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+2.1%)</span>
+            <span class="badge-rec ignore">IGNORE (+1.9%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>35</b>/100</div>
-            <div class='action-reason-box'>Ignore due to zero subscription demand and zero GMP listing premium, signalling severe investor disinterest and immediate discount risk despite fair valuation.</div>
+            <div class='action-reason-box'>Zero subscription demand, flat GMP, and discount risks outweigh the Tier-2 syndicate, making this IPO a clear avoid with no listing or fundamental upside.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jefferies India Pvt Ltd, Icici Securities Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd, Hdfc Bank Ltd, Bofa Securities India Ltd, Axis Capital Ltd, Jm Financial Ltd, Sbi Capital Markets Ltd</div>
@@ -637,8 +688,8 @@
           </td>
           <td class="num">
           <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              40/100
+            <span class="badge-gemini" style="background:#ef444422;color:#ef4444;border:1px solid #ef444455;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              35/100
             </span>
             <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">CAUTION</div>
             
@@ -647,14 +698,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and issue pricing details are completely undisclosed in the provided excerpts, offering zero margin of safety visibility.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Critical metrics such as ROCE, ROE, and historical revenue/margin trajectories are missing, preventing assessment of operational efficiency.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Without balance sheet data, cash flow statements, and customer concentration metrics, forensic checks for working capital inflation or window-dressing cannot be completed.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Issue size, offer composition (Fresh vs OFS), and promoter holding adjustments are unquantified, leaving potential dilution and float mechanics opaque.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as Post-IPO P/E, issue price, and issue size are entirely unpopulated in the prospectus excerpts, preventing any assessment of margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Financial performance indicators including PAT margin, ROCE, ROE, and Debt/Equity are missing, leaving the business moat and capital efficiency unverified.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance, customer concentration, and potential window-dressing activities cannot be audited due to the absence of detailed financial statements and cash flow data in the current disclosure set.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float dynamics and offer composition (Fresh Issue vs OFS) are indeterminate, restricting any analysis of promoter alignment or dilution overhang.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
             <span class="badge-rec ignore">IGNORE (-0.2%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>28</b>/100</div>
-            <div class='action-reason-box'>Zero subscription demand and flat GMP signal severe institutional rejection, making this a clear avoid due to immediate discount listing risks.</div>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>25</b>/100</div>
+            <div class='action-reason-box'>Zero subscription demand and flat GMP signal absolute lack of market interest, making this capital-destruction risk warrant an immediate ignore despite tier-2 backing.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Clsa India Pvt Ltd, Jp Morgan India Pvt Ltd, Kotak Mahindra Capital Company Ltd</div>
@@ -697,14 +748,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and issue pricing details are currently unavailable (N/A) in the prospectus excerpts, preventing an absolute assessment of the margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Key profitability metrics including PAT margins, ROCE, and ROE are undisclosed, leaving the core earnings quality and capital efficiency unverified.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: While top-tier merchant bankers (Nuvama, Motilal Oswal, IIFL) manage the issue, detailed related-party transactions and customer concentration metrics require deeper scrutiny upon final price band announcement.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Mainboard segment typically ensures adequate liquidity, but the exact split between Fresh Issue and OFS remains critical to determine the actual capital formation versus promoter exit.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as Post-IPO P/E and issue size are currently unquantified in the provided excerpts, preventing a definitive calculation of the margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Fundamental profitability indicators like ROCE, ROE, and PAT margins are unavailable, restricting the evaluation of the company&#x27;s underlying business moat and scale durability.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance health, related-party transactions, and customer concentration risks cannot be fully vetted without detailed DRHP disclosures on working capital and cash flow divergence.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float dynamics and offer composition (Fresh Issue vs. OFS) remain undefined, obscuring potential promoter dilution overhang and capital allocation efficiency.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
             <span class="badge-rec ignore">IGNORE (-2.8%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>23</b>/100</div>
-            <div class='action-reason-box'>Zero subscription demand and flat GMP signal severe listing discount risks, outweighing any institutional backing. Avoid completely.</div>
+            <div class='action-reason-box'>Zero subscription demand and flat GMP signal severe downside risk, completely overriding top-tier management and rendering this fundamentally uninvestable.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Nuvama Wealth Management Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</div>
@@ -712,7 +763,7 @@
           </td>
         </tr>
 
-        <tr class="open-row" data-rec="IGNORE" data-sector="Diversified">
+        <tr class="open-row" data-rec="BUY" data-sector="Diversified">
           <td>
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">National Stock Exchange of India</div>
             <span class="sector-pill">Diversified</span>
@@ -724,7 +775,7 @@
           </td>
           <td>--</td>
           <td class="num" style="color:var(--red)">
-            <b style="font-size:12px;">-15.0%</b>
+            <b style="font-size:12px;">-4.0%</b>
           </td>
           <td class="num"><b style="font-size:12px;"><span class='dim'>—</span></b></td>
           <td class="num" style="color:var(--dim)">
@@ -732,8 +783,8 @@
             
           </td>
           <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 1.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.3x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.7x</b></div>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 2.5x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.6x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 2.2x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 0.5x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>1.2x</b></div>
           </td>
           <td class="num">
           <div style="display:inline-block;text-align:right;">
@@ -747,14 +798,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>35.4x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹6746 Cr</b></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E of 53.2x commands a premium, but is structurally supported by a dominant duopoly market position, high entry barriers, and annuity-like cash flows typical of global exchange peers.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Outstanding return ratios including 42.8% ROCE and 32.98% ROE highlight an exceptional capital-efficient business model with strong operating leverage and durable pricing power.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: High PAT margin (50.98%) reflects structural software and transaction fee scalability rather than window-dressing, though ongoing regulatory scrutiny on algorithmic trading and data sharing remains a key risk factor.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics &amp; Capital Allocation: As a large-cap mainboard listing with immense liquidity, the structural float dynamics mitigate pre-open cornering risks, though tracking regulatory dividend payouts and clearing corporation capitalization is crucial.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Post-IPO P/E of 53.2x commands a justified monopoly premium given the exchange&#x27;s near-complete dominance in Indian equity and derivatives volumes.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Superior business moat evidenced by exceptional PAT margins of 50.98% and high return profiles (ROCE 42.8%, ROE 32.98%) with strong cash-generation capabilities.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Low forensic risk profile characteristic of core market infrastructure, though continuous regulatory scrutiny on derivatives volumes remains a key structural watchpoint.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Massive scale and large liquid float mechanics ensure robust institutional participation, mitigating micro-float cornering risks.</span></div>
             
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (-15.0%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>43</b>/100</div>
-            <div class='action-reason-box'>Despite robust fundamentals, 0.34x retail subscription, zero GMP, and -15% model fair value highlight severe discount risks, warranting an outright ignore.</div>
+            <span class="badge-rec buy">BUY (-5.0%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>56</b>/100</div>
+            <div class='action-reason-box'>Despite flat GMP and a slight negative model fair value, robust institutional demand (QIB 2.54x) and elite 85/100 fundamentals justify a core structural BUY.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Kotak Mahindra Capital Company Ltd, Morgan Stanley India Company Pvt Ltd, Avendus Capital Pvt Ltd., HSBC Securities &amp; Capital Markets Pvt Ltd, Dam Capital Advisors Ltd, Hdfc Bank Ltd, Citigroup Global Markets India Pvt Ltd, Icici Securities Ltd, Jm Financial Ltd, Pantomath Capital Advisors Pvt Ltd, Axis Capital Ltd, Jp Morgan India Pvt Ltd, Equirus Capital Pvt Ltd, Motilal Oswal Investment Advisors Ltd, Nuvama Wealth Management Ltd, Idbi Capital Markets Services Ltd, Iifl Capital Services Ltd, 360 One Wam Ltd, Anand Rathi Advisors Ltd</div>
@@ -770,14 +821,14 @@
 <!-- ========================================================================= -->
 <div class="sec-hdr-row">
   <div>
-    <div class="sec-hdr" style="color:#f59e0b;"><span class="dot-pending"></span> 2. GOING TO LIST (4 IPOs) &mdash; Bidding Closed, Awaiting Listing Day</div>
+    <div class="sec-hdr" style="color:#f59e0b;"><span class="dot-pending"></span> 2. GOING TO LIST (3 IPOs) &mdash; Bidding Closed, Awaiting Listing Day</div>
     <div style="font-size:11px;color:#94a3b8;margin-top:2px;">Ordered by Listing Date (listing soonest first)</div>
   </div>
 </div>
 <div class="toolbar">
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('pending', 'all', this)">All (4)</button>
+    <button class="pill-filter active" onclick="filterAction('pending', 'all', this)">All (3)</button>
     <button class="pill-filter" onclick="filterAction('pending', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('pending', 'BUY', this)">Buy</button>
     <button class="pill-filter" onclick="filterAction('pending', 'IGNORE', this)">Ignore / Avoid</button>
@@ -788,7 +839,6 @@
       <option value="all">All Sectors</option>
       <option value="Agriculture &amp; Agri-Tech">Agriculture &amp; Agri-Tech</option>
 <option value="Auto &amp; Ancillaries">Auto &amp; Ancillaries</option>
-<option value="Chemicals &amp; Materials">Chemicals &amp; Materials</option>
 <option value="Retail &amp; E-Commerce">Retail &amp; E-Commerce</option>
     </select>
   </div>
@@ -815,56 +865,6 @@
     </thead>
     <tbody id="pending-table-body">
       
-        <tr class="pending-row" data-rec="IGNORE" data-sector="Chemicals &amp; Materials">
-          <td>
-            <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Manika Plastech</div>
-            <span class="sector-pill">Chemicals &amp; Materials</span>
-          </td>
-          <td><span title='Full & Final — Bidding closed, awaiting listing day.' style='background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:2px 7px;border-radius:5px;font-size:10.5px;font-weight:700;white-space:nowrap;'>Closed (Full &amp; Final)</span></td>
-          <td class="num">
-            <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;43</div>
-            
-          </td>
-          <td><b>2026-09-21</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-16)</span></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+5.4%</b>
-          </td>
-          <td class="num"><b style="font-size:12px;">&#8377;46.0</b></td>
-          <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+4.7%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;45.0</div>
-          </td>
-          <td>
-            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 11.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 15.4x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 49.4x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 20.9x</span></div>
-            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>19.4x</b></div>
-          </td>
-          <td class="num">
-          <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              40/100
-            </span>
-            <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">CAUTION</div>
-            
-          </div>
-        </td>
-          <td style="min-width:320px;">
-          <div class="points-container">
-            <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>9.6x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 75.0% Post'>Promoter: <b>75.0%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;75%, -25.1% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 74% | OFS 26%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹38 Cr</b></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and specific financial ratios are currently unquantified in the provided document excerpts, requiring close review of the price band upon release.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Insufficient data to evaluate ROCE, ROE, or margin durability directly from the provided statutory definitions excerpt.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance &amp; Forensic Risks: Promoter holding drops from 100% to 75% via a combined fresh issue and partial OFS; comprehensive checks on related-party transactions and customer concentration in the full DRHP are necessary.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: The issue includes a sizeable Rs. 92 Cr fresh issue component intended for productive deployment alongside a Rs. 33 Cr secondary exit, resulting in a standard post-IPO promoter stake of 75%.</span></div>
-            <div style='margin-top:4px;'><a href='https://manikaplastech.com/wp-content/uploads/2026/09/RHP.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
-          </div>
-        </td>
-          <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+7.0%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>38</b>/100</div>
-            <div class='action-reason-box'>Despite healthy subscription, weak fundamentals, Tier-2 sponsorship, and discount risk outweigh modest GMP, pointing to poor post-listing stability.</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Pantomath Capital Advisors Pvt Ltd</div>
-            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Pantomath Capital Advisors Pvt Ltd [Tier 2 (High Conviction)]: 9 IPOs, avg gain +13.1%, 67% positive (LM impact: +4.9 pts)</li></ul>
-          </td>
-        </tr>
-
         <tr class="pending-row" data-rec="MUST_BUY" data-sector="Retail &amp; E-Commerce">
           <td>
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">SS Retail</div>
@@ -879,10 +879,10 @@
           <td class="num" style="color:var(--green)">
             <b style="font-size:12px;">+37.2%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;584.3</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;588.0</b></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+34.4%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;570.0</div>
+            <b style="font-size:12px;">+36.6%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;579.0</div>
           </td>
           <td>
             <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 214.2x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 33.7x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 118.8x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 34.2x</span></div>
@@ -900,14 +900,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>53.2x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 72% | OFS 28%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹146 Cr</b></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as Post-IPO P/E and EV/EBITDA are unquantified in the provided text, necessitating strict caution until final price band disclosures.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business fundamentals and exact margins (PAT, ROCE, ROE) lack empirical data in the prospectus summary, preventing definitive moat verification.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>No immediate forensic red flags or window-dressing patterns are apparent from the generic definitions, though full financial statement analysis is pending.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Capital allocation structure shows a healthy bias towards productive expansion via a Rs. 360 Cr Fresh Issue alongside a moderate Rs. 140 Cr OFS (28%).</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as Post-IPO P/E and exact issue price are unquantified in the immediate excerpts, necessitating caution on margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business fundamentals show sound structural definitions for ROCE, ROE, and Operating EBITDA, though precise historical trajectories require direct financial table extraction.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance health appears standard with reputable lead managers (Anand Rathi, Emkay Global), but detailed related-party disclosures and customer concentration limits must be verified in full financial statements.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float dynamics feature a reasonable mix with a substantial Rs. 360 Cr fresh issue component directed toward productive capital allocation rather than pure promoter exit.</span></div>
             <div style='margin-top:4px;'><a href='https://ssmobile.com/aboutus/investor/assets/RHP/SS%20Retail%20Limited%20-%20RHP%20-%2008092026.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec must-buy">MUST_BUY (+37.8%)</span>
+            <span class="badge-rec must-buy">MUST_BUY (+38.7%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>97</b>/100</div>
-            <div class='action-reason-box'>Blockbuster 108x subscription and 34% GMP override mediocre fundamentals, making this a high-conviction listing-day momentum trade with explosive debut gains.</div>
+            <div class='action-reason-box'>Massive 108.7x subscription and 36.6% GMP override moderate fundamentals, making this a high-conviction listing-day momentum trade despite rich 53.2x P/E valuation.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Anand Rathi Advisors Ltd, Emkay Global Financial Services Ltd</div>
@@ -927,12 +927,12 @@
           </td>
           <td><b>2026-09-23</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-18)</span></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+33.2%</b>
+            <b style="font-size:12px;">+36.5%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;123.5</b></td>
+          <td class="num"><b style="font-size:12px;">&#8377;126.2</b></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+28.5%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;119.5</div>
+            <b style="font-size:12px;">+31.2%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;122.0</div>
           </td>
           <td>
             <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 126.4x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 61.9x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 357.2x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 126.0x</span></div>
@@ -941,7 +941,7 @@
           <td class="num">
           <div style="display:inline-block;text-align:right;">
             <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              48/100
+              50/100
             </span>
             <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
             
@@ -950,14 +950,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>14.3x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 73.7% Post'>Promoter: <b>73.7%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;74%, -26.3% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 80% | OFS 20%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹37 Cr</b></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and specific pricing metrics are currently not disclosed in the preliminary prospectus excerpts, preventing an absolute assessment of margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Key profitability and capital efficiency metrics like ROCE, ROE, and PAT margins are unavailable in the current disclosures.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Forensic &amp; Governance Health: Promoter holding reduces from 100% to 73.7%, indicating a healthy ongoing skin-in-the-game posture, but deeper forensic data on cash flows and customer concentration requires scrutiny once financial tables populate.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: The offering features a combination of Rs. 100 Cr Fresh Issue for productive deployment and a Rs. 25 Cr OFS (20% of the total issue), representing a balanced capital allocation mechanism on a Mainboard float.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and exact issue price details are not fully disclosed in the excerpt, making a strict margin of safety calculation provisional pending full financial statements.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: The issue structure emphasizes a primary fresh component (Rs. 100 Cr) alongside a modest OFS (Rs. 25 Cr), pointing towards productive capital allocation rather than pure promoter exit.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance &amp; Forensic Health: Promoter holding reduces moderately from 100% to 73.7%, retaining significant skin-in-the-game; however, detailed related-party transactions and customer concentration require deeper scrutiny in the complete DRHP.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: As a Mainboard issuance with a substantial Rs. 125 Cr total issue size, float mechanics are sufficiently liquid to mitigate extreme micro-cap cornering risks.</span></div>
             <div style='margin-top:4px;'><a href='https://www.sarthi.in/wp-content/uploads/2026/09/Jindal-Supreme_RHP.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec must-buy">MUST_BUY (+32.8%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>96</b>/100</div>
-            <div class='action-reason-box'>Massive 181x subscription and 28.5% GMP override weak fundamentals, offering an elite blockbuster listing-day momentum play.</div>
+            <span class="badge-rec must-buy">MUST_BUY (+35.6%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>97</b>/100</div>
+            <div class='action-reason-box'>Massive 181.1x subscription and 31.2% GMP signal a blockbuster listing-day momentum play, overriding moderate fundamentals for high-conviction listing gains.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Sarthi Capital Advisors Pvt Ltd</div>
@@ -977,12 +977,12 @@
           </td>
           <td><b>2026-09-23</b><br><span style='font-size:9px;color:#64748b;'>(Closed 2026-09-18)</span></td>
           <td class="num" style="color:var(--green)">
-            <b style="font-size:12px;">+6.3%</b>
+            <b style="font-size:12px;">+5.7%</b>
           </td>
-          <td class="num"><b style="font-size:12px;">&#8377;91.0</b></td>
-          <td class="num" style="color:var(--dim)">
-            <b style="font-size:12px;">+0.0%</b>
-            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;84.0</div>
+          <td class="num"><b style="font-size:12px;">&#8377;86.9</b></td>
+          <td class="num" style="color:var(--red)">
+            <b style="font-size:12px;">-2.4%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;82.0</div>
           </td>
           <td>
             <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 1.6x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 1.7x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 13.2x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 6.8x</span></div>
@@ -990,8 +990,8 @@
           </td>
           <td class="num">
           <div style="display:inline-block;text-align:right;">
-            <span class="badge-gemini" style="background:#f59e0b22;color:#f59e0b;border:1px solid #f59e0b55;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
-              50/100
+            <span class="badge-gemini" style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;font-weight:700;padding:2px 7px;border-radius:5px;font-size:11px;">
+              62/100
             </span>
             <div style="font-size:8.5px;color:#94a3b8;font-weight:600;margin-top:2px;">FAIR</div>
             
@@ -1000,14 +1000,14 @@
           <td style="min-width:320px;">
           <div class="points-container">
             <div class='metric-pills-row'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>92.3x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 84.7% Pre &rarr; 61.6% Post'>Promoter: <b>61.6%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(85%&rarr;62%, -23.0% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 60% | OFS 40%</span><span style='background:#1e293b;border:1px solid #64748b66;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Anchor Allocation'>Anchor: <b>₹300 Cr</b></span></div>
-            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation metrics such as Post-IPO P/E and exact intrinsic value cannot be fully finalized from the initial excerpt, requiring deeper analysis of the restated consolidated financial statements.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>The business operates in the competitive auto-components and engineering sector, necessitating careful tracking of asset turnover and margin durability across economic cycles.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance disclosures indicate standard institutional lead manager participation, but detailed customer concentration and related-party transaction reviews from the full DRHP are mandatory.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Capital allocation is reasonably balanced with Rs. 600 Cr allocated to fresh issue for productive deployment alongside a Rs. 400 Cr secondary OFS by existing promoters.</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span>Valuation Sanity: Post-IPO P/E and specific peer comparisons are pending final price band disclosures, requiring caution regarding margin of safety.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Business Moat &amp; Scalability: Backed by established automotive pedigree, the company combines fresh capital deployment (₹600 Cr) with partial promoter exit (₹400 Cr OFS).</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Governance &amp; Forensic Health: Promoter holding reduces from 84.7% to 61.6%, reflecting a healthy skin-in-the-game retention post-listing without immediate red flags of pure window-dressing.</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span>Float Dynamics: Mainboard float size of ₹1,000 Cr ensures adequate institutional liquidity and institutional price discovery, mitigating micro-float cornering risks.</span></div>
             <div style='margin-top:4px;'><a href='https://www.heromotors.com/uploads/prospectus/hero-motors-limited-rhp.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
           </div>
         </td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+8.3%)</span>
-            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>6</b>/100</div>
-            <div class='action-reason-box'>Ignore this value trap as the exorbitant 92.3x P/E severely outweighs modest subscription demand, leaving zero listing gains or fundamental upside.</div>
+            <span class="badge-rec ignore">IGNORE (+3.5%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>8</b>/100</div>
+            <div class='action-reason-box'>Despite moderate subscription, the exorbitant 92.3x P/E valuation and negative GMP signal severe downside risks, making this a clear value trap to avoid.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Dam Capital Advisors Ltd, Icici Securities Ltd</div>
@@ -1067,12 +1067,38 @@
     </thead>
     <tbody id="recently-listed-table-body">
       
+        <tr class="recently-listed-row" data-rec="BUY" data-sector="Chemicals &amp; Materials">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Manika Plastech</div>
+            <span class="sector-pill">Chemicals &amp; Materials</span>
+            <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>9.6x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
+            <div title='Realized listing (+0.0%) underperformed prediction (+5.5%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-5.5%)</div>
+          </td>
+          <td class="num"><b style='color:#f8fafc;'>&#8377;43</b></td>
+          <td><b style="color:#f8fafc;font-size:11.5px;">21 Sep 26</b></td>
+          <td class="num">&#8377;43.0</td>
+          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+2.3%</b></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+5.1%</b></td>
+          <td class="num" style="color:var(--dim)"><b style="font-size:13px;">+0.0%</b></td>
+          <td class="num" style="color:var(--red)"><b>-2.3%</b></td>
+          <td class="num" style="color:var(--red)"><b>-5.1%</b></td>
+          <td style="min-width:180px;">
+            <span class="badge-rec buy">BUY (+5.5%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>70</b>/100</div>
+            <div class='action-reason-box'>Strong 29.5x subscription and cheap 9.6x P/E outweigh weak fundamentals, offering a high-probability listing-day momentum trade.</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Pantomath Capital Advisors Pvt Ltd</div>
+          </td>
+        </tr>
+
         <tr class="recently-listed-row" data-rec="IGNORE" data-sector="Real Estate &amp; Infrastructure">
           <td>
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Veegaland Developers</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>25.6x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+1.0%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+1.2%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;140</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">18 Sep 26</b></td>
@@ -1084,9 +1110,9 @@
           <td class="num" style="color:var(--green)"><b>+4.3%</b></td>
           <td class="num" style="color:var(--green)"><b>+1.7%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+9.0%)</span>
+            <span class="badge-rec ignore">IGNORE (+8.8%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>40</b>/100</div>
-            <div class='action-reason-box'>Despite a mild +5.7% GMP, ignore this issue due to weak 48/100 fundamentals, a Tier-3 lead manager, and mounting discount risks.</div>
+            <div class='action-reason-box'>Despite mild positive GMP, weak fundamentals, tier-3 merchant backing, and discount risks outweigh modest gains. Avoid this sub-50 DRHP scorer.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Cumulative Capital Pvt Ltd</div>
@@ -1098,7 +1124,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">LCC Projects</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>14.8x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+3.9%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (+4.1%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;146</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">17 Sep 26</b></td>
@@ -1110,9 +1136,9 @@
           <td class="num" style="color:var(--green)"><b>+4.8%</b></td>
           <td class="num" style="color:var(--green)"><b>+7.1%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec must-buy">MUST_BUY (+25.5%)</span>
+            <span class="badge-rec must-buy">MUST_BUY (+25.3%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>95</b>/100</div>
-            <div class='action-reason-box'>Exceptional 49.6x subscription and strong 24.7% GMP override moderate fundamentals, making this a high-conviction listing-day momentum trade with attractive 14.8x P/E valuation.</div>
+            <div class='action-reason-box'>Exceptional 49.6x subscription and 24.7% GMP override modest fundamentals, offering a high-conviction listing-day momentum arbitrage trade at an attractive 14.8x P/E.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Motilal Oswal Investment Advisors Ltd</div>
@@ -1124,7 +1150,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Karamtara Engineering</div>
             <span class="sector-pill">Engineering &amp; Capital Goods</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>35.7x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing gain (+26.0%) surpassed estimate (+19.2%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+6.7%)</div>
+            <div title='Listing gain (+26.0%) surpassed estimate (+19.0%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+6.9%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;254</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">17 Sep 26</b></td>
@@ -1136,9 +1162,9 @@
           <td class="num" style="color:var(--green)"><b>+7.9%</b></td>
           <td class="num" style="color:var(--green)"><b>+9.6%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec must-buy">MUST_BUY (+19.2%)</span>
+            <span class="badge-rec must-buy">MUST_BUY (+19.0%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>91</b>/100</div>
-            <div class='action-reason-box'>Exceptional 168x QIB demand and 18% GMP outweigh moderate fundamentals, driving a high-conviction listing-day momentum trade.</div>
+            <div class='action-reason-box'>Massive 168x QIB subscription and 18.1% GMP override modest fundamentals, offering a high-conviction listing-day momentum arbitrage trade.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Jm Financial Ltd, Icici Securities Ltd</div>
@@ -1150,7 +1176,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Rentomojo</div>
             <span class="sector-pill">Logistics &amp; Supply Chain</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>40.7x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-1.4%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-1.2%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;404</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">17 Sep 26</b></td>
@@ -1162,9 +1188,9 @@
           <td class="num" style="color:var(--red)"><b>-2.1%</b></td>
           <td class="num" style="color:var(--green)"><b>+3.3%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec buy">BUY (+20.8%)</span>
+            <span class="badge-rec buy">BUY (+20.6%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>76</b>/100</div>
-            <div class='action-reason-box'>Strong 72.9x subscription and 21.5% GMP confirm robust listing momentum, offsetting a fair 40.7x P/E valuation for an arbitrage trade.</div>
+            <div class='action-reason-box'>Strong 72.9x subscription and 21.5% GMP support a high-momentum listing-day trade, overriding a fair 40.7x P/E valuation.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Axis Capital Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</div>
@@ -1176,7 +1202,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Steamhouse India</div>
             <span class="sector-pill">Diversified</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>57.9x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-1.8%)</div>
+            <div title='Listing pop aligned with consensus prediction within +/-5%.' style='display:inline-block;background:#10b98122;color:#34d399;border:1px solid #10b98155;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>✓ Accurate (-1.6%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;81</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">17 Sep 26</b></td>
@@ -1188,9 +1214,9 @@
           <td class="num" style="color:var(--green)"><b>+0.0%</b></td>
           <td class="num" style="color:var(--green)"><b>+0.3%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec must-buy">MUST_BUY (+18.5%)</span>
+            <span class="badge-rec must-buy">MUST_BUY (+18.3%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>88</b>/100</div>
-            <div class='action-reason-box'>Robust 32x subscription and 16.7% GMP drive this high-conviction listing-day momentum play, offsetting rich 57.9x P/E valuations for a lucrative open-market exit.</div>
+            <div class='action-reason-box'>Robust 32x subscription demand and 16.7% GMP override high P/E concerns, making this a high-conviction listing-day momentum trade to exit at open.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Equirus Capital Pvt Ltd</div>
@@ -1202,7 +1228,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Asset Reconstruction Co.(India)</div>
             <span class="sector-pill">Diversified</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>11.1x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Disclosed Post P/E)</span></span></div>
-            <div title='Realized listing (+0.0%) underperformed prediction (+8.6%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-8.6%)</div>
+            <div title='Realized listing (+0.0%) underperformed prediction (+8.4%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-8.4%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;139</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">17 Sep 26</b></td>
@@ -1214,9 +1240,9 @@
           <td class="num" style="color:var(--red)"><b>-8.6%</b></td>
           <td class="num" style="color:var(--red)"><b>-4.5%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec buy">BUY (+8.6%)</span>
+            <span class="badge-rec buy">BUY (+8.4%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>60</b>/100</div>
-            <div class='action-reason-box'>Despite modest fundamentals, robust 52.6x QIB demand and attractive 11.1x P/E valuation drive a lucrative listing-day momentum trade.</div>
+            <div class='action-reason-box'>Favorable listing setup: Positive consensus with +9% GMP, healthy 20.1x subscription, and calculated model cushion of +4.5%.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Idbi Capital Markets Services Ltd, Jm Financial Ltd</div>
@@ -1242,7 +1268,7 @@
           <td style="min-width:180px;">
             <span class="badge-rec ignore">IGNORE (-1.2%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>1</b>/100</div>
-            <div class='action-reason-box'>Despite a fair DRHP score, negative listing grey market trends, anaemic subscription demand, and rich valuations signal a severe value trap. IGNORE.</div>
+            <div class='action-reason-box'>Despite a fair fundamental score, negative GMP, discount valuation expectations, and weak 1.4x subscription signal a classic value trap, justifying an outright IGNORE.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Motilal Oswal Investment Advisors Ltd, Axis Capital Ltd, Icici Securities Ltd, Iifl Capital Services Ltd, Nuvama Wealth Management Ltd</div>
@@ -1268,7 +1294,7 @@
           <td style="min-width:180px;">
             <span class="badge-rec buy">BUY (+5.0%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>59</b>/100</div>
-            <div class='action-reason-box'>Despite stellar 90x subscription and 28% GMP, an exorbitant 281x P/E valuation makes this a classic value trap. Avoid fundamental exposure.</div>
+            <div class='action-reason-box'>Despite robust 90x subscription and 28% GMP, an astronomical 281x P/E masks fundamental value risks, making this a risky avoidance.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Nuvama Wealth Management Ltd, Iifl Capital Services Ltd</div>
@@ -1280,7 +1306,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Glass Wall Systems (India)</div>
             <span class="sector-pill">Diversified</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>79.0x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Calculated: Post Shares × Price ÷ PAT)</span></span></div>
-            <div title='Grey market premium (+21.4%) decayed or failed to convert to listing pop (+6.6% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-12.9%)</div>
+            <div title='Grey market premium (+21.4%) decayed or failed to convert to listing pop (+6.6% actual). Dynamic GMP blend dampening required.' style='display:inline-block;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>⚠️ GMP Decay (-12.8%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;182</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">16 Sep 26</b></td>
@@ -1292,9 +1318,9 @@
           <td class="num" style="color:var(--red)"><b>-14.8%</b></td>
           <td class="num" style="color:var(--red)"><b>-7.1%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec buy">BUY (+19.5%)</span>
+            <span class="badge-rec buy">BUY (+19.3%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>60</b>/100</div>
-            <div class='action-reason-box'>Strong 81.7x subscription and 21.4% GMP justify a momentum listing trade despite the steep 79.0x P/E valuation.</div>
+            <div class='action-reason-box'>Strong 81.7x subscription and 21.4% GMP outweigh rich 79x P/E, driving a high-momentum listing-day arbitrage trade rather than a long-term fundamental hold.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Iifl Capital Services Ltd, Motilal Oswal Investment Advisors Ltd</div>
@@ -1332,7 +1358,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Pranav Constructions</div>
             <span class="sector-pill">Real Estate &amp; Infrastructure</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>24.0x</b> <span style='color:#94a3b8;font-size:8.5px;'>(DRHP Prospectus Forensic P/E)</span></span></div>
-            <div title='Realized listing (+33.1%) underperformed prediction (+40.7%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-7.6%)</div>
+            <div title='Listing gain (+33.1%) surpassed estimate (+12.1%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+20.9%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;124</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">15 Sep 26</b></td>
@@ -1344,9 +1370,9 @@
           <td class="num" style="color:var(--red)"><b>-9.7%</b></td>
           <td class="num" style="color:var(--red)"><b>-1.6%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+40.7%)</span>
+            <span class="badge-rec ignore">IGNORE (+12.1%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>17</b>/100</div>
-            <div class='action-reason-box'>Despite stellar 126x subscription and 42% GMP, ignore due to Tier-4 merchant bankers, high forensic P/E, and cyclical real estate value-trap risks.</div>
+            <div class='action-reason-box'>Despite stellar 126x subscription and 42% GMP, weak Tier-4 lead managers and forensic P/E red flags signal a classic value trap. Avoid to mitigate severe post-listing correction risks.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Pnb Investment Services Ltd, Centrum Capital Ltd</div>
@@ -1358,7 +1384,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Deepa Jewellers</div>
             <span class="sector-pill">Gems &amp; Jewellery</span>
             <div style='margin-top:3px;'><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>69.9x</b> <span style='color:#94a3b8;font-size:8.5px;'>(Calculated: Post Shares × Price ÷ PAT)</span></span></div>
-            <div title='Listing gain (+24.9%) surpassed estimate (+14.3%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+10.6%)</div>
+            <div title='Listing gain (+24.9%) surpassed estimate (+14.1%). Positive price discovery strength.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (+10.8%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;177</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">08 Sep 26</b></td>
@@ -1370,9 +1396,9 @@
           <td class="num" style="color:var(--green)"><b>+10.7%</b></td>
           <td class="num" style="color:var(--green)"><b>+14.4%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec buy">BUY (+14.3%)</span>
+            <span class="badge-rec buy">BUY (+14.1%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>65</b>/100</div>
-            <div class='action-reason-box'>Strong 43.4x subscription and 14.1% GMP support a lucrative listing-day momentum trade despite rich 69.9x P/E valuations.</div>
+            <div class='action-reason-box'>Strong 43.4x subscription and 14.1% GMP support a short-term listing momentum trade, offsetting rich 69.9x P/E valuations and weak lead managers.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Emkay Global Financial Services Ltd, Valmiki Leela Capital Pvt Ltd</div>
@@ -1398,7 +1424,7 @@
           <td style="min-width:180px;">
             <span class="badge-rec ignore">IGNORE (-9.4%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>1</b>/100</div>
-            <div class='action-reason-box'>Despite massive retail frenzy and positive GMP, the extreme 100.8x P/E valuation paired with a Tier-3 lead manager signals a high-risk momentum trap.</div>
+            <div class='action-reason-box'>Despite high subscription, avoid this extreme 100.8x P/E trap managed by a Tier-3 lead manager facing a dangerous subscription frenzy.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Mefcom Capital Markets Ltd</div>
@@ -1410,7 +1436,7 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Purple Style Labs</div>
             <span class="sector-pill">Retail &amp; E-Commerce</span>
             
-            <div title='Realized listing (-7.0%) underperformed prediction (+2.0%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-8.9%)</div>
+            <div title='Realized listing (-7.0%) underperformed prediction (+1.8%). Applying downward calibration offset.' style='display:inline-block;background:#3b82f622;color:#60a5fa;border:1px solid #3b82f655;padding:1px 5px;border-radius:4px;font-size:9.5px;margin-top:2px;cursor:help;'>Learned (-8.8%)</div>
           </td>
           <td class="num"><b style='color:#f8fafc;'>&#8377;575</b></td>
           <td><b style="color:#f8fafc;font-size:11.5px;">07 Sep 26</b></td>
@@ -1422,38 +1448,12 @@
           <td class="num" style="color:var(--red)"><b>-7.2%</b></td>
           <td class="num" style="color:var(--red)"><b>-6.7%</b></td>
           <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (+2.0%)</span>
+            <span class="badge-rec ignore">IGNORE (+1.8%)</span>
             <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>35</b>/100</div>
-            <div class='action-reason-box'>Ignore due to negligible 0.3% GMP, sub-1x HNI demand, and discount risk signaling poor listing momentum.</div>
+            <div class='action-reason-box'>Ignore due to negligible GMP, weak HNI subscription, and discount risk outweighing marginal demand.</div>
           </td>
           <td>
             <div style="font-weight:600;font-size:11px;color:#f8fafc;">Idbi Capital Markets Services Ltd, Axis Capital Ltd</div>
-          </td>
-        </tr>
-
-        <tr class="recently-listed-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
-          <td>
-            <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">ESDS Software Solution</div>
-            <span class="sector-pill">IT &amp; Technology</span>
-            
-            
-          </td>
-          <td class="num"><b style='color:#f8fafc;'>&#8377;429</b></td>
-          <td><b style="color:#f8fafc;font-size:11.5px;">04 Sep 26</b></td>
-          <td class="num">&#8377;757.0</td>
-          <td class="num"><span class="dim" style="color:#64748b;">—</span></td>
-          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">—</b></td>
-          <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b></td>
-          <td class="num" style="color:var(--green)"><b style="font-size:13px;">+76.5%</b></td>
-          <td class="num"><span class="dim">&mdash;</span></td>
-          <td class="num" style="color:var(--green)"><b>+76.5%</b></td>
-          <td style="min-width:180px;">
-            <span class="badge-rec ignore">IGNORE (—)</span>
-            
-            <div class='action-reason-box'>Avoid — Subdued demand: Stagnant GMP (+0.0%) and weak subscription (0.0x bids) indicate high discount listing risk and negative expected return (+0.0%).</div>
-          </td>
-          <td>
-            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Unassigned</div>
           </td>
         </tr>
     </tbody>

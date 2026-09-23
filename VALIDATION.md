@@ -3,14 +3,20 @@
 - **Model Type**: LightGBM Quantile (p10/p50/p90)
 - **Model Version**: `af0211e8a304`
 - **Training Sample**: 2035 historical IPOs (2018+ regime)
-- **Features Used**: 25 engineered signals
+- **Features Used**: 25 engineered signals (current `FEATURE_COLUMNS`)
 - **Validated At**: 2026-09-22T08:08:17.691737+00:00
-- **Validation Gate Status**: **✅ PASS (Validated for Live Inference)**
+- **Model Gate Status**: **✅ PASS (model gate cleared — live-inference eligible)**
+
+> **Scope**: this report certifies the **premium model only**. The action
+> ladder, relative-score thresholds, and trap rules are validated separately
+> in `ACTION_VALIDATION.md`. Passing this gate is necessary but not sufficient
+> for trusting a MUST_BUY.
 
 ---
 
 ## 1. Purged K-Fold Cross-Validation Metrics
-Cross-validation evaluated across 5 folds with 5% chronological embargo:
+Cross-validation evaluated across 5 folds with 5% chronological embargo
+(expanding-window walk-forward: train is always strictly before the fold):
 
 | Metric | Measured Value | Benchmark Target | Gate Status |
 |---|---|---|---|
@@ -47,12 +53,32 @@ Trained outside shock windows; evaluated on out-of-time listings during downturn
 | `log_sub` | 29 |
 | `ebitda_margin` | 27 |
 
-**Zero-importance audit:** `is_sme`, `pe`, `sub_trap_zone` — 0 split-importance (kept only if structurally required, e.g. `is_sme` for segment stratification; otherwise prune).
+**Zero-importance audit:** `is_sme`, `pe`, `sub_trap_zone` — 0 split-importance. `is_sme` may be kept for segment stratification; `pe` with zero importance means the ML model does **not** use P/E as a predictor — P/E enters only through the heuristic/rule layer (cascade + trap vetoes), which is a deliberate split but should be understood when reading scores.
+
+## 3b. Live reconciliation (trust this over CV)
+
+Measured on realised listing outcomes joined to latest final predictions:
+
+| Metric | Live value | CV value (above) |
+|---|---:|---:|
+| **n reconciled** | 140 | — |
+| **MAE** | **16.46%** | 13.64% |
+| **Directional accuracy** | **70.5%** | 78.6% |
+| **\|err\| > 15%** | 40 | — |
+| **\|err\| > 30%** | 16 | — |
+
+> CV numbers describe the training regime. **Live numbers describe what you
+> actually get.** Where they diverge, live wins. The action layer has its own
+> report in `ACTION_VALIDATION.md`.
 
 ---
 
-## 4. Production Trading Certification
+## 4. Model gate checklist (not a trading certification)
 - **Purged CV Check**: Passed
 - **COVID 2020 Bear Window Check**: Passed
 - **FII 2022 Bear Window Check**: Passed
-- **Overall Certification**: ✅ PASS (Validated for Live Inference)
+- **Overall Model Gate**: ✅ PASS (model gate cleared — live-inference eligible)
+
+**What this does NOT certify:** action thresholds (10/30/48/60/72), logit
+weights, trap-rule precision, or portfolio outcomes. Those require
+`ACTION_VALIDATION.md` with adequate sample sizes.

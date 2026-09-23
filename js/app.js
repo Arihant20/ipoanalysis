@@ -42,7 +42,7 @@ function filterSection(section) {
     } else if (actionCrit === 'BUY') {
       matchesAction = (rec === 'BUY' || rec === 'SUBSCRIBE');
     } else if (actionCrit === 'IGNORE') {
-      matchesAction = (rec === 'IGNORE' || rec === 'AVOID');
+      matchesAction = (rec === 'IGNORE' || rec === 'AVOID' || rec === 'NEUTRAL' || rec === 'REFUSE');
     }
 
     // 2. Sector filter check

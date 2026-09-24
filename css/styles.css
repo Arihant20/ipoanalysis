@@ -682,3 +682,30 @@ body.ultra-compact .pill-filter, body.ultra-compact .select-filter {
   padding: 3px 7px;
   font-size: 9.5px;
 }
+
+/* Hidden Gems & Multibagger Detector Styles */
+.gems-watchlist-panel {
+  margin: 16px 0 20px 0;
+  background: #0d1520;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+.gem-card {
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.gem-card:hover {
+  transform: translateY(-2px);
+}
+.gem-card-primary:hover {
+  border-color: #10b981;
+}
+.gem-card-secondary:hover {
+  border-color: #38bdf8;
+}
+.gem-badge-primary, .gem-badge-secondary {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.01em;
+}
+

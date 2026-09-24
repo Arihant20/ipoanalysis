@@ -3,9 +3,25 @@
 // Active action filter state per section
 const sectionActionFilters = {
   'open': 'all',
+  'upcoming': 'all',
+  'day1': 'all',
+  'day2': 'all',
+  'day3plus': 'all',
   'pending': 'all',
   'recently-listed': 'all',
   'past': 'all'
+};
+
+// Row-class map: day-specific sections first, then legacy fallbacks
+const sectionRowClass = {
+  'upcoming': '.upcoming-row',
+  'day1': '.day1-row',
+  'day2': '.day2-row',
+  'day3plus': '.day3plus-row',
+  'open': '.open-row, .upcoming-row, .day1-row, .day2-row, .day3plus-row',
+  'pending': '.pending-row',
+  'recently-listed': '.recently-listed-row',
+  'past': '.past-row'
 };
 
 function filterAction(section, action, btn) {
@@ -19,16 +35,14 @@ function filterAction(section, action, btn) {
 
 function filterSection(section) {
   const actionCrit = sectionActionFilters[section] || 'all';
-  
+
   const sectorSelect = document.getElementById('sector-' + section);
   const sectorCrit = sectorSelect ? sectorSelect.value : 'all';
-  
+
   const searchInput = document.getElementById('search-' + section);
   const searchCrit = searchInput ? searchInput.value.toLowerCase().trim() : '';
 
-  const rowClass = (section === 'open') ? '.open-row' :
-                   (section === 'pending') ? '.pending-row' :
-                   (section === 'recently-listed') ? '.recently-listed-row' : '.past-row';
+  const rowClass = sectionRowClass[section] || '.past-row';
 
   document.querySelectorAll(rowClass).forEach(row => {
     const rec = row.getAttribute('data-rec') || '';
@@ -66,6 +80,11 @@ function filterPending(crit, btn) { filterAction('pending', crit, btn); }
 function searchPending() { filterSection('pending'); }
 function searchRecentlyListed() { filterSection('recently-listed'); }
 function searchPast() { filterSection('past'); }
+// Day-section helpers (new)
+function filterUpcoming(crit, btn) { filterAction('upcoming', crit, btn); }
+function filterDay1(crit, btn) { filterAction('day1', crit, btn); }
+function filterDay2(crit, btn) { filterAction('day2', crit, btn); }
+function filterDay3(crit, btn) { filterAction('day3plus', crit, btn); }
 
 // ==============================================================================
 // INTERACTIVE TABLE COLUMN SORTING

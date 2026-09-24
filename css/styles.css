@@ -312,6 +312,23 @@ tr:hover td { background: rgba(59,130,246,0.06); }
   flex-shrink: 0;
 }
 
+/* Day-split section styling */
+.day-section {
+  margin-top: 18px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(51, 65, 85, 0.45);
+}
+.day-section .sec-hdr {
+  letter-spacing: 0.02em;
+}
+.checklist-pill {
+  display: inline-block;
+  white-space: nowrap;
+}
+.upcoming-row, .day1-row, .day2-row, .day3plus-row {
+  /* inherit table-row behaviour */
+}
+
 /* Action Badges */
 .badge-rec {
   display: inline-block;

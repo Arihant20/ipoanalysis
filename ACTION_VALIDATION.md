@@ -5,7 +5,7 @@ against realised listing gains. Companion to `VALIDATION.md`, which
 certifies only the LightGBM premium model.
 
 - **Joined outcomes**: 136 IPOs with actual gains + latest final prediction
-- **Generated**: 2026-09-24T16:35:16+05:30
+- **Generated**: 2026-09-24T17:02:08+05:30
 
 ## 1. Action hit rates
 

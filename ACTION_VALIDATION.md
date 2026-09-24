@@ -5,15 +5,15 @@ against realised listing gains. Companion to `VALIDATION.md`, which
 certifies only the LightGBM premium model.
 
 - **Joined outcomes**: 136 IPOs with actual gains + latest final prediction
-- **Generated**: 2026-09-24T18:00:52+05:30
+- **Generated**: 2026-09-24T19:48:58+05:30
 
 ## 1. Action hit rates
 
 | Action | n | % positive | avg gain | avg win | avg loss |
 |---|---:|---:|---:|---:|---:|
 | MUST_BUY | 37 | 86.5% | +37.8% | +44.3% | -10.1% | (n=37; treat as indicative)
-| BUY | 12 | 91.7% | +32.4% | +35.4% | -0.2% | ⚠️ **n=12, directional claims are weakly powered**
-| IGNORE | 87 | 52.9% | +7.2% | +18.1% | -9.2% | (n=87)
+| BUY | 11 | 100.0% | +35.4% | +35.4% | — | ⚠️ **n=11, directional claims are weakly powered**
+| IGNORE | 88 | 52.3% | +7.1% | +18.1% | -8.8% | (n=88)
 
 ## 2. Baseline comparison (the alpha question)
 
@@ -21,7 +21,7 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Strategy | n | hit rate | avg gain |
 |---|---:|---:|---:|
-| ours (MUST_BUY|BUY) | 49 | 87.8% | +36.5% |
+| ours (MUST_BUY|BUY) | 48 | 89.6% | +37.2% |
 | baseline: buy all | 136 | 65.4% | +17.7% |
 | baseline: GMP >= 15% | 53 | 88.7% | +38.1% |
 | baseline: sub_signal >= 10 | 97 | 66.0% | +24.9% |
@@ -33,7 +33,7 @@ Our BUY selection must beat naive baselines or the score adds no value.
 | Group | n | % positive | avg gain |
 |---|---:|---:|---:|
 | TRAP-regime | 41 | 53.7% | +12.0% |
-| Other IGNORE | 46 | 52.2% | +2.8% |
+| Other IGNORE | 47 | 51.1% | +2.8% |
 
 > Trap rules are justified only if TRAP-regime IPOs underperform ordinary IGNOREs (lower % positive / lower avg gain).
 
@@ -56,7 +56,7 @@ Select `relative_score >= X` as the buy rule; how does it do?
 |---:|---:|---:|---:|
 | 40 | 56 | 85.7% | +36.2% |
 | 48 | 54 | 85.2% | +37.3% |
-| 55 | 48 | 83.3% | +34.1% |
+| 55 | 47 | 83.0% | +34.8% |
 | 60 | 46 | 84.8% | +35.6% |
 | 65 | 45 | 84.4% | +35.8% |
 | 72 | 44 | 86.4% | +36.6% |

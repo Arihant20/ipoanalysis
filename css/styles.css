@@ -709,3 +709,63 @@ body.ultra-compact .pill-filter, body.ultra-compact .select-filter {
   letter-spacing: -0.01em;
 }
 
+/* Hidden Gem Dedicated Table Column */
+.gem-col {
+  vertical-align: top;
+  font-size: 11px;
+}
+.gem-cell-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.gem-tag-pill {
+  display: inline-block;
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Hidden Gems Methodology Guide Page */
+.gems-guide-header {
+  background: linear-gradient(135deg, #091a2f, #0f2744);
+  border: 1px solid #1e3a5f;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+.gems-section-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin-bottom: 24px;
+}
+.gems-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.gems-stat-box {
+  background: var(--surface-2);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.pathway-card {
+  background: #0d1522;
+  border: 1px solid #1f2e48;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.chart-box-container {
+  background: #090e17;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+

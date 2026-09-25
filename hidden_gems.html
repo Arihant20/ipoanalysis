@@ -28,7 +28,7 @@
     <a href="hidden_gems.html" class="nav-tab active">💎 Hidden Gems</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-25 11:20:10 IST
+    <span class="pulse-dot"></span> Cycle: 2026-09-25 11:54:04 IST
   </div>
 </nav>
 
@@ -49,7 +49,7 @@
     </div>
     <div style="text-align:right;">
       <div style="font-size:10.5px;color:#94a3b8;">Empirically Backtested</div>
-      <div style="font-size:14px;font-weight:800;color:#34d399;margin-top:2px;">1,373 SME &bull; 224 Mainboard IPOs</div>
+      <div style="font-size:14px;font-weight:800;color:#34d399;margin-top:2px;">1,373 SME &bull; 711 Mainboard IPOs</div>
       <div style="font-size:10px;color:#64748b;margin-top:2px;">Strict Day 2 &amp; Day 3 Window</div>
     </div>
   </div>
@@ -58,8 +58,8 @@
   <div class="gems-stat-grid">
     <div class="gems-stat-box" style="border-left:3px solid #38bdf8;">
       <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Mainboard Gem Win Rate</div>
-      <div style="font-size:22px;font-weight:800;color:#38bdf8;margin-top:2px;">70.8%</div>
-      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">83.3% Non-Negative &bull; <b>0.0% Crash Risk</b></div>
+      <div style="font-size:22px;font-weight:800;color:#38bdf8;margin-top:2px;">72.0%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">84.0% Non-Negative &bull; <b>0.0% Crash Risk</b></div>
     </div>
     <div class="gems-stat-box" style="border-left:3px solid #10b981;">
       <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">SME Gem Win Rate</div>
@@ -153,7 +153,7 @@
       Mainboard Hidden Gems Engine &bull; The Demand Sweet Spot Framework
     </h2>
     <p style="font-size:12px;color:#94a3b8;margin:0;line-height:1.4;">
-      Why Mainboard investors lose money on both extremes: chasing 100x lotteries gives &lt;0.5% allocation with high open dumps, while sub-5x issues suffer a 46% loss rate. Our empirical framework identifies the sweet spot corridor backed by Tier-1 institutions.
+      Why Mainboard investors lose money on both extremes: chasing 100x lotteries gives &lt;0.5% allocation with high open dumps, while sub-5x issues suffer a 56% loss rate. Our empirical framework identifies the sweet spot corridor backed by Tier-1 institutions.
     </p>
   </div>
 
@@ -162,16 +162,16 @@
     <!-- LEFT: THE DEMAND CORRIDOR -->
     <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
       <h3 style="font-size:13.5px;font-weight:700;color:#38bdf8;margin:0 0 8px 0;">
-        📊 The Subscription Demand Corridor (Empirical Proof on 224 IPOs)
+        📊 The Subscription Demand Corridor (Empirical Proof across 711 Mainboard IPOs)
       </h3>
       <div style="font-size:11.5px;color:#cbd5e1;line-height:1.45;">
-        Our historical backtest discovered that total demand is non-linear:
+        Our historical backtest across 711 Mainboard issues discovered that total demand is non-linear:
         <ul style="margin:8px 0 10px 18px;padding:0;">
-          <li><b>&lt; 5x Subscription (Cold Liquidity Trap):</b> 45.9% win rate, 45.9% loss rate. High failure rate due to institutional indifference.</li>
-          <li><b>5x &ndash; 10x Subscription:</b> 62.5% win rate, 25.0% loss rate.</li>
-          <li><b>10x &ndash; 25x Demand Sweet Spot:</b> <span style="color:#34d399;font-weight:700;">77.8% Win Rate, 94.4% Non-Negative Rate, 0.0% Severe Crash!</span> Safe institutional clearing without hyper-froth.</li>
-          <li><b>25x &ndash; 45x Disciplined Momentum:</b> 71.4% Win Rate, 85.7% Non-Negative Rate.</li>
-          <li><b>&gt; 45x Hyper-Hyped Lottery:</b> Win rate is 92%, but retail allotment chance drops below 0.5%, yielding negligible portfolio returns.</li>
+          <li><b>&lt; 5x Subscription (Cold Liquidity Trap, n=223):</b> 29.1% win rate, 56.1% loss rate, -3.7% avg return. High failure rate due to institutional indifference.</li>
+          <li><b>5x &ndash; 10x Subscription (n=73):</b> 75.3% win rate, 76.7% non-negative rate, 0.0% crash.</li>
+          <li><b>10x &ndash; 25x Demand Sweet Spot (n=36):</b> <span style="color:#34d399;font-weight:700;">72.2% Win Rate, 97.2% Non-Negative Rate, 0.0% Severe Crash!</span> Safe institutional clearing without froth.</li>
+          <li><b>25x &ndash; 45x Disciplined Momentum (n=78):</b> 65.4% Win Rate, 78.2% Non-Negative Rate.</li>
+          <li><b>&gt; 45x Hyper-Hyped Lottery (n=301):</b> Win rate is 91.7%, but retail allotment chance collapses below 0.5%, yielding negligible portfolio returns.</li>
         </ul>
       </div>
       <div class="chart-box-container">
@@ -485,7 +485,7 @@ document.addEventListener("DOMContentLoaded", function() {
       datasets: [
         {
           label: "Win Rate %",
-          data: [45.9, 62.5, 77.8, 71.4, 92.0],
+          data: [29.1, 75.3, 72.2, 65.4, 91.7],
           backgroundColor: "#38bdf8cc",
           borderColor: "#38bdf8",
           borderWidth: 1,
@@ -493,7 +493,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: "Loss / Crash Risk %",
-          data: [45.9, 25.0, 0.0, 14.3, 8.0],
+          data: [56.1, 23.3, 2.8, 21.8, 3.0],
           backgroundColor: "#ef4444cc",
           borderColor: "#ef4444",
           borderWidth: 1,
@@ -509,9 +509,9 @@ document.addEventListener("DOMContentLoaded", function() {
         tooltip: {
           callbacks: {
             afterBody: function(ctx) {
-              if (ctx[0].dataIndex === 2) return "Sweet Spot: 0% Crash Risk + 94.4% Non-Negative!";
-              if (ctx[0].dataIndex === 0) return "Cold Trap: 46% loss rate";
-              if (ctx[0].dataIndex === 4) return "Lottery: Allotment < 0.5%";
+              if (ctx[0].dataIndex === 2) return "Sweet Spot (n=36): 0% Severe Crash + 97.2% Non-Negative!";
+              if (ctx[0].dataIndex === 0) return "Cold Trap (n=223): 56.1% loss rate, -3.7% avg return";
+              if (ctx[0].dataIndex === 4) return "Lottery (n=301): Retail allotment collapses < 0.5%";
             }
           }
         }
@@ -523,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  // Chart 2: Mainboard Pathway Performance Comparison
+  // Chart 2: Mainboard Pathway Performance Comparison (711 IPOs)
   const ctxMbPathway = document.getElementById("mbPathwayChart").getContext("2d");
   new Chart(ctxMbPathway, {
     type: "bar",
@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function() {
       datasets: [
         {
           label: "Win Rate (>0%)",
-          data: [75.0, 100.0, 77.8, 75.0, 60.7],
+          data: [76.9, 100.0, 66.7, 66.7, 66.5],
           backgroundColor: "#10b981cc",
           borderColor: "#10b981",
           borderWidth: 1,
@@ -540,7 +540,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         {
           label: "Non-Negative (>=0%)",
-          data: [75.0, 100.0, 88.9, 100.0, 64.3],
+          data: [76.9, 100.0, 88.9, 100.0, 76.2],
           backgroundColor: "#38bdf8cc",
           borderColor: "#38bdf8",
           borderWidth: 1,

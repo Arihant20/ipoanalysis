@@ -26,7 +26,7 @@
     <a href="post_listing_gems.html" class="nav-tab active">📈 Post-Listing Gems (Track 2)</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-09-25 15:56:58 IST
+    <span class="pulse-dot"></span> Cycle: 2026-09-25 15:59:13 IST
   </div>
 </nav>
 
@@ -52,27 +52,71 @@
     </div>
   </div>
 
-  <!-- STATS GRID -->
+  <!-- STATS GRID (validated path-aware numbers, see validation note below) -->
   <div class="gems-stat-grid">
     <div class="gems-stat-box" style="border-left:3px solid #38bdf8;">
-      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Mainboard Elite Win Rate</div>
-      <div style="font-size:22px;font-weight:800;color:#38bdf8;margin-top:2px;">80.0%</div>
-      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">Size &le; 2.5k Cr &bull; <b>+32.5% Avg Peak</b></div>
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Validated 30-Day Win Rate</div>
+      <div style="font-size:22px;font-weight:800;color:#38bdf8;margin-top:2px;">37.8%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">95% CI 32.1&ndash;43.8 &bull; n=262 resolved &bull; stop-first sim</div>
     </div>
     <div class="gems-stat-box" style="border-left:3px solid #10b981;">
-      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">SME Gem Win Rate</div>
-      <div style="font-size:22px;font-weight:800;color:#10b981;margin-top:2px;">82.4%</div>
-      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">Micro Float Sub &le; 10x &bull; <b>+77.7% Peak</b></div>
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Production Filter Win Rate</div>
+      <div style="font-size:22px;font-weight:800;color:#10b981;margin-top:2px;">36.8%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">n=19 qualified &bull; baseline 37.9% &bull; <b>edge not significant (p=0.93)</b></div>
     </div>
     <div class="gems-stat-box" style="border-left:3px solid #fbbf24;">
-      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Expected 3-4w Return</div>
-      <div style="font-size:22px;font-weight:800;color:#fbbf24;margin-top:2px;">+14% to +18%</div>
-      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">With -8% to -10% Stop Loss</div>
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Mean 30-Day Return</div>
+      <div style="font-size:22px;font-weight:800;color:#fbbf24;margin-top:2px;">+0.26%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">median <b>-10%</b> &bull; stop-loss hit 56.1%</div>
     </div>
     <div class="gems-stat-box" style="border-left:3px solid #ef4444;">
       <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Mandatory Hard Exit</div>
       <div style="font-size:22px;font-weight:800;color:#f87171;margin-top:2px;">Day 25&ndash;27</div>
       <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">Strictly 4d BEFORE 30d Anchor Unlock</div>
+    </div>
+  </div>
+
+  <!-- VALIDATION NOTE: original claims vs independent re-test -->
+  <div style="margin-top:14px;background:#1a1410;border:1px solid #7c5a1a;border-radius:8px;padding:14px 16px;">
+    <div style="font-size:12.5px;font-weight:800;color:#fbbf24;margin-bottom:6px;">
+      &#9888; Validation Note &bull; Original Claims vs Independent Re-Test
+    </div>
+    <div style="font-size:11.5px;color:#e2e8f0;line-height:1.5;">
+      The original Track 2 research reported <b>80.0% (mainboard, n=15)</b> and <b>82.4% (SME, n=17)</b> win
+      rates with <b>+14% to +18%</b> expected 3&ndash;4 week returns. Those figures reproduced exactly, but only
+      under the original methodology: an <b>in-sample, peak-based simulation that checks the +20% target before
+      the stop-loss</b>, over a <b>1-year horizon</b> instead of the stated 30-day exit. Re-tested with
+      <b>path-aware ordering (stop evaluated before target), a strict 30-day window, and no look-ahead</b> on the
+      same 262 symbol-resolved IPOs, the win rate falls to <b>37.8%</b> and mean return to <b>+0.26%</b> &mdash;
+      a <b>+21.0pp methodology inflation</b> (z=4.81, p=1.5e-06; 23.7pp of the old "wins" were trades the
+      path-aware stop would have exited flat or down). The shipped filter itself shows <b>no measurable edge
+      over the unfiltered baseline</b> (36.8% vs 37.9%, p=0.93).
+    </div>
+    <table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:11px;">
+      <tr style="text-align:left;color:#94a3b8;border-bottom:1px solid #7c5a1a44;">
+        <th style="padding:5px 8px;font-weight:700;">Claim</th>
+        <th style="padding:5px 8px;font-weight:700;">Independent Evidence</th>
+      </tr>
+      <tr style="border-bottom:1px solid #7c5a1a22;color:#e2e8f0;">
+        <td style="padding:5px 8px;">80.0% mainboard win (n=15)</td>
+        <td style="padding:5px 8px;">Path-aware 30d: <b>37.8%</b> [32.1, 43.8] all-IPO; qualified subset 36.8% (n=19)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #7c5a1a22;color:#e2e8f0;">
+        <td style="padding:5px 8px;">82.4% SME win (n=17)</td>
+        <td style="padding:5px 8px;">SME path-aware 30d: <b>37.8%</b> [30.4, 45.9] (n=148); qualified 38.7% raw-horizon (n=31)</td>
+      </tr>
+      <tr style="border-bottom:1px solid #7c5a1a22;color:#e2e8f0;">
+        <td style="padding:5px 8px;">+14% to +18% expected 3&ndash;4w</td>
+        <td style="padding:5px 8px;">Path-aware mean <b>+0.26%</b>, median <b>-10%</b>, stop hit <b>56.1%</b></td>
+      </tr>
+      <tr style="color:#e2e8f0;">
+        <td style="padding:5px 8px;">Peak gains +32.5% / +77.7%</td>
+        <td style="padding:5px 8px;">Peak values are real but <b>unbounded-horizon maxima</b> &mdash; not achievable inside the 30-day exit</td>
+      </tr>
+    </table>
+    <div style="font-size:10.5px;color:#94a3b8;margin-top:8px;">
+      Walk-forward check: 2024 33.3% &bull; 2025 38.9% &bull; 2026 41.9% (no regime decay, but also no out-of-sample
+      edge). Full method, CIs and scripts: see reports/track2 validation notes in git history.
     </div>
   </div>
 </div>
@@ -140,14 +184,14 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Sonaselection India</div>
             <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
               <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
-              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">SONA</span>
             </div>
           </td>
           <td><b style="color:#f8fafc;font-size:11px;">2026-09-24</b></td>
           <td class="num">&#8377;99.0</td>
-          <td class="num">—</td>
-          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
-          <td class="num">—</td>
+          <td class="num">&#8377;102.3</td>
+          <td class="num"><b style='color:#f8fafc;'>&#8377;107.4</b></td>
+          <td class="num"><span style='color:#10b981;font-weight:700;'>+3.3%</span></td>
           <td class="num"><b style="color:#cbd5e1;">2.0x</b></td>
           <td>
             <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
@@ -215,14 +259,14 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Jindal Supreme (India)</div>
             <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
               <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
-              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">JSIPL</span>
             </div>
           </td>
           <td><b style="color:#f8fafc;font-size:11px;">2026-09-23</b></td>
           <td class="num">&#8377;93.0</td>
-          <td class="num">—</td>
-          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
-          <td class="num">—</td>
+          <td class="num">&#8377;120.0</td>
+          <td class="num"><b style='color:#f8fafc;'>&#8377;132.3</b></td>
+          <td class="num"><span style='color:#10b981;font-weight:700;'>+29.0%</span></td>
           <td class="num"><b style="color:#cbd5e1;">181.1x</b></td>
           <td>
             <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
@@ -240,21 +284,21 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Hero Motors</div>
             <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
               <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
-              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">HEROMOTORS</span>
             </div>
           </td>
           <td><b style="color:#f8fafc;font-size:11px;">2026-09-23</b></td>
           <td class="num">&#8377;84.0</td>
-          <td class="num">—</td>
-          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
-          <td class="num">—</td>
+          <td class="num">&#8377;82.0</td>
+          <td class="num"><b style='color:#f8fafc;'>&#8377;118.1</b></td>
+          <td class="num"><span style='color:#ef4444;font-weight:700;'>-2.4%</span></td>
           <td class="num"><b style="color:#cbd5e1;">7.1x</b></td>
           <td>
             <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
               ⛔ DISQUALIFIED
             </span>
             </td>
-          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Discount Knife (-2.4% &lt; -2%)</div></td>
           <td class="num"><span style='color:#64748b;'>—</span></td>
           <td class="num"><span style='color:#64748b;'>—</span></td>
           <td><span style='color:#64748b;'>—</span></td>
@@ -265,14 +309,14 @@
             <div style="font-weight:700;font-size:12.5px;color:#ffffff;">SS Retail</div>
             <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
               <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
-              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">SSRETAIL</span>
             </div>
           </td>
           <td><b style="color:#f8fafc;font-size:11px;">2026-09-23</b></td>
           <td class="num">&#8377;424.0</td>
-          <td class="num">—</td>
-          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
-          <td class="num">—</td>
+          <td class="num">&#8377;624.0</td>
+          <td class="num"><b style='color:#f8fafc;'>&#8377;811.8</b></td>
+          <td class="num"><span style='color:#10b981;font-weight:700;'>+47.2%</span></td>
           <td class="num"><b style="color:#cbd5e1;">108.7x</b></td>
           <td>
             <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
@@ -508,10 +552,10 @@
       SECTION 1 &bull; MAINBOARD
     </div>
     <h2 style="font-size:18px;font-weight:800;color:#ffffff;margin:0 0 4px 0;">
-      Mainboard Secondary Swing Engine &bull; The 80% Win Rate Architecture
+      Mainboard Secondary Swing Engine &bull; What Survived Re-Testing
     </h2>
     <p style="font-size:12px;color:#94a3b8;margin:0;line-height:1.4;">
-      Our deep-dive across 162 Mainboard issues isolated the single largest destroyer of swing returns: <b>Mega-Cap OFS issues (&gt; ₹3,000 Cr)</b>. Restricting issue size to the institutional accumulation corridor (&le; ₹2,500 Cr) catapults the empirical win rate to <b>80.0%</b> with an average peak gain of <b>+32.5%</b>.
+      Our deep-dive across 162 Mainboard issues isolated the single largest destroyer of swing returns: <b>Mega-Cap OFS issues (&gt; &#8377;3,000 Cr)</b> &mdash; that observation holds. Restricting issue size to the institutional accumulation corridor (&le; &#8377;2,500 Cr) produced the headline <b>80.0%</b> win rate <b>in the original in-sample, peak-based simulation (n=15, Wilson CI 53&ndash;89%)</b>. Under the independent path-aware 30-day re-test the qualified mainboard cohort settles at <b>60.0% raw-horizon (n=15) and 36.8% path-aware (n=19 across both segments)</b> &mdash; not statistically distinguishable from the 37.9% baseline.
     </p>
   </div>
 
@@ -524,7 +568,7 @@
         Empirical proof from our deep dive:
         <ul style="margin:8px 0 10px 18px;padding:0;">
           <li><b>Mega Issues &gt; ₹3,000 Cr (Hyundai, Swiggy, NTPC Green, Tata Capital):</b> Suffer a <b>62.5% failure rate</b>. Giant promoter/PE offer-for-sale (OFS) blocks swamp secondary buying liquidity for months.</li>
-          <li><b>Mid-Cap Growth Sweet Spot (&le; ₹2,500 Cr, n=15):</b> <span style="color:#34d399;font-weight:700;">80.0% Win Rate, +14.4% Expected Net Return, +32.5% Avg Peak!</span> Institutional desks easily corner 3-5% of free float on Days 1-3.</li>
+          <li><b>Mid-Cap Growth Sweet Spot (&le; &#8377;2,500 Cr, n=15):</b> <span style="color:#fbbf24;font-weight:700;">Original claim: 80.0% win, +32.5% avg peak (in-sample, peak-based). Independent path-aware 30d re-test: 36.8% [19.1, 59.0], mean -0.37%.</span> The size corridor remains a sensible risk filter; the 80% figure does not survive out-of-sample scrutiny.</li>
         </ul>
       </div>
       <div class="chart-box-container">
@@ -583,7 +627,7 @@
       SME Secondary Swing Engine &bull; Micro-Float Cornering &amp; High Moats
     </h2>
     <p style="font-size:12px;color:#94a3b8;margin:0;line-height:1.4;">
-      SME issues opening flat or modest (0% to +18%) achieve an average peak upside of <b>+53.62%</b> when backed by Tier-1 underwriters (Beeline, Hem, GYR) with clean balance sheets.
+      SME issues opening flat or modest (0% to +18%) achieve an average <b>peak</b> upside of <b>+53.62%</b> when backed by Tier-1 underwriters (Beeline, Hem, GYR) with clean balance sheets. <i style="color:#94a3b8;">Peak values are unbounded-horizon maxima, not 30-day achievable returns &mdash; the path-aware 30-day re-test of SME names returns a <b>37.8%</b> win rate and <b>+0.43%</b> mean.</i>
     </p>
   </div>
 
@@ -596,7 +640,7 @@
         Empirical proof from 386 SME IPOs:
         <ul style="margin:8px 0 10px 18px;padding:0;">
           <li><b>Discount Opens (&lt; 0%):</b> Crash rate 62.1%, avg return <b>-16.12%</b>. Immediate lower circuits.</li>
-          <li><b>Modest Positive Opens (0% to +18%):</b> <span style="color:#34d399;font-weight:700;">Average Peak Upside +52.42%, Avg Post Return +15.49%!</span></li>
+          <li><b>Modest Positive Opens (0% to +18%):</b> <span style="color:#34d399;font-weight:700;">Average Peak Upside +52.42%, Avg 1-Yr Post Return +15.49%!</span> <i style="color:#94a3b8;">Both are peak/1-year statistics; path-aware 30-day mean is far lower.</i></li>
           <li><b>Euphoric Opens (&gt; +50%):</b> Crash rate 50.9%, avg post return <b>-1.12%</b>. Pre-IPO pump &amp; dump.</li>
         </ul>
       </div>
@@ -745,7 +789,7 @@ document.addEventListener("DOMContentLoaded", function() {
       labels: ["<= 1,500 Cr", "<= 2,500 Cr Sweet Spot", "3,000-5,000 Cr", "> 5,000 Cr Mega OFS"],
       datasets: [
         {
-          label: "Empirical Win Rate %",
+          label: "In-Sample Peak Win Rate % (pre-validation, see note above)",
           data: [78.6, 80.0, 48.0, 37.5],
           backgroundColor: ["#10b981", "#38bdf8", "#f59e0b", "#ef4444"]
         }

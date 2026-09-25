@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track 2: Post-Listing Secondary Swing Gems — Explainability &amp; Empirical Framework</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+<nav class="main-nav">
+  <div class="nav-brand">
+    <span class="brand-icon"></span>
+    <div>
+      <div class="brand-title">IPO Estimator Pro</div>
+      <div class="brand-sub">Independent Valuation | Lead Manager Alpha | ML Engine</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="mainboard.html" class="nav-tab ">Mainboard IPOs</a>
+    <a href="sme.html" class="nav-tab ">SME IPOs</a>
+    <a href="lead_managers.html" class="nav-tab ">Lead Manager Analysis</a>
+    <a href="hidden_gems.html" class="nav-tab ">💎 Hidden Gems (Primary)</a>
+    <a href="post_listing_gems.html" class="nav-tab active">📈 Post-Listing Gems (Track 2)</a>
+  </div>
+  <div class="nav-meta">
+    <span class="pulse-dot"></span> Cycle: 2026-09-25 13:06:37 IST
+  </div>
+</nav>
+
+
+<!-- HERO HEADER -->
+<div class="gems-guide-header">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px;">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(56,189,248,0.15);border:1px solid #38bdf844;padding:3px 10px;border-radius:20px;font-size:10.5px;font-weight:700;color:#38bdf8;margin-bottom:8px;">
+        <span>📈</span> TRACK 2: POST-LISTING SECONDARY SWING FRAMEWORK
+      </div>
+      <h1 style="font-size:22px;font-weight:800;color:#ffffff;line-height:1.2;margin:0 0 6px 0;">
+        Post-Listing Secondary Swing Gems &bull; 3–4 Week Multi-Bagger Dip Engine
+      </h1>
+      <p style="font-size:12.5px;color:#cbd5e1;max-width:880px;line-height:1.45;margin:0;">
+        A systematic quantitative framework for buying fresh on the <b>Day 1&ndash;3 post-listing washout dip</b> after initial IPO flippers dump on modest openings (-2% to +15%). <b>Entry is strictly restricted to IPOs listed within the last 7 calendar days (&le; 7d old)</b>. Holding horizon is strictly <b>12 to 22 trading sessions (~3 to 4 weeks)</b>, with a <b>MANDATORY HARD EXIT on Day 25&ndash;27</b> (strictly 3 to 5 calendar days before the SEBI 30-day 50% anchor unlock).
+      </p>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:10.5px;color:#94a3b8;">Empirically Backtested</div>
+      <div style="font-size:14px;font-weight:800;color:#38bdf8;margin-top:2px;">548 Post-Listing IPOs</div>
+      <div style="font-size:10px;color:#64748b;margin-top:2px;">162 Mainboard &bull; 386 SME</div>
+    </div>
+  </div>
+
+  <!-- STATS GRID -->
+  <div class="gems-stat-grid">
+    <div class="gems-stat-box" style="border-left:3px solid #38bdf8;">
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Mainboard Elite Win Rate</div>
+      <div style="font-size:22px;font-weight:800;color:#38bdf8;margin-top:2px;">80.0%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">Size &le; 2.5k Cr &bull; <b>+32.5% Avg Peak</b></div>
+    </div>
+    <div class="gems-stat-box" style="border-left:3px solid #10b981;">
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">SME Gem Win Rate</div>
+      <div style="font-size:22px;font-weight:800;color:#10b981;margin-top:2px;">82.4%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">Micro Float Sub &le; 10x &bull; <b>+77.7% Peak</b></div>
+    </div>
+    <div class="gems-stat-box" style="border-left:3px solid #fbbf24;">
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Expected 3-4w Return</div>
+      <div style="font-size:22px;font-weight:800;color:#fbbf24;margin-top:2px;">+14% to +18%</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">With -8% to -10% Stop Loss</div>
+    </div>
+    <div class="gems-stat-box" style="border-left:3px solid #ef4444;">
+      <div style="font-size:10px;color:#94a3b8;font-weight:700;text-transform:uppercase;">Mandatory Hard Exit</div>
+      <div style="font-size:22px;font-weight:800;color:#f87171;margin-top:2px;">Day 25&ndash;27</div>
+      <div style="font-size:10px;color:#cbd5e1;margin-top:2px;">Strictly 4d BEFORE 30d Anchor Unlock</div>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE ACTIVE TRACK 2 GEMS SECTION -->
+<div class="gems-section-card" style="border-left:4px solid #38bdf8;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+    <div>
+      <h2 style="font-size:15px;font-weight:800;color:#ffffff;display:flex;align-items:center;gap:6px;margin:0;">
+        <span>🎯</span> Active Post-Listing Swing Watchlist (Strictly Listed in Last 7 Days, Age &le; 7d)
+      </h2>
+      <div style="font-size:11px;color:#94a3b8;margin-top:2px;">
+        Evaluates stocks listed strictly in the last 7 calendar days with recent closing prices from <code>C:\Agents\SwingTradeBrain\data\bhavcopies</code>. Stocks listed > 7 days ago have closed entry windows.
+      </div>
+    </div>
+  </div>
+  
+    <div class="table-container" style="margin-top:12px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Company &amp; Symbol</th>
+            <th>Listed On</th>
+            <th class="num">Issue ₹</th>
+            <th class="num">Open ₹</th>
+            <th class="num">Latest Close ₹</th>
+            <th class="num">Open Gain%</th>
+            <th class="num">Sub Mult.</th>
+            <th>Track 2 Status</th>
+            <th style="min-width:240px;">Selection / Disqualification Rationale</th>
+            <th class="num">Swing Target (₹)</th>
+            <th class="num">Stop Loss (₹)</th>
+            <th>Mandatory Exit Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Axiom Gas Engineering</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-25</b></td>
+          <td class="num">&#8377;53.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">1.4x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Sonaselection India</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-24</b></td>
+          <td class="num">&#8377;99.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">2.0x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Kheria Autocomp</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-24</b></td>
+          <td class="num">&#8377;101.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">2.5x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">SpectraA Technology Solutions</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-24</b></td>
+          <td class="num">&#8377;118.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">304.1x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Flipper Trap (Sub 304.1x &gt; 20x)</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Jindal Supreme (India)</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-23</b></td>
+          <td class="num">&#8377;93.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">181.1x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Flipper Trap (Sub 181.1x &gt; 20x)</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Hero Motors</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-23</b></td>
+          <td class="num">&#8377;84.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">7.1x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">SS Retail</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-23</b></td>
+          <td class="num">&#8377;424.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">108.7x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Flipper Trap (Sub 108.7x &gt; 20x)</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Shakti Polytarp</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-22</b></td>
+          <td class="num">&#8377;59.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">8.6x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Commodity / Value Trap Sector</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Quanto Agroworld</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-22</b></td>
+          <td class="num">&#8377;67.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">1.2x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Vama Wovenfab</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-22</b></td>
+          <td class="num">&#8377;341.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">2.6x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="background:rgba(56,189,248,0.03);">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Veegaland Developers</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">MAINBOARD</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">VEEGALAND</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-18</b></td>
+          <td class="num">&#8377;140.0</td>
+          <td class="num">&#8377;142.0</td>
+          <td class="num"><b style='color:#f8fafc;'>&#8377;141.8</b></td>
+          <td class="num"><span style='color:#10b981;font-weight:700;'>+1.4%</span></td>
+          <td class="num"><b style="color:#cbd5e1;">14.6x</b></td>
+          <td>
+            <span style="background:rgba(56,189,248,0.18);border:1px solid #38bdf8;color:#38bdf8;padding:2px 7px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:0.3px;">
+              💎 SWING GEM
+            </span>
+            <div style="font-size:9.5px;color:#bae6fd;margin-top:2px;font-weight:600;">Tier-1 Inst. Backed</div>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#cbd5e1;line-height:1.35;'><b style='color:#7dd3fc;'>Why:</b> Top Institutional Underwriter (Cumulative Capital Pvt Ltd) backing with modest open (+1.4%). Initial flipper supply absorbed; calm institutional accumulation for 3-4 week swing.</div></td>
+          <td class="num">
+            <div style="font-size:11px;font-weight:700;color:#34d399;">&#8377;170.2 &ndash; &#8377;191.5</div>
+            <div style="font-size:9.5px;color:#94a3b8;">+20% to +35% (Max +55%)</div>
+            </td>
+          <td class="num">
+            <div style="font-size:11px;font-weight:700;color:#f87171;">&#8377;127.7</div>
+            <div style="font-size:9.5px;color:#94a3b8;">-10.0% from Entry</div>
+            </td>
+          <td>
+            <div style="font-size:11px;font-weight:700;color:#fbbf24;">14 Oct 2026</div>
+            <div style="font-size:9.5px;color:#38bdf8;"><b>19d remaining</b> (before Anchor Unlock)</div>
+            </td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Panchatv Bharat</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-18</b></td>
+          <td class="num">&#8377;140.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">1.4x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Raksan Transformers</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-18</b></td>
+          <td class="num">&#8377;273.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">47.4x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Flipper Trap (Sub 47.4x &gt; 20x)</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Om Galaxy</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-18</b></td>
+          <td class="num">&#8377;90.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">2.1x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Neutral / Non-Moat</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        <tr style="">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;">Maharaja &amp; Speedex India</div>
+            <div style="display:inline-flex;gap:5px;align-items:center;margin-top:2px;">
+              <span style="background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:1px 5px;border-radius:3px;font-size:9px;font-weight:700;">SME</span>
+              <span style="background:#1e293b;color:#cbd5e1;padding:1px 5px;border-radius:3px;font-size:9.5px;font-family:monospace;font-weight:700;">—</span>
+            </div>
+          </td>
+          <td><b style="color:#f8fafc;font-size:11px;">2026-09-18</b></td>
+          <td class="num">&#8377;186.0</td>
+          <td class="num">—</td>
+          <td class="num"><span style='color:#64748b;'>Awaiting Close</span></td>
+          <td class="num">—</td>
+          <td class="num"><b style="color:#cbd5e1;">32.4x</b></td>
+          <td>
+            <span style="background:#1e293b;border:1px solid #334155;color:#94a3b8;padding:2px 6px;border-radius:4px;font-size:9.5px;font-weight:600;">
+              ⛔ DISQUALIFIED
+            </span>
+            </td>
+          <td style="max-width:260px;"><div style='font-size:10.5px;color:#94a3b8;line-height:1.3;'>Flipper Trap (Sub 32.4x &gt; 20x)</div></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td class="num"><span style='color:#64748b;'>—</span></td>
+          <td><span style='color:#64748b;'>—</span></td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+    
+</div>
+
+<!-- SECTION 1: MAINBOARD TRACK 2 FRAMEWORK -->
+<div class="gems-section-card" id="section-mainboard">
+  <div style="border-bottom:1px solid #1e293b;padding-bottom:12px;margin-bottom:16px;">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:#38bdf822;color:#38bdf8;border:1px solid #38bdf855;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:800;margin-bottom:6px;">
+      SECTION 1 &bull; MAINBOARD
+    </div>
+    <h2 style="font-size:18px;font-weight:800;color:#ffffff;margin:0 0 4px 0;">
+      Mainboard Secondary Swing Engine &bull; The 80% Win Rate Architecture
+    </h2>
+    <p style="font-size:12px;color:#94a3b8;margin:0;line-height:1.4;">
+      Our deep-dive across 162 Mainboard issues isolated the single largest destroyer of swing returns: <b>Mega-Cap OFS issues (&gt; ₹3,000 Cr)</b>. Restricting issue size to the institutional accumulation corridor (&le; ₹2,500 Cr) catapults the empirical win rate to <b>80.0%</b> with an average peak gain of <b>+32.5%</b>.
+    </p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:16px;margin-bottom:20px;">
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <h3 style="font-size:13.5px;font-weight:700;color:#38bdf8;margin:0 0 8px 0;">
+        📊 Issue Size Sweet Spot vs Win Rate (The Mega-Cap OFS Discovery)
+      </h3>
+      <div style="font-size:11.5px;color:#cbd5e1;line-height:1.45;">
+        Empirical proof from our deep dive:
+        <ul style="margin:8px 0 10px 18px;padding:0;">
+          <li><b>Mega Issues &gt; ₹3,000 Cr (Hyundai, Swiggy, NTPC Green, Tata Capital):</b> Suffer a <b>62.5% failure rate</b>. Giant promoter/PE offer-for-sale (OFS) blocks swamp secondary buying liquidity for months.</li>
+          <li><b>Mid-Cap Growth Sweet Spot (&le; ₹2,500 Cr, n=15):</b> <span style="color:#34d399;font-weight:700;">80.0% Win Rate, +14.4% Expected Net Return, +32.5% Avg Peak!</span> Institutional desks easily corner 3-5% of free float on Days 1-3.</li>
+        </ul>
+      </div>
+      <div class="chart-box-container">
+        <canvas id="mbSubVsPostChart" style="max-height:220px;"></canvas>
+      </div>
+    </div>
+
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <h3 style="font-size:13.5px;font-weight:700;color:#38bdf8;margin:0 0 8px 0;">
+        🏆 Real Mainboard Track 2 Multibaggers
+      </h3>
+      <div style="font-size:11px;color:#94a3b8;margin-bottom:8px;">
+        High-quality businesses that listed lukewarm and staged massive 3-4 week swings:
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="background:#0c1e2e;border-left:3px solid #38bdf8;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Ather Energy (EV Tech)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +199.5%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +2.18% on 1.50x sub. Lead by Axis, JM, HSBC. Post return: +186.0%.</div>
+        </div>
+        <div style="background:#0c1e2e;border-left:3px solid #38bdf8;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Zinka Logistics / BlackBuck (Logistics Tech)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +166.3%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +2.89% on 1.87x sub. Lead by Morgan Stanley, Axis. Post return: +97.6%.</div>
+        </div>
+        <div style="background:#0c1e2e;border-left:3px solid #38bdf8;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Belrise Industries (Auto Precision)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +126.3%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +11.11%. Lead by Axis, Jefferies, HSBC. Post return: +113.2%.</div>
+        </div>
+        <div style="background:#0c1e2e;border-left:3px solid #38bdf8;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Groww / Billionbrains (Fintech)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +102.9%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +12.00% on 17.6x sub. Lead by Citigroup, Kotak, JP Morgan. Post return: +97.9%.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: SME TRACK 2 FRAMEWORK -->
+<div class="gems-section-card" id="section-sme">
+  <div style="border-bottom:1px solid #1e293b;padding-bottom:12px;margin-bottom:16px;">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:#10b98122;color:#10b981;border:1px solid #10b98155;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:800;margin-bottom:6px;">
+      SECTION 2 &bull; SME
+    </div>
+    <h2 style="font-size:18px;font-weight:800;color:#ffffff;margin:0 0 4px 0;">
+      SME Secondary Swing Engine &bull; Micro-Float Cornering &amp; High Moats
+    </h2>
+    <p style="font-size:12px;color:#94a3b8;margin:0;line-height:1.4;">
+      SME issues opening flat or modest (0% to +18%) achieve an average peak upside of <b>+53.62%</b> when backed by Tier-1 underwriters (Beeline, Hem, GYR) with clean balance sheets.
+    </p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:16px;">
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <h3 style="font-size:13.5px;font-weight:700;color:#10b981;margin:0 0 8px 0;">
+        📈 Opening Gain Sweet Spot vs Long-Term Returns
+      </h3>
+      <div style="font-size:11.5px;color:#cbd5e1;line-height:1.45;">
+        Empirical proof from 386 SME IPOs:
+        <ul style="margin:8px 0 10px 18px;padding:0;">
+          <li><b>Discount Opens (&lt; 0%):</b> Crash rate 62.1%, avg return <b>-16.12%</b>. Immediate lower circuits.</li>
+          <li><b>Modest Positive Opens (0% to +18%):</b> <span style="color:#34d399;font-weight:700;">Average Peak Upside +52.42%, Avg Post Return +15.49%!</span></li>
+          <li><b>Euphoric Opens (&gt; +50%):</b> Crash rate 50.9%, avg post return <b>-1.12%</b>. Pre-IPO pump &amp; dump.</li>
+        </ul>
+      </div>
+      <div class="chart-box-container">
+        <canvas id="smeOpenGainChart" style="max-height:220px;"></canvas>
+      </div>
+    </div>
+
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <h3 style="font-size:13.5px;font-weight:700;color:#10b981;margin:0 0 8px 0;">
+        🏆 Real SME Track 2 Multibaggers
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="background:#071c14;border-left:3px solid #10b981;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Aptus Pharma (Specialty Pharma)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +422.9%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +15.43% on 22.4x sub. Rallied from Rs.80.8 to Rs.422.5.</div>
+        </div>
+        <div style="background:#071c14;border-left:3px solid #10b981;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Zelio E-Mobility (EV Two-Wheelers)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +293.8%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +13.90% on 1.57x sub. Lead by Hem Securities. Rallied from Rs.154.9 to Rs.610.</div>
+        </div>
+        <div style="background:#071c14;border-left:3px solid #10b981;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">OBSC Perfection (Precision Engineering)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +277.2%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened +10.00% on 16.6x sub. Post return: +230.9%.</div>
+        </div>
+        <div style="background:#071c14;border-left:3px solid #10b981;padding:8px 10px;border-radius:4px;">
+          <div style="display:flex;justify-content:space-between;">
+            <b style="color:#f8fafc;font-size:12px;">Speciality Medicines (Pharma Formulation)</b>
+            <span style="color:#34d399;font-weight:700;font-size:11px;">Peak: +207.4%</span>
+          </div>
+          <div style="font-size:10px;color:#94a3b8;margin-top:2px;">Opened flat at Rs.124.0 on 2.33x sub. Post return: +165.8%.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: THE 4 FATAL TRAPS & ANCHOR LOCK-IN CLIFF -->
+<div class="gems-section-card" id="section-traps">
+  <div style="border-bottom:1px solid #1e293b;padding-bottom:12px;margin-bottom:16px;">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:#ef444422;color:#f87171;border:1px solid #ef444455;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:800;margin-bottom:6px;">
+      SECTION 3 &bull; RISK MANAGEMENT
+    </div>
+    <h2 style="font-size:18px;font-weight:800;color:#ffffff;margin:0 0 4px 0;">
+      Why 62.4% of Modest Opens Fail &bull; The 4 Fatal Traps &amp; Anchor Unlock Cliff
+    </h2>
+    <p style="font-size:12px;color:#94a3b8;margin:0;line-height:1.4;">
+      Identifying the exact structural reasons behind secondary IPO failures and why the SEBI 30-day anchor unlock makes long-term unhedged holding dangerous.
+    </p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:14px;margin-bottom:20px;">
+    <div style="background:#150e13;border:1px solid #4a1d24;border-radius:8px;padding:14px;">
+      <b style="color:#f87171;font-size:12.5px;">Trap 1: The Discount Open Falling Knife</b>
+      <div style="font-size:11px;color:#cbd5e1;margin-top:4px;line-height:1.4;">
+        IPOs opening &lt; -5% suffer a <b>71.8% failure rate</b> and <b>-13.13% avg return</b>. Discount opens reflect institutional rejection and lack of anchor demand. <i>Rule: Never buy an opening discount.</i>
+      </div>
+    </div>
+    <div style="background:#150e13;border:1px solid #4a1d24;border-radius:8px;padding:14px;">
+      <b style="color:#f87171;font-size:12.5px;">Trap 2: The Overcrowded Flipper Dump</b>
+      <div style="font-size:11px;color:#cbd5e1;margin-top:4px;line-height:1.4;">
+        When sub &gt; 35x opens flat, leveraged retail and HNI flippers panic dump simultaneously: Citichem (410x, crashed -75%), Deccan (102x, crashed -81%), Pranav (126x, crashed -15%). <i>Rule: Max sub &le; 35x.</i>
+      </div>
+    </div>
+    <div style="background:#150e13;border:1px solid #4a1d24;border-radius:8px;padding:14px;">
+      <b style="color:#f87171;font-size:12.5px;">Trap 3: Toxic Underwriters &amp; Commodity Traps</b>
+      <div style="font-size:11px;color:#cbd5e1;margin-top:4px;line-height:1.4;">
+        Merchant bankers like Khandwala, Horizon, Fast Track Finsec have a <b>54.4% crash rate</b>. Commodity sectors (foam, textiles, trading, scrap) lack pricing power. <i>Rule: Blacklist enforced.</i>
+      </div>
+    </div>
+    <div style="background:#150e13;border:1px solid #4a1d24;border-radius:8px;padding:14px;">
+      <b style="color:#f87171;font-size:12.5px;">Trap 4: The 30-Day Anchor Unlock Cliff</b>
+      <div style="font-size:11px;color:#cbd5e1;margin-top:4px;line-height:1.4;">
+        50% of anchor shares unlock on Day 30. In our dataset, <b>44 IPOs surged +35% to +62%</b> in weeks 1-3 (NSDL, BlueStone, Capillary, Oswal Pumps) but bled into losses by Day 35. <i>Rule: Mandatory exit Day 25&ndash;27.</i>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+    <h3 style="font-size:13.5px;font-weight:700;color:#fbbf24;margin:0 0 8px 0;">
+      ⏳ The 30-Day Anchor Unlock Reversal (44 Verified Empirical Cases)
+    </h3>
+    <div style="font-size:11.5px;color:#cbd5e1;line-height:1.45;margin-bottom:12px;">
+      Chart below illustrates the catastrophic drop when allotees hold through the Day 30 institutional lock-in expiration instead of taking profits on Days 25&ndash;27:
+    </div>
+    <div class="chart-box-container">
+      <canvas id="anchorCliffChart" style="max-height:220px;"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: INVESTOR PLAYBOOK -->
+<div class="gems-section-card" id="section-playbook" style="border-left:4px solid #fbbf24;">
+  <div style="border-bottom:1px solid #1e293b;padding-bottom:12px;margin-bottom:16px;">
+    <div style="display:inline-flex;align-items:center;gap:6px;background:#f59e0b22;color:#fbbf24;border:1px solid #f59e0b55;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:800;margin-bottom:6px;">
+      SECTION 4 &bull; EXECUTION PROTOCOL
+    </div>
+    <h2 style="font-size:18px;font-weight:800;color:#ffffff;margin:0 0 4px 0;">
+      Investor Execution Playbook &bull; Step-by-Step Rules
+    </h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:16px;">
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <b style="color:#38bdf8;font-size:13px;">1. Entry Protocol (Day 1&ndash;3 Dip)</b>
+      <ul style="font-size:11px;color:#cbd5e1;margin:8px 0 0 16px;padding:0;line-height:1.45;">
+        <li>Do not buy at 9:15 AM listing open. Allow initial retail flipper volatility to settle.</li>
+        <li>Enter on Day 1 between 1:30 PM &ndash; 3:15 PM, or on Day 2&ndash;3 washout dips.</li>
+        <li>Ensure open gain was modest (-3% to +18%) and subscription &le; 35x.</li>
+      </ul>
+    </div>
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <b style="color:#34d399;font-size:13px;">2. Profit-Taking Protocol</b>
+      <ul style="font-size:11px;color:#cbd5e1;margin:8px 0 0 16px;padding:0;line-height:1.45;">
+        <li>Book 50% profits when stock reaches conservative target (+20% to +35%).</li>
+        <li>Move trailing stop loss to entry price (break-even guarantee).</li>
+        <li>Let remainder run towards full swing multibagger target (+35% to +60%).</li>
+      </ul>
+    </div>
+    <div style="background:#09121e;border:1px solid #1e314b;border-radius:8px;padding:16px;">
+      <b style="color:#f87171;font-size:13px;">3. Hard Exit Protocol (Day 25&ndash;27)</b>
+      <ul style="font-size:11px;color:#cbd5e1;margin:8px 0 0 16px;padding:0;line-height:1.45;">
+        <li>Exit 100% of remaining position on Days 25&ndash;27, regardless of profit or loss.</li>
+        <li>Strictly 3 to 5 calendar days before the 30-day 50% anchor unlock.</li>
+        <li>Zero exceptions: Avoid holding into institutional block sales.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Chart 1: Mainboard Sub vs Post Return
+  new Chart(document.getElementById("mbSubVsPostChart"), {
+    type: "bar",
+    data: {
+      labels: ["<= 1,500 Cr", "<= 2,500 Cr Sweet Spot", "3,000-5,000 Cr", "> 5,000 Cr Mega OFS"],
+      datasets: [
+        {
+          label: "Empirical Win Rate %",
+          data: [78.6, 80.0, 48.0, 37.5],
+          backgroundColor: ["#10b981", "#38bdf8", "#f59e0b", "#ef4444"]
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, max: 100, grid: { color: "#1e293b" } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Chart 2: SME Open Gain vs Peak Upside
+  new Chart(document.getElementById("smeOpenGainChart"), {
+    type: "bar",
+    data: {
+      labels: ["< -12% Knife", "-12% to 0% Trap", "0% to 15% Sweet Spot", "15% to 25% Momentum", "> 50% Euphoria"],
+      datasets: [
+        {
+          label: "Avg Peak Achieved %",
+          data: [17.39, 30.46, 48.28, 59.51, 52.07],
+          backgroundColor: ["#ef4444", "#f59e0b", "#10b981", "#38bdf8", "#64748b"]
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { grid: { color: "#1e293b" } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // Chart 3: Anchor Lock-in Reversal
+  new Chart(document.getElementById("anchorCliffChart"), {
+    type: "line",
+    data: {
+      labels: ["Day 1 Open", "Day 7 Dip Absorption", "Day 14-22 Peak Surge", "Day 25-27 Target Exit", "Day 30 Anchor Unlock", "Day 45 Bleed"],
+      datasets: [
+        {
+          label: "Track 2 Disciplined Exit Playbook",
+          data: [0, 8.5, 48.2, 45.0, null, null],
+          borderColor: "#10b981",
+          backgroundColor: "rgba(16,185,129,0.15)",
+          borderWidth: 3,
+          fill: true,
+          tension: 0.3
+        },
+        {
+          label: "Unhedged Hold Past Anchor Unlock (Reversal)",
+          data: [0, 8.5, 48.2, 45.0, 12.0, -18.5],
+          borderColor: "#ef4444",
+          borderDash: [5, 5],
+          borderWidth: 2,
+          fill: false,
+          tension: 0.3
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { labels: { color: "#cbd5e1", font: { size: 11 } } } },
+      scales: {
+        y: { grid: { color: "#1e293b" } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

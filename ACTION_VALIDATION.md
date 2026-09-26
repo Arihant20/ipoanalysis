@@ -5,7 +5,7 @@ against realised listing gains. Companion to `VALIDATION.md`, which
 certifies only the LightGBM premium model.
 
 - **Joined outcomes**: 138 IPOs with actual gains + latest final prediction
-- **Generated**: 2026-09-25T21:40:08+05:30
+- **Generated**: 2026-09-26T16:48:30+05:30
 
 ## 1. Action hit rates
 
@@ -65,7 +65,7 @@ Select `relative_score >= X` as the buy rule; how does it do?
 ## 6. Live model metrics (reconciliation)
 
 - **n**: 138
-- **MAE**: 16.25%
+- **MAE**: 16.26%
 - **Directional accuracy**: 65.9% (n=138)
 - **|err|>15%**: 41 · **|err|>30%**: 17
 

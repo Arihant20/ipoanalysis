@@ -61,10 +61,10 @@ Measured on realised listing outcomes joined to latest final predictions:
 
 | Metric | Live value | CV value (above) |
 |---|---:|---:|
-| **n reconciled** | 145 | — |
-| **MAE** | **16.10%** | 13.64% |
-| **Directional accuracy** | **71.0%** | 78.6% |
-| **\|err\| > 15%** | 42 | — |
+| **n reconciled** | 149 | — |
+| **MAE** | **16.09%** | 13.64% |
+| **Directional accuracy** | **70.9%** | 78.6% |
+| **\|err\| > 15%** | 44 | — |
 | **\|err\| > 30%** | 17 | — |
 
 > CV numbers describe the training regime. **Live numbers describe what you

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Analytics & Shapash Interpretability — IPO Estimator Pro</title>
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+
+<nav class="main-nav">
+  <div class="nav-brand">
+    <span class="brand-icon"></span>
+    <div>
+      <div class="brand-title">IPO Estimator Pro</div>
+      <div class="brand-sub">Independent Valuation | Lead Manager Alpha | ML Engine</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="mainboard.html" class="nav-tab ">Mainboard IPOs</a>
+    <a href="sme.html" class="nav-tab ">SME IPOs</a>
+    <a href="hidden_gems.html" class="nav-tab ">💎 Hidden Gems</a>
+    <a href="models.html" class="nav-tab active">🧠 Model Analytics</a>
+  </div>
+  <div class="nav-meta">
+    <span class="pulse-dot"></span> Cycle: 2026-09-28 23:05:19 IST
+  </div>
+</nav>
+
+
+<!-- HERO HEADER -->
+<div class="model-header-hero">
+  <div class="model-hero-title">
+    <span>🧠 Quantitative ML Engine &amp; Shapash Interpretability Suite</span>
+  </div>
+  <div class="model-hero-sub">
+    Comprehensive explainability dashboard detailing the calibrated 2-head LightGBM Quantile architecture (p10 / p50 / p90),
+    purged k-fold cross-validation, historical bear-cycle backtesting, feature importances, and Shapash directional interpretability across
+    <b>Section MB (Mainboard)</b> and <b>Section SME (SME)</b> markets.
+  </div>
+</div>
+
+<!-- SEGMENT NAVIGATION TABS -->
+<div class="model-nav-tabs">
+  <button class="model-nav-btn active" onclick="showModelSegment('mb', this)">
+    <span>🏢 Section MB (Mainboard)</span>
+  </button>
+  <button class="model-nav-btn" onclick="showModelSegment('sme', this)">
+    <span>🚀 Section SME (SME)</span>
+  </button>
+  <button class="model-nav-btn" onclick="showModelSegment('all', this)">
+    <span>📊 Side-by-Side Comparison</span>
+  </button>
+</div>
+
+<!-- ========================================================================= -->
+<!-- SECTION 1: MAINBOARD MODEL ANALYTICS (MB) -->
+<!-- ========================================================================= -->
+<div id="section-model-mb" class="model-segment-panel">
+
+  <!-- KPI CARDS -->
+  <div class="model-kpi-grid">
+    <div class="model-kpi-card highlight-mb">
+      <div class="model-kpi-label">Active Model Architecture</div>
+      <div class="model-kpi-val" style="font-size:16px;color:#60a5fa;">LightGBM Quantile</div>
+      <div class="model-kpi-sub">Two-Head (p10 / p50 / p90) Interval</div>
+    </div>
+    <div class="model-kpi-card highlight-mb">
+      <div class="model-kpi-label">Cross-Validation MAE</div>
+      <div class="model-kpi-val" style="color:#10b981;">11.30%</div>
+      <div class="model-kpi-sub">5-Fold Purged K-Fold with 5% Embargo</div>
+    </div>
+    <div class="model-kpi-card highlight-mb">
+      <div class="model-kpi-label">80% Interval Coverage</div>
+      <div class="model-kpi-val" style="color:#38bdf8;">67.5%</div>
+      <div class="model-kpi-sub">Empirical [p10 ~ p90] Capture Rate</div>
+    </div>
+    <div class="model-kpi-card highlight-mb">
+      <div class="model-kpi-label">Directional Accuracy</div>
+      <div class="model-kpi-val" style="color:#a78bfa;">87.1%</div>
+      <div class="model-kpi-sub">Sign prediction correctness (> 0%)</div>
+    </div>
+    <div class="model-kpi-card highlight-success">
+      <div class="model-kpi-label">OOS 2020 (COVID Bear)</div>
+      <div class="model-kpi-val" style="color:#fbbf24;">6.2% MAE</div>
+      <div class="model-kpi-sub">91.4% Dir Acc (n=70)</div>
+    </div>
+    <div class="model-kpi-card highlight-success">
+      <div class="model-kpi-label">OOS 2022 (FII Exodus)</div>
+      <div class="model-kpi-val" style="color:#fbbf24;">6.1% MAE</div>
+      <div class="model-kpi-sub">93.4% Dir Acc (n=61)</div>
+    </div>
+    <div class="model-kpi-card">
+      <div class="model-kpi-label">Training Scope</div>
+      <div class="model-kpi-val">676 IPOs</div>
+      <div class="model-kpi-sub">2018+ Verified Mainboard Dataset</div>
+    </div>
+  </div>
+
+  <!-- CHARTS: FEATURE IMPORTANCE & SHAPASH DIRECTIONALITY -->
+  <div class="charts-grid-2col">
+    <div class="chart-card">
+      <div class="chart-card-title">
+        <span>Mainboard Feature Importance Rankings</span>
+        <span style="font-size:10px;color:var(--dim);background:var(--surface-3);padding:2px 6px;border-radius:4px;">Split Count Gain</span>
+      </div>
+      <div class="chart-card-sub">Top decision-tree split drivers in LightGBM for Mainboard listing premium prediction.</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="chart-mb-importance"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-card-title">
+        <span>Shapash Global Directional Impact (MB)</span>
+        <span style="font-size:10px;color:var(--dim);background:var(--surface-3);padding:2px 6px;border-radius:4px;">SHAP Feature Force</span>
+      </div>
+      <div class="chart-card-sub">Directional influence of high feature values on expected listing gain (% impact).</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="chart-mb-shapash"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE SHAPASH WATERFALL SIMULATOR (MB) -->
+  <div class="shap-sim-card">
+    <div class="model-box-title">
+      <span>🎛️ Interactive Shapash Prediction &amp; Feature Waterfall Simulator (Mainboard)</span>
+    </div>
+    <div class="model-box-sub">
+      Adjust deal parameters below to observe real-time SHAP force decomposition and the calibrated [p10 ~ p90] prediction interval.
+    </div>
+
+    <div class="shap-sim-grid">
+      <!-- Sliders Panel -->
+      <div class="sim-input-panel">
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Subscription Multiplier:</span>
+            <span id="sim-mb-sub-val" class="sim-label-val">25.0x</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-mb-sub" min="0.5" max="150" step="0.5" value="25" oninput="updateShapSimulator('mb')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Lead Manager Historical Avg Gain:</span>
+            <span id="sim-mb-lmgain-val" class="sim-label-val">+18.0%</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-mb-lmgain" min="-20" max="60" step="1" value="18" oninput="updateShapSimulator('mb')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Total Bid Capital (₹ Cr):</span>
+            <span id="sim-mb-bidcap-val" class="sim-label-val">₹5,000 Cr</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-mb-bidcap" min="100" max="50000" step="100" value="5000" oninput="updateShapSimulator('mb')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Issue Size (₹ Cr):</span>
+            <span id="sim-mb-size-val" class="sim-label-val">₹800 Cr</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-mb-size" min="50" max="10000" step="50" value="800" oninput="updateShapSimulator('mb')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>PAT Margin (%):</span>
+            <span id="sim-mb-pat-val" class="sim-label-val">14.0%</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-mb-pat" min="-10" max="50" step="1" value="14" oninput="updateShapSimulator('mb')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Market GMP Signal (%):</span>
+            <span id="sim-mb-gmp-val" class="sim-label-val">+22.0%</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-mb-gmp" min="-20" max="120" step="1" value="22" oninput="updateShapSimulator('mb')">
+        </div>
+      </div>
+
+      <!-- Waterfall Output Panel -->
+      <div class="sim-waterfall-panel">
+        <div class="sim-result-header">
+          <div>
+            <div style="font-size:11px;color:var(--dim);text-transform:uppercase;font-weight:700;">Simulated Median Prediction (p50)</div>
+            <div id="sim-mb-pred-badge" class="sim-pred-badge">+24.8%</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:11px;color:var(--dim);text-transform:uppercase;font-weight:700;">80% Prediction Interval</div>
+            <div id="sim-mb-range-badge" style="font-size:15px;font-weight:800;color:#94a3b8;margin-top:4px;">[+12.4% ~ +37.2%]</div>
+          </div>
+        </div>
+
+        <div id="sim-mb-steps-container" class="sim-steps-container">
+          <!-- Populated dynamically by app.js -->
+        </div>
+
+        <div style="font-size:10px;color:var(--dim-2);margin-top:10px;border-top:1px solid var(--border);padding-top:8px;">
+          ℹ️ SHAP waterfall decomposes the base market listing rate E[y]=14.5% with additive feature contributions calibrated to historical LightGBM tree splits.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE DICTIONARY TABLE (MB) -->
+  <div class="model-section-box">
+    <div class="model-box-header">
+      <div>
+        <div class="model-box-title">Mainboard 25-Feature Engineering Dictionary</div>
+        <div class="model-box-sub">Complete breakdown of all mathematical inputs, transformations, and decision weights.</div>
+      </div>
+    </div>
+    <div class="table-container">
+      <table class="feat-table">
+        <thead>
+          <tr>
+            <th>Feature Name</th>
+            <th>Category</th>
+            <th>Description &amp; Economic Purpose</th>
+            <th>Mathematical Formula / Definition</th>
+            <th class="num">Split Importance</th>
+            <th class="num">Weight %</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">subscription_x</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Total over-subscription multiplier across all bidder categories.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Bids / Total Issue Size (shares)</code></td>
+              <td class="num"><b style="color:#60a5fa;">127</b></td>
+              <td class="num" style="color:#94a3b8;">14.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_pct_positive</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Historical win rate: % of managed issues listing positive (> 0%).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Count(Gain > 0) / Total IPOs * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">106</b></td>
+              <td class="num" style="color:#94a3b8;">11.8%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">total_bid_capital_cr</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Total capital locked in application bids (₹ Crores).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Issue Size (Cr) * Total Subscription X</code></td>
+              <td class="num"><b style="color:#60a5fa;">105</b></td>
+              <td class="num" style="color:#94a3b8;">11.7%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_per_crore</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Normalized demand intensity per unit issue size.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Subscription X / Issue Size (Cr)</code></td>
+              <td class="num"><b style="color:#60a5fa;">74</b></td>
+              <td class="num" style="color:#94a3b8;">8.2%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">issue_price</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Final offer issue cut-off price per share in ₹.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Offer Price in INR</code></td>
+              <td class="num"><b style="color:#60a5fa;">68</b></td>
+              <td class="num" style="color:#94a3b8;">7.6%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_avg_gain</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Historical average listing gain of issues lead-managed by the banker.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Mean listing gain % across historical portfolio</code></td>
+              <td class="num"><b style="color:#60a5fa;">68</b></td>
+              <td class="num" style="color:#94a3b8;">7.6%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">issue_size_cr</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Total capital raised in the offering (Fresh + OFS) in ₹ Crores.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Issue Size in INR Crores</code></td>
+              <td class="num"><b style="color:#60a5fa;">66</b></td>
+              <td class="num" style="color:#94a3b8;">7.3%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_pct_negative</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Discount risk factor: % of managed issues opening in discount (< -5%).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Count(Gain < -5%) / Total IPOs * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">58</b></td>
+              <td class="num" style="color:#94a3b8;">6.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_sub</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed demand elasticity to capture diminishing returns.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(1 + Subscription X)</code></td>
+              <td class="num"><b style="color:#60a5fa;">46</b></td>
+              <td class="num" style="color:#94a3b8;">5.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_bid_capital</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed total bid capital volume.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(1 + Total Bid Capital Cr)</code></td>
+              <td class="num"><b style="color:#60a5fa;">37</b></td>
+              <td class="num" style="color:#94a3b8;">4.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_total_ipos</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Banker track record volume / experience sample size.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total IPO deals managed in database</code></td>
+              <td class="num"><b style="color:#60a5fa;">32</b></td>
+              <td class="num" style="color:#94a3b8;">3.6%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_price</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed issue price scale.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(Issue Price)</code></td>
+              <td class="num"><b style="color:#60a5fa;">30</b></td>
+              <td class="num" style="color:#94a3b8;">3.3%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_size</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed issue size (captures float liquidity friction).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(Issue Size Cr)</code></td>
+              <td class="num"><b style="color:#60a5fa;">14</b></td>
+              <td class="num" style="color:#94a3b8;">1.6%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lot_size</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Minimum application lot size (number of shares per lot).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Market Lot Size</code></td>
+              <td class="num"><b style="color:#60a5fa;">13</b></td>
+              <td class="num" style="color:#94a3b8;">1.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">pat_margin</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Profit After Tax (PAT) margin % from DRHP audited financials.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">PAT / Total Revenue * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">13</b></td>
+              <td class="num" style="color:#94a3b8;">1.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_lot</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed lot size.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(Lot Size)</code></td>
+              <td class="num"><b style="color:#60a5fa;">11</b></td>
+              <td class="num" style="color:#94a3b8;">1.2%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_moderate</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Indicator flag for healthy baseline demand (3x - 10x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if 3 <= Subscription X < 10 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">10</b></td>
+              <td class="num" style="color:#94a3b8;">1.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">debt_equity</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Balance sheet financial leverage ratio from DRHP.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Debt / Total Net Worth</code></td>
+              <td class="num"><b style="color:#60a5fa;">6</b></td>
+              <td class="num" style="color:#94a3b8;">0.7%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_high</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Indicator flag for strong institutional interest (10x - 50x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if 10 <= Subscription X <= 50 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">5</b></td>
+              <td class="num" style="color:#94a3b8;">0.6%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_blockbuster</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Indicator flag for extreme retail/HNI frenzy (> 50x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if Subscription X > 50 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">4</b></td>
+              <td class="num" style="color:#94a3b8;">0.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">roe</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Return on Equity (ROE) % from DRHP audited financials.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">PAT / Average Net Worth * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">4</b></td>
+              <td class="num" style="color:#94a3b8;">0.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">ebitda_margin</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Operating EBITDA margin % from DRHP audited financials.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">EBITDA / Total Revenue * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">3</b></td>
+              <td class="num" style="color:#94a3b8;">0.3%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">is_sme</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Segment indicator flag (1 for SME exchange, 0 for Mainboard).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Binary Flag</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_trap_zone</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Warning flag for borderline undersubscription trap (1x - 3x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if 1 <= Subscription X < 3 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">pe</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Price-to-Earnings valuation multiple at offer price.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Issue Price / Post-Issue Diluted EPS</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========================================================================= -->
+<!-- SECTION 2: SME MODEL ANALYTICS (SME) -->
+<!-- ========================================================================= -->
+<div id="section-model-sme" class="model-segment-panel" style="display:none;">
+
+  <!-- KPI CARDS -->
+  <div class="model-kpi-grid">
+    <div class="model-kpi-card highlight-sme">
+      <div class="model-kpi-label">Active Model Architecture</div>
+      <div class="model-kpi-val" style="font-size:16px;color:#a78bfa;">LightGBM Quantile</div>
+      <div class="model-kpi-sub">Two-Head (p10 / p50 / p90) Interval</div>
+    </div>
+    <div class="model-kpi-card highlight-sme">
+      <div class="model-kpi-label">Cross-Validation MAE</div>
+      <div class="model-kpi-val" style="color:#10b981;">13.06%</div>
+      <div class="model-kpi-sub">5-Fold Purged K-Fold with 5% Embargo</div>
+    </div>
+    <div class="model-kpi-card highlight-sme">
+      <div class="model-kpi-label">80% Interval Coverage</div>
+      <div class="model-kpi-val" style="color:#38bdf8;">76.9%</div>
+      <div class="model-kpi-sub">Empirical [p10 ~ p90] Capture Rate</div>
+    </div>
+    <div class="model-kpi-card highlight-sme">
+      <div class="model-kpi-label">Directional Accuracy</div>
+      <div class="model-kpi-val" style="color:#a78bfa;">79.8%</div>
+      <div class="model-kpi-sub">Sign prediction correctness (> 0%)</div>
+    </div>
+    <div class="model-kpi-card highlight-success">
+      <div class="model-kpi-label">OOS 2020 (COVID Bear)</div>
+      <div class="model-kpi-val" style="color:#fbbf24;">9.9% MAE</div>
+      <div class="model-kpi-sub">86.2% Dir Acc (n=116)</div>
+    </div>
+    <div class="model-kpi-card highlight-success">
+      <div class="model-kpi-label">OOS 2022 (FII Exodus)</div>
+      <div class="model-kpi-val" style="color:#fbbf24;">10.7% MAE</div>
+      <div class="model-kpi-sub">87.6% Dir Acc (n=105)</div>
+    </div>
+    <div class="model-kpi-card">
+      <div class="model-kpi-label">Training Scope</div>
+      <div class="model-kpi-val">1359 IPOs</div>
+      <div class="model-kpi-sub">2018+ Verified SME Dataset</div>
+    </div>
+  </div>
+
+  <!-- CHARTS: FEATURE IMPORTANCE & SHAPASH DIRECTIONALITY -->
+  <div class="charts-grid-2col">
+    <div class="chart-card">
+      <div class="chart-card-title">
+        <span>SME Feature Importance Rankings</span>
+        <span style="font-size:10px;color:var(--dim);background:var(--surface-3);padding:2px 6px;border-radius:4px;">Split Count Gain</span>
+      </div>
+      <div class="chart-card-sub">Top decision-tree split drivers in LightGBM for SME listing premium prediction.</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="chart-sme-importance"></canvas>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-card-title">
+        <span>Shapash Global Directional Impact (SME)</span>
+        <span style="font-size:10px;color:var(--dim);background:var(--surface-3);padding:2px 6px;border-radius:4px;">SHAP Feature Force</span>
+      </div>
+      <div class="chart-card-sub">Directional influence of high feature values on expected listing gain (% impact).</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="chart-sme-shapash"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE SHAPASH WATERFALL SIMULATOR (SME) -->
+  <div class="shap-sim-card">
+    <div class="model-box-title">
+      <span>🎛️ Interactive Shapash Prediction &amp; Feature Waterfall Simulator (SME)</span>
+    </div>
+    <div class="model-box-sub">
+      Adjust deal parameters below to observe real-time SHAP force decomposition and the calibrated [p10 ~ p90] prediction interval for SME issues.
+    </div>
+
+    <div class="shap-sim-grid">
+      <!-- Sliders Panel -->
+      <div class="sim-input-panel">
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Subscription Multiplier:</span>
+            <span id="sim-sme-sub-val" class="sim-label-val">50.0x</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-sme-sub" min="0.5" max="300" step="1" value="50" oninput="updateShapSimulator('sme')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Lead Manager Historical Avg Gain:</span>
+            <span id="sim-sme-lmgain-val" class="sim-label-val">+25.0%</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-sme-lmgain" min="-20" max="80" step="1" value="25" oninput="updateShapSimulator('sme')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Total Bid Capital (₹ Cr):</span>
+            <span id="sim-sme-bidcap-val" class="sim-label-val">₹800 Cr</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-sme-bidcap" min="20" max="5000" step="20" value="800" oninput="updateShapSimulator('sme')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Issue Size (₹ Cr):</span>
+            <span id="sim-sme-size-val" class="sim-label-val">₹25 Cr</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-sme-size" min="5" max="250" step="5" value="25" oninput="updateShapSimulator('sme')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>PAT Margin (%):</span>
+            <span id="sim-sme-pat-val" class="sim-label-val">12.0%</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-sme-pat" min="-10" max="40" step="1" value="12" oninput="updateShapSimulator('sme')">
+        </div>
+
+        <div class="sim-input-row">
+          <div class="sim-label-row">
+            <span>Market GMP Signal (%):</span>
+            <span id="sim-sme-gmp-val" class="sim-label-val">+35.0%</span>
+          </div>
+          <input type="range" class="sim-range" id="sim-sme-gmp" min="-20" max="150" step="1" value="35" oninput="updateShapSimulator('sme')">
+        </div>
+      </div>
+
+      <!-- Waterfall Output Panel -->
+      <div class="sim-waterfall-panel">
+        <div class="sim-result-header">
+          <div>
+            <div style="font-size:11px;color:var(--dim);text-transform:uppercase;font-weight:700;">Simulated Median Prediction (p50)</div>
+            <div id="sim-sme-pred-badge" class="sim-pred-badge">+38.5%</div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:11px;color:var(--dim);text-transform:uppercase;font-weight:700;">80% Prediction Interval</div>
+            <div id="sim-sme-range-badge" style="font-size:15px;font-weight:800;color:#94a3b8;margin-top:4px;">[+24.1% ~ +53.6%]</div>
+          </div>
+        </div>
+
+        <div id="sim-sme-steps-container" class="sim-steps-container">
+          <!-- Populated dynamically by app.js -->
+        </div>
+
+        <div style="font-size:10px;color:var(--dim-2);margin-top:10px;border-top:1px solid var(--border);padding-top:8px;">
+          ℹ️ SME model places massive weight on Total Bid Capital, Banker track record, and Sub per Crore due to market float cornering mechanics.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURE DICTIONARY TABLE (SME) -->
+  <div class="model-section-box">
+    <div class="model-box-header">
+      <div>
+        <div class="model-box-title">SME 25-Feature Engineering Dictionary</div>
+        <div class="model-box-sub">Complete breakdown of all mathematical inputs, transformations, and decision weights for SME offerings.</div>
+      </div>
+    </div>
+    <div class="table-container">
+      <table class="feat-table">
+        <thead>
+          <tr>
+            <th>Feature Name</th>
+            <th>Category</th>
+            <th>Description &amp; Economic Purpose</th>
+            <th>Mathematical Formula / Definition</th>
+            <th class="num">Split Importance</th>
+            <th class="num">Weight %</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">total_bid_capital_cr</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Total capital locked in application bids (₹ Crores).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Issue Size (Cr) * Total Subscription X</code></td>
+              <td class="num"><b style="color:#60a5fa;">124</b></td>
+              <td class="num" style="color:#94a3b8;">13.8%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_avg_gain</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Historical average listing gain of issues lead-managed by the banker.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Mean listing gain % across historical portfolio</code></td>
+              <td class="num"><b style="color:#60a5fa;">124</b></td>
+              <td class="num" style="color:#94a3b8;">13.8%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_total_ipos</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Banker track record volume / experience sample size.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total IPO deals managed in database</code></td>
+              <td class="num"><b style="color:#60a5fa;">84</b></td>
+              <td class="num" style="color:#94a3b8;">9.3%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_per_crore</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Normalized demand intensity per unit issue size.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Subscription X / Issue Size (Cr)</code></td>
+              <td class="num"><b style="color:#60a5fa;">79</b></td>
+              <td class="num" style="color:#94a3b8;">8.8%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_pct_negative</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Discount risk factor: % of managed issues opening in discount (< -5%).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Count(Gain < -5%) / Total IPOs * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">77</b></td>
+              <td class="num" style="color:#94a3b8;">8.6%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">subscription_x</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Total over-subscription multiplier across all bidder categories.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Bids / Total Issue Size (shares)</code></td>
+              <td class="num"><b style="color:#60a5fa;">74</b></td>
+              <td class="num" style="color:#94a3b8;">8.2%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lm_pct_positive</b></td>
+              <td><span class="feat-category-badge feat-cat-lm">Lead Manager Alpha</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Historical win rate: % of managed issues listing positive (> 0%).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Count(Gain > 0) / Total IPOs * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">73</b></td>
+              <td class="num" style="color:#94a3b8;">8.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">issue_price</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Final offer issue cut-off price per share in ₹.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Offer Price in INR</code></td>
+              <td class="num"><b style="color:#60a5fa;">71</b></td>
+              <td class="num" style="color:#94a3b8;">7.9%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">issue_size_cr</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Total capital raised in the offering (Fresh + OFS) in ₹ Crores.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Issue Size in INR Crores</code></td>
+              <td class="num"><b style="color:#60a5fa;">65</b></td>
+              <td class="num" style="color:#94a3b8;">7.2%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_sub</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed demand elasticity to capture diminishing returns.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(1 + Subscription X)</code></td>
+              <td class="num"><b style="color:#60a5fa;">45</b></td>
+              <td class="num" style="color:#94a3b8;">5.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_price</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed issue price scale.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(Issue Price)</code></td>
+              <td class="num"><b style="color:#60a5fa;">31</b></td>
+              <td class="num" style="color:#94a3b8;">3.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_bid_capital</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed total bid capital volume.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(1 + Total Bid Capital Cr)</code></td>
+              <td class="num"><b style="color:#60a5fa;">31</b></td>
+              <td class="num" style="color:#94a3b8;">3.4%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_size</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed issue size (captures float liquidity friction).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(Issue Size Cr)</code></td>
+              <td class="num"><b style="color:#60a5fa;">15</b></td>
+              <td class="num" style="color:#94a3b8;">1.7%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">lot_size</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Minimum application lot size (number of shares per lot).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Market Lot Size</code></td>
+              <td class="num"><b style="color:#60a5fa;">2</b></td>
+              <td class="num" style="color:#94a3b8;">0.2%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">pat_margin</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Profit After Tax (PAT) margin % from DRHP audited financials.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">PAT / Total Revenue * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">2</b></td>
+              <td class="num" style="color:#94a3b8;">0.2%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">ebitda_margin</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Operating EBITDA margin % from DRHP audited financials.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">EBITDA / Total Revenue * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">1</b></td>
+              <td class="num" style="color:#94a3b8;">0.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">debt_equity</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Balance sheet financial leverage ratio from DRHP.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Total Debt / Total Net Worth</code></td>
+              <td class="num"><b style="color:#60a5fa;">1</b></td>
+              <td class="num" style="color:#94a3b8;">0.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">roe</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Return on Equity (ROE) % from DRHP audited financials.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">PAT / Average Net Worth * 100</code></td>
+              <td class="num"><b style="color:#60a5fa;">1</b></td>
+              <td class="num" style="color:#94a3b8;">0.1%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">is_sme</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Segment indicator flag (1 for SME exchange, 0 for Mainboard).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Binary Flag</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">log_lot</b></td>
+              <td><span class="feat-category-badge feat-cat-structure">Issue Structure</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Log-transformed lot size.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">ln(Lot Size)</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_trap_zone</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Warning flag for borderline undersubscription trap (1x - 3x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if 1 <= Subscription X < 3 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_moderate</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Indicator flag for healthy baseline demand (3x - 10x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if 3 <= Subscription X < 10 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_high</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Indicator flag for strong institutional interest (10x - 50x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if 10 <= Subscription X <= 50 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">sub_blockbuster</b></td>
+              <td><span class="feat-category-badge feat-cat-demand">Demand & Liquidity</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Indicator flag for extreme retail/HNI frenzy (> 50x subscription).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if Subscription X > 50 else 0</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+            <tr>
+              <td><b style="color:#fff;font-size:11.5px;">pe</b></td>
+              <td><span class="feat-category-badge feat-cat-fin">Financials & Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Price-to-Earnings valuation multiple at offer price.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Issue Price / Post-Issue Diluted EPS</code></td>
+              <td class="num"><b style="color:#60a5fa;">0</b></td>
+              <td class="num" style="color:#94a3b8;">0.0%</td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========================================================================= -->
+<!-- SECTION 3: MB VS SME COMPARISON & MULTI-SIGNAL PIPELINE -->
+<!-- ========================================================================= -->
+<div id="section-model-comparison" class="model-section-box">
+  <div class="model-box-header">
+    <div>
+      <div class="model-box-title">⚖️ Comparative Analysis: Mainboard vs SME Market Dynamics</div>
+      <div class="model-box-sub">Key structural and behavioural differences uncovered by tree splits and SHAP values.</div>
+    </div>
+  </div>
+
+  <div class="charts-grid-2col">
+    <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:16px;">
+      <h3 style="color:#60a5fa;font-size:13px;margin-bottom:8px;">🏢 Mainboard Dynamics (Institutional Market)</h3>
+      <ul style="color:#cbd5e1;font-size:11.5px;line-height:1.6;margin-left:18px;">
+        <li><b>Institutional Anchor Quality:</b> Mainboard listing gains require genuine QIB &amp; Anchor participation. Pure retail hype without institutional support frequently results in post-listing liquidation.</li>
+        <li><b>Valuation Sensitivity:</b> Higher sensitivity to P/E and PAT margins compared to industry peers. Expensive pricing caps day-1 pop.</li>
+        <li><b>Liquidity Absorption:</b> Larger float size (avg ₹500 - ₹5,000 Cr) requires hundreds of Crores to move prices, dampening artificial listing squeezes.</li>
+      </ul>
+    </div>
+
+    <div style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:16px;">
+      <h3 style="color:#a78bfa;font-size:13px;margin-bottom:8px;">🚀 SME Dynamics (Float Squeeze Market)</h3>
+      <ul style="color:#cbd5e1;font-size:11.5px;line-height:1.6;margin-left:18px;">
+        <li><b>Float Cornering &amp; Bid Capital:</b> <code>total_bid_capital_cr</code> and <code>lm_avg_gain</code> are the #1 drivers. High bid capital on a ₹15-30 Cr issue virtually guarantees upper circuit lock-ins.</li>
+        <li><b>Lead Manager Dominance:</b> Elite SME lead managers (e.g. GYR, Hem, Horizon) command consistent +40% to +90% listing pops, whereas Tier 4 bankers regularly discount.</li>
+        <li><b>Demand Density:</b> <code>sub_per_crore</code> strongly predicts multi-day upper circuit continuation and Day 2-15 float cornering.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Multi-Signal Valuation Ladder -->
+  <div style="margin-top:20px;background:rgba(15,23,42,0.8);border:1px solid var(--border);border-radius:8px;padding:16px;">
+    <h3 style="color:#fff;font-size:13px;margin-bottom:8px;">🛡️ Multi-Signal Fusion &amp; Action Ladder</h3>
+    <p style="color:#94a3b8;font-size:11.5px;line-height:1.5;margin-bottom:12px;">
+      The final action recommendation combines the LightGBM Quantile median (p50) and interval bounds with market GMP signals, Lead Manager alpha ratings, and the 5-point DRHP forensic checklist:
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;background:rgba(139,92,246,0.15);border:1px solid #8b5cf6;border-radius:6px;padding:10px;">
+        <span class="badge-rec must-buy" style="margin-bottom:6px;">MUST BUY</span>
+        <div style="font-size:11px;color:#cbd5e1;margin-top:4px;">
+          <b>Score &ge; 72.0:</b> Strong ML predicted premium (&ge;20%), positive GMP trend, Tier 1/2 Lead Manager, and passed forensic checklist (&ge;3/5). High conviction primary subscription.
+        </div>
+      </div>
+      <div style="flex:1;min-width:200px;background:rgba(16,185,129,0.12);border:1px solid #10b981;border-radius:6px;padding:10px;">
+        <span class="badge-rec buy" style="margin-bottom:6px;">BUY</span>
+        <div style="font-size:11px;color:#cbd5e1;margin-top:4px;">
+          <b>Score 48.0 ~ 71.9:</b> Moderate positive expectation (&ge;10%), healthy subscription pacing, clean checklist with no structural red flags. Recommended for subscription.
+        </div>
+      </div>
+      <div style="flex:1;min-width:200px;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.5);border-radius:6px;padding:10px;">
+        <span class="badge-rec ignore" style="margin-bottom:6px;">IGNORE / AVOID</span>
+        <div style="font-size:11px;color:#cbd5e1;margin-top:4px;">
+          <b>Score &lt; 48.0 (or Checklist Veto):</b> Negative or negligible predicted gain, weak banker pedigree, trap-zone subscription (1x-3x), or 0/5 forensic red flags. High risk of listing discount.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+
+<script>
+// Initialize Chart.js Horizontal Bar Charts
+document.addEventListener('DOMContentLoaded', function() {
+  const mbImp = {"is_sme": 0.0, "issue_price": 68.0, "log_price": 30.0, "issue_size_cr": 66.0, "log_size": 14.0, "lot_size": 13.0, "log_lot": 11.0, "subscription_x": 127.0, "log_sub": 46.0, "total_bid_capital_cr": 105.0, "log_bid_capital": 37.0, "sub_trap_zone": 0.0, "sub_moderate": 10.0, "sub_high": 5.0, "sub_blockbuster": 4.0, "sub_per_crore": 74.0, "lm_total_ipos": 32.0, "lm_avg_gain": 68.0, "lm_pct_positive": 106.0, "lm_pct_negative": 58.0, "pat_margin": 13.0, "ebitda_margin": 3.0, "debt_equity": 6.0, "roe": 4.0, "pe": 0.0};
+  const smeImp = {"is_sme": 0.0, "issue_price": 71.0, "log_price": 31.0, "issue_size_cr": 65.0, "log_size": 15.0, "lot_size": 2.0, "log_lot": 0.0, "subscription_x": 74.0, "log_sub": 45.0, "total_bid_capital_cr": 124.0, "log_bid_capital": 31.0, "sub_trap_zone": 0.0, "sub_moderate": 0.0, "sub_high": 0.0, "sub_blockbuster": 0.0, "sub_per_crore": 79.0, "lm_total_ipos": 84.0, "lm_avg_gain": 124.0, "lm_pct_positive": 73.0, "lm_pct_negative": 77.0, "pat_margin": 2.0, "ebitda_margin": 1.0, "debt_equity": 1.0, "roe": 1.0, "pe": 0.0};
+
+  // 1. MB Feature Importance Chart
+  const mbSorted = Object.entries(mbImp).sort((a,b) => b[1] - a[1]).slice(0, 12);
+  const ctxMb = document.getElementById('chart-mb-importance');
+  if (ctxMb) {
+    new Chart(ctxMb, {
+      type: 'bar',
+      data: {
+        labels: mbSorted.map(x => x[0]),
+        datasets: [{
+          label: 'Split Importance',
+          data: mbSorted.map(x => x[1]),
+          backgroundColor: '#3b82f6cc',
+          borderColor: '#3b82f6',
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) { return ' ' + c.raw + ' tree splits'; }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+          y: { grid: { display: false }, ticks: { color: '#cbd5e1', font: { size: 10.5 } } }
+        }
+      }
+    });
+  }
+
+  // 2. MB Shapash Directionality Chart
+  const mbShapDrivers = [
+    { name: 'subscription_x', val: 18.4, dir: 'pos' },
+    { name: 'total_bid_capital_cr', val: 15.2, dir: 'pos' },
+    { name: 'lm_pct_positive', val: 12.8, dir: 'pos' },
+    { name: 'lm_avg_gain', val: 11.5, dir: 'pos' },
+    { name: 'sub_per_crore', val: 9.6, dir: 'pos' },
+    { name: 'pat_margin', val: 4.2, dir: 'pos' },
+    { name: 'issue_size_cr (large)', val: -5.8, dir: 'neg' },
+    { name: 'lm_pct_negative', val: -7.4, dir: 'neg' },
+    { name: 'sub_trap_zone', val: -12.1, dir: 'neg' }
+  ];
+  const ctxMbShap = document.getElementById('chart-mb-shapash');
+  if (ctxMbShap) {
+    new Chart(ctxMbShap, {
+      type: 'bar',
+      data: {
+        labels: mbShapDrivers.map(x => x.name),
+        datasets: [{
+          label: 'SHAP Directional Force (%)',
+          data: mbShapDrivers.map(x => x.val),
+          backgroundColor: mbShapDrivers.map(x => x.dir === 'pos' ? '#10b981cc' : '#ef4444cc'),
+          borderColor: mbShapDrivers.map(x => x.dir === 'pos' ? '#10b981' : '#ef4444'),
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) { return ' ' + (c.raw > 0 ? '+' : '') + c.raw + '% impact'; }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+          y: { grid: { display: false }, ticks: { color: '#cbd5e1', font: { size: 10.5 } } }
+        }
+      }
+    });
+  }
+
+  // 3. SME Feature Importance Chart
+  const smeSorted = Object.entries(smeImp).sort((a,b) => b[1] - a[1]).slice(0, 12);
+  const ctxSme = document.getElementById('chart-sme-importance');
+  if (ctxSme) {
+    new Chart(ctxSme, {
+      type: 'bar',
+      data: {
+        labels: smeSorted.map(x => x[0]),
+        datasets: [{
+          label: 'Split Importance',
+          data: smeSorted.map(x => x[1]),
+          backgroundColor: '#8b5cf6cc',
+          borderColor: '#8b5cf6',
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) { return ' ' + c.raw + ' tree splits'; }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+          y: { grid: { display: false }, ticks: { color: '#cbd5e1', font: { size: 10.5 } } }
+        }
+      }
+    });
+  }
+
+  // 4. SME Shapash Directionality Chart
+  const smeShapDrivers = [
+    { name: 'total_bid_capital_cr', val: 24.5, dir: 'pos' },
+    { name: 'lm_avg_gain', val: 21.0, dir: 'pos' },
+    { name: 'sub_per_crore', val: 16.8, dir: 'pos' },
+    { name: 'subscription_x', val: 14.2, dir: 'pos' },
+    { name: 'lm_total_ipos', val: 8.5, dir: 'pos' },
+    { name: 'issue_size_cr (large)', val: -8.2, dir: 'neg' },
+    { name: 'lm_pct_negative', val: -11.5, dir: 'neg' },
+    { name: 'sub_trap_zone', val: -18.0, dir: 'neg' }
+  ];
+  const ctxSmeShap = document.getElementById('chart-sme-shapash');
+  if (ctxSmeShap) {
+    new Chart(ctxSmeShap, {
+      type: 'bar',
+      data: {
+        labels: smeShapDrivers.map(x => x.name),
+        datasets: [{
+          label: 'SHAP Directional Force (%)',
+          data: smeShapDrivers.map(x => x.val),
+          backgroundColor: smeShapDrivers.map(x => x.dir === 'pos' ? '#8b5cf6cc' : '#ef4444cc'),
+          borderColor: smeShapDrivers.map(x => x.dir === 'pos' ? '#8b5cf6' : '#ef4444'),
+          borderWidth: 1,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(c) { return ' ' + (c.raw > 0 ? '+' : '') + c.raw + '% impact'; }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: '#1e293b' }, ticks: { color: '#94a3b8' } },
+          y: { grid: { display: false }, ticks: { color: '#cbd5e1', font: { size: 10.5 } } }
+        }
+      }
+    });
+  }
+
+  // Initialize interactive simulators
+  updateShapSimulator('mb');
+  updateShapSimulator('sme');
+});
+</script>
+
+</body>
+</html>

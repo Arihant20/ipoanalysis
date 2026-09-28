@@ -1,4 +1,4 @@
-// IPO Estimator Pro - Client-side Interactions
+// IPO Estimator Pro - Client-side Interactions & Model Analytics
 
 // Active action filter state per section
 const sectionActionFilters = {
@@ -80,7 +80,6 @@ function filterPending(crit, btn) { filterAction('pending', crit, btn); }
 function searchPending() { filterSection('pending'); }
 function searchRecentlyListed() { filterSection('recently-listed'); }
 function searchPast() { filterSection('past'); }
-// Day-section helpers (new)
 function filterUpcoming(crit, btn) { filterAction('upcoming', crit, btn); }
 function filterDay1(crit, btn) { filterAction('day1', crit, btn); }
 function filterDay2(crit, btn) { filterAction('day2', crit, btn); }
@@ -165,6 +164,10 @@ function initDensity() {
   } catch (e) {}
 }
 
+// ==============================================================================
+// LEAD MANAGER CARDS & MODAL
+// ==============================================================================
+
 let currentLmFilter = 'all';
 let currentLmSearch = '';
 let lmPage = 1;
@@ -172,7 +175,7 @@ const LM_PAGE_SIZE = 24;
 
 function filterCards(crit, btn) {
   document.querySelectorAll('.pill-filter').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
+  if (btn) btn.classList.add('active');
   currentLmFilter = crit;
   applyLmFilters();
 }
@@ -244,19 +247,6 @@ function loadMoreLMs() {
   updatePagination();
 }
 
-function initPage() {
-  initDensity();
-  if (document.getElementById('lm-cards-container')) {
-    applyLmFilters();
-  }
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initPage);
-} else {
-  initPage();
-}
-
 function esc(s) {
   return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
@@ -279,12 +269,163 @@ function inspectLM(btn) {
 }
 
 function closeModal() {
-  document.getElementById('lm-modal').style.display = 'none';
+  const m = document.getElementById('lm-modal');
+  if (m) m.style.display = 'none';
 }
 
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
-    const m = document.getElementById('lm-modal');
-    if (m) m.style.display = 'none';
+    closeModal();
   }
 });
+
+// ==============================================================================
+// MODEL ANALYTICS: SEGMENT SWITCHING & SHAPASH SIMULATOR
+// ==============================================================================
+
+function showModelSegment(seg, btn) {
+  document.querySelectorAll('.model-nav-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  const mbSec = document.getElementById('section-model-mb');
+  const smeSec = document.getElementById('section-model-sme');
+  const compareSec = document.getElementById('section-model-comparison');
+
+  if (seg === 'mb') {
+    if (mbSec) mbSec.style.display = 'block';
+    if (smeSec) smeSec.style.display = 'none';
+    if (compareSec) compareSec.style.display = 'none';
+  } else if (seg === 'sme') {
+    if (mbSec) mbSec.style.display = 'none';
+    if (smeSec) smeSec.style.display = 'block';
+    if (compareSec) compareSec.style.display = 'none';
+  } else {
+    // all
+    if (mbSec) mbSec.style.display = 'block';
+    if (smeSec) smeSec.style.display = 'block';
+    if (compareSec) compareSec.style.display = 'block';
+  }
+}
+
+function updateShapSimulator(seg) {
+  const isMb = (seg === 'mb');
+  const prefix = isMb ? 'sim-mb-' : 'sim-sme-';
+
+  const sub = parseFloat(document.getElementById(prefix + 'sub').value) || 1;
+  const lmGain = parseFloat(document.getElementById(prefix + 'lmgain').value) || 0;
+  const bidCap = parseFloat(document.getElementById(prefix + 'bidcap').value) || 100;
+  const size = parseFloat(document.getElementById(prefix + 'size').value) || 50;
+  const pat = parseFloat(document.getElementById(prefix + 'pat').value) || 10;
+  const gmp = parseFloat(document.getElementById(prefix + 'gmp').value) || 0;
+
+  // Update label indicators
+  document.getElementById(prefix + 'sub-val').textContent = sub.toFixed(1) + 'x';
+  document.getElementById(prefix + 'lmgain-val').textContent = (lmGain >= 0 ? '+' : '') + lmGain.toFixed(1) + '%';
+  document.getElementById(prefix + 'bidcap-val').textContent = '₹' + bidCap.toFixed(0) + ' Cr';
+  document.getElementById(prefix + 'size-val').textContent = '₹' + size.toFixed(0) + ' Cr';
+  document.getElementById(prefix + 'pat-val').textContent = pat.toFixed(1) + '%';
+  document.getElementById(prefix + 'gmp-val').textContent = (gmp >= 0 ? '+' : '') + gmp.toFixed(1) + '%';
+
+  // Base expected return (baseline intercept E[Y])
+  const baseVal = isMb ? 14.5 : 18.2;
+
+  // Calibrated SHAP contributions
+  // 1. Subscription multiplier effect
+  let subShap = 0;
+  if (sub > 1) {
+    subShap = Math.min(35.0, (Math.log(sub) * (isMb ? 6.2 : 8.8)) - (isMb ? 4.0 : 5.5));
+  } else {
+    subShap = -8.5;
+  }
+
+  // 2. Lead Manager track record effect
+  const lmShap = (lmGain - (isMb ? 12.0 : 15.0)) * (isMb ? 0.32 : 0.45);
+
+  // 3. Bid capital & demand density
+  const bidCapShap = (Math.log10(Math.max(10, bidCap)) - 2.5) * (isMb ? 4.5 : 6.0);
+
+  // 4. Issue Size float friction effect
+  const sizeShap = (isMb ? (size > 1500 ? -4.5 : (size < 400 ? 3.0 : 0)) : (size > 100 ? -5.5 : (size < 30 ? 4.5 : 0)));
+
+  // 5. Financial Quality / PAT Margin
+  const patShap = (pat - 10.0) * (isMb ? 0.22 : 0.12);
+
+  // 6. Market GMP alignment
+  const gmpShap = (gmp - baseVal) * (isMb ? 0.38 : 0.42);
+
+  const totalShap = baseVal + subShap + lmShap + bidCapShap + sizeShap + patShap + gmpShap;
+  const finalP50 = Math.max(-25.0, Math.min(150.0, totalShap));
+  const errMargin = isMb ? 11.3 : 13.1;
+  const finalP10 = Math.max(-40.0, finalP50 - (errMargin * 1.1));
+  const finalP90 = finalP50 + (errMargin * 1.15);
+
+  // Render prediction badge
+  const predBadge = document.getElementById(prefix + 'pred-badge');
+  if (predBadge) {
+    predBadge.textContent = (finalP50 >= 0 ? '+' : '') + finalP50.toFixed(1) + '%';
+    predBadge.style.color = finalP50 > 0 ? '#34d399' : '#f87171';
+    predBadge.style.borderColor = finalP50 > 0 ? '#10b981' : '#ef4444';
+  }
+
+  const rangeBadge = document.getElementById(prefix + 'range-badge');
+  if (rangeBadge) {
+    rangeBadge.textContent = '[' + (finalP10 >= 0 ? '+' : '') + finalP10.toFixed(1) + '% ~ ' + (finalP90 >= 0 ? '+' : '') + finalP90.toFixed(1) + '%]';
+  }
+
+  // Update Waterfall steps
+  const steps = [
+    { name: 'Base Expected Return E[y]', val: baseVal, isBase: true },
+    { name: 'Subscription Multiplier', val: subShap },
+    { name: 'Lead Manager Track Record', val: lmShap },
+    { name: 'Total Bid Capital Density', val: bidCapShap },
+    { name: 'Issue Size Float Dynamics', val: sizeShap },
+    { name: 'PAT Margin & Profitability', val: patShap },
+    { name: 'Market GMP Alignment', val: gmpShap }
+  ];
+
+  const stepsContainer = document.getElementById(prefix + 'steps-container');
+  if (stepsContainer) {
+    let stepsHtml = '';
+    steps.forEach(s => {
+      const isPos = s.val >= 0;
+      const valStr = (s.isBase ? '' : (isPos ? '+' : '')) + s.val.toFixed(1) + '%';
+      const col = s.isBase ? '#38bdf8' : (isPos ? '#10b981' : '#ef4444');
+      const bg = s.isBase ? '#38bdf844' : (isPos ? '#10b98155' : '#ef444455');
+      const barWidth = Math.min(100, Math.max(8, Math.abs(s.val) * 3.5));
+
+      stepsHtml += `
+        <div class="sim-step-item">
+          <div class="sim-step-name">${s.name}</div>
+          <div class="sim-step-bar-wrap">
+            <div class="sim-step-bar-fill" style="width:${barWidth}%; background:${bg}; border-left:3px solid ${col};"></div>
+          </div>
+          <div class="sim-step-val" style="color:${col}">${valStr}</div>
+        </div>
+      `;
+    });
+    stepsContainer.innerHTML = stepsHtml;
+  }
+}
+
+// ==============================================================================
+// INITIALIZATION
+// ==============================================================================
+
+function initPage() {
+  initDensity();
+  if (document.getElementById('lm-cards-container')) {
+    applyLmFilters();
+  }
+  if (document.getElementById('sim-mb-sub')) {
+    updateShapSimulator('mb');
+  }
+  if (document.getElementById('sim-sme-sub')) {
+    updateShapSimulator('sme');
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPage);
+} else {
+  initPage();
+}

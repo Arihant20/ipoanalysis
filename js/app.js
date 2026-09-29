@@ -71,6 +71,81 @@ function filterSection(section) {
       row.style.display = 'none';
     }
   });
+
+  // 4. Card elements filtering for mobile & card views
+  const cardsCont = document.getElementById('cards-container-' + section);
+  if (cardsCont) {
+    cardsCont.querySelectorAll('.ipo-card').forEach(card => {
+      const rec = card.getAttribute('data-rec') || '';
+      const sector = card.getAttribute('data-sector') || '';
+      const text = card.innerText.toLowerCase();
+
+      let matchesAction = (actionCrit === 'all' || rec === actionCrit);
+      if (actionCrit === 'MUST_BUY') {
+        matchesAction = (rec === 'MUST_BUY');
+      } else if (actionCrit === 'BUY') {
+        matchesAction = (rec === 'BUY' || rec === 'SUBSCRIBE');
+      } else if (actionCrit === 'IGNORE') {
+        matchesAction = (rec === 'IGNORE' || rec === 'AVOID' || rec === 'NEUTRAL' || rec === 'REFUSE');
+      }
+
+      let matchesSector = (sectorCrit === 'all' || sector === sectorCrit);
+      let matchesSearch = (!searchCrit || text.includes(searchCrit));
+
+      if (matchesAction && matchesSector && matchesSearch) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+}
+
+// ==============================================================================
+// VIEW MODE TOGGLE (Table vs Cards View)
+// ==============================================================================
+
+function toggleViewMode(secKey, mode, btn) {
+  const tableCont = document.getElementById('table-container-' + secKey);
+  const cardsCont = document.getElementById('cards-container-' + secKey);
+  if (!tableCont || !cardsCont) return;
+
+  const parentToolbar = btn ? btn.parentElement : null;
+  if (parentToolbar) {
+    parentToolbar.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  if (mode === 'cards') {
+    tableCont.classList.add('hide-view');
+    tableCont.classList.remove('force-table-active');
+    cardsCont.classList.add('show-view');
+    cardsCont.classList.remove('hide-cards-mobile');
+    try { localStorage.setItem('ipo_view_' + secKey, 'cards'); } catch(e){}
+  } else {
+    tableCont.classList.remove('hide-view');
+    tableCont.classList.add('force-table-active');
+    cardsCont.classList.remove('show-view');
+    cardsCont.classList.add('hide-cards-mobile');
+    try { localStorage.setItem('ipo_view_' + secKey, 'table'); } catch(e){}
+  }
+}
+
+function initViewModes() {
+  const sections = ['day3plus', 'day2', 'day1', 'upcoming', 'pending', 'recently-listed'];
+  const isMobile = window.innerWidth <= 768;
+  sections.forEach(sec => {
+    try {
+      const saved = localStorage.getItem('ipo_view_' + sec);
+      const mode = saved || (isMobile ? 'cards' : 'table');
+      const tableBtn = document.getElementById('btn-view-table-' + sec);
+      const cardsBtn = document.getElementById('btn-view-cards-' + sec);
+      const activeBtn = mode === 'cards' ? cardsBtn : tableBtn;
+      if (activeBtn) {
+        toggleViewMode(sec, mode, activeBtn);
+      }
+    } catch(e){}
+  });
 }
 
 // Backwards-compatible legacy helpers
@@ -413,6 +488,7 @@ function updateShapSimulator(seg) {
 
 function initPage() {
   initDensity();
+  initViewModes();
   if (document.getElementById('lm-cards-container')) {
     applyLmFilters();
   }

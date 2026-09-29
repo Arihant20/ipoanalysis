@@ -4,5 +4,6 @@ Live IPO Estimator & Quantitative Valuation Suite:
 - **Mainboard IPOs**: [mainboard.html](mainboard.html)
 - **SME IPOs**: [sme.html](sme.html)
 - **Hidden Gems (Primary / Day 2-3 Float Squeeze)**: [hidden_gems.html](hidden_gems.html)
+- **Model Analytics & Shapash Interpretability**: [models.html](models.html)
 
 *Updated automatically after each daily pipeline run.*

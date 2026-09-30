@@ -61,11 +61,11 @@ Measured on realised listing outcomes joined to latest final predictions:
 
 | Metric | Live value | CV value (above) |
 |---|---:|---:|
-| **n reconciled** | 152 | — |
-| **MAE** | **15.86%** | 13.64% |
-| **Directional accuracy** | **70.8%** | 78.6% |
-| **\|err\| > 15%** | 44 | — |
-| **\|err\| > 30%** | 17 | — |
+| **n reconciled** | 160 | — |
+| **MAE** | **15.70%** | 13.64% |
+| **Directional accuracy** | **70.4%** | 78.6% |
+| **\|err\| > 15%** | 45 | — |
+| **\|err\| > 30%** | 19 | — |
 
 > CV numbers describe the training regime. **Live numbers describe what you
 > actually get.** Where they diverge, live wins. The action layer has its own

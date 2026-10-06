@@ -5,14 +5,14 @@ against realised listing gains. Companion to `VALIDATION.md`, which
 certifies only the LightGBM premium model.
 
 - **Joined outcomes**: 107 IPOs with actual gains + latest final prediction
-- **Generated**: 2026-10-06T00:36:22+05:30
+- **Generated**: 2026-10-06T14:38:56+05:30
 
 ## 1. Action hit rates
 
 | Action | n | % positive | avg gain | avg win | avg loss |
 |---|---:|---:|---:|---:|---:|
-| MUST_BUY | 22 | 86.4% | +41.7% | +48.8% | -10.1% | (n=22; treat as indicative)
-| BUY | 14 | 92.9% | +36.9% | +39.7% | — | ⚠️ **n=14, directional claims are weakly powered**
+| MUST_BUY | 24 | 87.5% | +43.5% | +50.2% | -10.1% | (n=24; treat as indicative)
+| BUY | 12 | 91.7% | +32.4% | +35.4% | — | ⚠️ **n=12, directional claims are weakly powered**
 | IGNORE | 71 | 53.5% | +6.5% | +16.3% | -7.9% | (n=71)
 
 ## 2. Baseline comparison (the alpha question)
@@ -32,8 +32,8 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Group | n | % positive | avg gain |
 |---|---:|---:|---:|
-| TRAP-regime | 27 | 55.6% | +7.6% |
-| Other IGNORE | 44 | 52.3% | +5.8% |
+| TRAP-regime | 26 | 53.8% | +7.7% |
+| Other IGNORE | 45 | 53.3% | +5.8% |
 
 > Trap rules are justified only if TRAP-regime IPOs underperform ordinary IGNOREs (lower % positive / lower avg gain).
 
@@ -42,9 +42,9 @@ Our BUY selection must beat naive baselines or the score adds no value.
 | Quartile | n | score range | avg gain | % positive |
 |---|---:|---|---:|---:|
 | Q1 | 25 | 1-6 | -0.7% | 40.0% |
-| Q2 | 25 | 6-46 | +6.5% | 56.0% |
-| Q3 | 25 | 48-89 | +14.8% | 72.0% |
-| Q4 | 22 | 89-99 | +50.5% | 90.9% |
+| Q2 | 25 | 6-48 | +3.3% | 56.0% |
+| Q3 | 25 | 49-89 | +15.5% | 68.0% |
+| Q4 | 22 | 90-99 | +53.4% | 95.5% |
 
 > A useful score shows monotonically increasing avg gain from Q1->Q4.
 
@@ -54,10 +54,10 @@ Select `relative_score >= X` as the buy rule; how does it do?
 
 | threshold | n | hit rate | avg gain |
 |---:|---:|---:|---:|
-| 40 | 50 | 82.0% | +30.1% |
-| 48 | 46 | 80.4% | +32.0% |
-| 55 | 43 | 79.1% | +34.0% |
-| 60 | 41 | 80.5% | +35.6% |
+| 40 | 51 | 82.4% | +31.2% |
+| 48 | 47 | 80.9% | +33.2% |
+| 55 | 44 | 79.5% | +35.3% |
+| 60 | 41 | 80.5% | +37.7% |
 | 65 | 38 | 78.9% | +37.5% |
 | 72 | 36 | 80.6% | +39.5% |
 | 80 | 30 | 86.7% | +45.4% |
@@ -65,9 +65,9 @@ Select `relative_score >= X` as the buy rule; how does it do?
 ## 6. Live model metrics (reconciliation)
 
 - **n**: 107
-- **MAE**: 14.02%
-- **Directional accuracy**: 71.0% (n=107)
-- **|err|>15%**: 31 · **|err|>30%**: 13
+- **MAE**: 13.57%
+- **Directional accuracy**: 70.1% (n=107)
+- **|err|>15%**: 31 · **|err|>30%**: 10
 
 > These are **live** numbers and will diverge from CV metrics in `VALIDATION.md`. Trust these for operational expectations.
 

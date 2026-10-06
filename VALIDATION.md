@@ -1,10 +1,10 @@
 # Quantitative Model Validation & Out-Of-Time Stress Test Report
 
 - **Model Type**: LightGBM Quantile (p10/p50/p90)
-- **Model Version**: `af0211e8a304`
-- **Training Sample**: 2035 historical IPOs (2018+ regime)
-- **Features Used**: 25 engineered signals (current `FEATURE_COLUMNS`)
-- **Validated At**: 2026-09-22T08:08:17.691737+00:00
+- **Model Version**: `4cab63634e0a`
+- **Training Sample**: 2266 historical IPOs (2018+ regime)
+- **Features Used**: 26 engineered signals (current `FEATURE_COLUMNS`)
+- **Validated At**: 2026-10-05T14:40:09.943855+00:00
 - **Model Gate Status**: **✅ PASS (model gate cleared — live-inference eligible)**
 
 > **Scope**: this report certifies the **premium model only**. The action
@@ -20,10 +20,10 @@ Cross-validation evaluated across 5 folds with 5% chronological embargo
 
 | Metric | Measured Value | Benchmark Target | Gate Status |
 |---|---|---|---|
-| **Mean Absolute Error (MAE)** | **13.64%** | < 20.0% | PASS |
-| **Root Mean Squared Error (RMSE)** | **21.10%** | < 30.0% | PASS |
-| **Directional Accuracy** | **78.6%** | > 60.0% | PASS |
-| **80% Prediction Interval Coverage** | **74.3%** | 70.0% - 90.0% | PASS |
+| **Mean Absolute Error (MAE)** | **13.56%** | < 20.0% | PASS |
+| **Root Mean Squared Error (RMSE)** | **20.98%** | < 30.0% | PASS |
+| **Directional Accuracy** | **68.6%** | > 60.0% | PASS |
+| **80% Prediction Interval Coverage** | **77.4%** | 70.0% - 90.0% | PASS |
 
 ---
 
@@ -32,28 +32,28 @@ Trained outside shock windows; evaluated on out-of-time listings during downturn
 
 | Stress Window | Date Range | N | Measured MAE | RMSE | Dir Acc | Stress Gate |
 |---|---|---|---|---|---|---|
-| **2020 COVID Crash** | 2020-03-01 to 2020-12-31 | 186 | **9.35%** | 17.57% | 88.2% | PASS (MAE < 25%) |
-| **2022 FII Exodus** | 2022-04-01 to 2022-12-31 | 166 | **10.30%** | 18.81% | 89.8% | PASS (MAE < 25%) |
+| **2020 COVID Crash** | 2020-03-01 to 2020-12-31 | 219 | **10.44%** | 18.38% | 74.4% | PASS (MAE < 25%) |
+| **2022 FII Exodus** | 2022-04-01 to 2022-12-31 | 199 | **10.44%** | 18.86% | 76.9% | PASS (MAE < 25%) |
 
 ---
 
 ## 3. Top Feature Importances (Median Model, ranked by split-importance)
 | Feature Column | Split Importance Score |
 |---|---|
-| `lm_avg_gain` | 139 |
-| `subscription_x` | 111 |
-| `lm_pct_positive` | 80 |
-| `total_bid_capital_cr` | 75 |
-| `sub_per_crore` | 65 |
-| `lm_total_ipos` | 65 |
-| `issue_price` | 59 |
-| `issue_size_cr` | 53 |
-| `lm_pct_negative` | 48 |
-| `roe` | 47 |
-| `log_sub` | 29 |
-| `ebitda_margin` | 27 |
+| `subscription_x` | 168 |
+| `total_bid_capital_cr` | 111 |
+| `log_sub` | 86 |
+| `sub_per_crore` | 86 |
+| `roe` | 81 |
+| `issue_size_cr` | 70 |
+| `issue_price` | 66 |
+| `debt_equity` | 47 |
+| `lot_size` | 41 |
+| `ebitda_margin` | 35 |
+| `log_price` | 27 |
+| `log_bid_capital` | 21 |
 
-**Zero-importance audit:** `is_sme`, `pe`, `sub_trap_zone` — 0 split-importance. `is_sme` may be kept for segment stratification; `pe` with zero importance means the ML model does **not** use P/E as a predictor — P/E enters only through the heuristic/rule layer (cascade + trap vetoes), which is a deliberate split but should be understood when reading scores.
+**Zero-importance audit:** `is_sme`, `lm_avg_gain`, `lm_pct_negative`, `lm_pct_positive`, `lm_total_ipos`, `pe` — 0 split-importance. `is_sme` may be kept for segment stratification; `pe` with zero importance means the ML model does **not** use P/E as a predictor — P/E enters only through the heuristic/rule layer (cascade + trap vetoes), which is a deliberate split but should be understood when reading scores.
 
 ## 3b. Live reconciliation (trust this over CV)
 
@@ -61,10 +61,10 @@ Measured on realised listing outcomes joined to latest final predictions:
 
 | Metric | Live value | CV value (above) |
 |---|---:|---:|
-| **n reconciled** | 106 | — |
-| **MAE** | **14.12%** | 13.64% |
-| **Directional accuracy** | **73.3%** | 78.6% |
-| **\|err\| > 15%** | 31 | — |
+| **n reconciled** | 112 | — |
+| **MAE** | **14.08%** | 13.56% |
+| **Directional accuracy** | **72.0%** | 68.6% |
+| **\|err\| > 15%** | 33 | — |
 | **\|err\| > 30%** | 13 | — |
 
 > CV numbers describe the training regime. **Live numbers describe what you

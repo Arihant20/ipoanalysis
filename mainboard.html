@@ -27,7 +27,7 @@
     <a href="models.html" class="nav-tab ">🧠 Model Analytics</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-10-07 00:18:51 IST
+    <span class="pulse-dot"></span> Cycle: 2026-10-07 13:50:03 IST
   </div>
 </nav>
 
@@ -56,7 +56,7 @@
     <span class="filter-label">SECTOR:</span>
     <select class="select-filter" id="sector-day3plus" onchange="filterSection('day3plus')">
       <option value="all">All Sectors</option>
-      
+      <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
     </select>
   </div>
   <input type="text" class="search-box" id="search-day3plus"
@@ -102,7 +102,7 @@
     <span class="filter-label">SECTOR:</span>
     <select class="select-filter" id="sector-day2" onchange="filterSection('day2')">
       <option value="all">All Sectors</option>
-      
+      <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
     </select>
   </div>
   <input type="text" class="search-box" id="search-day2"
@@ -141,7 +141,7 @@
     <span class="filter-label">SECTOR:</span>
     <select class="select-filter" id="sector-day1" onchange="filterSection('day1')">
       <option value="all">All Sectors</option>
-      
+      <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
     </select>
   </div>
   <input type="text" class="search-box" id="search-day1"
@@ -167,7 +167,7 @@
 <!-- SECTION 4: UPCOMING (PRE-OPEN) -->
 <div class="sec-hdr-row day-section" id="sec-upcoming">
   <div>
-    <div class="sec-hdr" style="color:#94a3b8;"><span class="dot-open"></span> 4. UPCOMING (PRE-OPEN) (0 IPOs)</div>
+    <div class="sec-hdr" style="color:#94a3b8;"><span class="dot-open"></span> 4. UPCOMING (PRE-OPEN) (1 IPOs)</div>
     <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP + Lead Manager only — model/LLM not run until Day 2</div>
   </div>
   <div class="density-switch">
@@ -180,7 +180,7 @@
     <span class="filter-label">SECTOR:</span>
     <select class="select-filter" id="sector-upcoming" onchange="filterSection('upcoming')">
       <option value="all">All Sectors</option>
-      
+      <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
     </select>
   </div>
   <input type="text" class="search-box" id="search-upcoming"
@@ -194,11 +194,79 @@
 <div class="table-container" id="table-container-upcoming">
   <table id="table-upcoming">
     <thead><tr><th class="sortable" onclick="sortTable('table-upcoming', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-upcoming', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-upcoming', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-upcoming', 3, true)">GMP%</th><th class="sortable" onclick="sortTable('table-upcoming', 4, false)">Lead Manager</th></tr></thead>
-    <tbody id="upcoming-table-body"><tr><td colspan="5" style="text-align:center;padding:16px;color:#94a3b8;">No upcoming IPOs in this segment.</td></tr></tbody>
+    <tbody id="upcoming-table-body">
+            <tr class="upcoming-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+              <td>
+                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">HD Fire Protect</div>
+                <span class="sector-pill">Healthcare &amp; Pharma</span>
+              </td>
+              <td class="num">
+                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;271</div>
+                
+              </td>
+              <td>2026-10-15<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-21)</span></td>
+              <td class="num" style="color:var(--dim)"><b style="font-size:12px;">+0.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;271.0</div></td>
+              <td>
+                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Anand Rathi Advisors Ltd, Ambit Pvt Ltd, Iifl Capital Services Ltd</div>
+              </td>
+            </tr></tbody>
   </table>
 </div>
 <div class="cards-view-container" id="cards-container-upcoming">
-  <div style="text-align:center;padding:24px;color:#94a3b8;background:#0f172a;border:1px solid #1e293b;border-radius:8px;">No upcoming IPOs in this segment.</div>
+  
+        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+          <div class="ipo-card-header">
+            <div>
+              <div class="ipo-card-title">HD Fire Protect</div>
+              <div class="ipo-card-meta">
+                <span class="sector-pill">Healthcare &amp; Pharma</span>
+                
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <span class="badge-rec ignore">IGNORE (-1.5%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>31</b>/100</span></div>
+            </div>
+          </div>
+
+          <div class="ipo-card-stats">
+            <div class="card-stat-item">
+              <span class="card-stat-label">Issue Price (Size)</span>
+              <span class="card-stat-val">
+                &#8377;271
+                
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Timeline</span>
+              <span class="card-stat-val" style="font-size:11.5px;color:#cbd5e1;">Close: <b>2026-10-15</b> &bull; Lists: 2026-10-21</span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Model Score</span>
+              <span class="card-stat-val" style="color:var(--red);">
+                -1.5% <span style="font-size:10px;color:#94a3b8;">(&#8377;267.0)</span>
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Market GMP</span>
+              <span class="card-stat-val" style="color:var(--dim);">
+                +0.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;271.0)</span>
+              </span>
+            </div>
+          </div>
+
+          
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | PASS: EBITDA 27.3% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/1</b> WEAK</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>49.7x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>85.0%</b></span></div>
+          <div class='card-rationale'>Avoid — Subdued demand: Stagnant GMP (+0.0%) and weak subscription (0.0x bids) indicate high discount listing risk and negative expected return (-1.5%). (Interim bids; final demand may change by closing day.)</div>
+
+          <div class="card-footer">
+            <div style="font-size:11px;color:#94a3b8;">
+              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Anand Rathi Advisors Ltd, Ambit Pvt Ltd, Iifl Capital Services Ltd</b>
+            </div>
+            
+          </div>
+        </div>
+        
 </div>
 
 

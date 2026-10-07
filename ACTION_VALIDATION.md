@@ -4,8 +4,8 @@ Scores the **decision layer** (action ladder + relative_score + trap rules)
 against realised listing gains. Companion to `VALIDATION.md`, which
 certifies only the LightGBM premium model.
 
-- **Joined outcomes**: 108 IPOs with actual gains + latest final prediction
-- **Generated**: 2026-10-06T17:15:57+05:30
+- **Joined outcomes**: 110 IPOs with actual gains + latest final prediction
+- **Generated**: 2026-10-07T19:33:02+05:30
 
 ## 1. Action hit rates
 
@@ -13,7 +13,7 @@ certifies only the LightGBM premium model.
 |---|---:|---:|---:|---:|---:|
 | MUST_BUY | 25 | 88.0% | +43.2% | +49.6% | -10.1% | (n=25; treat as indicative)
 | BUY | 12 | 91.7% | +32.4% | +35.4% | — | ⚠️ **n=12, directional claims are weakly powered**
-| IGNORE | 71 | 53.5% | +6.5% | +16.3% | -7.9% | (n=71)
+| IGNORE | 73 | 53.4% | +6.3% | +15.9% | -7.6% | (n=73)
 
 ## 2. Baseline comparison (the alpha question)
 
@@ -22,7 +22,7 @@ Our BUY selection must beat naive baselines or the score adds no value.
 | Strategy | n | hit rate | avg gain |
 |---|---:|---:|---:|
 | ours (MUST_BUY|BUY) | 37 | 89.2% | +39.7% |
-| baseline: buy all | 108 | 65.7% | +17.9% |
+| baseline: buy all | 110 | 65.5% | +17.5% |
 | baseline: GMP >= 15% | 42 | 90.5% | +42.4% |
 | baseline: sub_signal >= 10 | 81 | 69.1% | +23.5% |
 
@@ -32,8 +32,8 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Group | n | % positive | avg gain |
 |---|---:|---:|---:|
-| TRAP-regime | 26 | 53.8% | +7.6% |
-| Other IGNORE | 45 | 53.3% | +5.8% |
+| TRAP-regime | 27 | 51.9% | +7.3% |
+| Other IGNORE | 46 | 54.3% | +5.7% |
 
 > Trap rules are justified only if TRAP-regime IPOs underperform ordinary IGNOREs (lower % positive / lower avg gain).
 
@@ -41,10 +41,10 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Quartile | n | score range | avg gain | % positive |
 |---|---:|---|---:|---:|
-| Q1 | 25 | 1-6 | -1.1% | 36.0% |
-| Q2 | 25 | 7-52 | +3.0% | 60.0% |
-| Q3 | 25 | 53-92 | +12.3% | 68.0% |
-| Q4 | 23 | 93-99 | +56.8% | 95.7% |
+| Q1 | 25 | 1-6 | -1.0% | 36.0% |
+| Q2 | 25 | 6-48 | +2.8% | 56.0% |
+| Q3 | 25 | 49-90 | +11.2% | 72.0% |
+| Q4 | 25 | 92-99 | +53.4% | 92.0% |
 
 > A useful score shows monotonically increasing avg gain from Q1->Q4.
 
@@ -64,9 +64,9 @@ Select `relative_score >= X` as the buy rule; how does it do?
 
 ## 6. Live model metrics (reconciliation)
 
-- **n**: 108
-- **MAE**: 12.79%
-- **Directional accuracy**: 74.1% (n=108)
+- **n**: 110
+- **MAE**: 12.57%
+- **Directional accuracy**: 73.6% (n=110)
 - **|err|>15%**: 29 · **|err|>30%**: 9
 
 > These are **live** numbers and will diverge from CV metrics in `VALIDATION.md`. Trust these for operational expectations.

@@ -9,6 +9,15 @@
 <title>Hidden Gems Discovery Engine - Float Squeeze &amp; Empirical Framework</title>
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  .gems-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  .gems-section-card{background:#0c1929;border:1px solid #1e293b;border-radius:10px;padding:16px;margin-top:14px}
+  @media(max-width:900px){.gems-stat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.gems-stat-grid{grid-template-columns:1fr} .gems-section-card{padding:12px} .table-container{overflow-x:auto}}
+  .feat-cat-signal{background:#7c3aed22;color:#a78bfa}
+  .feat-cat-interaction{background:#f59e0b22;color:#fbbf24}
+  .feat-cat-regime{background:#06b6d422;color:#22d3ee}
+</style>
 </head>
 <body>
 
@@ -28,7 +37,7 @@
     <a href="models.html" class="nav-tab ">🧠 Model Analytics</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-10-07 13:50:38 IST
+    <span class="pulse-dot"></span> Cycle: 2026-10-07 19:45:53 IST
   </div>
 </nav>
 
@@ -78,44 +87,30 @@
     </div>
   </div>
 
-  <!-- MANDATORY 2 TO 15 TRADING SESSIONS HOLDING PLAYBOOK -->
-  <div style="margin-top:14px;background:#0d1f18;border:1px solid #175438;border-radius:8px;padding:14px 16px;">
-    <div style="font-size:13px;font-weight:800;color:#34d399;display:flex;align-items:center;gap:6px;margin-bottom:6px;">
-      <span>⏳</span> The Mandatory 2 to 15 Trading Sessions Holding Playbook (Why Listing Open Turns Into Multi-Day Expansion)
+   <!-- 2→15 DAYS HOLD — COLLAPSIBLE -->
+  <details style="margin-top:14px;background:#0d1f18;border:1px solid #175438;border-radius:8px;padding:12px 16px;" open>
+    <summary style="font-size:13px;font-weight:800;color:#34d399;cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;">⏳ The 2→15 Trading Sessions Holding Playbook — click to collapse</summary>
+    <div style="font-size:11.5px;color:#e2e8f0;line-height:1.5;margin-top:8px;">
+      Hold through initial circuits; exit on volume-spike unlock or +20% to +50% target. Quiet opens (+2 to +6%) are expected — modest subscription means you actually own the stock; micro float (≤₹35 Cr) then squeezes into consecutive upper circuits. Verified: gems avg open <b>+4.4%</b> → peak <b>+18.1%</b>, <b>53.8%</b> ≥ +20%.
     </div>
-    <div style="font-size:11.5px;color:#e2e8f0;line-height:1.5;">
-      A fundamental misconception in IPO analysis is evaluating Hidden Gems solely on the <b>Day-1 9:45 AM Pre-Open Price</b>.
-      <ul style="margin:6px 0 6px 18px;padding:0;">
-        <li><b>Why Day 1 Opens Quietly (+2% to +6%):</b> By definition, a Hidden Gem has modest subscription (1x-12x) and unhyped GMP (0%-15%). It cannot open at +90% on Day 1 - if the crowd anticipated an immediate +90% pop, retail would have bid it 300x, reducing allotment odds to 0.3%!</li>
-        <li><b>How the 2-15 Day Float Squeeze Unfolds:</b> Because retail applicants receive 50%-100% allocation, you own the stock. Tradable float is micro (&le; ₹25-35 Cr). Once day-1 flippers are absorbed in early trade, institutional desks, family offices, and momentum HNIs corner the tiny float. With zero supply available, the stock locks into <b>consecutive +5% to +20% Upper Circuits</b>!</li>
-        <li><b>The Empirical Evidence:</b> Across our verified dataset, qualified gems opened at an average of <b>+4.4%</b>, but verifiable holdings achieved an average peak return of <b>+18.1%</b> over the subsequent 2 to 15 sessions! Over <b>53.8%</b> surged &ge; +20%!</li>
-        <li><b>The Execution Rule:</b> <u>Hold 2 to 15 trading sessions through initial circuits</u>. Exit immediately when the upper circuit unlocks with a high-volume churn spike, or when target (+20% to +50%+) is reached. Never dump at day-1 open.</li>
-      </ul>
-    </div>
-  </div>
+  </details>
 
-  <!-- ASTRON TRAP ELIMINATION GUARD -->
-  <div style="margin-top:12px;background:#1a0f12;border:1px solid #4a1d24;border-radius:8px;padding:12px 16px;">
-    <div style="font-size:12.5px;font-weight:800;color:#f87171;display:flex;align-items:center;gap:6px;margin-bottom:4px;">
-      <span>🛡️</span> The Astron Trap Elimination: Protecting Against -20% Illiquid Lower Circuit Traps
-    </div>
-    <div style="font-size:11px;color:#e2e8f0;line-height:1.45;">
-      In SME IPOs, a <b>-20% opening crash is a catastrophe</b> because trading freezes with zero buyers, locking capital in an illiquid trap. Our forensic post-mortem of <i>Astron Multigrain</i> (-20% open, -68.8% plunge) established the <b>Astron Guard</b>:
-      <b>Any issue in low-moat commodity / grain / agro / pulses / flour processing with subscription &lt; 4.0x is strictly disqualified unless underwritten by a vetted Tier-1 merchant banker.</b>
-      Unvetted bankers with commodity issues have zero float-defense capability and represent cold junk, not stealth gems. Implementing this guard crushes severe crash risk across qualified gems.
-    </div>
-  </div>
+   <!-- ASTRON GUARD — COMPACT -->
+  <details style="margin-top:12px;background:#1a0f12;border:1px solid #4a1d24;border-radius:8px;padding:12px 16px;">
+    <summary style="font-size:12.5px;font-weight:800;color:#f87171;cursor:pointer;list-style:none;">🛡️ Astron Guard (click to expand)</summary>
+    <div style="font-size:11px;color:#e2e8f0;line-height:1.45;margin-top:6px;">Commodity / agro issue + sub &lt; 4.0x without Tier-1 LM = disqualified. Post-mortem: Astron Multigrain -20% open, -68.8% plunge. Guard cuts crash to 2.4%.</div>
+  </details>
 </div>
 
-<!-- LIVE ACTIVE GEMS SECTION (IF ANY) -->
+  <!-- LIVE ACTIVE GEMS SECTION (IF ANY) -->
 <div class="gems-section-card" style="border-left:4px solid #10b981;">
   <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
     <div>
       <h2 style="font-size:15px;font-weight:800;color:#ffffff;display:flex;align-items:center;gap:6px;margin:0;">
-        <span>🎯</span> Active Hidden Gems (Live Day 2 &amp; Day 3 Bidding Window)
+        <span>🎯</span> Active Hidden Gems (Live Day 2 &amp; Day 3) — <span style="color:#34d399;">0 found</span>
       </h2>
       <div style="font-size:11px;color:#94a3b8;margin-top:2px;">
-        Evaluated exclusively during active order book accumulation. Upcoming (pre-open) and closed/allotted deals are strictly excluded.
+        Day 2/3 only — upcoming &amp; closed deals excluded. Today: no qualifying gems in the live book.
       </div>
     </div>
   </div>
@@ -127,6 +122,8 @@
             Currently evaluating Day 2 and Day 3 order books in real time. When an upcoming issue enters its Day 2/3 bidding corridor with verified fundamentals, Tier-1 underwriting, and micro-float scarcity, it will appear here immediately.
           </div>
         </div>
+  
+  
 </div>
 
 <!-- ========================================================================= -->

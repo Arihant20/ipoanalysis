@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Model Analytics & Shapash Interpretability — IPO Estimator Pro</title>
+<title>Model Analytics — IPO Estimator Pro</title>
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  @media(max-width:700px){.model-kpi-grid{grid-template-columns:repeat(2,1fr) !important}}
+  @media(max-width:560px){.model-kpi-grid{grid-template-columns:1fr !important} .feat-table-wrap{overflow-x:auto}}
+</style>
 </head>
 <body>
 
@@ -25,21 +29,15 @@
     <a href="models.html" class="nav-tab active">🧠 Model Analytics</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-10-07 13:51:51 IST
+    <span class="pulse-dot"></span> Cycle: 2026-10-07 19:49:22 IST
   </div>
 </nav>
 
 
-<!-- HERO HEADER -->
-<div class="model-header-hero">
-  <div class="model-hero-title">
-    <span>🧠 Quantitative ML Engine &amp; Shapash Interpretability Suite</span>
-  </div>
-  <div class="model-hero-sub">
-    Comprehensive explainability dashboard detailing the calibrated 2-head LightGBM Quantile architecture (p10 / p50 / p90),
-    purged k-fold cross-validation, historical bear-cycle backtesting, feature importances, and Shapash directional interpretability across
-    <b>Section MB (Mainboard)</b> and <b>Section SME (SME)</b> markets.
-  </div>
+<!-- HERO — TRIMMED -->
+<div class="model-header-hero" style="padding:14px 16px;">
+  <div style="font-size:15px;font-weight:800;color:#fff;">🧠 Model Analytics — 34 Features, 2266 IPOs</div>
+  <div style="font-size:11px;color:#94a3b8;margin-top:4px;">LightGBM Quantile p10/p50/p90 · 5-fold purged CV + bear OOS · 11.4% CV MAE · Updated 2026-10-06</div>
 </div>
 
 <!-- SEGMENT NAVIGATION TABS -->
@@ -332,9 +330,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sub_x_roe</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-interaction">Interaction</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Demand-quality interaction: subscription leverage on capital efficiency.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">subscription_x * roe / 100</code></td>
               <td class="num"><b style="color:#60a5fa;">237</b></td>
               <td class="num" style="color:#94a3b8;">3.4%</td>
             </tr>
@@ -377,9 +375,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">gmp_tier</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-signal">Signal Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Street sentiment bucket: -1 toxic (≤0%), 0 neutral (0-10%), 1 sweet (10-20%), 2 blockbuster (20%+).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">bucket(gmp_gain_pct)</code></td>
               <td class="num"><b style="color:#60a5fa;">93</b></td>
               <td class="num" style="color:#94a3b8;">1.3%</td>
             </tr>
@@ -395,9 +393,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">is_gmp_missing</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-signal">Signal Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Flag: GMP unavailable (street has not priced this issue).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if GMP is None else 0</code></td>
               <td class="num"><b style="color:#60a5fa;">51</b></td>
               <td class="num" style="color:#94a3b8;">0.7%</td>
             </tr>
@@ -422,9 +420,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">de_low</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-interaction">Interaction</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Low-leverage quality flag: D/E < 0.5 indicates clean balance sheet.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if debt_equity < 0.5 else 0</code></td>
               <td class="num"><b style="color:#60a5fa;">10</b></td>
               <td class="num" style="color:#94a3b8;">0.1%</td>
             </tr>
@@ -494,45 +492,45 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_trendscore</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Sector trend strength from STB macro warehouse (0-1).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB sector_trendscore</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_breadth_50d</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">% stocks above 50-day MA in the IPO's sector.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB breadth_50d</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_breadth_200d</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">% stocks above 200-day MA in the IPO's sector.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB breadth_200d</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_rs20</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">20-day relative strength vs broad market.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB rs20</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_bmom20</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">20-day breadth momentum (rising/falling participation).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB bmom20</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
@@ -803,9 +801,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sub_x_roe</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-interaction">Interaction</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Demand-quality interaction: subscription leverage on capital efficiency.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">subscription_x * roe / 100</code></td>
               <td class="num"><b style="color:#60a5fa;">239</b></td>
               <td class="num" style="color:#94a3b8;">3.4%</td>
             </tr>
@@ -857,9 +855,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">gmp_tier</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-signal">Signal Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Street sentiment bucket: -1 toxic (≤0%), 0 neutral (0-10%), 1 sweet (10-20%), 2 blockbuster (20%+).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">bucket(gmp_gain_pct)</code></td>
               <td class="num"><b style="color:#60a5fa;">91</b></td>
               <td class="num" style="color:#94a3b8;">1.3%</td>
             </tr>
@@ -875,9 +873,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">is_gmp_missing</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-signal">Signal Quality</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Flag: GMP unavailable (street has not priced this issue).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if GMP is None else 0</code></td>
               <td class="num"><b style="color:#60a5fa;">34</b></td>
               <td class="num" style="color:#94a3b8;">0.5%</td>
             </tr>
@@ -902,9 +900,9 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">de_low</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-interaction">Interaction</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Low-leverage quality flag: D/E < 0.5 indicates clean balance sheet.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">1 if debt_equity < 0.5 else 0</code></td>
               <td class="num"><b style="color:#60a5fa;">8</b></td>
               <td class="num" style="color:#94a3b8;">0.1%</td>
             </tr>
@@ -983,45 +981,45 @@
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_trendscore</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">Sector trend strength from STB macro warehouse (0-1).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB sector_trendscore</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_breadth_50d</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">% stocks above 50-day MA in the IPO's sector.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB breadth_50d</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_breadth_200d</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">% stocks above 200-day MA in the IPO's sector.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB breadth_200d</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_rs20</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">20-day relative strength vs broad market.</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB rs20</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>
             
             <tr>
               <td><b style="color:#fff;font-size:11.5px;">sector_bmom20</b></td>
-              <td><span class="feat-category-badge feat-cat-structure">General</span></td>
-              <td style="color:#cbd5e1;font-size:11px;">Model feature</td>
-              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">Raw value</code></td>
+              <td><span class="feat-category-badge feat-cat-regime">Market Regime</span></td>
+              <td style="color:#cbd5e1;font-size:11px;">20-day breadth momentum (rising/falling participation).</td>
+              <td><code style="background:rgba(0,0,0,0.3);padding:2px 6px;border-radius:4px;color:#93c5fd;font-size:10px;">STB bmom20</code></td>
               <td class="num"><b style="color:#60a5fa;">0</b></td>
               <td class="num" style="color:#94a3b8;">0.0%</td>
             </tr>

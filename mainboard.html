@@ -27,7 +27,7 @@
     <a href="models.html" class="nav-tab ">🧠 Model Analytics</a>
   </div>
   <div class="nav-meta">
-    <span class="pulse-dot"></span> Cycle: 2026-10-13 11:06:53 IST
+    <span class="pulse-dot"></span> Cycle: 2026-10-15 10:57:03 IST
   </div>
 </nav>
 
@@ -36,7 +36,7 @@
 <!-- SECTION 1: DAY 3 → FINAL DAY -->
 <div class="sec-hdr-row day-section" id="sec-day3plus">
   <div>
-    <div class="sec-hdr" style="color:#fbbf24;"><span class="dot-open"></span> 1. DAY 3 → FINAL DAY (0 IPOs)</div>
+    <div class="sec-hdr" style="color:#fbbf24;"><span class="dot-open"></span> 1. DAY 3 → FINAL DAY (1 IPOs)</div>
     <div style="font-size:11px;color:#94a3b8;margin-top:2px;">Full decision view: Day-2 metrics + day-2-to-present book trend → final call</div>
   </div>
   <div class="density-switch">
@@ -47,7 +47,7 @@
   
   <div class="filter-group">
     <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('day3plus', 'all', this)">All (0)</button>
+    <button class="pill-filter active" onclick="filterAction('day3plus', 'all', this)">All (1)</button>
     <button class="pill-filter" onclick="filterAction('day3plus', 'MUST_BUY', this)">Must Buy</button>
     <button class="pill-filter" onclick="filterAction('day3plus', 'BUY', this)">Buy</button>
     <button class="pill-filter" onclick="filterAction('day3plus', 'IGNORE', this)">Ignore / Avoid</button>
@@ -59,6 +59,7 @@
       <option value="Diversified">Diversified</option>
 <option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
 <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="IT &amp; Technology">IT &amp; Technology</option>
     </select>
   </div>
   <input type="text" class="search-box" id="search-day3plus"
@@ -72,118 +73,49 @@
 <div class="table-container" id="table-container-day3plus">
   <table id="table-day3plus">
     <thead><tr><th class="sortable" onclick="sortTable('table-day3plus', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-day3plus', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-day3plus', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-day3plus', 3, true)">Model Score</th><th class="sortable num" onclick="sortTable('table-day3plus', 4, true)">GMP% (Trend)</th><th class="sortable" onclick="sortTable('table-day3plus', 5, false)">Demand Breakdown</th><th class="sortable" onclick="sortTable('table-day3plus', 6, false)">Hidden Gem</th><th class="sortable" onclick="sortTable('table-day3plus', 7, false)">Valuation &amp; Checklist</th><th class="sortable" onclick="sortTable('table-day3plus', 8, false)">Action &amp; Score Rationale</th><th class="sortable" onclick="sortTable('table-day3plus', 9, false)">Lead Manager</th></tr></thead>
-    <tbody id="day3plus-table-body"><tr><td colspan="10" style="text-align:center;padding:16px;color:#94a3b8;">No IPOs on Day 3+ in this segment.</td></tr></tbody>
+    <tbody id="day3plus-table-body">
+        <tr class="day3plus-row" data-rec="BUY" data-sector="Healthcare &amp; Pharma">
+          <td>
+            <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">HD Fire Protect</div>
+            <span class="sector-pill">Healthcare &amp; Pharma</span>
+          </td>
+          <td class="num">
+            <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;271</div>
+            
+          </td>
+          <td>2026-10-15<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-21)</span></td>
+          <td class="num" style="color:var(--green)"><b style="font-size:12px;">+4.8%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;284.0</div></td>
+          <td class="num" style="color:var(--green)">
+            <b style="font-size:12px;">+32.8%</b>
+            <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;360.0</div>
+          </td>
+          <td>
+            <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 2.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 18.5x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 62.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 12.8x</span></div>
+            <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>10.4x</b></div>
+          </td>
+          <td class='gem-col' style='text-align:center;color:#475569;font-size:12px;vertical-align:middle;'>—</td>
+          <td style="min-width:320px;">
+          <div class="points-container">
+            <div class='metric-pills-row'><span class='badge-val-score' style='background:#ef444422;color:#ef4444;border:1px solid #ef444466;font-weight:700;padding:1px 7px;border-radius:4px;font-size:10px;' title='Fundamental Valuation Score: 38/100 (CAUTION)'>Valuation: <b>38/100</b> <span style='font-size:8.5px;opacity:0.9;'>(CAUTION)</span></span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>49.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 100.0% Pre &rarr; 85.0% Post'>Promoter: <b>85.0%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(100%&rarr;85%, -15.0% dil.)</span></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='0% Tier-1 Marquee () | Total ₹243 Cr'>⚓ Anchor: <b>0% Marquee</b> (₹0Cr)</span><span class='checklist-pill' title='FAIL: Sub 24.0x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 2.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +32.8% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | PASS: LM hit 81% (n=17, need &gt;= 60%) &amp; sub 24.0x -&gt; proven book + demand | PASS: EBITDA 27.3% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #f59e0b66;color:#f59e0b;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>2/5</b> MIXED</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> Sub 24.0x vs seg median 30x (>=10x required) -> below bar</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> QIB 2.0x (need >12.4x) & sub <= seg median -> weak institutions or demand</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> GMP +32.8% (need >= 10%) & sub <= seg median -> GMP/book divergence or weak</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#34d399;font-weight:700;'>✓</span> LM hit 81% (n=17, need >= 60%) & sub 24.0x -> proven book + demand</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#34d399;font-weight:700;'>✓</span> EBITDA 27.3% (>=18%) & zero/undisclosed debt -> quality without leverage</span></div>
+            <div style='margin-top:4px;'><a href='https://www.bseindia.com/corporates/download/370731/IPO%20Open/RHPsigned_20261008112437.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
+          </div>
+        </td>
+          <td style="min-width:180px;">
+            <span class="badge-rec buy">BUY (+16.0%)</span>
+            <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>82</b>/100</div>
+            <div class='action-reason-box'>Favorable listing setup: Positive consensus with +33% GMP, healthy 24.0x subscription, and calculated model cushion of +4.8%. (Final day snapshot.)</div>
+          </td>
+          <td>
+            <div style="font-weight:600;font-size:11px;color:#f8fafc;">Anand Rathi Advisors Ltd, Ambit Pvt Ltd, Iifl Capital Services Ltd</div>
+            <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Anand Rathi Advisors Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +29.4%, 100% positive (LM impact: +9.8 pts)</li><li>Ambit Pvt Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +16.1%, 75% positive (LM impact: +5.8 pts)</li></ul>
+          </td>
+        </tr></tbody>
   </table>
 </div>
 <div class="cards-view-container" id="cards-container-day3plus">
-  <div style="text-align:center;padding:24px;color:#94a3b8;background:#0f172a;border:1px solid #1e293b;border-radius:8px;">No IPOs on Day 3+ in this segment.</div>
-</div>
-
-
-
-<!-- SECTION 2: DAY 2 -->
-<div class="sec-hdr-row day-section" id="sec-day2">
-  <div>
-    <div class="sec-hdr" style="color:#a78bfa;"><span class="dot-open"></span> 2. DAY 2 (0 IPOs)</div>
-    <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP, Model Score, Subscription, Valuation & Checklist, Action, Lead Manager — LLM active</div>
-  </div>
-  <div class="density-switch">
-    <button class="btn-density" onclick="toggleDensity()" title="Toggle table row padding">Density</button>
-  </div>
-</div>
-<div class="toolbar">
   
-  <div class="filter-group">
-    <span class="filter-label">ACTION:</span>
-    <button class="pill-filter active" onclick="filterAction('day2', 'all', this)">All (0)</button>
-    <button class="pill-filter" onclick="filterAction('day2', 'MUST_BUY', this)">Must Buy</button>
-    <button class="pill-filter" onclick="filterAction('day2', 'BUY', this)">Buy</button>
-    <button class="pill-filter" onclick="filterAction('day2', 'IGNORE', this)">Ignore / Avoid</button>
-  </div>
-  <div class="filter-group">
-    <span class="filter-label">SECTOR:</span>
-    <select class="select-filter" id="sector-day2" onchange="filterSection('day2')">
-      <option value="all">All Sectors</option>
-      <option value="Diversified">Diversified</option>
-<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
-<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
-    </select>
-  </div>
-  <input type="text" class="search-box" id="search-day2"
-         placeholder="Search day 2 Mainboard IPOs..."
-         oninput="filterSection('day2')">
-  <div class="view-switch-group">
-    <button class="view-btn view-btn-table active" id="btn-view-table-day2" onclick="toggleViewMode('day2', 'table', this)" title="Table View">📋 Table</button>
-    <button class="view-btn view-btn-cards" id="btn-view-cards-day2" onclick="toggleViewMode('day2', 'cards', this)" title="Cards View">🗂️ Cards</button>
-  </div>
-</div>
-<div class="table-container" id="table-container-day2">
-  <table id="table-day2">
-    <thead><tr><th class="sortable" onclick="sortTable('table-day2', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-day2', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-day2', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-day2', 3, true)">Model Score</th><th class="sortable num" onclick="sortTable('table-day2', 4, true)">GMP%</th><th class="sortable" onclick="sortTable('table-day2', 5, false)">Demand Breakdown</th><th class="sortable" onclick="sortTable('table-day2', 6, false)">Hidden Gem</th><th class="sortable" onclick="sortTable('table-day2', 7, false)">Valuation &amp; Checklist</th><th class="sortable" onclick="sortTable('table-day2', 8, false)">Action &amp; Score Rationale</th><th class="sortable" onclick="sortTable('table-day2', 9, false)">Lead Manager</th></tr></thead>
-    <tbody id="day2-table-body"><tr><td colspan="10" style="text-align:center;padding:16px;color:#94a3b8;">No IPOs on Day 2 in this segment.</td></tr></tbody>
-  </table>
-</div>
-<div class="cards-view-container" id="cards-container-day2">
-  <div style="text-align:center;padding:24px;color:#94a3b8;background:#0f172a;border:1px solid #1e293b;border-radius:8px;">No IPOs on Day 2 in this segment.</div>
-</div>
-
-
-
-<!-- SECTION 3: DAY 1 -->
-<div class="sec-hdr-row day-section" id="sec-day1">
-  <div>
-    <div class="sec-hdr" style="color:#60a5fa;"><span class="dot-open"></span> 3. DAY 1 (1 IPOs)</div>
-    <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP, Model Score, Lead Manager — LLM analysis skipped on Day 1</div>
-  </div>
-  <div class="density-switch">
-    <button class="btn-density" onclick="toggleDensity()" title="Toggle table row padding">Density</button>
-  </div>
-</div>
-<div class="toolbar">
-  
-  <div class="filter-group">
-    <span class="filter-label">SECTOR:</span>
-    <select class="select-filter" id="sector-day1" onchange="filterSection('day1')">
-      <option value="all">All Sectors</option>
-      <option value="Diversified">Diversified</option>
-<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
-<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
-    </select>
-  </div>
-  <input type="text" class="search-box" id="search-day1"
-         placeholder="Search day 1 Mainboard IPOs..."
-         oninput="filterSection('day1')">
-  <div class="view-switch-group">
-    <button class="view-btn view-btn-table active" id="btn-view-table-day1" onclick="toggleViewMode('day1', 'table', this)" title="Table View">📋 Table</button>
-    <button class="view-btn view-btn-cards" id="btn-view-cards-day1" onclick="toggleViewMode('day1', 'cards', this)" title="Cards View">🗂️ Cards</button>
-  </div>
-</div>
-<div class="table-container" id="table-container-day1">
-  <table id="table-day1">
-    <thead><tr><th class="sortable" onclick="sortTable('table-day1', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-day1', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-day1', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-day1', 3, true)">Model Score</th><th class="sortable num" onclick="sortTable('table-day1', 4, true)">GMP%</th><th class="sortable" onclick="sortTable('table-day1', 5, false)">Lead Manager</th></tr></thead>
-    <tbody id="day1-table-body">
-            <tr class="day1-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
-              <td>
-                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">HD Fire Protect</div>
-                <span class="sector-pill">Healthcare &amp; Pharma</span>
-              </td>
-              <td class="num">
-                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;271</div>
-                
-              </td>
-              <td>2026-10-15<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-21)</span></td>
-              <td class="num" style="color:var(--red)"><b style="font-size:12px;">-15.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;230.3</div></td>
-              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+31.7%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;357.0</div></td>
-              <td>
-                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Anand Rathi Advisors Ltd, Ambit Pvt Ltd, Iifl Capital Services Ltd</div>
-                <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Anand Rathi Advisors Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +29.4%, 100% positive (LM impact: +9.8 pts)</li><li>Ambit Pvt Ltd [Tier 2 (High Conviction)]: 4 IPOs, avg gain +16.1%, 75% positive (LM impact: +5.8 pts)</li></ul>
-              </td>
-            </tr></tbody>
-  </table>
-</div>
-<div class="cards-view-container" id="cards-container-day1">
-  
-        <div class="ipo-card day1-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+        <div class="ipo-card day3plus-row" data-rec="BUY" data-sector="Healthcare &amp; Pharma">
           <div class="ipo-card-header">
             <div>
               <div class="ipo-card-title">HD Fire Protect</div>
@@ -193,8 +125,8 @@
               </div>
             </div>
             <div style="text-align:right;">
-              <span class="badge-rec ignore">IGNORE (-15.0%)</span>
-              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>68</b>/100</span></div>
+              <span class="badge-rec buy">BUY (+16.0%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>82</b>/100</span></div>
             </div>
           </div>
 
@@ -212,27 +144,27 @@
             </div>
             <div class="card-stat-item">
               <span class="card-stat-label">Model Score</span>
-              <span class="card-stat-val" style="color:var(--red);">
-                -15.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;230.3)</span>
+              <span class="card-stat-val" style="color:var(--green);">
+                +4.8% <span style="font-size:10px;color:#94a3b8;">(&#8377;284.0)</span>
               </span>
             </div>
             <div class="card-stat-item">
               <span class="card-stat-label">Market GMP</span>
               <span class="card-stat-val" style="color:var(--green);">
-                +31.7% <span style="font-size:10px;color:#94a3b8;">(&#8377;357.0)</span>
+                +32.8% <span style="font-size:10px;color:#94a3b8;">(&#8377;360.0)</span>
               </span>
             </div>
           </div>
 
-          <div class='card-demand-bar'><div style='font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:700;'>DEMAND MULTIPLES:</div><div style='display:flex;gap:6px;flex-wrap:wrap;'><span title='QIB' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI' style='color:#a78bfa;'><b>bHNI:</b> 0.2x</span> | <span title='sHNI' style='color:#c084fc;'><b>sHNI:</b> 1.7x</span> | <span title='Retail' style='color:#34d399;'><b>Ret:</b> 0.9x</span></div></div>
-          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='FAIL: Sub 0.8x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 0.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +31.7% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | FAIL: LM hit 81% (n=17, need &gt;= 60%) &amp; sub 0.8x -&gt; weak LM trail or demand | PASS: EBITDA 27.3% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/5</b> WEAK</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>49.7x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>85.0%</b></span></div>
-          <div class='card-rationale'>Neutral outlook: Mixed indicators with -15.0% model value, +31.7% GMP, and 0.8x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
+          <div class='card-demand-bar'><div style='font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:700;'>DEMAND MULTIPLES:</div><div style='display:flex;gap:6px;flex-wrap:wrap;'><span title='QIB' style='color:#60a5fa;'><b>QIB:</b> 2.0x</span> | <span title='bHNI' style='color:#a78bfa;'><b>bHNI:</b> 18.5x</span> | <span title='sHNI' style='color:#c084fc;'><b>sHNI:</b> 62.0x</span> | <span title='Retail' style='color:#34d399;'><b>Ret:</b> 12.8x</span></div></div>
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='FAIL: Sub 24.0x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 2.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +32.8% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | PASS: LM hit 81% (n=17, need &gt;= 60%) &amp; sub 24.0x -&gt; proven book + demand | PASS: EBITDA 27.3% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #f59e0b66;color:#f59e0b;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>2/5</b> MIXED</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>49.7x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>85.0%</b></span></div>
+          <div class='card-rationale'>Favorable listing setup: Positive consensus with +33% GMP, healthy 24.0x subscription, and calculated model cushion of +4.8%. (Final day snapshot.)</div>
 
           <div class="card-footer">
             <div style="font-size:11px;color:#94a3b8;">
               <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Anand Rathi Advisors Ltd, Ambit Pvt Ltd, Iifl Capital Services Ltd</b>
             </div>
-            
+            <a href='https://www.bseindia.com/corporates/download/370731/IPO%20Open/RHPsigned_20261008112437.pdf' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP &rarr;</a>
           </div>
         </div>
         
@@ -240,11 +172,11 @@
 
 
 
-<!-- SECTION 4: UPCOMING (PRE-OPEN) -->
-<div class="sec-hdr-row day-section" id="sec-upcoming">
+<!-- SECTION 2: DAY 2 -->
+<div class="sec-hdr-row day-section" id="sec-day2">
   <div>
-    <div class="sec-hdr" style="color:#94a3b8;"><span class="dot-open"></span> 4. UPCOMING (PRE-OPEN) (4 IPOs)</div>
-    <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP + Lead Manager only — model/LLM not run until Day 2</div>
+    <div class="sec-hdr" style="color:#a78bfa;"><span class="dot-open"></span> 2. DAY 2 (1 IPOs)</div>
+    <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP, Model Score, Subscription, Valuation & Checklist, Action, Lead Manager — LLM active</div>
   </div>
   <div class="density-switch">
     <button class="btn-density" onclick="toggleDensity()" title="Toggle table row padding">Density</button>
@@ -253,27 +185,35 @@
 <div class="toolbar">
   
   <div class="filter-group">
+    <span class="filter-label">ACTION:</span>
+    <button class="pill-filter active" onclick="filterAction('day2', 'all', this)">All (1)</button>
+    <button class="pill-filter" onclick="filterAction('day2', 'MUST_BUY', this)">Must Buy</button>
+    <button class="pill-filter" onclick="filterAction('day2', 'BUY', this)">Buy</button>
+    <button class="pill-filter" onclick="filterAction('day2', 'IGNORE', this)">Ignore / Avoid</button>
+  </div>
+  <div class="filter-group">
     <span class="filter-label">SECTOR:</span>
-    <select class="select-filter" id="sector-upcoming" onchange="filterSection('upcoming')">
+    <select class="select-filter" id="sector-day2" onchange="filterSection('day2')">
       <option value="all">All Sectors</option>
       <option value="Diversified">Diversified</option>
 <option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
 <option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="IT &amp; Technology">IT &amp; Technology</option>
     </select>
   </div>
-  <input type="text" class="search-box" id="search-upcoming"
-         placeholder="Search upcoming (pre-open) Mainboard IPOs..."
-         oninput="filterSection('upcoming')">
+  <input type="text" class="search-box" id="search-day2"
+         placeholder="Search day 2 Mainboard IPOs..."
+         oninput="filterSection('day2')">
   <div class="view-switch-group">
-    <button class="view-btn view-btn-table active" id="btn-view-table-upcoming" onclick="toggleViewMode('upcoming', 'table', this)" title="Table View">📋 Table</button>
-    <button class="view-btn view-btn-cards" id="btn-view-cards-upcoming" onclick="toggleViewMode('upcoming', 'cards', this)" title="Cards View">🗂️ Cards</button>
+    <button class="view-btn view-btn-table active" id="btn-view-table-day2" onclick="toggleViewMode('day2', 'table', this)" title="Table View">📋 Table</button>
+    <button class="view-btn view-btn-cards" id="btn-view-cards-day2" onclick="toggleViewMode('day2', 'cards', this)" title="Cards View">🗂️ Cards</button>
   </div>
 </div>
-<div class="table-container" id="table-container-upcoming">
-  <table id="table-upcoming">
-    <thead><tr><th class="sortable" onclick="sortTable('table-upcoming', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-upcoming', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-upcoming', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-upcoming', 3, true)">GMP%</th><th class="sortable" onclick="sortTable('table-upcoming', 4, false)">Lead Manager</th></tr></thead>
-    <tbody id="upcoming-table-body">
-            <tr class="upcoming-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+<div class="table-container" id="table-container-day2">
+  <table id="table-day2">
+    <thead><tr><th class="sortable" onclick="sortTable('table-day2', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-day2', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-day2', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-day2', 3, true)">Model Score</th><th class="sortable num" onclick="sortTable('table-day2', 4, true)">GMP%</th><th class="sortable" onclick="sortTable('table-day2', 5, false)">Demand Breakdown</th><th class="sortable" onclick="sortTable('table-day2', 6, false)">Hidden Gem</th><th class="sortable" onclick="sortTable('table-day2', 7, false)">Valuation &amp; Checklist</th><th class="sortable" onclick="sortTable('table-day2', 8, false)">Action &amp; Score Rationale</th><th class="sortable" onclick="sortTable('table-day2', 9, false)">Lead Manager</th></tr></thead>
+    <tbody id="day2-table-body">
+            <tr class="day2-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
               <td>
                 <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Fusion CX</div>
                 <span class="sector-pill">Healthcare &amp; Pharma</span>
@@ -283,64 +223,38 @@
                 
               </td>
               <td>2026-10-16<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-22)</span></td>
-              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+6.6%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;308.0</div></td>
+              <td class="num" style="color:var(--red)"><b style="font-size:12px;">-15.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;245.7</div></td>
+              <td class="num" style="color:var(--green)">
+                <b style="font-size:12px;">+11.4%</b>
+                <div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;322.0</div>
+              </td>
+              <td>
+                <div style='display:flex;gap:4px;font-size:10px;white-space:nowrap;flex-wrap:wrap;'><span title='QIB (Institutions)' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI (>10L)' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI (2-10L)' style='color:#c084fc;'><b>sHNI:</b> 1.0x</span> | <span title='Retail Individual' style='color:#34d399;'><b>Ret:</b> 2.0x</span></div>
+                <div style='font-size:9px;color:#94a3b8;margin-top:1px;'>Wtd: <b>0.8x</b></div>
+              </td>
+              <td class='gem-col' style='text-align:center;color:#475569;font-size:12px;vertical-align:middle;'>—</td>
+              <td style="min-width:320px;">
+          <div class="points-container">
+            <div class='metric-pills-row'><span class='badge-val-score' style='background:#38bdf822;color:#38bdf8;border:1px solid #38bdf866;font-weight:700;padding:1px 7px;border-radius:4px;font-size:10px;' title='Fundamental Valuation Score: 72/100 (GOOD VALUE)'>Valuation: <b>72/100</b> <span style='font-size:8.5px;opacity:0.9;'>(GOOD VALUE)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Valuation Multiplier Cascade (Disclosed Post P/E)'>P/E: <b>18.7x</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(Disclosed Post P/E)</span></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Promoter Holding: 99.0% Pre &rarr; 81.8% Post'>Promoter: <b>81.8%</b> <span style='color:#94a3b8;font-size:8.5px;font-weight:400;'>(99%&rarr;82%, -17.2% dil.)</span></span><span style='background:#1e293b;border:1px solid #64748b66;color:#cbd5e1;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='Issue Structure'>Fresh 71% | OFS 29%</span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;' title='0% Tier-1 Marquee () | Total ₹361 Cr'>⚓ Anchor: <b>0% Marquee</b> (₹0Cr)</span><span class='checklist-pill' title='FAIL: Sub 0.6x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 0.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +11.4% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | FAIL: LM hit 64% (n=35, need &gt;= 60%) &amp; sub 0.6x -&gt; weak LM trail or demand | PASS: EBITDA 20.0% (&gt;=18%) &amp; D/E 0.51 (&lt;= 1.5) -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/5</b> WEAK</span></div>
+            <div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> Sub 0.6x vs seg median 30x (>=10x required) -> below bar</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> QIB 0.0x (need >12.4x) & sub <= seg median -> weak institutions or demand</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> GMP +11.4% (need >= 10%) & sub <= seg median -> GMP/book divergence or weak</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#f87171;font-weight:700;'>✗</span> LM hit 64% (n=35, need >= 60%) & sub 0.6x -> weak LM trail or demand</span></div><div class='point-bullet'><span class='bullet-icon'>▸</span><span><span style='color:#34d399;font-weight:700;'>✓</span> EBITDA 20.0% (>=18%) & D/E 0.51 (<= 1.5) -> quality without leverage</span></div>
+            <div style='margin-top:4px;'><a href='https://nsearchives.nseindia.com/content/ipo/RHP_FUSIONCX.zip' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP Prospectus &rarr;</a></div>
+          </div>
+        </td>
+              <td style="min-width:180px;">
+                <span class="badge-rec ignore">IGNORE (-15.0%)</span>
+                <div style='font-size:10px;color:#cbd5e1;font-weight:600;margin-top:3px;'>Score: <b style='color:#f8fafc;'>37</b>/100</div>
+                <div class='action-reason-box'>Weak subscription (0.6x, zero QIB) and a -15% model fair value imply listing‑day discount risk, outweighing modest GMP upside and decent fundamentals; thus avoid.</div>
+              </td>
               <td>
                 <div style="font-weight:600;font-size:11px;color:#f8fafc;">Nuvama Wealth Management Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</div>
-              </td>
-            </tr>
-
-            <tr class="upcoming-row" data-rec="IGNORE" data-sector="Diversified">
-              <td>
-                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Zetwerk Manufacturing Business</div>
-                <span class="sector-pill">Diversified</span>
-              </td>
-              <td class="num">
-                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;151</div>
-                
-              </td>
-              <td>2026-10-19<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-23)</span></td>
-              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+10.6%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;167.0</div></td>
-              <td>
-                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Kotak Mahindra Capital Company Ltd, Morgan Stanley India Co.Pvt.Ltd., Goldman Sachs (India) Securities Pvt Ltd, Avendus Capital Pvt Ltd., Pantomath Capital Advisors Pvt Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd</div>
-              </td>
-            </tr>
-
-            <tr class="upcoming-row" data-rec="IGNORE" data-sector="Diversified">
-              <td>
-                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Tonbo Imaging India</div>
-                <span class="sector-pill">Diversified</span>
-              </td>
-              <td class="num">
-                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;700</div>
-                
-              </td>
-              <td>2026-10-19<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-23)</span></td>
-              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+60.7%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;1125.0</div></td>
-              <td>
-                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Iifl Capital Services Ltd</div>
-              </td>
-            </tr>
-
-            <tr class="upcoming-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
-              <td>
-                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Bonfiglioli Transmissions</div>
-                <span class="sector-pill">Engineering &amp; Capital Goods</span>
-              </td>
-              <td class="num">
-                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;586</div>
-                
-              </td>
-              <td>2026-10-19<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-23)</span></td>
-              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+26.4%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;741.0</div></td>
-              <td>
-                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Icici Securities Ltd, Axis Capital Ltd, Jefferies India Pvt Ltd, Bnp Paribas</div>
+                <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Nuvama Wealth Management Ltd [Tier 3 (Moderate)]: 25 IPOs, avg gain +9.9%, 56% positive (LM impact: +3.0 pts)</li><li>Motilal Oswal Investment Advisors Ltd [Tier 2 (High Conviction)]: 37 IPOs, avg gain +12.0%, 68% positive (LM impact: +4.6 pts)</li></ul>
               </td>
             </tr></tbody>
   </table>
 </div>
-<div class="cards-view-container" id="cards-container-upcoming">
+<div class="cards-view-container" id="cards-container-day2">
   
-        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+        <div class="ipo-card day2-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
           <div class="ipo-card-header">
             <div>
               <div class="ipo-card-title">Fusion CX</div>
@@ -350,8 +264,8 @@
               </div>
             </div>
             <div style="text-align:right;">
-              <span class="badge-rec ignore">IGNORE (+3.4%)</span>
-              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>13</b>/100</span></div>
+              <span class="badge-rec ignore">IGNORE (-15.0%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>37</b>/100</span></div>
             </div>
           </div>
 
@@ -370,85 +284,125 @@
             <div class="card-stat-item">
               <span class="card-stat-label">Model Score</span>
               <span class="card-stat-val" style="color:var(--red);">
-                -0.8% <span style="font-size:10px;color:#94a3b8;">(&#8377;286.6)</span>
+                -15.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;245.7)</span>
               </span>
             </div>
             <div class="card-stat-item">
               <span class="card-stat-label">Market GMP</span>
               <span class="card-stat-val" style="color:var(--green);">
-                +6.6% <span style="font-size:10px;color:#94a3b8;">(&#8377;308.0)</span>
+                +11.4% <span style="font-size:10px;color:#94a3b8;">(&#8377;322.0)</span>
               </span>
             </div>
           </div>
 
-          
-          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | PASS: EBITDA 20.0% (&gt;=18%) &amp; D/E 0.51 (&lt;= 1.5) -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/1</b> WEAK</span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>18.7x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>81.8%</b></span></div>
-          <div class='card-rationale'>Neutral outlook: Mixed indicators with -0.8% model value, +6.6% GMP, and 0.0x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
+          <div class='card-demand-bar'><div style='font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:700;'>DEMAND MULTIPLES:</div><div style='display:flex;gap:6px;flex-wrap:wrap;'><span title='QIB' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI' style='color:#c084fc;'><b>sHNI:</b> 1.0x</span> | <span title='Retail' style='color:#34d399;'><b>Ret:</b> 2.0x</span></div></div>
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='FAIL: Sub 0.6x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 0.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +11.4% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | FAIL: LM hit 64% (n=35, need &gt;= 60%) &amp; sub 0.6x -&gt; weak LM trail or demand | PASS: EBITDA 20.0% (&gt;=18%) &amp; D/E 0.51 (&lt;= 1.5) -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/5</b> WEAK</span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>18.7x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>81.8%</b></span></div>
+          <div class='card-rationale'>Weak subscription (0.6x, zero QIB) and a -15% model fair value imply listing‑day discount risk, outweighing modest GMP upside and decent fundamentals; thus avoid.</div>
 
           <div class="card-footer">
             <div style="font-size:11px;color:#94a3b8;">
               <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Nuvama Wealth Management Ltd, Motilal Oswal Investment Advisors Ltd, Iifl Capital Services Ltd</b>
             </div>
-            
+            <a href='https://nsearchives.nseindia.com/content/ipo/RHP_FUSIONCX.zip' target='_blank' style='font-size:10px;color:#38bdf8;text-decoration:none;font-weight:600;'>&#128196; DRHP &rarr;</a>
           </div>
         </div>
         
+</div>
 
-        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="Diversified">
-          <div class="ipo-card-header">
-            <div>
-              <div class="ipo-card-title">Zetwerk Manufacturing Business</div>
-              <div class="ipo-card-meta">
+
+
+<!-- SECTION 3: DAY 1 -->
+<div class="sec-hdr-row day-section" id="sec-day1">
+  <div>
+    <div class="sec-hdr" style="color:#60a5fa;"><span class="dot-open"></span> 3. DAY 1 (3 IPOs)</div>
+    <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP, Model Score, Lead Manager — LLM analysis skipped on Day 1</div>
+  </div>
+  <div class="density-switch">
+    <button class="btn-density" onclick="toggleDensity()" title="Toggle table row padding">Density</button>
+  </div>
+</div>
+<div class="toolbar">
+  
+  <div class="filter-group">
+    <span class="filter-label">SECTOR:</span>
+    <select class="select-filter" id="sector-day1" onchange="filterSection('day1')">
+      <option value="all">All Sectors</option>
+      <option value="Diversified">Diversified</option>
+<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
+<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="IT &amp; Technology">IT &amp; Technology</option>
+    </select>
+  </div>
+  <input type="text" class="search-box" id="search-day1"
+         placeholder="Search day 1 Mainboard IPOs..."
+         oninput="filterSection('day1')">
+  <div class="view-switch-group">
+    <button class="view-btn view-btn-table active" id="btn-view-table-day1" onclick="toggleViewMode('day1', 'table', this)" title="Table View">📋 Table</button>
+    <button class="view-btn view-btn-cards" id="btn-view-cards-day1" onclick="toggleViewMode('day1', 'cards', this)" title="Cards View">🗂️ Cards</button>
+  </div>
+</div>
+<div class="table-container" id="table-container-day1">
+  <table id="table-day1">
+    <thead><tr><th class="sortable" onclick="sortTable('table-day1', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-day1', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-day1', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-day1', 3, true)">Model Score</th><th class="sortable num" onclick="sortTable('table-day1', 4, true)">GMP%</th><th class="sortable" onclick="sortTable('table-day1', 5, false)">Lead Manager</th></tr></thead>
+    <tbody id="day1-table-body">
+            <tr class="day1-row" data-rec="IGNORE" data-sector="Diversified">
+              <td>
+                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Tonbo Imaging India</div>
                 <span class="sector-pill">Diversified</span>
+              </td>
+              <td class="num">
+                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;700</div>
                 
-              </div>
-            </div>
-            <div style="text-align:right;">
-              <span class="badge-rec ignore">IGNORE (+6.7%)</span>
-              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>47</b>/100</span></div>
-            </div>
-          </div>
+              </td>
+              <td>2026-10-19<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-23)</span></td>
+              <td class="num" style="color:var(--red)"><b style="font-size:12px;">-15.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;595.0</div></td>
+              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+71.4%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;1200.0</div></td>
+              <td>
+                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Iifl Capital Services Ltd</div>
+                <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li><li>Iifl Capital Services Ltd [Tier 2 (High Conviction)]: 45 IPOs, avg gain +13.5%, 69% positive (LM impact: +5.0 pts)</li></ul>
+              </td>
+            </tr>
 
-          <div class="ipo-card-stats">
-            <div class="card-stat-item">
-              <span class="card-stat-label">Issue Price (Size)</span>
-              <span class="card-stat-val">
-                &#8377;151
+            <tr class="day1-row" data-rec="IGNORE" data-sector="Diversified">
+              <td>
+                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Zetwerk Manufacturing Business</div>
+                <span class="sector-pill">Diversified</span>
+              </td>
+              <td class="num">
+                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;151</div>
                 
-              </span>
-            </div>
-            <div class="card-stat-item">
-              <span class="card-stat-label">Timeline</span>
-              <span class="card-stat-val" style="font-size:11.5px;color:#cbd5e1;">Close: <b>2026-10-19</b> &bull; Lists: 2026-10-23</span>
-            </div>
-            <div class="card-stat-item">
-              <span class="card-stat-label">Model Score</span>
-              <span class="card-stat-val" style="color:var(--green);">
-                +1.4% <span style="font-size:10px;color:#94a3b8;">(&#8377;153.1)</span>
-              </span>
-            </div>
-            <div class="card-stat-item">
-              <span class="card-stat-label">Market GMP</span>
-              <span class="card-stat-val" style="color:var(--green);">
-                +10.6% <span style="font-size:10px;color:#94a3b8;">(&#8377;167.0)</span>
-              </span>
-            </div>
-          </div>
+              </td>
+              <td>2026-10-19<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-23)</span></td>
+              <td class="num" style="color:var(--red)"><b style="font-size:12px;">-15.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;128.3</div></td>
+              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+14.6%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;173.0</div></td>
+              <td>
+                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Kotak Mahindra Capital Company Ltd, Morgan Stanley India Co.Pvt.Ltd., Goldman Sachs (India) Securities Pvt Ltd, Avendus Capital Pvt Ltd., Pantomath Capital Advisors Pvt Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd</div>
+                <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Jm Financial Ltd [Tier 2 (High Conviction)]: 43 IPOs, avg gain +12.3%, 67% positive (LM impact: +4.7 pts)</li><li>Kotak Mahindra Capital Company Ltd [Tier 2 (High Conviction)]: 38 IPOs, avg gain +15.3%, 74% positive (LM impact: +5.6 pts)</li></ul>
+              </td>
+            </tr>
 
-          
-          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | SKIP: EBITDA margin / D/E not available' style='background:#0f172a;border:1px solid #64748b66;color:#64748b;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>0/0</b> N/A</span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>11.4%</b></span></div>
-          <div class='card-rationale'>Neutral outlook: Mixed indicators with +1.4% model value, +10.6% GMP, and 0.0x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
-
-          <div class="card-footer">
-            <div style="font-size:11px;color:#94a3b8;">
-              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Jm Financial Ltd, Kotak Mahindra Capital Company Ltd, Morgan Stanley India Co.Pvt.Ltd., Goldman Sachs (India) Securities Pvt Ltd, Avendus Capital Pvt Ltd., Pantomath Capital Advisors Pvt Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd</b>
-            </div>
-            
-          </div>
-        </div>
-        
-
-        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="Diversified">
+            <tr class="day1-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
+              <td>
+                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Bonfiglioli Transmissions</div>
+                <span class="sector-pill">Engineering &amp; Capital Goods</span>
+              </td>
+              <td class="num">
+                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;586</div>
+                
+              </td>
+              <td>2026-10-19<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-23)</span></td>
+              <td class="num" style="color:var(--red)"><b style="font-size:12px;">-15.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;498.1</div></td>
+              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+30.4%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;764.0</div></td>
+              <td>
+                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Icici Securities Ltd, Axis Capital Ltd, Jefferies India Pvt Ltd, Bnp Paribas</div>
+                <ul style='margin:3px 0 0 12px;padding:0;font-size:10px;color:#94a3b8;line-height:1.25;'><li>Icici Securities Ltd [Tier 2 (High Conviction)]: 41 IPOs, avg gain +10.9%, 66% positive (LM impact: +4.3 pts)</li><li>Axis Capital Ltd [Tier 1 (Elite Alpha)]: 38 IPOs, avg gain +18.5%, 82% positive (LM impact: +8.1 pts)</li></ul>
+              </td>
+            </tr></tbody>
+  </table>
+</div>
+<div class="cards-view-container" id="cards-container-day1">
+  
+        <div class="ipo-card day1-row" data-rec="IGNORE" data-sector="Diversified">
           <div class="ipo-card-header">
             <div>
               <div class="ipo-card-title">Tonbo Imaging India</div>
@@ -458,8 +412,8 @@
               </div>
             </div>
             <div style="text-align:right;">
-              <span class="badge-rec ignore">IGNORE (+24.2%)</span>
-              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>81</b>/100</span></div>
+              <span class="badge-rec ignore">IGNORE (-15.0%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>78</b>/100</span></div>
             </div>
           </div>
 
@@ -478,19 +432,19 @@
             <div class="card-stat-item">
               <span class="card-stat-label">Model Score</span>
               <span class="card-stat-val" style="color:var(--red);">
-                -0.1% <span style="font-size:10px;color:#94a3b8;">(&#8377;699.6)</span>
+                -15.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;595.0)</span>
               </span>
             </div>
             <div class="card-stat-item">
               <span class="card-stat-label">Market GMP</span>
               <span class="card-stat-val" style="color:var(--green);">
-                +60.7% <span style="font-size:10px;color:#94a3b8;">(&#8377;1125.0)</span>
+                +71.4% <span style="font-size:10px;color:#94a3b8;">(&#8377;1200.0)</span>
               </span>
             </div>
           </div>
 
-          
-          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | FAIL: EBITDA -36.2% fails quality threshold (&lt;18%)' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>0/1</b> WEAK</span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>78.8x</b></span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>15.7%</b></span></div>
+          <div class='card-demand-bar'><div style='font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:700;'>DEMAND MULTIPLES:</div><div style='display:flex;gap:6px;flex-wrap:wrap;'><span title='QIB' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI' style='color:#a78bfa;'><b>bHNI:</b> 0.1x</span> | <span title='sHNI' style='color:#c084fc;'><b>sHNI:</b> 1.5x</span> | <span title='Retail' style='color:#34d399;'><b>Ret:</b> 0.5x</span></div></div>
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='FAIL: Sub 0.5x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 0.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +71.4% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | FAIL: LM hit 68% (n=44, need &gt;= 60%) &amp; sub 0.5x -&gt; weak LM trail or demand | FAIL: EBITDA -36.2% fails quality threshold (&lt;18%)' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>0/5</b> WEAK</span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>78.8x</b></span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>15.7%</b></span></div>
           <div class='card-rationale'>Avoid — Extreme valuation risk: Stretched multiple (P/E 78.8x) leaves zero safety margin despite retail hype; elevated risk of post-listing multiple contraction.</div>
 
           <div class="card-footer">
@@ -502,7 +456,61 @@
         </div>
         
 
-        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
+        <div class="ipo-card day1-row" data-rec="IGNORE" data-sector="Diversified">
+          <div class="ipo-card-header">
+            <div>
+              <div class="ipo-card-title">Zetwerk Manufacturing Business</div>
+              <div class="ipo-card-meta">
+                <span class="sector-pill">Diversified</span>
+                
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <span class="badge-rec ignore">IGNORE (-15.0%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>30</b>/100</span></div>
+            </div>
+          </div>
+
+          <div class="ipo-card-stats">
+            <div class="card-stat-item">
+              <span class="card-stat-label">Issue Price (Size)</span>
+              <span class="card-stat-val">
+                &#8377;151
+                
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Timeline</span>
+              <span class="card-stat-val" style="font-size:11.5px;color:#cbd5e1;">Close: <b>2026-10-19</b> &bull; Lists: 2026-10-23</span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Model Score</span>
+              <span class="card-stat-val" style="color:var(--red);">
+                -15.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;128.3)</span>
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Market GMP</span>
+              <span class="card-stat-val" style="color:var(--green);">
+                +14.6% <span style="font-size:10px;color:#94a3b8;">(&#8377;173.0)</span>
+              </span>
+            </div>
+          </div>
+
+          <div class='card-demand-bar'><div style='font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:700;'>DEMAND MULTIPLES:</div><div style='display:flex;gap:6px;flex-wrap:wrap;'><span title='QIB' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI' style='color:#a78bfa;'><b>bHNI:</b> 0.0x</span> | <span title='sHNI' style='color:#c084fc;'><b>sHNI:</b> 0.0x</span> | <span title='Retail' style='color:#34d399;'><b>Ret:</b> 0.0x</span></div></div>
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='FAIL: Sub 0.0x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 0.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +14.6% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | FAIL: LM hit 72% (n=20, need &gt;= 60%) &amp; sub 0.0x -&gt; weak LM trail or demand | SKIP: EBITDA margin / D/E not available' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>0/4</b> WEAK</span><span style='background:#1e293b;border:1px solid #f8717166;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>11.4%</b></span></div>
+          <div class='card-rationale'>Neutral outlook: Mixed indicators with -15.0% model value, +14.6% GMP, and 0.0x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
+
+          <div class="card-footer">
+            <div style="font-size:11px;color:#94a3b8;">
+              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Jm Financial Ltd, Kotak Mahindra Capital Company Ltd, Morgan Stanley India Co.Pvt.Ltd., Goldman Sachs (India) Securities Pvt Ltd, Avendus Capital Pvt Ltd., Pantomath Capital Advisors Pvt Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd</b>
+            </div>
+            
+          </div>
+        </div>
+        
+
+        <div class="ipo-card day1-row" data-rec="IGNORE" data-sector="Engineering &amp; Capital Goods">
           <div class="ipo-card-header">
             <div>
               <div class="ipo-card-title">Bonfiglioli Transmissions</div>
@@ -512,8 +520,8 @@
               </div>
             </div>
             <div style="text-align:right;">
-              <span class="badge-rec ignore">IGNORE (+12.7%)</span>
-              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>70</b>/100</span></div>
+              <span class="badge-rec ignore">IGNORE (-15.0%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>57</b>/100</span></div>
             </div>
           </div>
 
@@ -532,24 +540,204 @@
             <div class="card-stat-item">
               <span class="card-stat-label">Model Score</span>
               <span class="card-stat-val" style="color:var(--red);">
-                -1.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;580.0)</span>
+                -15.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;498.1)</span>
               </span>
             </div>
             <div class="card-stat-item">
               <span class="card-stat-label">Market GMP</span>
               <span class="card-stat-val" style="color:var(--green);">
-                +26.4% <span style="font-size:10px;color:#94a3b8;">(&#8377;741.0)</span>
+                +30.4% <span style="font-size:10px;color:#94a3b8;">(&#8377;764.0)</span>
+              </span>
+            </div>
+          </div>
+
+          <div class='card-demand-bar'><div style='font-size:10px;color:#94a3b8;margin-bottom:3px;font-weight:700;'>DEMAND MULTIPLES:</div><div style='display:flex;gap:6px;flex-wrap:wrap;'><span title='QIB' style='color:#60a5fa;'><b>QIB:</b> 0.0x</span> | <span title='bHNI' style='color:#a78bfa;'><b>bHNI:</b> 0.0x</span> | <span title='sHNI' style='color:#c084fc;'><b>sHNI:</b> 0.1x</span> | <span title='Retail' style='color:#34d399;'><b>Ret:</b> 0.0x</span></div></div>
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='FAIL: Sub 0.1x vs seg median 30x (&gt;=10x required) -&gt; below bar | FAIL: QIB 0.0x (need &gt;12.4x) &amp; sub &lt;= seg median -&gt; weak institutions or demand | FAIL: GMP +30.4% (need &gt;= 10%) &amp; sub &lt;= seg median -&gt; GMP/book divergence or weak | FAIL: LM hit 68% (n=27, need &gt;= 60%) &amp; sub 0.1x -&gt; weak LM trail or demand | PASS: EBITDA 18.4% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/5</b> WEAK</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>46.3x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>77.0%</b></span></div>
+          <div class='card-rationale'>Neutral outlook: Mixed indicators with -15.0% model value, +30.4% GMP, and 0.1x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
+
+          <div class="card-footer">
+            <div style="font-size:11px;color:#94a3b8;">
+              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Icici Securities Ltd, Axis Capital Ltd, Jefferies India Pvt Ltd, Bnp Paribas</b>
+            </div>
+            
+          </div>
+        </div>
+        
+</div>
+
+
+
+<!-- SECTION 4: UPCOMING (PRE-OPEN) -->
+<div class="sec-hdr-row day-section" id="sec-upcoming">
+  <div>
+    <div class="sec-hdr" style="color:#94a3b8;"><span class="dot-open"></span> 4. UPCOMING (PRE-OPEN) (2 IPOs)</div>
+    <div style="font-size:11px;color:#94a3b8;margin-top:2px;">GMP + Lead Manager only — model/LLM not run until Day 2</div>
+  </div>
+  <div class="density-switch">
+    <button class="btn-density" onclick="toggleDensity()" title="Toggle table row padding">Density</button>
+  </div>
+</div>
+<div class="toolbar">
+  
+  <div class="filter-group">
+    <span class="filter-label">SECTOR:</span>
+    <select class="select-filter" id="sector-upcoming" onchange="filterSection('upcoming')">
+      <option value="all">All Sectors</option>
+      <option value="Diversified">Diversified</option>
+<option value="Engineering &amp; Capital Goods">Engineering &amp; Capital Goods</option>
+<option value="Healthcare &amp; Pharma">Healthcare &amp; Pharma</option>
+<option value="IT &amp; Technology">IT &amp; Technology</option>
+    </select>
+  </div>
+  <input type="text" class="search-box" id="search-upcoming"
+         placeholder="Search upcoming (pre-open) Mainboard IPOs..."
+         oninput="filterSection('upcoming')">
+  <div class="view-switch-group">
+    <button class="view-btn view-btn-table active" id="btn-view-table-upcoming" onclick="toggleViewMode('upcoming', 'table', this)" title="Table View">📋 Table</button>
+    <button class="view-btn view-btn-cards" id="btn-view-cards-upcoming" onclick="toggleViewMode('upcoming', 'cards', this)" title="Cards View">🗂️ Cards</button>
+  </div>
+</div>
+<div class="table-container" id="table-container-upcoming">
+  <table id="table-upcoming">
+    <thead><tr><th class="sortable" onclick="sortTable('table-upcoming', 0, false)">IPO Name &amp; Sector</th><th class="sortable num" onclick="sortTable('table-upcoming', 1, true)">Issue ₹ (Size)</th><th class="sortable" onclick="sortTable('table-upcoming', 2, false)">Close Date</th><th class="sortable num" onclick="sortTable('table-upcoming', 3, true)">GMP%</th><th class="sortable" onclick="sortTable('table-upcoming', 4, false)">Lead Manager</th></tr></thead>
+    <tbody id="upcoming-table-body">
+            <tr class="upcoming-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
+              <td>
+                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Jio Platforms</div>
+                <span class="sector-pill">IT &amp; Technology</span>
+              </td>
+              <td class="num">
+                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;1119</div>
+                
+              </td>
+              <td>2026-10-23<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-28)</span></td>
+              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+18.9%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;1331.1</div></td>
+              <td>
+                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Kotak Mahindra Capital Company Ltd, Morgan Stanley India Company Pvt Ltd, Bofa Securities India Ltd, Axis Capital Ltd, Citigroup Global Markets India Pvt Ltd, Bnp Paribas, Clsa India Pvt Ltd, Dam Capital Advisors Ltd, Goldman Sachs (India) Securities Pvt Ltd, Hdfc Bank Ltd, Icici Securities Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd, Jm Financial Ltd, Jefferies India Pvt Ltd, Iifl Capital Services Ltd, Jp Morgan India Pvt Ltd, Sbi Capital Markets Ltd, Ubs Securities India Private Ltd, 360 One Wam Ltd</div>
+              </td>
+            </tr>
+
+            <tr class="upcoming-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+              <td>
+                <div style="font-weight:700;font-size:12.5px;color:#ffffff;line-height:1.2;margin-bottom:3px;">Paras Healthcare</div>
+                <span class="sector-pill">Healthcare &amp; Pharma</span>
+              </td>
+              <td class="num">
+                <div style='font-weight:700;font-size:12px;color:#f8fafc;'>&#8377;693</div>
+                
+              </td>
+              <td>2026-10-23<br><span style='font-size:8.5px;color:#64748b;'>(Lists 2026-10-28)</span></td>
+              <td class="num" style="color:var(--green)"><b style="font-size:12px;">+12.0%</b><div style='font-size:9.5px;color:#64748b;margin-top:1px;'>&#8377;776.0</div></td>
+              <td>
+                <div style="font-weight:600;font-size:11px;color:#f8fafc;">Jm Financial Ltd, Bofa Securities India Ltd, Nuvama Wealth Management Ltd</div>
+              </td>
+            </tr></tbody>
+  </table>
+</div>
+<div class="cards-view-container" id="cards-container-upcoming">
+  
+        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="IT &amp; Technology">
+          <div class="ipo-card-header">
+            <div>
+              <div class="ipo-card-title">Jio Platforms</div>
+              <div class="ipo-card-meta">
+                <span class="sector-pill">IT &amp; Technology</span>
+                
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <span class="badge-rec ignore">IGNORE (+8.5%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>57</b>/100</span></div>
+            </div>
+          </div>
+
+          <div class="ipo-card-stats">
+            <div class="card-stat-item">
+              <span class="card-stat-label">Issue Price (Size)</span>
+              <span class="card-stat-val">
+                &#8377;1119
+                
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Timeline</span>
+              <span class="card-stat-val" style="font-size:11.5px;color:#cbd5e1;">Close: <b>2026-10-23</b> &bull; Lists: 2026-10-28</span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Model Score</span>
+              <span class="card-stat-val" style="color:var(--red);">
+                -2.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;1096.7)</span>
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Market GMP</span>
+              <span class="card-stat-val" style="color:var(--green);">
+                +18.9% <span style="font-size:10px;color:#94a3b8;">(&#8377;1331.1)</span>
               </span>
             </div>
           </div>
 
           
-          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | PASS: EBITDA 18.4% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/1</b> WEAK</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>46.3x</b></span><span style='background:#1e293b;border:1px solid #34d39966;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>77.0%</b></span></div>
-          <div class='card-rationale'>Neutral outlook: Mixed indicators with -1.0% model value, +26.4% GMP, and 0.0x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | PASS: EBITDA 53.3% (&gt;=18%) &amp; zero/undisclosed debt -&gt; quality without leverage' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>1/1</b> WEAK</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>33.2x</b></span><span style='background:#1e293b;border:1px solid #94a3b866;color:#94a3b8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>Promoter: <b>64.5%</b></span><span style='background:#1e293b;border:1px solid #10b98166;color:#34d399;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>100% Fresh</span></div>
+          <div class='card-rationale'>Neutral outlook: Mixed indicators with -2.0% model value, +18.9% GMP, and 0.0x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
 
           <div class="card-footer">
             <div style="font-size:11px;color:#94a3b8;">
-              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Icici Securities Ltd, Axis Capital Ltd, Jefferies India Pvt Ltd, Bnp Paribas</b>
+              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Kotak Mahindra Capital Company Ltd, Morgan Stanley India Company Pvt Ltd, Bofa Securities India Ltd, Axis Capital Ltd, Citigroup Global Markets India Pvt Ltd, Bnp Paribas, Clsa India Pvt Ltd, Dam Capital Advisors Ltd, Goldman Sachs (India) Securities Pvt Ltd, Hdfc Bank Ltd, Icici Securities Ltd, HSBC Securities &amp; Capital Markets Pvt Ltd, Jm Financial Ltd, Jefferies India Pvt Ltd, Iifl Capital Services Ltd, Jp Morgan India Pvt Ltd, Sbi Capital Markets Ltd, Ubs Securities India Private Ltd, 360 One Wam Ltd</b>
+            </div>
+            
+          </div>
+        </div>
+        
+
+        <div class="ipo-card upcoming-row" data-rec="IGNORE" data-sector="Healthcare &amp; Pharma">
+          <div class="ipo-card-header">
+            <div>
+              <div class="ipo-card-title">Paras Healthcare</div>
+              <div class="ipo-card-meta">
+                <span class="sector-pill">Healthcare &amp; Pharma</span>
+                
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <span class="badge-rec ignore">IGNORE (+5.1%)</span>
+              <div><span style='font-size:10px;color:#cbd5e1;font-weight:600;margin-left:4px;'>Score: <b>41</b>/100</span></div>
+            </div>
+          </div>
+
+          <div class="ipo-card-stats">
+            <div class="card-stat-item">
+              <span class="card-stat-label">Issue Price (Size)</span>
+              <span class="card-stat-val">
+                &#8377;693
+                
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Timeline</span>
+              <span class="card-stat-val" style="font-size:11.5px;color:#cbd5e1;">Close: <b>2026-10-23</b> &bull; Lists: 2026-10-28</span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Model Score</span>
+              <span class="card-stat-val" style="color:var(--red);">
+                -4.2% <span style="font-size:10px;color:#94a3b8;">(&#8377;664.0)</span>
+              </span>
+            </div>
+            <div class="card-stat-item">
+              <span class="card-stat-label">Market GMP</span>
+              <span class="card-stat-val" style="color:var(--green);">
+                +12.0% <span style="font-size:10px;color:#94a3b8;">(&#8377;776.0)</span>
+              </span>
+            </div>
+          </div>
+
+          
+          <div class='metric-pills-row' style='margin-top:6px;'><span class='checklist-pill' title='SKIP: No subscription data yet | SKIP: QIB / total subscription not available | SKIP: GMP or subscription not available | SKIP: Lead-manager history or subscription insufficient | FAIL: EBITDA 23.7% (&gt;=18%) &amp; D/E 3.21 (&lt;= 1.5) -&gt; thin margin or levered' style='background:#0f172a;border:1px solid #ef444466;color:#ef4444;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:700;'>Checklist: <b>0/1</b> WEAK</span><span style='background:#1e293b;border:1px solid #38bdf866;color:#38bdf8;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>P/E: <b>37.7x</b></span><span style='background:#1e293b;border:1px solid #ef444466;color:#f87171;padding:1px 6px;border-radius:4px;font-size:9.5px;font-weight:600;'>OFS 66%</span></div>
+          <div class='card-rationale'>Neutral outlook: Mixed indicators with -4.2% model value, +12.0% GMP, and 0.0x demand; insufficient margin of safety. (Interim bids; final demand may change by closing day.)</div>
+
+          <div class="card-footer">
+            <div style="font-size:11px;color:#94a3b8;">
+              <span style="color:#64748b;font-weight:600;">Banker:</span> <b style="color:#f8fafc;">Jm Financial Ltd, Bofa Securities India Ltd, Nuvama Wealth Management Ltd</b>
             </div>
             
           </div>

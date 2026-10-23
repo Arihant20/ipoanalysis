@@ -4,16 +4,16 @@ Scores the **decision layer** (action ladder + relative_score + trap rules)
 against realised listing gains. Companion to `VALIDATION.md`, which
 certifies only the LightGBM premium model.
 
-- **Joined outcomes**: 110 IPOs with actual gains + latest final prediction
-- **Generated**: 2026-10-08T13:15:01+05:30
+- **Joined outcomes**: 138 IPOs with actual gains + latest final prediction
+- **Generated**: 2026-10-23T12:39:09+05:30
 
 ## 1. Action hit rates
 
 | Action | n | % positive | avg gain | avg win | avg loss |
 |---|---:|---:|---:|---:|---:|
-| MUST_BUY | 25 | 88.0% | +43.2% | +49.6% | -10.1% | (n=25; treat as indicative)
-| BUY | 12 | 91.7% | +32.4% | +35.4% | — | ⚠️ **n=12, directional claims are weakly powered**
-| IGNORE | 73 | 53.4% | +6.3% | +15.9% | -7.6% | (n=73)
+| MUST_BUY | 29 | 89.7% | +43.3% | +48.7% | -10.1% | (n=29; treat as indicative)
+| BUY | 15 | 86.7% | +28.9% | +33.3% | — | ⚠️ **n=15, directional claims are weakly powered**
+| IGNORE | 94 | 54.3% | +6.5% | +16.6% | -8.2% | (n=94)
 
 ## 2. Baseline comparison (the alpha question)
 
@@ -21,10 +21,10 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Strategy | n | hit rate | avg gain |
 |---|---:|---:|---:|
-| ours (MUST_BUY|BUY) | 37 | 89.2% | +39.7% |
-| baseline: buy all | 110 | 65.5% | +17.5% |
-| baseline: GMP >= 15% | 42 | 90.5% | +42.4% |
-| baseline: sub_signal >= 10 | 81 | 69.1% | +23.5% |
+| ours (MUST_BUY|BUY) | 44 | 88.6% | +38.4% |
+| baseline: buy all | 138 | 65.2% | +16.7% |
+| baseline: GMP >= 15% | 48 | 91.7% | +43.0% |
+| baseline: sub_signal >= 10 | 103 | 68.0% | +21.9% |
 
 > If `ours` does not beat `baseline: GMP >= 15%`, the composite score is not adding selection alpha over raw market sentiment.
 
@@ -32,8 +32,8 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Group | n | % positive | avg gain |
 |---|---:|---:|---:|
-| TRAP-regime | 27 | 51.9% | +7.3% |
-| Other IGNORE | 46 | 54.3% | +5.7% |
+| TRAP-regime | 34 | 58.8% | +8.6% |
+| Other IGNORE | 60 | 51.7% | +5.3% |
 
 > Trap rules are justified only if TRAP-regime IPOs underperform ordinary IGNOREs (lower % positive / lower avg gain).
 
@@ -41,10 +41,10 @@ Our BUY selection must beat naive baselines or the score adds no value.
 
 | Quartile | n | score range | avg gain | % positive |
 |---|---:|---|---:|---:|
-| Q1 | 25 | 1-6 | -1.0% | 36.0% |
-| Q2 | 25 | 6-48 | +2.8% | 56.0% |
-| Q3 | 25 | 49-90 | +11.2% | 72.0% |
-| Q4 | 25 | 92-99 | +53.4% | 92.0% |
+| Q1 | 32 | 1-6 | +0.2% | 46.9% |
+| Q2 | 32 | 6-46 | +5.8% | 50.0% |
+| Q3 | 32 | 48-89 | +6.4% | 65.6% |
+| Q4 | 32 | 90-99 | +51.2% | 93.8% |
 
 > A useful score shows monotonically increasing avg gain from Q1->Q4.
 
@@ -54,20 +54,20 @@ Select `relative_score >= X` as the buy rule; how does it do?
 
 | threshold | n | hit rate | avg gain |
 |---:|---:|---:|---:|
-| 40 | 53 | 83.0% | +30.9% |
-| 48 | 50 | 82.0% | +32.3% |
-| 55 | 46 | 80.4% | +34.7% |
-| 60 | 43 | 81.4% | +36.9% |
-| 65 | 42 | 81.0% | +37.2% |
-| 72 | 38 | 81.6% | +40.8% |
-| 80 | 34 | 82.4% | +43.7% |
+| 40 | 69 | 78.3% | +27.8% |
+| 48 | 63 | 79.4% | +29.1% |
+| 55 | 58 | 79.3% | +31.4% |
+| 60 | 52 | 82.7% | +35.2% |
+| 65 | 49 | 81.6% | +36.4% |
+| 72 | 45 | 82.2% | +39.3% |
+| 80 | 41 | 82.9% | +41.6% |
 
 ## 6. Live model metrics (reconciliation)
 
-- **n**: 110
-- **MAE**: 12.57%
-- **Directional accuracy**: 73.6% (n=110)
-- **|err|>15%**: 29 · **|err|>30%**: 9
+- **n**: 138
+- **MAE**: 13.55%
+- **Directional accuracy**: 71.0% (n=138)
+- **|err|>15%**: 39 · **|err|>30%**: 11
 
 > These are **live** numbers and will diverge from CV metrics in `VALIDATION.md`. Trust these for operational expectations.
 

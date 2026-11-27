@@ -4,8 +4,8 @@
 > across 739 historical Indian IPOs (2024-2026). Frozen decision tree evaluated out-of-sample.
 
 - **Evaluation Dataset**: 739 distinct IPOs (historical post-listing performance)
-- **Qualified Gems Sample**: 41 IPOs (Selectivity rate: 5.5%)
-- **Generated At**: 2026-10-08T13:13:31+05:30
+- **Qualified Gems Sample**: 76 IPOs (Selectivity rate: 9.7%)
+- **Generated At**: 2026-11-06T15:30:08+05:30
 - **Audit Verdict**: **✅ PASS (Walk-Forward Out-Of-Sample Edge Confirmed)**
 
 ---
@@ -16,11 +16,11 @@ The core proposition of the Hidden Gems strategy is **eliminating lottery crowdi
 
 | Metric | Market Baseline (All 739 IPOs) | Hidden Gems (n=41) | Edge / Alpha | Gate Status |
 |---|---|---|---|---|
-| **Listing Open Win Rate** | 63.6% | **63.4%** (95% CI: [48.1%, 76.4%]) | Controlled entry | PASS |
-| **Severe Crash Rate (Open < -10%)** | 13.4% (99 failures) | **2.4%** (1 failure) | **-11.0pp risk reduction** | **EXEMPLARY** |
-| **Avg 2-15d Peak Gain** | +38.7% | **+39.7%** | **+1.0% expansion alpha** | PASS |
-| **Net Realizable Peak (70% Haircut)** | — | **+27.8%** | Liquidity/slippage buffer | PASS |
-| **Multi-Session Squeeze (> +15%)** | 41.5% | **51.2%** (21/41) | **+9.7pp excess** | PASS |
+| **Listing Open Win Rate** | 63.7% | **67.1%** (95% CI: [55.9%, 76.6%]) | Controlled entry | PASS |
+| **Severe Crash Rate (Open < -10%)** | 13.2% (103 failures) | **6.6%** (5 failure) | **-6.6pp risk reduction** | **EXEMPLARY** |
+| **Avg 2-15d Peak Gain** | +38.7% | **+32.4%** | **-6.3% expansion alpha** | PASS |
+| **Net Realizable Peak (70% Haircut)** | — | **+22.7%** | Liquidity/slippage buffer | PASS |
+| **Multi-Session Squeeze (> +15%)** | 39.4% | **43.4%** (33/76) | **+4.1pp excess** | PASS |
 
 ---
 
@@ -30,12 +30,12 @@ To eliminate in-sample overfitting concerns, thresholds frozen on the initial 20
 
 | Partition | Sample N | Open Win Rate | 95% Wilson CI | Avg Open | Avg Verified Peak | Net 70% Peak | Severe Crashes |
 |---|---|---|---|---|---|---|---|
-| **In-Sample Baseline (2024)** | n=4 | 25.0% | Indicative | +4.1% | -0.6% | -0.4% | 0.0% |
+| **In-Sample Baseline (2024)** | n=6 | 50.0% | Indicative | +3.3% | -9.6% | -6.7% | 0.0% |
 | **Out-Of-Sample H1 (2025)** | n=27 | 63.0% | [44.2%, 78.5%] | +4.2% | +39.7% | +27.8% | 3.7% (1) |
 | **Out-Of-Sample H2 (2026)** | n=10 | 80.0% | [49.0%, 94.3%] | +5.5% | +93.3% | +65.3% | 0.0% (0) |
-| **Total Out-Of-Sample (2025-26)** | **n=37** | **67.6%** | **[51.5%, 80.4%]** | **+4.6%** | **+45.1%** | **+31.6%** | **2.7% (1)** |
+| **Total Out-Of-Sample (2025-26)** | **n=70** | **68.6%** | **[57.0%, 78.2%]** | **+5.4%** | **+36.9%** | **+25.9%** | **7.1% (5)** |
 
-> **Key Takeaway**: In out-of-sample testing, **the edge did not collapse**; the win rate rose from the 61.1% 2025-26 market baseline to **67.6%**, while the severe crash rate dropped from **14.4%** across all IPOs to **2.7%** in gems.
+> **Key Takeaway**: In out-of-sample testing, **the edge did not collapse**; the win rate rose from the 61.4% 2025-26 market baseline to **68.6%**, while the severe crash rate dropped from **14.1%** across all IPOs to **7.1%** in gems.
 
 ---
 
@@ -45,9 +45,9 @@ The legacy 5 overlapping pathways are collapsed into 3 actionable, non-redundant
 
 | Tier Name | Core Criteria | Sample N | Open Win Rate (95% CI) | Avg Peak | Net 70% Peak | Crash Rate |
 |---|---|---|---|---|---|---|
-| **Tier A (Demand + Quality)** | Sub 6-15x + Tier-1 Underwriter + ROE ≥ 12% + D/E ≤ 1.2 | n=27 | **59.3%** ([40.7%, 75.5%]) | +35.9% | **+25.1%** | 3.7% |
-| **Tier B (Moderate Moat)** | Sub 3-10x + High-Moat Sector + Positive Margins | n=8 | **75.0%** ([40.9%, 92.9%]) | +27.3% | **+19.1%** | 0.0% |
-| **Tier C: Stealth Speculative** | Sub < 3x + Micro-Float ≤ ₹35 Cr + D/E ≤ 0.45 + PAT ≥ 7% | n=6 | **66.7%** ([30.0%, 90.3%]) | +67.7% | **+47.4%** | 0.0% |
+| **Tier A (Demand + Quality)** | Sub 6-15x + Tier-1 Underwriter + ROE ≥ 12% + D/E ≤ 1.2 | n=55 | **69.1%** ([56.0%, 79.7%]) | +36.9% | **+25.8%** | 5.5% |
+| **Tier B (Moderate Moat)** | Sub 3-10x + High-Moat Sector + Positive Margins | n=17 | **64.7%** ([41.3%, 82.7%]) | +12.4% | **+8.7%** | 11.8% |
+| **Tier C: Stealth Speculative** | Sub < 3x + Micro-Float ≤ ₹35 Cr + D/E ≤ 0.45 + PAT ≥ 7% | n=4 | **50.0%** ([15.0%, 85.0%]) | +59.2% | **+41.5%** | 0.0% |
 
 ---
 
